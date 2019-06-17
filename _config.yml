@@ -1,4 +1,5 @@
 theme: jekyll-theme-cayman
+title: Lauren Cappiello
 
 plugins:
   - jekyll-relative-links
