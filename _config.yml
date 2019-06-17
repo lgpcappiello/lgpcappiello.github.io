@@ -1,6 +1,5 @@
 theme: jekyll-theme-minimal
 title: Lauren Cappiello
-description: Applied Statistics PhD candidate working under the supervision of Dr. Zhiwei Zhang at the University of California, Riverside
 
 plugins:
   - jekyll-relative-links
