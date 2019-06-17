@@ -1,5 +1,6 @@
 theme: jekyll-theme-minimal
 title: Lauren Cappiello
+description: brief about
 
 plugins:
   - jekyll-relative-links
