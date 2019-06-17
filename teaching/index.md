@@ -2,7 +2,7 @@
 
 ## Department of Statistics at UC Riverside
 ### Adjunct Instructor
-- STAT 100A Introduction to Statistics (Su19, Session B)
+- [STAT 100A Introduction to Statistics (Su19, Session B)](https://lgpcappiello.github.io/teaching/stat100a/su19.html)
 
 ### Graduate Student Researcher 
 - Helped build fully online versions of introductory statistics courses.
