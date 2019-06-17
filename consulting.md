@@ -2,7 +2,7 @@
 
 ## Lead Consultant
 ### Graduate Quantitative Methods Center at UC Riverside 
-### July 2018 -- June 2019
+#### July 2018 -- June 2019
 
 - Provided statistical and computational consultations to graduate students and postdoctoral researchers from across campus. Support includes both research assistance and more general tutoring. 
 - Developed and presented workshops, instructional labs, and departmental seminars on statistics and statistical computing.
