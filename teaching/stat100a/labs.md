@@ -25,4 +25,4 @@ swirl()
 
 ## Help
 
-For questions about the labs, ask your TA or email your instructor.
+For help during lab, raise your hand and ask your TA. For questions outside of lab, please feel free to come to office hours, email the instructor or your TA, find one of us before or after class, or stop us on the street. :)
