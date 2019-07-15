@@ -2,13 +2,13 @@
 
 ## Logging In
 
-To log on to the computer, press CTRL+ALT+DEL as shown on the Windows Screen. A log on information box should appear. Your log on information is your NetID and permanent PIN. If you have changed your webmail password, you may need to use that password instead of your permanent PIN. This will log you onto a personal account on the computer. You should not need multifactor authentication for this process. If necessary, you can reset your UCR password using a phone or tablet by going to password.ucr.edu. 
+To log on to the computer, click or press any button. A log on information box should appear. Your log on information is your NetID and permanent PIN. If you have changed your webmail password, you may need to use that password instead of your permanent PIN. This will log you onto a personal account on the computer. You should not need multifactor authentication for this process. If necessary, you can reset your UCR password using a phone or tablet by going to password.ucr.edu. The first time to log on to a lab computer, it may take a few minutes to set up your account. This is normal!
 
 If you are unable to log on even after resetting your password and talking to your TA, you may visit Student Computing Services in Watkins 2117. Note that *you will still be required to complete the day's lab*. 
 
 ## Using R
 
-R is already installed on the lab computers. If there is not an R icon on the desktop, use the Start button on the taskbar and go to Programs --> R
+R is already installed on the lab computers. There should be an R icon on the Desktop (it may be labeled R x64 3.2.5 or something similar). Double click on it to open R. We will work directly in the R Console, which will appear when you open R. 
 
 If you want to spend time working with R at home, you may <a href="https://www.r-project.org/" target="blank">download R here</a>. You may also want to <a href="https://www.rstudio.com/" target="blank">download RStudio</a>, a useful GUI for working with R.
 
