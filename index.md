@@ -9,3 +9,6 @@ Applied Statistics Ph.D. candidate working under the supervision of Dr. Zhiwei Z
 ## Contact
 
 lauren.cappiello@email.ucr.edu
+
+## Complete CV
+<a href="https://lgpcappiello.github.io/CappielloCV.pdf">Curriculum Vitae</a>
