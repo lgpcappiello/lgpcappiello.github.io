@@ -1,6 +1,6 @@
 ## Extra credit
 
-Write an exam question that would be appropriate for your midterm. Your exam question must come from material covered in class, your homeworks, or your labs. Questions may be either multiple choice or short answer. To recieve any credit, *you must write an original question* and provide both the question and the correct answer.
+Write an exam question that would be appropriate for your midterm. The midterm will cover material up to and including Section 3.5 of your textbook. Your exam question must come from material covered in class, your homeworks, or your labs. Questions may be either multiple choice or short answer. To recieve any credit, *you must write an original question* and provide both the question and the correct answer.
 
 Email your completed exam question to Lauren at lauren.cappiello@email.ucr.edu by midnight on August 8. 
 
