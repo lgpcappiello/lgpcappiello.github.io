@@ -22,7 +22,7 @@ uninstall_course("STAT100A")
 install_course_github("lgpcappiello", "STAT100A")
 swirl()
 ```
-Note: you may see red text that says either "Course not found!" or "Course uninstalled successfully!". Both are normal. Uninstalling and (re)installing the course each time allows us to update the labs throughout the term.
+Note: you may see red text that says either "course not found" or "course uninstalled successfully". Both are normal. Uninstalling and (re)installing the course each time allows us to update the labs throughout the term.
 
 ## Help
 
