@@ -15,13 +15,14 @@ If you want to spend time working with R at home, you may <a href="https://www.r
 ## Accessing Labs
 
 To access the labs, copy the following code into the R Console window and press Enter. Wait until you see the prompt "What shall I call you?". Enter your name and follow the rest of the prompts to complete the lab.
-
 ```r
 install.packages("swirl")
 library(swirl)
+uninstall_course("STAT100A")
 install_course_github("lgpcappiello", "STAT100A")
 swirl()
 ```
+Note: you may see red text that says either "Course not found!" or "Course uninstalled successfully!". Both are normal. Uninstalling and (re)installing the course each time allows us to update the labs throughout the term.
 
 ## Help
 
