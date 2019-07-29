@@ -10,6 +10,8 @@ If you are unable to log on even after resetting your password and talking to yo
 
 R is already installed on the lab computers. There should be an R icon on the Desktop (it may be labeled R x64 3.2.5 or something similar). You may also use RStudio, a useful GUI for working with R. We will work directly in the R Console, which will appear when you open R or RStudio. 
 
+Alternately, open up a web browser and navigate to <a href="https://rstudio.cloud/projects" target="blank">rstudio.cloud/projects</a>. This is an online version of RStudio. You will need to create a (free) account to use this website, but this will allow you to save your work in the cloud. If you are having any issues using R or RStudio on the lab computers, this should fix those issues. To access the RStudio console, click on "new project" or click on one of your existing projects to continue working.
+
 If you want to spend time working with R at home, you may <a href="https://www.r-project.org/" target="blank">download R here</a>. You may also want to <a href="https://www.rstudio.com/" target="blank">download RStudio</a>.
 
 ## Accessing Labs
