@@ -10,8 +10,8 @@ library(SnowballC)
 library(wordcloud)
 library(RColorBrewer)
 
-#read in text file of interest (this is the only thing you need to change!)
-text <- readLines('/Users/cappiello/Documents/stat100a/dragon.txt')
+#read in text file of interest
+text <- readLines("https://lgpcappiello.github.io/teaching/stat100a/Rcode/dragon.txt")
 
 docs <- Corpus(VectorSource(text))
 inspect(docs)
