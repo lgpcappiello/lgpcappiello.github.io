@@ -18,6 +18,8 @@ for(i in 1:reps){ #repeat 10000 times
   #take the difference of the two proportions and save it
   diff <- append(diff, trtprop-placprop)
 }
+#find the average difference in proportions
+mean(diff)
 #count the number of times the difference is bigger than 
 # the observed difference of 0.643
 out <- abs(diff) > 0.643; sum(out)
