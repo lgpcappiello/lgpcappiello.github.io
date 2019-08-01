@@ -27,6 +27,7 @@ As the lead consultant (one-year contract position), I supervised and managed a 
 - Introduction to Multilevel Modeling
 - Introduction to SAS
 - Introduction to R
+- Intermediate Topics in R
 - Overview of Causal Inference
 - Improving Research Credibility
 - Writing Articles in LaTeX
