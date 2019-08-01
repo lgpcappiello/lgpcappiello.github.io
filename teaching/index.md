@@ -4,7 +4,7 @@
 ### Adjunct Instructor
 - [STAT 100A Introduction to Statistics (Su19, Session B)](https://lgpcappiello.github.io/teaching/stat100a/su19.html)
 
-### Graduate Student Researcher 
+### Online Course Development 
 I worked with a small group of faculty and graduate students to build a fully online version of our introductory statistics courses. This involved planning and filming short video lectures as well as revamping the existing introductory course structure to work in an online environment. These changes inspired the development of my own course in Summer 2019.
 
 ### Graduate Teaching Assistant
