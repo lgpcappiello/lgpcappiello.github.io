@@ -1,10 +1,12 @@
 # Consulting
 
-## Lead Consultant
+## Statistical Consultant / Lead Consultant
 ### Graduate Quantitative Methods Center at UC Riverside 
-#### July 2018 -- June 2019
+#### July 2018 -- present
 
-<a href="https://gradquant.ucr.edu/" target="blank">UCR GradQuant</a> works with graduate students and postdoctoral research from all departments to provide assistance in quantitative and computational methods. Consultations were primarily research-focused but also included graduate-level course tutoring. While at GradQuant, I worked on problems related to all of my consultation offerings, as well as a number of problems related to SPSS, Stata, Excel, and general programming logic. I also developed and presented workshops, piloted the instructional labs program, and gave departmental seminars on statistics and statistical computing. Finally, I supervised and managed a team of part-time consultants.
+<a href="https://gradquant.ucr.edu/" target="blank">UCR GradQuant</a> works with graduate students and postdoctoral research from all departments to provide assistance in quantitative and computational methods. Consultations are primarily research-focused but also include graduate-level course tutoring. While at GradQuant I have worked on problems related to all of my consultation offerings, as well as a number of problems related to SPSS, Stata, Excel, and general programming logic. I also develop and present workshops, instructional labs, and departmental seminars on statistics and statistical computing. 
+
+As the lead consultant (one-year contract position), I supervised and managed a team of part-time consultants. I also piloted the instructional labs program, performed the usual consultant duties, and assisted with administrative tasks such as hiring, scheduling, and website management.
 
 #### Consultation types offered: 
 - Basic Statistics
@@ -17,7 +19,6 @@
 - LaTeX
 - SAS
 - R
-- Stan
 
 #### Workshops, instructional labs, and departmental seminars: 
 - Introduction to Statistical Inference
