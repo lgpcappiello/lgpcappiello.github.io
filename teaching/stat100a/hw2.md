@@ -4,6 +4,6 @@ Section 3.1 (pg. 92) #3.1, 3.6, 3.9
 
 Section 3.2 (pg. 109) #3.13
 
-Section 3.4 (pg. 124) #3.23, 3.35
+Section 3.4 (pg. 124) #3.29, 3.35
 
 Section 3.5 (pg. 128) #3.38
