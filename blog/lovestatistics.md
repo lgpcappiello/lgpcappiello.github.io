@@ -7,7 +7,7 @@ However you feel about statistics – if you love it, are confused by it, or eve
 With this in mind, consider that you don’t have to love doing math to appreciate what it does for you. You don’t need advanced calculus (or any calculus, for that matter) to be a critical consumer of data. At the heart of every piece of technology, feat of engineering, investment, and even baked good you use is a scientific approach supported by mathematics. 
 Consider, if you will, baking a loaf of bread. Proteins in flour form an elastic network that allows the loaf to rise and stay risen; leavening agents such as yeast and baking create carbon dioxide as a byproduct to make the bread rise; an egg might help bring a hydrophobic fat into your mixture… the possibilities are endless. 
 
-<p align="center"><img src="https://media.giphy.com/media/26gJAuwR7TAz5NRy8/giphy.gif"></p>
+<p align="center"><img src="https://media.giphy.com/media/26gJAuwR7TAz5NRy8/giphy.gif" height="128"></p>
 <p align="center"><small>Yes, that is a lion made entirely out of bread.</small></p>
 
 That said, not every possibility makes a pleasant loaf of bread. Optimization, whether approached statistically or by many generations of trial and error, is the mathematical underpinning of that delicious bread lion. (Click <a href="http://www.berries.com/blog/science-of-baking">here</a> for a fun infographic on the science of baking.)
