@@ -7,13 +7,13 @@ However you feel about statistics – if you love it, are confused by it, or eve
 With this in mind, consider that you don’t have to love doing math to appreciate what it does for you. You don’t need advanced calculus (or any calculus, for that matter) to be a critical consumer of data. At the heart of every piece of technology, feat of engineering, investment, and even baked good you use is a scientific approach supported by mathematics. 
 Consider, if you will, baking a loaf of bread. Proteins in flour form an elastic network that allows the loaf to rise and stay risen; leavening agents such as yeast and baking create carbon dioxide as a byproduct to make the bread rise; an egg might help bring a hydrophobic fat into your mixture… the possibilities are endless. 
 
-<p align="center"><img src="https://media.giphy.com/media/26gJAuwR7TAz5NRy8/giphy.gif" height="128"></p>
+<p align="center"><img src="https://media.giphy.com/media/26gJAuwR7TAz5NRy8/giphy.gif" height="200"></p>
 <p align="center"><small>Yes, that is a lion made entirely out of bread.</small></p>
 
 That said, not every possibility makes a pleasant loaf of bread. Optimization, whether approached statistically or by many generations of trial and error, is the mathematical underpinning of that delicious bread lion. (Click <a href="http://www.berries.com/blog/science-of-baking">here</a> for a fun infographic on the science of baking.)
 Now that you’re primed with a world class bread lion, I’m just going to go ahead and say it: math is cool. People have a natural desire to describe and explain the world around them. Mathematics and statistics let us do exactly that. Perhaps fields like physics and chemistry come to mind but, in fact, fields as diverse as art history and linguistics have started to incorporate statistical approaches. Music is incredibly mathematical (which is not to say that it’s necessarily formulaic!). Philosophy, mathematics, and computer science students all take logic courses. In short, math worms its way into all aspects of our lives.
 
-<p align="center"><img src="http://giphygifs.s3.amazonaws.com/media/i8LQDpYfnzYWc/giphy.gif" alt="Fractals"></p>
+<p align="center"><img src="http://giphygifs.s3.amazonaws.com/media/i8LQDpYfnzYWc/giphy.gif" alt="Fractals" width="200"></p>
 <p align="center"><small>Fractals are a mathematical concept wherein an object displays infinite self-similarity. Fun!</small></p>
 
 Statistics takes all of that information and brings in another dimension: the quantification of uncertainty. Whenever we gather data, there is some degree of uncertainty about how well our data represents the population that we are interested in. This is the primary role of statistics: to determine exactly how much uncertainty there is and quantify that in a meaningful way. If you randomly find 100 people and ask them all how many cats they have and I randomly find two people and ask them the same question, chances are that your data is a lot more meaningful than mine. Maybe you got a mean of two cats and I got a mean of eight. 
