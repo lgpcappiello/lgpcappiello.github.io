@@ -7,24 +7,24 @@ However you feel about statistics – if you love it, are confused by it, or eve
 With this in mind, consider that you don’t have to love doing math to appreciate what it does for you. You don’t need advanced calculus (or any calculus, for that matter) to be a critical consumer of data. At the heart of every piece of technology, feat of engineering, investment, and even baked good you use is a scientific approach supported by mathematics. 
 Consider, if you will, baking a loaf of bread. Proteins in flour form an elastic network that allows the loaf to rise and stay risen; leavening agents such as yeast and baking create carbon dioxide as a byproduct to make the bread rise; an egg might help bring a hydrophobic fat into your mixture… the possibilities are endless. 
 
-<img src="https://media.giphy.com/media/26gJAuwR7TAz5NRy8/giphy.gif">
-*Yes, that is a lion made entirely out of bread.*
+<p align="center"><img src="https://media.giphy.com/media/26gJAuwR7TAz5NRy8/giphy.gif"></p>
+<p align="center"><small>Yes, that is a lion made entirely out of bread.</small></p>
 
 That said, not every possibility makes a pleasant loaf of bread. Optimization, whether approached statistically or by many generations of trial and error, is the mathematical underpinning of that delicious bread lion. (Click <a href=”http://www.berries.com/blog/science-of-baking”>here</a> for a fun infographic on the science of baking.)
 Now that you’re primed with a world class bread lion, I’m just going to go ahead and say it: math is cool. People have a natural desire to describe and explain the world around them. Mathematics and statistics let us do exactly that. Perhaps fields like physics and chemistry come to mind but, in fact, fields as diverse as art history and linguistics have started to incorporate statistical approaches. Music is incredibly mathematical (which is not to say that it’s necessarily formulaic!). Philosophy, mathematics, and computer science students all take logic courses. In short, math worms its way into all aspects of our lives.
 
-<img src="http://giphygifs.s3.amazonaws.com/media/i8LQDpYfnzYWc/giphy.gif" alt="Fractals">
-*Fractals are a mathematical concept wherein an object displays infinite self-similarity. Fun!*
+<p align="center"><img src="http://giphygifs.s3.amazonaws.com/media/i8LQDpYfnzYWc/giphy.gif" alt="Fractals"></p>
+<p align="center"><small>Fractals are a mathematical concept wherein an object displays infinite self-similarity. Fun!</small></p>
 
 Statistics takes all of that information and brings in another dimension: the quantification of uncertainty. Whenever we gather data, there is some degree of uncertainty about how well our data represents the population that we are interested in. This is the primary role of statistics: to determine exactly how much uncertainty there is and quantify that in a meaningful way. If you randomly find 100 people and ask them all how many cats they have and I randomly find two people and ask them the same question, chances are that your data is a lot more meaningful than mine. Maybe you got a mean of two cats and I got a mean of eight. 
 
-<img src="http://giphygifs.s3.amazonaws.com/media/40Fpxgn6Yq640/giphy.gif" alt="Kittens">
-*Eight cats may not be reasonable, but that’s the dream.*
+<p align="center"><img src="http://giphygifs.s3.amazonaws.com/media/40Fpxgn6Yq640/giphy.gif" alt="Kittens"></p>
+<p align="center"><small>Eight cats may not be reasonable, but that’s the dream.</small></p>
 
 Without statistics, we have no way to quantitatively demonstrate that your estimate is better than mine. With statistics, we can develop a confidence interval, test your mean of two against my claim of eight, and more! As a critical consumer of information, keeping this in mind whenever someone presents a numeric factoid is a great place to start on your journey to statistical skepticism. 
 
 Keeping up with current events is enormously important and factoids about bread are interesting, but at this point you may be wondering what all of this means to your work as a graduate student. As students and scholars, statistics are a part of just about every discipline. Even if your own research does not require any statistical analyses, a basic understanding of quantitative methods will allow you to keep up-to-date with the literature in your field. Developing a basic understanding of the mathematical underpinnings behind the statistical analyses you come across will help you to be a more critical reader and a better researcher. If you do need statistics for your research, taking the time to truly appreciate what statistics can do for you is the first step toward describing your time spent running analyses as “interesting” rather than “tedious”.
 
-<img src="https://media.giphy.com/media/26xBI73gWquCBBCDe/giphy.gif" alt="Confused Winona Ryder">
+<p align="center"><img src="https://media.giphy.com/media/26xBI73gWquCBBCDe/giphy.gif" alt="Confused Winona Ryder"></p>
 
 At this point, you may be asking yourself if these concepts are really all that accessible. Everyone who can think logically can learn math! If you do not have an extensive mathematics or statistics background, it may take a little bit of additional work, but it’s certainly not impossible! Whether you want to learn more, are starting from zero, or already consider yourself an expert, GradQuant is happy to hear from you. Our consultants love to teach and to talk about people’s research. Stop by our drop-in hours or schedule consultation any time (more detailed information at gradquant.ucr.edu). GradQuant staff have also curated a variety of resources (available on our website) to help you develop your quantitative knowhow from the comfort of your couch. 
