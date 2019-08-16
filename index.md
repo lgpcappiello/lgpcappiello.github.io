@@ -8,7 +8,7 @@ Applied Statistics Ph.D. candidate working under the supervision of Dr. Xinping 
 
 ## Contributed Blogs
 
-<a href="https://lgpcappiello.github.io/blog/lovestatistics.html">Learning to Love Statistics</a> is a lighthearted take on the importance of statistics in everyday life, written for the UCR Graduate Student Resource Center blog.</small>
+<a href="https://lgpcappiello.github.io/blog/lovestatistics.html">Learning to Love Statistics</a> is a lighthearted take on the importance of statistics in everyday life, written for the UCR Graduate Student Resource Center blog.
 
 ## Contact
 
