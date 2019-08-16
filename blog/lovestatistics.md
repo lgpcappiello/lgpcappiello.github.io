@@ -10,7 +10,7 @@ Consider, if you will, baking a loaf of bread. Proteins in flour form an elastic
 <p align="center"><img src="https://media.giphy.com/media/26gJAuwR7TAz5NRy8/giphy.gif"></p>
 <p align="center"><small>Yes, that is a lion made entirely out of bread.</small></p>
 
-That said, not every possibility makes a pleasant loaf of bread. Optimization, whether approached statistically or by many generations of trial and error, is the mathematical underpinning of that delicious bread lion. (Click <a href=”http://www.berries.com/blog/science-of-baking”>here</a> for a fun infographic on the science of baking.)
+That said, not every possibility makes a pleasant loaf of bread. Optimization, whether approached statistically or by many generations of trial and error, is the mathematical underpinning of that delicious bread lion. (Click <a href="http://www.berries.com/blog/science-of-baking">here</a> for a fun infographic on the science of baking.)
 Now that you’re primed with a world class bread lion, I’m just going to go ahead and say it: math is cool. People have a natural desire to describe and explain the world around them. Mathematics and statistics let us do exactly that. Perhaps fields like physics and chemistry come to mind but, in fact, fields as diverse as art history and linguistics have started to incorporate statistical approaches. Music is incredibly mathematical (which is not to say that it’s necessarily formulaic!). Philosophy, mathematics, and computer science students all take logic courses. In short, math worms its way into all aspects of our lives.
 
 <p align="center"><img src="http://giphygifs.s3.amazonaws.com/media/i8LQDpYfnzYWc/giphy.gif" alt="Fractals"></p>
