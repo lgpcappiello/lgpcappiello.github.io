@@ -1,0 +1,36 @@
+## STAT 100B: Introduction to Statistics
+### Course Syllabus | <a href="https://www.openintro.org/stat/textbook.php?stat_book=os" target="blank">Open Source Textbook</a> | <a href="https://lgpcappiello.github.io/teaching/stat100b/labs.html" target="blank">Labs</a> 
+
+Supplemental R code may be found here.
+
+Note: This schedule may change throughout the term. Check back periodically for updates.
+
+<table>
+  <tbody>
+  <tr><td><strong>Week 1</strong></td><td><strong>Inference for Categorical Data</strong></td></tr>
+  <tr><td>Monday               </td><td> Intro and Review Inference for a Single Population (6.1) </td></tr>
+  <tr><td>Wednesday            </td><td> Difference of Two Populations (6.2) </td></tr>
+  <tr><td>Friday               </td><td> Goodness-of-Fit (6.3) </td></tr>
+  
+  <tr><td><strong>Week 2</strong></td><td><strong>Inference for Numerical Data</strong></td></tr>
+  
+  <tr><td><strong>Week 3</strong></td><td><strong>Inference for Numerical Data</strong></td></tr>
+  
+  <tr><td><strong>Week 4</strong></td><td><strong>ANOVA</strong></td></tr>
+  
+  <tr><td><strong>Week 5</strong></td><td><strong>ANOVA</strong></td></tr>
+  
+  <tr><td><strong>Week 6</strong></td><td><strong>Regression</strong></td></tr>
+  
+  <tr><td><strong>Week 7</strong></td><td><strong>Regression</strong></td></tr>
+  
+  <tr><td><strong>Week 8</strong></td><td><strong>Multiple Regression </strong></td></tr>
+  
+  <tr><td><strong>Week 9</strong></td><td><strong>Multiple Regression</strong></td></tr>
+  
+  <tr><td><strong>Week 10</strong></td><td><strong>Logistic Regression</strong></td></tr>
+  
+</tbody>
+</table>
+
+The GitHub repository for the Swirl labs may be found <a href="https://github.com/lgpcappiello/STAT100A" target="blank">here</a>.
