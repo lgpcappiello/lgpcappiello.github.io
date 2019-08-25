@@ -4,7 +4,7 @@
 ### Graduate Quantitative Methods Center at UC Riverside 
 #### July 2018 -- present
 
-<a href="https://gradquant.ucr.edu/" target="blank">UCR GradQuant</a> works with graduate students and postdoctoral research from all departments to provide assistance in quantitative and computational methods. Consultations are primarily research-focused but also include graduate-level course tutoring. While at GradQuant I have worked on problems related to all of my consultation offerings, as well as a number of problems related to SPSS, Stata, Excel, and general programming logic. I also develop and present workshops, instructional labs, and departmental seminars on statistics and statistical computing. 
+<a href="https://gradquant.ucr.edu/" target="blank">UCR GradQuant</a> works with graduate students and postdoctoral research from all departments to provide assistance in quantitative and computational methods Consultations include both course support and research assistance. While at GradQuant I have worked on problems related to all of my consultation offerings, as well as a number of problems related to SPSS, Stata, Excel, and general programming logic. I also develop and present workshops, instructional labs, and departmental seminars on statistics and statistical computing. 
 
 As the lead consultant (one-year contract position), I supervised and managed a team of part-time consultants. I also piloted the instructional labs program, performed the usual consultant duties, and assisted with administrative tasks such as hiring, scheduling, and website management.
 
