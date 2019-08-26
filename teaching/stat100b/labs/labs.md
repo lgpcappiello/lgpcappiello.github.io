@@ -1,4 +1,4 @@
-# R Labs for STAT 100A
+# R Labs for STAT 100B
 
 ## Logging In
 
