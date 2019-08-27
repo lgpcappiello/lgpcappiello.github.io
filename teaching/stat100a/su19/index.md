@@ -1,5 +1,5 @@
 ## STAT 100A: Introduction to Statistics
-### <a href="https://lgpcappiello.github.io/teaching/stat100a/syllabus.pdf" target="blank">Course Syllabus</a> | <a href="https://www.openintro.org/stat/textbook.php?stat_book=os" target="blank">Open Source Textbook</a> | <a href="https://lgpcappiello.github.io/teaching/stat100a/labs.html" target="blank">Labs</a> 
+### <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/syllabus.pdf" target="blank">Course Syllabus</a> | <a href="https://www.openintro.org/stat/textbook.php?stat_book=os" target="blank">Open Source Textbook</a> | <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/labs.html" target="blank">Labs</a> 
 
 Supplemental R code may be found <a href="https://lgpcappiello.github.io/teaching/stat100a/RCode.html">here</a>.
 
@@ -25,16 +25,16 @@ Note: This schedule may change throughout the term. Check back periodically for 
                                             <br> Lab 4 </td></tr>
   <tr><td>Thursday               </td><td>  Normal Distribution (<a href="https://lgpcappiello.github.io/teaching/stat100a/slides/su19/W2D4.pdf" target="blank">Slides</a>)
                                             <br> Discussion Quiz 2 (<a href="https://lgpcappiello.github.io/teaching/stat100a/su19/hw2.html">Homework 2</a>) 
-                                            <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/extracredit1.html">EXTRA CREDIT</a>
+                                            <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/extracredit1.html">EXTRA CREDIT</a>
   </td></tr>
 
   <tr><td><strong>Week 3</strong></td><td><strong>Distributions</strong></td></tr>
   <tr><td>Monday (8/12)        </td><td>  Midterm Review
                                             <br> Lab 5 </td></tr>
   <tr><td>Tuesday                </td><td> <em>MIDTERM</em> (Chapters 1-3) 
-                                            <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/formulas1.pdf">Provided Formulas</a>
-                                            <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/MidtermEC_Qs.pdf">Student-Created Study Questions</a>
-                                            <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/MidtermEC_Soln.pdf">Student-Created Solutions</a>
+                                            <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/formulas1.pdf">Provided Formulas</a>
+                                            <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/MidtermEC_Qs.pdf">Student-Created Study Questions</a>
+                                            <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/MidtermEC_Soln.pdf">Student-Created Solutions</a>
                                                                                   </td></tr>
   <tr><td>Wednesday              </td><td> Binomal Distribution (<a href="https://lgpcappiello.github.io/teaching/stat100a/slides/su19/W3D3.pdf" target="blank">Slides</a>) 
                                             <br> Lab 6 </td></tr>
@@ -50,7 +50,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>Thursday               </td><td> One-Sided Hypothesis Testing for a Proportion (<a href="https://lgpcappiello.github.io/teaching/stat100a/slides/su19/W4D4.pdf" target="blank">Slides</a>) 
                                             <br> Go over Midterm. 
                                             <br> Discussion Quiz 4 (<a href="https://lgpcappiello.github.io/teaching/stat100a/su19/hw4.html">Homework 4</a>) 
-                                            <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/extracredit2.html">EXTRA CREDIT</a>
+                                            <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/extracredit2.html">EXTRA CREDIT</a>
   </td></tr>
 
   <tr><td><strong>Week 5</strong></td><td><strong>Inference</strong></td></tr>
@@ -62,7 +62,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>Thursday               </td><td> Final Exam Review 
                                           <br> Discussion Quiz 5 (<a href="https://lgpcappiello.github.io/teaching/stat100a/su19/hw5.html">Homework 5</a>) </td></tr>
   <tr><td>Friday (8/30)        </td><td> <em>FINAL EXAM</em> | 8:00 - 10:00 am | OLMH 1208 
-      <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/PracticeFinal.pdf">Practice Exam</a>
-      <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/practicesolns.pdf">Solutions</a> </td></tr>
+      <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/PracticeFinal.pdf">Practice Exam</a>
+      <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/practicesolns.pdf">Solutions</a> </td></tr>
 </tbody>
 </table>
