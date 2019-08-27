@@ -64,6 +64,6 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>Friday (8/30)        </td><td> <em>FINAL EXAM</em> | 8:00 - 10:00 am | OLMH 1208 
       <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/PracticeFinal.pdf">Practice Exam</a>
       <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/practicesolns.pdf">Solutions</a>
-  <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/FinalEC.pdf">Student Problems</a></td></tr>
+  <br> <a href="https://lgpcappiello.github.io/teaching/stat100a/su19/FinalEC.pdf">Student-Created Study Guide</a></td></tr>
 </tbody>
 </table>
