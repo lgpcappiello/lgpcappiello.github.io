@@ -57,7 +57,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>Monday (8/26)        </td><td> Inference for a Sample Mean (<a href="https://lgpcappiello.github.io/teaching/stat100a/slides/su19/W5D1.pdf" target="blank">Slides</a>) 
                                           <br> <a href="https://forms.gle/pCnVAi6uHf1nrs4r9" target="blank">Lab 9</a> </td></tr>
   <tr><td>Tuesday                </td><td> A Brief Overview of Regression (<a href="https://lgpcappiello.github.io/teaching/stat100a/slides/su19/W5D2.pdf" target="blank">Slides</a>) </td></tr>
-  <tr><td>Wednesday              </td><td> Difference of Two Proportions (8.2 & 6.2)
+  <tr><td>Wednesday              </td><td> Finish Regression, Difference of Two Proportions (<a href="https://lgpcappiello.github.io/teaching/stat100a/slides/su19/W5D3.pdf" target="blank">Slides</a>)
                                           <br> <a href="https://forms.gle/Y2w238Zy72pXsfPk6" target="blank">Lab 10</a> </td></tr>
   <tr><td>Thursday               </td><td> Final Exam Review 
                                           <br> Discussion Quiz 5 (<a href="https://lgpcappiello.github.io/teaching/stat100a/su19/hw5.html">Homework 5</a>) </td></tr>
