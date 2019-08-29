@@ -3,7 +3,7 @@
 ## Department of Statistics at UC Riverside
 ### Instructor
 - [STAT 100B Introduction to Statistics (Fall 2019)](https://lgpcappiello.github.io/teaching/stat100b/f19.html)
-- [STAT 100A Introduction to Statistics (Summer 2019, Session B)](https://lgpcappiello.github.io/teaching/stat100a/su19.html)
+- [STAT 100A Introduction to Statistics (Summer 2019, Session B)](https://lgpcappiello.github.io/teaching/stat100a/su19/)
 
 ### Online Course Development 
 I worked with a small group of faculty and graduate students to build a fully online version of our introductory statistics courses. This involved planning and filming short video lectures as well as revamping the existing introductory course structure to work in an online environment. These changes inspired the development of my own introductory statistics courses.
