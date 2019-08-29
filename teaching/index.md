@@ -1,7 +1,7 @@
 # Teaching
 
 ## Department of Statistics at UC Riverside
-### Adjunct Instructor
+### Instructor
 - [STAT 100B Introduction to Statistics (Fall 2019)](https://lgpcappiello.github.io/teaching/stat100b/f19.html)
 - [STAT 100A Introduction to Statistics (Summer 2019, Session B)](https://lgpcappiello.github.io/teaching/stat100a/su19.html)
 
