@@ -2,7 +2,7 @@
 
 ## Department of Statistics at UC Riverside
 ### Instructor
-- [STAT 100B Introduction to Statistics (Fall 2019)](https://lgpcappiello.github.io/teaching/stat100b/f19.html)
+- [STAT 100B Introduction to Statistics (Fall 2019)](https://lgpcappiello.github.io/teaching/stat100b/f19/)
 - [STAT 100A Introduction to Statistics (Summer 2019, Session B)](https://lgpcappiello.github.io/teaching/stat100a/su19/)
 
 ### Online Course Development 
