@@ -13,7 +13,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td colspan="2" align="center"><strong>Week 1: Confidence Intervals and Hypothesis Testing </strong></td></tr>
   <tr><td>September 30</td><td> </td></tr>
   <tr><td>October 2</td><td> </td></tr>
-  <tr><td>October 4</td><td> You must attend your Lab A and discussion this week or <em>you will be dropped!</em></td></tr>
+  <tr><td>October 4</td><td> You must attend your first lab and discussion this week or <em>you will be dropped!</em></td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 2: Difference of Two Means</strong></td></tr>
   <tr><td>October 7</td><td> </td></tr>
@@ -41,7 +41,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>November 8</td><td></td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 7: Multiple Linear Regression</strong></td></tr>
-  <tr><td>November 11</td><td>CAMPUS CLOSED - Veterans Day <br> <em>No Lab A this week.</em></td></tr>
+  <tr><td>November 11</td><td>CAMPUS CLOSED - Veterans Day <br> <em>No Lab A meeting this week.</em></td></tr>
   <tr><td>November 13</td><td></td></tr>
   <tr><td>November 15</td><td></td></tr>
   
@@ -53,7 +53,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td colspan="2" align="center"><strong>Week 9: Logistic Regression</strong></td></tr>
   <tr><td>November 25</td><td></td></tr>
   <tr><td>November 27</td><td></td></tr>
-  <tr><td>November 29</td><td>CAMPUS CLOSED - Happy Thanksgiving! <br><em>No Lab B or discussion this week.</em></td></tr>
+  <tr><td>November 29</td><td>CAMPUS CLOSED - Happy Thanksgiving! <br><em>No Lab B meeting or discussion this week.</em></td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 10: Simulations</strong></td></tr>
   <tr><td>December 2</td><td></td></tr>
