@@ -11,9 +11,9 @@ Note: This schedule may change throughout the term. Check back periodically for 
     <em>No lab or discussion this week.</em> <a href="https://docs.google.com/forms/d/e/1FAIpQLScMzIs-m096HgH9fHWhY4Sl3uDJG-jC3erU5Wv9r77jQGypzQ/viewform?usp=sf_link" target="blank">Student Survey</a> due October 1 at 11:59 pm.</td></tr>  
   
   <tr><td colspan="2" align="center"><strong>Week 1: Confidence Intervals and Hypothesis Testing </strong></td></tr>
-  <tr><td>September 30</td><td> </td></tr>
+  <tr><td>September 30</td><td> You must attend your first lab and discussion this week or <em>you will be dropped!</em> </td></tr>
   <tr><td>October 2</td><td> </td></tr>
-  <tr><td>October 4</td><td> You must attend your first lab and discussion this week or <em>you will be dropped!</em></td></tr>
+  <tr><td>October 4</td><td> </td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 2: Difference of Two Means</strong></td></tr>
   <tr><td>October 7</td><td> </td></tr>
