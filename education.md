@@ -1,7 +1,7 @@
 # Education
 
 ## Ph.D., Applied Statistics
-### University of Calfornia, Riverside | June 2020 (expected)
+### University of Calfornia, Riverside | September 2020 (expected)
 Dissertation title: *Applied Machine Learning Methods in Evidence Synthesis*
 
 ## M.S., Statistics 
