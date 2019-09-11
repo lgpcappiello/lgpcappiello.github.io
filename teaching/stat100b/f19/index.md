@@ -7,8 +7,8 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tbody>
     
   <tr><td colspan="2" align="center"><strong>Week 0: Introductions, Basic R</strong></td></tr>
-  <tr><td>September 27</td><td>
-    <em>No lab or discussion this week.</em> <a href="https://docs.google.com/forms/d/e/1FAIpQLScMzIs-m096HgH9fHWhY4Sl3uDJG-jC3erU5Wv9r77jQGypzQ/viewform?usp=sf_link" target="blank">Student Survey</a> due October 1 at 11:59 pm.</td></tr>  
+  <tr><td>September 27</td><td> <a href="https://docs.google.com/forms/d/e/1FAIpQLScMzIs-m096HgH9fHWhY4Sl3uDJG-jC3erU5Wv9r77jQGypzQ/viewform?usp=sf_link" target="blank">Student Survey</a> due October 1 at 11:59 pm. <br>
+    <em>No lab or discussion this week.</em> </td></tr>  
   
   <tr><td colspan="2" align="center"><strong>Week 1: Confidence Intervals and Hypothesis Testing </strong></td></tr>
   <tr><td>September 30</td><td> Lab 1: Introduction to R and RStudio
