@@ -1,6 +1,4 @@
-Corresponding discussion quiz: October 3
-
-Recall that homeworks are not to be turned in, but your quiz questions will be similar to the questions on your homework. If you make sure you have a thorough understanding of how to answer each question, you will do well on your quiz! :)
+##Homework 1: Due October 3
 
 For any textbook question using p-values, you may use either the p-value approach or the test statistic approach. Make sure that you are comfortable with both! 
 
