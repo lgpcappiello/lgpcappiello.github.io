@@ -1,4 +1,4 @@
-##Homework 1: Due October 3
+## Homework 1: Due October 3
 
 For any textbook question using p-values, you may use either the p-value approach or the test statistic approach. Make sure that you are comfortable with both! 
 
