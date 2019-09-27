@@ -8,4 +8,4 @@ Section 5.1 (pg. 179) # 5.3
 
 Section 7.1 (pg. 259) #7.2, 7.7, 7.11
 
-The average weight of a male labrador retriever is believed to be well-approximated by a normal distribution with mean 71.5 lbs and standard deviation 7.5 lbs. A veterinarian is skeptical of this claim and takes a random sample of 15 labs that come into her clinic. The 15 labs have an average weight of 80 lbs with standard deviation 5.1. Use the test statistic approach at the 5% level to test if the vet's data suggests that our original belief is incorrect. 
+The average weight of a male labrador retriever is believed to be well-approximated by a normal distribution with mean 71.5 lbs and standard deviation 7.5 lbs. A veterinarian is skeptical of this claim and takes a random sample of 15 labs that come into her clinic. The 15 labs have an average weight of 80 lbs. Use the test statistic approach at the 5% level to test if the vet's data suggests that our original belief is incorrect. 
