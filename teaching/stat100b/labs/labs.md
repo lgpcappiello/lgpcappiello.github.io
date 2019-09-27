@@ -16,7 +16,7 @@ If you want to spend time working with R at home, I recommend getting started by
 
 ## Turning in Labs
 
-Each lab has several "Exercise" problems and at least one "On Your Own" section. Lab write-ups must include the original question, the R code used to produce your results, and a thorough response for each problem. All parts of your write up must be typed. Feel free to copy and paste the original questions from the lab documents. Plots and images should be included by copy and pasting or by screen shot. 
+Each lab has several "Exercise" problems and at least one "On Your Own" section. Lab write-ups must include the original question, the R code used to produce your results, and a thorough response for each problem. All parts of your write up must be typed. Feel free to copy and paste the original questions from the lab documents. Plots and images should be included by copy and pasting or by screen shot. A printed copy of your lab must be turned in to your TA by the end of your Lab B. Because you have several days to finish each lab, there is a zero tolerance policy for late labs.  
 
 ## Help
 
