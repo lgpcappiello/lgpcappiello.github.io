@@ -8,7 +8,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
     
   <tr><td colspan="2" align="center"><strong>Week 0: Introductions, Basic R</strong></td></tr>
   <tr><td>September 27</td><td> <em>No lab or discussion this week.</em><br>
-  <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W0D0.pdf">Slides (Intro, Normal Distribution Refresher)</a>
+  <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W0D0.pdf">Slides (Intro, Normal Distribution Refresher)</a> <br>
   <a href="https://docs.google.com/forms/d/e/1FAIpQLScMzIs-m096HgH9fHWhY4Sl3uDJG-jC3erU5Wv9r77jQGypzQ/viewform?usp=sf_link" target="blank">Student Survey</a> due October 1 at 11:59 pm. <br>
   <a href="https://lgpcappiello.github.io/teaching/stat100b/hw1.html">Homework 1</a>
      </td></tr>  
