@@ -14,7 +14,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
      </td></tr>  
   
   <tr><td colspan="2" align="center"><strong>Week 1: Confidence Intervals and Hypothesis Testing </strong></td></tr>
-  <tr><td>September 30</td><td> Lab 1: Introduction to R and RStudio
+  <tr><td>September 30</td><td> <a href="lgpcappiello.github.io/teaching/stat100b/labs/intro_to_r.html">Lab 1: Introduction to R and RStudio</a>
       <br>You must attend your first lab and discussion this week or <em>you will be dropped!</em> </td></tr>
   <tr><td>October 2</td><td> </td></tr>
   <tr><td>October 4</td><td> </td></tr>
