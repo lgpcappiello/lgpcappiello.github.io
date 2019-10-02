@@ -17,18 +17,18 @@
   <tbody>
 
   <tr><td>Monday</td><td> Lecture (Section 001) 8:00 AM - 8:50 AM <br> 
-                          Lab (Section 022) 9:30 AM - 10:50 AM <br>
-                          Lab (Section 021) 11:00 AM - 12:20 AM <br> 
-                          Lab (Section 023) 6:30 PM - 7:50 PM </td></tr>  
-  <tr><td>Tuesday</td><td> Lab (Section 024) 6:30 PM - 7:50 PM </td></tr>
+                          Lab (Ying, Section 022) 9:30 AM - 10:50 AM <br>
+                          Lab (Ying, Section 021) 11:00 AM - 12:20 AM <br> 
+                          Lab (Deepak, Section 023) 6:30 PM - 7:50 PM </td></tr>  
+  <tr><td>Tuesday</td><td> Lab (Deepak, Section 024) 6:30 PM - 7:50 PM </td></tr>
   <tr><td>Wednesday</td><td> Lecture (Section 001) 8:00 AM - 8:50 AM <br> 
-                          Lab (Section 022) 9:30 AM - 10:50 AM <br>
-                          Lab (Section 021) 11:00 AM - 12:20 AM <br> 
-                          Lab (Section 023) 6:30 PM - 7:50 PM </td></tr>
-  <tr><td>Thursday</td><td> Discussion (Section 032) 8:00 AM - 8:50 AM <br>
-                          Discussion (Section 031) 1:00 PM - 1:50 PM <br>
-                          Discussion (Section 033) 5:00 PM - 5:50 PM <br>
-                          Lab (Section 024) 6:30 PM - 7:50 PM </td></tr>
+                          Lab (Ying, Section 022) 9:30 AM - 10:50 AM <br>
+                          Lab (Ying, Section 021) 11:00 AM - 12:20 AM <br> 
+                          Lab (Deepak, Section 023) 6:30 PM - 7:50 PM </td></tr>
+  <tr><td>Thursday</td><td> Discussion (Ying, Section 032) 8:00 AM - 8:50 AM <br>
+                          Discussion (Jiacheng, Section 031) 1:00 PM - 1:50 PM <br>
+                          Discussion (Deepak, Section 033) 5:00 PM - 5:50 PM <br>
+                          Lab (Deepak, Section 024) 6:30 PM - 7:50 PM </td></tr>
   <tr><td>Friday</td><td> Lecture (Section 001) 8:00 AM - 8:50 AM  </td></tr>
   
 </tbody>
