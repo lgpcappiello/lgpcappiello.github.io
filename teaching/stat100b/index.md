@@ -10,7 +10,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>September 27</td><td> <em>No lab or discussion this week.</em><br>
   <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W0D1.pdf">Slides (Course Intro, Normal Distribution Refresher)</a> <br>
   <a href="https://docs.google.com/forms/d/e/1FAIpQLScMzIs-m096HgH9fHWhY4Sl3uDJG-jC3erU5Wv9r77jQGypzQ/viewform?usp=sf_link" target="blank">Student Survey</a> due October 1 at 11:59 pm. <br>
-  <a href="https://lgpcappiello.github.io/teaching/stat100b/hw1.html">Homework 1</a>
+  <a href="https://lgpcappiello.github.io/teaching/stat100b/hw1.html">Homework 1</a> due October 3.
      </td></tr>  
   
   <tr><td colspan="2" align="center"><strong>Week 1: Confidence Intervals and Hypothesis Testing </strong></td></tr>
@@ -18,7 +18,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/intro_to_r.html">Lab 1: Introduction to R and RStudio</a>
       <br>You must attend your first lab and discussion this week or <em>you will be dropped!</em> </td></tr>
   <tr><td>October 2</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W1D2.pdf">Slides (Hypothesis Tests for One-Sample Means)</a> </td></tr>
-  <tr><td>October 4</td><td> </td></tr>
+  <tr><td>October 4</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/hw2.html">Homework 2</a> due October 10. </td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 2: Difference of Two Means</strong></td></tr>
   <tr><td>October 7</td><td> </td></tr>
