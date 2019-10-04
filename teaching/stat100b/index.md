@@ -18,7 +18,8 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/intro_to_r.html">Lab 1: Introduction to R and RStudio</a>
       <br>You must attend your first lab and discussion this week or <em>you will be dropped!</em> </td></tr>
   <tr><td>October 2</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W1D2.pdf">Slides (Hypothesis Tests for One-Sample Means)</a> </td></tr>
-  <tr><td>October 4</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/hw2.html">Homework 2</a> due October 10. </td></tr>
+  <tr><td>October 4</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W1D3.pdf">Slides (Hypothesis Tests for Paired Samples)</a> <br> 
+  <a href="https://lgpcappiello.github.io/teaching/stat100b/hw2.html">Homework 2</a> due October 10. </td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 2: Difference of Two Means</strong></td></tr>
   <tr><td>October 7</td><td> </td></tr>
