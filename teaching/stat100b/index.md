@@ -22,7 +22,8 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <a href="https://lgpcappiello.github.io/teaching/stat100b/hw2.html">Homework 2</a> due October 10. </td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 2: Difference of Two Means</strong></td></tr>
-  <tr><td>October 7</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/confidence_intervals.html">Lab 2: Confidence Interals</a> </td></tr>
+  <tr><td>October 7</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W2D1.pdf">Slides (Hypothesis Tests for Two-Sample Means)</a> <br>
+  <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/confidence_intervals.html">Lab 2: Confidence Interals</a> </td></tr>
   <tr><td>October 9</td><td> </td></tr>
   <tr><td>October 11</td><td> </td></tr>
   
