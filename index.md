@@ -6,6 +6,10 @@ layout: default
 
 Applied Statistics Ph.D. candidate working under the supervision of Dr. Xinping Cui at the University of California, Riverside with support from Dr. Zhiwei Zhang at the National Cancer Institute. My research focuses on applying machine learning methods to evidence synthesis problems in causal inference. 
 
+## Github
+
+My public Github repositories may be found <a href="https://github.com/lgpcappiello?tab=repositories">here</a>.
+
 ## Contributed Blogs
 
 <a href="https://lgpcappiello.github.io/blog/lovestatistics.html">Learning to Love Statistics</a> is a lighthearted take on the importance of statistics in everyday life, written for the UCR Graduate Student Resource Center blog.
