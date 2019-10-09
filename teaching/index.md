@@ -6,7 +6,9 @@
 - [STAT 100A Introduction to Statistics (Summer 2019)](https://lgpcappiello.github.io/teaching/stat100a/)
 
 ### Online Course Development 
-I worked with a small group of faculty and graduate students to build a fully online version of our introductory statistics courses. This involved planning and filming short video lectures as well as revamping the existing introductory course structure to work in an online environment. These changes inspired the development of my own introductory statistics courses.
+- Helped build fully online versions of introductory statistics courses
+- Revamped existing course structure to suit an online learning environment
+- Planned and filmed video lectures using Learning Glass technology
 
 ### Graduate Teaching Assistant
 - STAT 147 Introduction to Statistical Computing (F17, Su19)
