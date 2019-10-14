@@ -25,7 +25,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>October 7</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W2D1.pdf">Slides (Hypothesis Tests for Two-Sample Means)</a> <br>
   <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/confidence_intervals.html">Lab 2: Confidence Intervals</a> </td></tr>
   <tr><td>October 9</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W2D2.pdf">Slides (Statistical Power for Difference of Means)</a> </td></tr>
-  <tr><td>October 11</td><td> </td> <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W2D3.pdf">Slides (Power and Sample Size Calculations)</a> <br> 
+  <tr><td>October 11</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W2D3.pdf">Slides (Power and Sample Size Calculations)</a> <br> 
   <a href="https://lgpcappiello.github.io/teaching/stat100b/hw3.html">Homework 3</a> due October 17. </td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 3: Analysis of Variance (ANOVA)</strong></td></tr>
