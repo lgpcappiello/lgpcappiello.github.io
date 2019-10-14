@@ -28,7 +28,8 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <a href="https://lgpcappiello.github.io/teaching/stat100b/hw3.html">Homework 3</a> due October 17. </td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 3: Analysis of Variance (ANOVA)</strong></td></tr>
-  <tr><td>October 14</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/lab_ttest.html">Lab 3: The T Test</a> </td></tr>
+  <tr><td>October 14</td><td> <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W3D1.pdf">Slides (Motivating the ANOVA)</a> <br>
+  <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/lab_ttest.html">Lab 3: The T Test</a> </td></tr>
   <tr><td>October 16</td><td></td></tr>
   <tr><td>October 18</td><td></td></tr>
   
