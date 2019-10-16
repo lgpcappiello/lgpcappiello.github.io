@@ -4,7 +4,7 @@ layout: default
 
 # About
 
-Applied Statistics Ph.D. candidate working under the supervision of Dr. Xinping Cui at the University of California, Riverside with support from Dr. Zhiwei Zhang at the National Cancer Institute. My research focuses on applying machine learning methods to evidence synthesis problems in causal inference. 
+Applied Statistics Ph.D. candidate working under the supervision of Dr. Xinping Cui at the University of California, Riverside with support from Dr. Zhiwei Zhang at the National Cancer Institute. My research focuses on applying semi-parametric / machine learning methods to evidence synthesis problems in causal inference. In plain language, this involves inferring treatment effects when placebo-controlled trials are not available in the current population. This can occur, for example, when there are ethical concerns related to witholding treatment. 
 
 ## Github
 
