@@ -35,7 +35,8 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <a href="https://lgpcappiello.github.io/teaching/stat100b/hw4.html">Homework 4</a> due October 24. </td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 4: Simple Experimental Designs</strong></td></tr>
-  <tr><td>October 21</td><td></td></tr>
+  <tr><td>October 21</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/labs/lab_anova.html">Lab 4: ANOVA</a>
+  <br> <a href="https://lgpcappiello.github.io/teaching/stat100b/extracredit.html">Extra Credit</a> </td></tr>
   <tr><td>October 23</td><td></td></tr>
   <tr><td>October 25</td><td></td></tr>
   
@@ -74,4 +75,3 @@ Note: This schedule may change throughout the term. Check back periodically for 
   
 </tbody>
 </table>
-
