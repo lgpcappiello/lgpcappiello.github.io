@@ -43,7 +43,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   
   <tr><td colspan="2" align="center"><strong>Week 5: Simple Linear Regression</strong></td></tr>
   <tr><td>October 28</td><td></td></tr>
-  <tr><td>October 30</td><td></td></tr>
+  <tr><td>October 30</td><td><em>No Lab B meeting this week.</em></td></tr>
   <tr><td>November 1</td><td>MIDTERM</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 6: Simple Linear Regression</strong></td></tr>
@@ -63,8 +63,8 @@ Note: This schedule may change throughout the term. Check back periodically for 
   
   <tr><td colspan="2" align="center"><strong>Week 9: Logistic Regression</strong></td></tr>
   <tr><td>November 25</td><td></td></tr>
-  <tr><td>November 27</td><td></td></tr>
-  <tr><td>November 29</td><td>CAMPUS CLOSED - Happy Thanksgiving! <br><em>No Lab B meeting or discussion this week.</em></td></tr>
+  <tr><td>November 27</td><td><em>No Lab B meeting or discussion this week.</em></td></tr>
+  <tr><td>November 29</td><td>CAMPUS CLOSED - Happy Thanksgiving!</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 10: Simulations</strong></td></tr>
   <tr><td>December 2</td><td></td></tr>
