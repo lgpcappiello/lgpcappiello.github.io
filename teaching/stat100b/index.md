@@ -38,7 +38,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>October 21</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W4D1.pdf">Slides (Intro and Randomized Block Design)</a> <br>
   <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/lab_anova.html">Lab 4: ANOVA</a>
   <br> <a href="https://lgpcappiello.github.io/teaching/stat100b/extracredit.html">Extra Credit</a> </td></tr>
-  <tr><td>October 23</td><td></td></tr>
+  <tr><td>October 23</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W4D2.pdf">Slides (Factorial Design)</a> </td></tr>
   <tr><td>October 25</td><td></td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 5: Simple Linear Regression</strong></td></tr>
