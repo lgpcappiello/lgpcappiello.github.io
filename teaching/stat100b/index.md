@@ -44,7 +44,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td colspan="2" align="center"><strong>Week 5: Simple Linear Regression</strong></td></tr>
   <tr><td>October 28</td><td></td></tr>
   <tr><td>October 30</td><td><em>No Lab B meeting this week.</em></td></tr>
-  <tr><td>November 1</td><td>MIDTERM</td></tr>
+  <tr><td>November 1</td><td>MIDTERM <br><a href="https://lgpcappiello.github.io/teaching/stat100b/midtermformulas.pdf">Provided Formulas and Tables</a></td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 6: Simple Linear Regression</strong></td></tr>
   <tr><td>November 4</td><td></td></tr>
