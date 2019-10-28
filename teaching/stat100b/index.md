@@ -43,7 +43,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <a href="https://lgpcappiello.github.io/teaching/stat100b/hw5.html">Homework 5</a> due October 31.</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 5: Simple Linear Regression</strong></td></tr>
-  <tr><td>October 28</td><td></td></tr>
+  <tr><td>October 28</td><a href="https://lgpcappiello.github.io/teaching/stat100b/labs/week5activity.html">Lab Activity</a><td></td></tr>
   <tr><td>October 30</td><td><em>No Lab B meeting this week.</em></td></tr>
   <tr><td>November 1</td><td>MIDTERM <br><a href="https://lgpcappiello.github.io/teaching/stat100b/midtermformulas.pdf">Provided Formulas and Tables</a></td></tr>
   
