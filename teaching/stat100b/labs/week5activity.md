@@ -1,4 +1,5 @@
 ## Week 5 Lab Activity: Experimental Design
+### Note: this activity is due by the end of your Lab A (Monday or Tuesday) this week!
 
 Suppose I want to know how well a new chickenpox vaccine works. I plan to take a random sample of 10 people and give half the vaccine. In eight weeks, I will check to see how many people in each group contracted chickenpox. In order to see whether the vaccine works, I will test whether more people in the vaccine group or in the control group got the chickenpox. 
 
