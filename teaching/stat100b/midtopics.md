@@ -1,6 +1,7 @@
 ## Midterm Topics
 ### The midterm may not cover everything, but every one of these topics is fair game.
 
+- Type I and II errors, power
 - Hypothesis tests for paired samples
 - Hypothesis tests for two-sample means
 - Sample size calculations for two-sample means
