@@ -45,7 +45,8 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td colspan="2" align="center"><strong>Week 5: Simple Linear Regression</strong></td></tr>
   <tr><td>October 28</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W5D1.pdf">Slides (Introducing Regression Concepts)</a><br>
   <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/week5activity.html">Lab Activity</a></td></tr>
-  <tr><td>October 30</td><td><em>No Lab B meeting this week.</em></td></tr>
+  <tr><td>October 30</td><td><em>No Lab B meeting this week.</em><br>
+  <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W5D2.pdf">Slides (Least Squares Regression)</a></td></tr>
   <tr><td>November 1</td><td>MIDTERM (<a href="https://lgpcappiello.github.io/teaching/stat100b/midtopics.html">Topics</a>)<br><a href="https://lgpcappiello.github.io/teaching/stat100b/midtermformulas.pdf">Provided Formulas and Tables</a></td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 6: Simple Linear Regression</strong></td></tr>
