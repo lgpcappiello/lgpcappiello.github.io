@@ -50,7 +50,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>November 1</td><td>MIDTERM (<a href="https://lgpcappiello.github.io/teaching/stat100b/midtopics.html">Topics</a>)<br><a href="https://lgpcappiello.github.io/teaching/stat100b/midtermformulas.pdf">Provided Formulas and Tables</a></td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 6: Simple Linear Regression</strong></td></tr>
-  <tr><td>November 4</td><td></td></tr>
+  <tr><td>November 4</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/labs/data_visualization.html">Lab 5: Data Visualization in R</a></td></tr>
   <tr><td>November 6</td><td></td></tr>
   <tr><td>November 8</td><td></td></tr>
   
