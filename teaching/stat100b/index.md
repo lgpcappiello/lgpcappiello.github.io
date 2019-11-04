@@ -48,7 +48,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>October 30</td><td><em>No Lab B meeting this week.</em><br>
   <a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W5D2.pdf">Slides (Least Squares Regression)</a></td></tr>
   <tr><td>November 1</td><td>MIDTERM (<a href="https://lgpcappiello.github.io/teaching/stat100b/midtopics.html">Topics</a>)<br><a href="https://lgpcappiello.github.io/teaching/stat100b/midtermformulas.pdf">Provided Formulas and Tables</a><br>
-   <a href="https://lgpcappiello.github.io/teaching/stat100b/hw5.html">Homework 6</a> November 7.</td></tr>
+   <a href="https://lgpcappiello.github.io/teaching/stat100b/hw6.html">Homework 6</a> November 7.</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 6: Simple Linear Regression</strong></td></tr>
   <tr><td>November 4</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/labs/data_visualization.html">Lab 5: Data Visualization in R</a></td></tr>
