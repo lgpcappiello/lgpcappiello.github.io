@@ -53,7 +53,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td colspan="2" align="center"><strong>Week 6: Simple Linear Regression</strong></td></tr>
   <tr><td>November 4</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W6D1.pdf">Slides (Categorical Predictors and Regression Diagnostics)</a><br>
 <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/data_visualization.html">Lab 5: Data Visualization in R</a></td></tr>
-  <tr><td>November 6</td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W6D2.pdf">Slides (Inference for Linear Regression)</a><td></td></tr>
+  <tr><td>November 6</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W6D2.pdf">Slides (Inference for Linear Regression)</a></td></tr>
   <tr><td>November 8</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/hw7.html">Homework 7</a> due November 14.</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 7: Multiple Linear Regression</strong></td></tr>
