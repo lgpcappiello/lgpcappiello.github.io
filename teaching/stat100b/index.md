@@ -58,12 +58,12 @@ Note: This schedule may change throughout the term. Check back periodically for 
   
   <tr><td colspan="2" align="center"><strong>Week 7: Multiple Linear Regression</strong></td></tr>
   <tr><td>November 11</td><td>CAMPUS CLOSED - Veterans Day <br> <em>No Lab A meeting this week.</em></td></tr>
-  <tr><td>November 13</td><td></td></tr>
+  <tr><td>November 13</td><td>Lab 6: Simple Linear Regression (due by the end of your Week 8 Lab A)</td></tr>
   <tr><td>November 15</td><td></td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 8: Multiple Linear Regression</strong></td></tr>
   <tr><td>November 18</td><td></td></tr>
-  <tr><td>November 20</td><td></td></tr>
+  <tr><td>November 20</td><td>Lab 7: Multiple Linear Regression (due by the end of your Week 9 Lab A)</td></tr>
   <tr><td>November 22</td><td></td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 9: Logistic Regression</strong></td></tr>
@@ -72,7 +72,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>November 29</td><td>CAMPUS CLOSED - Happy Thanksgiving!</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 10: Simulations</strong></td></tr>
-  <tr><td>December 2</td><td></td></tr>
+  <tr><td>December 2</td><td>Lab 8: Simulations</td></tr>
   <tr><td>December 4</td><td></td></tr>
   <tr><td>December 6</td><td></td></tr>
   
