@@ -59,7 +59,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   
   <tr><td colspan="2" align="center"><strong>Week 7: Multiple Linear Regression</strong></td></tr>
   <tr><td>November 11</td><td>CAMPUS CLOSED - Veterans Day <br> <em>No Lab A meeting this week.</em></td></tr>
-  <tr><td>November 13</td><td>Lab 6: Simple Linear Regression (due by the end of your Week 8 Lab A)</td></tr>
+  <tr><td>November 13</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/labs/simple_regression.html">Lab 6: Simple Linear Regression</a> (due by the end of your Week 8 Lab A)</td></tr>
   <tr><td>November 15</td><td></td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 8: Multiple Linear Regression</strong></td></tr>
