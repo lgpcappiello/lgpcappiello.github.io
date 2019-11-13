@@ -65,7 +65,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td colspan="2" align="center"><strong>Week 8: Multiple Linear Regression</strong></td></tr>
   <tr><td>November 18</td><td></td></tr>
   <tr><td>November 20</td><td>Lab 7: Multiple Linear Regression (due by the end of your Week 9 Lab A)</td></tr>
-  <tr><td>November 22</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/hw8.html">Homework 9</a> due December 5.</td></tr>
+  <tr><td>November 22</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/hw9.html">Homework 9</a> due December 5.</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 9: Logistic Regression</strong></td></tr>
   <tr><td>November 25</td><td></td></tr>
