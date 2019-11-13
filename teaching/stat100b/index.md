@@ -53,7 +53,8 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td colspan="2" align="center"><strong>Week 6: Simple Linear Regression</strong></td></tr>
   <tr><td>November 4</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W6D1.pdf">Slides (Categorical Predictors and Regression Diagnostics)</a><br>
 <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/data_visualization.html">Lab 5: Data Visualization in R</a></td></tr>
-  <tr><td>November 6</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W6D2.pdf">Slides (Inference for Linear Regression)</a></td></tr>
+  <tr><td>November 6</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W6D2.pdf">Slides (Inference for Linear Regression)</a>
+  <br><a href="https://lgpcappiello.github.io/teaching/stat100b/stat_extra_linear_regression_supp.pdf">Textbook supplement: Confidence Intervals</a></td></tr>
   <tr><td>November 8</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W6D3.pdf">Slides (Introduction to Multiple Linear Regression)</a><br>
   <a href="https://lgpcappiello.github.io/teaching/stat100b/hw7.html">Homework 7</a> due November 14.</td></tr>
   
@@ -63,7 +64,8 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>November 15</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/hw8.html">Homework 8</a> due November 21.</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 8: Multiple Linear Regression</strong></td></tr>
-  <tr><td>November 18</td><td></td></tr>
+  <tr><td>November 18</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/stat_extra_interaction_effects.pdf">Textbook supplement: Interaction Effects</a>
+  <br><a href="https://lgpcappiello.github.io/teaching/stat100b/stat_extra_nonlinear_relationships.pdf">Textbook supplement: Nonlinear Relationships</a></td></tr>
   <tr><td>November 20</td><td>Lab 7: Multiple Linear Regression (due by the end of your Week 9 Lab A)</td></tr>
   <tr><td>November 22</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/hw9.html">Homework 9</a> due December 5.</td></tr>
   
