@@ -64,9 +64,8 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>November 15</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W7D2.pdf">Slides (Model Selection and Assumptions)</a><br><a href="https://lgpcappiello.github.io/teaching/stat100b/hw8.html">Homework 8</a> due November 21.</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 8: Multiple Linear Regression</strong></td></tr>
-  <tr><td>November 18</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/stat_extra_interaction_effects.pdf">Textbook supplement: Interaction Effects</a>
-  <br><a href="https://lgpcappiello.github.io/teaching/stat100b/stat_extra_nonlinear_relationships.pdf">Textbook supplement: Nonlinear Relationships</a></td></tr>
-  <tr><td>November 20</td><td>Lab 7: Multiple Linear Regression (due by the end of your Week 9 Lab A)</td></tr>
+  <tr><td>November 18</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/stat_extra_interaction_effects.pdf">Textbook supplement: Interaction Effects</a></td></tr>
+  <tr><td>November 20</td><td>Lab 7: Multiple Linear Regression (due by the end of your Week 9 Lab A)<br><a href="https://lgpcappiello.github.io/teaching/stat100b/stat_extra_nonlinear_relationships.pdf">Textbook supplement: Nonlinear Relationships</a></td></tr>
   <tr><td>November 22</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/hw9.html">Homework 9</a> due December 5.</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 9: Logistic Regression</strong></td></tr>
