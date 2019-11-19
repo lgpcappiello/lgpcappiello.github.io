@@ -14,6 +14,6 @@ I am also the primary instructor for Introduction to Statistics II, for which I 
 
 My public Github repositories may be found <a href="https://github.com/lgpcappiello?tab=repositories">here</a>.
 
-## Contributed Blogs
+## Online Publications
 
 <a href="https://lgpcappiello.github.io/blog/lovestatistics.html">Learning to Love Statistics</a> is a lighthearted take on the importance of statistics in everyday life, written for the UCR Graduate Student Resource Center blog.
