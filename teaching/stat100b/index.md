@@ -68,7 +68,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <br><a href="https://lgpcappiello.github.io/teaching/stat100b/stat_extra_nonlinear_relationships.pdf">Textbook supplement: Nonlinear Relationships</a></td></tr>
   <tr><td>November 20</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W8D2.pdf">Slides (Nonlinear Trends and Case Study)</a><br><a href="https://lgpcappiello.github.io/teaching/stat100b/labs/multiple_regression.html">Lab 7: Multiple Linear Regression</a> (due by the end of your Week 9 Lab A)
   <br><a href="https://lgpcappiello.github.io/teaching/stat100b/mtcars_casestudy.R">R code for in-lecture case study</a></td></tr>
-  <tr><td>November 22</td><td>The original article from Section 9.5 and today's lecture: <a href="https://www.nber.org/papers/w9873.pdf"><em>Are Emily and Greg More Employable than Lakisha and Jamal?</em></a><br><a href="https://lgpcappiello.github.io/teaching/stat100b/hw9.html">Homework 9</a> due December 5.</td></tr>
+  <tr><td>November 22</td><td><a href="https://www.nber.org/papers/w9873.pdf"><em>Journal article on the data from Section 9.5</em></a><br><a href="https://lgpcappiello.github.io/teaching/stat100b/hw9.html">Homework 9</a> due December 5.</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 9: Logistic Regression</strong></td></tr>
   <tr><td>November 25</td><td></td></tr>
