@@ -71,7 +71,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>November 22</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W8D3.pdf">Slides (Introduction to Logistic Regression)</a><br><a href="https://www.nber.org/papers/w9873.pdf" target="blank">Journal article on the data from Section 9.5</a><br><a href="https://lgpcappiello.github.io/teaching/stat100b/hw9.html">Homework 9</a> due December 5.</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 9: Logistic Regression</strong></td></tr>
-  <tr><td>November 25</td><td></td></tr>
+  <tr><td>November 25</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W9D1.pdf">Slides (Logistic Regression)</a></td></tr>
   <tr><td>November 27</td><td>NO CLASS<br><em>No Lab B meeting or discussion this week.</em></td></tr>
   <tr><td>November 29</td><td>CAMPUS CLOSED - Happy Thanksgiving!</td></tr>
   
