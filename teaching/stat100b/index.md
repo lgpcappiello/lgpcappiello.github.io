@@ -76,7 +76,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td>November 29</td><td>CAMPUS CLOSED - Enjoy your long weekend!</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 10: Introduction to Nonparametric Tests and Simulations</strong></td></tr>
-  <tr><td>December 2</td><td>Lab 8: Simulations</td></tr>
+  <tr><td>December 2</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/extracredit2.html">Extra Credit</a><br>Lab 8: Simulations</td></tr>
   <tr><td>December 4</td><td></td></tr>
   <tr><td>December 6</td><td></td></tr>
   
