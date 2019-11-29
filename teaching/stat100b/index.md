@@ -73,7 +73,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td colspan="2" align="center"><strong>Week 9: Logistic Regression</strong></td></tr>
   <tr><td>November 25</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W9D1.pdf">Slides (Logistic Regression)</a></td></tr>
   <tr><td>November 27</td><td>Class Canceled<br><em>No Lab B meeting or discussion this week.</em></td></tr>
-  <tr><td>November 29</td><td>CAMPUS CLOSED - Happy Thanksgiving!</td></tr>
+  <tr><td>November 29</td><td>CAMPUS CLOSED - Enjoy your long weekend!</td></tr>
   
   <tr><td colspan="2" align="center"><strong>Week 10: Introduction to Nonparametric Tests and Simulations</strong></td></tr>
   <tr><td>December 2</td><td>Lab 8: Simulations</td></tr>
