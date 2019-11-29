@@ -13,5 +13,5 @@ MC_geom<-function(n,x,p){
   }
   mean.frogs <- mean(k)
   sd.frogs <- sd(k)
-  return(list(mean.frogs, sd.frogs))
+  return(list(mean = mean.frogs, sd = sd.frogs))
 }
