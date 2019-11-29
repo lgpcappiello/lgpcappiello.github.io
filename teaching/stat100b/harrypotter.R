@@ -11,8 +11,5 @@ MC_geom<-function(n,x,p){
     }
     k[i]<-j
   }
-  m<-mean(k)
-  se<-sd(k)/sqrt(n)
-  ci<-m+c(-1,1)*1.96*se
-  return(list(mean=m,se=se,ci_95=ci))
+  mean(k)
 }
