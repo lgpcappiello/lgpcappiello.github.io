@@ -83,7 +83,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   
   <tr><td colspan="2" align="center"><strong>FINALS</strong></td></tr>
   <tr><td>December 11</td><td>The final exam is scheduled for Wednesday, December 11, 3:00 pm - 6:00 pm
-  <br><a href="https://lgpcappiello.github.io/teaching/stat100b/practiceProblems.pdf">Final Exam Practice Problems"</a></td></tr>
+  <br><a href="https://lgpcappiello.github.io/teaching/stat100b/practiceProblems.pdf">Final Exam Practice Problems</a></td></tr>
   
 </tbody>
 </table>
