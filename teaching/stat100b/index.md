@@ -78,7 +78,7 @@ Note: This schedule may change throughout the term. Check back periodically for 
   <tr><td colspan="2" align="center"><strong>Week 10: Introduction to Nonparametric Tests and Simulations</strong></td></tr>
   <tr><td>December 2</td><td><a href="https://lgpcappiello.github.io/teaching/stat100b/slides/W10D1.pdf">Slides (The Sign Test)</a><br><a href="https://lgpcappiello.github.io/teaching/stat100b/extracredit2.html">Extra Credit</a><br>
 <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/simulations.html">Lab 8: Simulations</a></td></tr>
-  <tr><td>December 4</td><td></td></tr>
+  <tr><td>December 4</td><td>Class Canceled<br>Discussion: Exam Review (come with questions!)</td></tr>
   <tr><td>December 6</td><td></td></tr>
   
   <tr><td colspan="2" align="center"><strong>FINALS</strong></td></tr>
