@@ -1,6 +1,8 @@
 ---
 layout: single
 title: "R Labs"
+sidebar:
+  nav: "teaching"
 ---
 
 ## Logging In
