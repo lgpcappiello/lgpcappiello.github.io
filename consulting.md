@@ -1,8 +1,8 @@
 ---
 permalink: /consulting/
 layout: single
-toc: false
 ---
+
 # Consulting
 
 ## Lead Consultant
