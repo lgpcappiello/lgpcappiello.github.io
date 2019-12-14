@@ -2,6 +2,7 @@
 permalink: /consulting/
 title: "Consulting"
 layout: single
+author_profile: true
 ---
 
 ## Lead Consultant
