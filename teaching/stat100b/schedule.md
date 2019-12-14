@@ -1,3 +1,8 @@
+---
+title: "Schedule"
+layout: single
+---
+
 ## Office Hours and Weekly Schedule
 ### Office Hours
 <table>
