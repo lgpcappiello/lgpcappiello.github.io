@@ -1,4 +1,6 @@
+---
 permalink: /consulting/
+---
 
 # Consulting
 
