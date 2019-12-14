@@ -29,4 +29,4 @@ My public Github repositories may be found <a href="https://github.com/lgpcappie
 
 ## Online Publications
 
-<a href="https://lgpcappiello.github.io/blog/lovestatistics.html">Learning to Love Statistics</a> is a lighthearted take on the importance of statistics in everyday life, written for the UCR Graduate Student Resource Center blog.
+<a href="https://lgpcappiello.github.io/blog/lovestatistics">Learning to Love Statistics</a> is a lighthearted take on the importance of statistics in everyday life, written for the UCR Graduate Student Resource Center blog.
