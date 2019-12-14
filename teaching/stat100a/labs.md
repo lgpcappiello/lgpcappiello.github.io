@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 # R Labs for STAT 100A
 
 ## Logging In
