@@ -16,6 +16,7 @@ main:
   #   url: /sitemap/
   
 teaching:
+  - author_profile: true
   - title: "Course Links"
     children:
       - title: "STAT 100A (UCR)"
