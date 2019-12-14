@@ -1,4 +1,5 @@
 ---
+permalink: /teaching/stat100b/schedule.md
 layout: single
 ---
 
