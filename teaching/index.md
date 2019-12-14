@@ -2,6 +2,7 @@
 permalink: /teaching/
 title: "Teaching"
 layout: single
+author_profile: true
 ---
 
 ## Department of Statistics at UC Riverside
