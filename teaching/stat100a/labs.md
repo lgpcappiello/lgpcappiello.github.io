@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "R Labs"
+author_profile: true
 sidebar:
   nav: "teaching"
 ---
