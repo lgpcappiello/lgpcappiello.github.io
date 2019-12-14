@@ -1,8 +1,7 @@
 ---
 layout: single
+title: "R Labs"
 ---
-
-# R Labs for STAT 100A
 
 ## Logging In
 
