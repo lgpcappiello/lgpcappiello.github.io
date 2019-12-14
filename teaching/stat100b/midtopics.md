@@ -1,5 +1,4 @@
 ---
-title: "Midterm Topics"
 layout: single
 ---
 
