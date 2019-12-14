@@ -2,6 +2,7 @@
 permalink: /education/
 title: "Education"
 layout: single
+author_profile: true
 ---
 
 ## Ph.D., Applied Statistics
