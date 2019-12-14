@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 This page contains links to some of the R Code used to produce some of the graphs, simulations, and other results found in the slides.
 
  - <a href="https://lgpcappiello.github.io/teaching/stat100a/Rcode/wordcloud.R">Word Cloud</a>
