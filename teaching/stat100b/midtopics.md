@@ -1,3 +1,8 @@
+---
+title: "Midterm Topics"
+layout: single
+---
+
 ## Midterm Topics
 ### The midterm may not cover everything, but every one of these topics is fair game.
 
