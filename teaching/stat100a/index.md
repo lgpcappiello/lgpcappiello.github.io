@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "STAT 100A: Introduction to Statistics"
+author_profile: true
 sidebar:
   nav: "teaching"
 ---
