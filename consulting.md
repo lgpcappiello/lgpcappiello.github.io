@@ -1,9 +1,8 @@
 ---
 permalink: /consulting/
+title: "Consulting"
 layout: single
 ---
-
-# Consulting
 
 ## Lead Consultant
 ## Graduate Quantitative Methods Center at UC Riverside 
