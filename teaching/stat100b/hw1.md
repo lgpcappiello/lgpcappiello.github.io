@@ -1,5 +1,7 @@
 ---
 layout: single
+sidebar:
+  nav: "teaching"
 ---
 
 ## Homework 1: Due October 3
