@@ -1,7 +1,7 @@
---
+---
 layout: single
 title: "Learning to Love Statistics"
---
+---
 
 *This post was originally written for UCR GradQuant and the UCR Graduate Student Resource Center blog.*
 
