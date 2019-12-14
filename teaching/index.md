@@ -1,9 +1,8 @@
 ---
 permalink: /teaching/
 title: "Teaching"
+layout: single
 ---
-
-# Teaching
 
 ## Department of Statistics at UC Riverside
 ### Instructor
