@@ -1,5 +1,7 @@
 ---
 layout: single
+sidebar:
+  nav: "teaching"
 ---
 
 ## Homework 9: Due December 5
