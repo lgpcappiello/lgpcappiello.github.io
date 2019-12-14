@@ -1,6 +1,4 @@
 ---
-permalink: /teaching/stat100b/schedule.html
-title: "schedule"
 layout: single
 ---
 
