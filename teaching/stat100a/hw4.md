@@ -1,6 +1,7 @@
 ---
 layout: single
 title: "Homework 4"
+author_profile: true
 sidebar:
   nav: "teaching"
 ---
