@@ -1,20 +1,7 @@
 ---
 permalink: /
 title: "About"
-excerpt: "Minimal Mistakes is a flexible two-column Jekyll theme."
 author_profile: true
-layouts_gallery:
-  - url: /assets/images/mm-layout-splash.png
-    image_path: /assets/images/mm-layout-splash.png
-    alt: "splash layout example"
-  - url: /assets/images/mm-layout-single-meta.png
-    image_path: /assets/images/mm-layout-single-meta.png
-    alt: "single layout with comments and related posts"
-  - url: /assets/images/mm-layout-archive.png
-    image_path: /assets/images/mm-layout-archive.png
-    alt: "archive layout example"
-last_modified_at: 2019-08-27T15:46:43-04:00
-toc: true
 ---
 
 Applied Statistics Ph.D. candidate with strong written and oral communication skills. My research focuses on applying semi-parametric / machine learning methods to evidence synthesis problems in causal inference. In plain language, this involves inferring treatment effects when placebo-controlled trials are not available in the current population. This can occur, for example, when there are ethical concerns related to withholding treatment.
