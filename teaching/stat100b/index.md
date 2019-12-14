@@ -1,6 +1,8 @@
 ---
 layout: single
 title: "STAT 100B: Introduction to Statistics"
+sidebar:
+  nav: "teaching"
 ---
 
 ### <a href="https://lgpcappiello.github.io/teaching/stat100b/syllabus.pdf" target="blank">Course Syllabus</a> | <a href="https://lgpcappiello.github.io/teaching/stat100b/schedule" target="blank">Weekly Schedule</a> | <a href="https://www.openintro.org/stat/textbook.php?stat_book=os" target="blank">Open Source Textbook</a> | <a href="https://lgpcappiello.github.io/teaching/stat100b/labs/labs" target="blank">Labs</a>
