@@ -14,3 +14,11 @@ main:
     url: /consulting/
   # - title: "Sitemap"
   #   url: /sitemap/
+  
+teaching:
+  - title: "Course Links"
+    children:
+      - title: "STAT 100A (UCR)"
+        url: /teaching/stat100a/
+      - title: "STAT 100B (UCR)"
+        url: /teaching/stat100b/
