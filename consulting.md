@@ -1,8 +1,7 @@
 ---
 permalink: /consulting/
-title: "Consulting"
 layout: single
-toc: true
+toc: false
 ---
 # Consulting
 
