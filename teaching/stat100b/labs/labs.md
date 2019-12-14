@@ -1,5 +1,8 @@
 ---
 layout: single
+author_profile: true
+sidebar:
+  nav: "teaching"
 ---
 
 # R Labs for STAT 100B
