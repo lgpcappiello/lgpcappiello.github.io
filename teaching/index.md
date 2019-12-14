@@ -1,3 +1,5 @@
+--- layout: home author_profile: true ---
+
 # Teaching
 
 ## Department of Statistics at UC Riverside
