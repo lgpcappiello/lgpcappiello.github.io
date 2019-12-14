@@ -1,6 +1,4 @@
 ---
-permalink: /teaching/stat100b/
-title: "STAT 100B"
 layout: single
 ---
 
