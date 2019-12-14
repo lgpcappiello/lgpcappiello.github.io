@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 ## Homework 1: Due October 3
 
 Homeworks should be done on paper with a physical copy turned in to your TA at the start of discussion. Grading will be based on completeness as well as accuracy. In order to receive credit, you must show all your work. For any textbook question using p-values, you may use either the p-value approach or the test statistic approach. 
