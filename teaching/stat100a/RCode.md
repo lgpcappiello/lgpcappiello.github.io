@@ -1,5 +1,7 @@
 ---
 layout: single
+sidebar:
+  nav: "teaching"
 ---
 
 This page contains links to some of the R Code used to produce some of the graphs, simulations, and other results found in the slides.
