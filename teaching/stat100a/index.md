@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 # STAT 100A: Introduction to Statistics
 ### <a href="https://lgpcappiello.github.io/teaching/stat100a/syllabus.pdf" target="blank">Course Syllabus</a> | <a href="https://www.openintro.org/stat/textbook.php?stat_book=os" target="blank">Open Source Textbook</a> | <a href="https://lgpcappiello.github.io/teaching/stat100a/labs.html" target="blank">Labs</a> 
 
