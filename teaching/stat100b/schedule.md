@@ -1,5 +1,5 @@
 ---
-permalink: /teaching/stat100b/schedule.md
+permalink: /teaching/stat100b/schedule.html
 layout: single
 ---
 
