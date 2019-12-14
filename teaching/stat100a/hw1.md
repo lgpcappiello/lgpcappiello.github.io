@@ -1,3 +1,9 @@
+---
+layout: single
+---
+
+## Homework 1
+
 Recall: Homeworks are not to be turned in, but your quiz questions will come directly from your homework assignment. If you make sure you have a thorough understanding of how to answer each question, you will do well on your quiz! :)
 
 Section 1.2 (pg. 19) #1.3, 1.7, 1.10
