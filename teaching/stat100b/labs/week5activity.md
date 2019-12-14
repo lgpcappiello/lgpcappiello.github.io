@@ -1,3 +1,7 @@
+---
+layout: single
+---
+
 ## Week 5 Lab Activity: Experimental Design
 ### Note: this activity is due by the end of your Lab A (Monday or Tuesday) this week!
 
