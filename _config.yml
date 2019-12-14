@@ -108,29 +108,17 @@ analytics:
 # Site Author
 author:
   name             : "Lauren Cappiello"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : # "I am an **amazing** person."
+  avatar           : "https://avatars2.githubusercontent.com/u/46605262?s=460&v=4"
+  bio              : "Applied Statistics PhD candidate at the University of California, Riverside."
   location         : "Riverside, CA"
   email            : lauren.cappiello@email.ucr.edu
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: mailto:lauren.cappiello@email.ucr.edu
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/lgpcappiello/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
 
 # Site Footer
 footer:
@@ -282,7 +270,7 @@ compress_html:
 
 # Defaults
 defaults:
-  # _posts
+  _posts
   - scope:
       path: ""
       type: posts
