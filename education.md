@@ -7,7 +7,7 @@ author_profile: true
 
 ## Ph.D., Applied Statistics
 #### University of Calfornia, Riverside | June 2020 (expected)
-Dissertation title: *Applied Machine Learning Methods in Evidence Synthesis*
+Dissertation title: *Applied Machine Learning Methods in Adjusting for Population Differences*
 
 ## M.S., Statistics 
 #### University of Calfornia, Riverside | June 2018
