@@ -1,6 +1,9 @@
 ---
-layout: single
 title: "Learning to Love Statistics"
+tags:
+  - education
+  - statistics
+  - just for fun
 ---
 
 *This post was originally written for UCR GradQuant and the UCR Graduate Student Resource Center blog.*
