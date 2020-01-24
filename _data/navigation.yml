@@ -12,6 +12,8 @@ main:
     url: /research/
   - title: "Consulting"
     url: /consulting/
+  - title: "Blog"
+    url: /blog/year-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
   
