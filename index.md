@@ -10,10 +10,5 @@ Always on the lookout for new ways to learn and get involved, I am the president
 
 I have also served as the primary instructor for Introduction to Statistics I and II, for which I developed materials including lectures and labs, managed several TAs, and piloted the use of R programming in the department's introductory statistics courses. Much of my course materials may be found under "Teaching", with original LaTex and markdown files on my Github. 
 
-## Github
-
-My public Github repositories may be found <a href="https://github.com/lgpcappiello?tab=repositories">here</a>.
-
-## Online Publications
-
-<a href="https://lgpcappiello.github.io/blog/lovestatistics">Learning to Love Statistics</a> is a lighthearted take on the importance of statistics in everyday life, written for the UCR Graduate Student Resource Center blog.
+### Curriculum Vitae
+My CV may be found <a href="https://lgpcappiello.github.io/CappielloCV.pdf">here</a> (last update: 2/2/2020).
