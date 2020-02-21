@@ -9,8 +9,10 @@ author_profile: true
 - Causal Inference
 - Machine Learning
 - Nonparametric Statistics
-- Biostatistics
 - Applied Statistics and Data Analysis
 
 ## Publications and Conferences
-- Cappiello, L. and Flegal, J. (2016) ”A Novel Estimation Technique for a Five-Parameter Bivariate Beta Distribution”.  Poster presented at the International Biometric Society Eastern North American Region Spring 2016 Meeting in Austin, Texas.
+
+- L Cappiello, X Cui, and Z Zhang (2020) "Applied Machine Learning Methods in Adjusting for Population Differences". Invited student research talk at the Orange County Biostatistics Symposium in Irvine, California.
+
+- L Cappiello and J Flegal (2016) ”A Novel Estimation Technique for a Five-Parameter Bivariate Beta Distribution”.  Poster presented at the International Biometric Society Eastern North American Region Spring Meeting in Austin, Texas.
