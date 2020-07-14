@@ -1,12 +1,12 @@
 ---
 permalink: /
-title: "About"
+title: "Welcome!"
 author_profile: true
 ---
 
-Incoming Assistant Professor in the Mathematics and Statistics Department at CSU, Sacramento. Current Applied Statistics Ph.D. candidate at the University of California, Riverside. My dissertation research focuses on applying semi-parametric / machine learning methods to adjusting for population differences. One such problem involves inferring treatment effects when placebo-controlled trials are not available in the current population. This can occur, for example, when there are ethical concerns related to withholding treatment.
+I am an incoming Assistant Professor in the Mathematics and Statistics Department at CSU, Sacramento. My background is in statistics, and I recieved my PhD in Applied Statistics from the University of California, Riverside. 
 
-Course materials may be found under "Teaching", with original LaTeX and markdown files on my Github. 
+My goal for this site is to share teaching materials and information on my research. Course materials may be found under "Teaching", with original LaTeX and markdown files on my Github. I am always open to collaboration and mentoring student research and am happy to work on projects outside of the current scope of my research. I also do consulting work as time permits. Please feel free to reach out to me with any questions. 
 
 ### Curriculum Vitae
 My CV may be found <a href="https://lgpcappiello.github.io/CappielloCV.pdf">here</a> (last update: 25-March-2020).
