@@ -22,7 +22,7 @@ teaching:
     children:
       - title: "MATH 26A"
         url: /teaching/math26a/
-      -title: "STAT 1"
+      - title: "STAT 1"
         url: /teaching/stat1/
       - title: "STAT 100A (UCR)"
         url: /teaching/stat100a/
