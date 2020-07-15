@@ -50,8 +50,8 @@ Note: This is a tentative schedule. Some sections may take more or less time tha
       <tr><td></td><td><em>Exam III</em> (take-home) covering Chapters 7-9</td></tr> 
     <tr><td><strong>Week 15</strong></td><td><strong>Inferences for Two Population Means</strong></td></tr>
       <tr><td>12/7-12/11</td><td>Sections 10.1-10.2</td></tr>
-      <tr><td>12/7-12/11</td><td><em>Project Due</em></td></tr>
     <tr><td><strong>Finals Week</strong></td><td><strong></strong></td></tr>
       <tr><td>12/14-12/18</td><td><em>Cumulative Final Exam</em> (take-home), timeframe TBA</td></tr>
+      <tr><td></td><td><em>Project Due</em> (date TBA, but toward the end of your finals week)</td></tr>
 </tbody>
 </table>
