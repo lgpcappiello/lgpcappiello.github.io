@@ -36,7 +36,8 @@ Note: This is a tentative schedule. Some sections may take more or less time tha
       <tr><td></td><td><em>Exam II</em> (take-home) covering Chapters 4-6</td></tr> 
       <tr><td></td><td>Happy Halloween!</td></tr> 
     <tr><td><strong>Week 10</strong></td><td><strong>The Sampling Distribution of the Sample Mean</strong></td></tr>
-      <tr><td>11/2-11/6</td><td>Sections 7.1-7.3</td></tr>  
+      <tr><td>11/2-11/6</td><td>Sections 7.1-7.3</td></tr>
+      <tr><td></td><td><em>Project Proposal Due</em></td></tr>
     <tr><td><strong>Week 11</strong></td><td><strong>Confidence Intervals for One Population Mean</strong></td></tr>
       <tr><td>11/9-11/13</td><td>Sections 8.1-8.2</td></tr>  
       <tr><td></td><td>Campus closed Nov 11 for Veteran's Day</td></tr> 
