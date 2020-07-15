@@ -22,7 +22,7 @@ Note: This is a tentative schedule. Some sections may take more or less time tha
       <tr><td>9/14-9/18</td><td>Sections 3.1-3.3</td></tr>
     <tr><td><strong>Week 4</strong></td><td><strong>Descriptive Measures</strong></td></tr>
       <tr><td>9/21-9/25</td><td>Sections 3.4-4.1</td></tr>
-      <tr><td></td><td><em>Exam I</em> covering Chapters 1-3</td></tr>
+      <tr><td></td><td><em>Exam I</em> (take-home) covering Chapters 1-3</td></tr>
     <tr><td><strong>Week 5</strong></td><td><strong>Probability Concepts</strong></td></tr>
       <tr><td>9/28-10/2</td><td>Sections 4.2-4.4</td></tr>
     <tr><td><strong>Week 6</strong></td><td><strong>Probability Concepts</strong></td></tr>
@@ -33,7 +33,7 @@ Note: This is a tentative schedule. Some sections may take more or less time tha
       <tr><td>10/19-10/23</td><td>Sections 5.3, 6.1-6.2</td></tr>  
     <tr><td><strong>Week 9</strong></td><td><strong>The Normal Distribution</strong></td></tr>
       <tr><td>10/26-10/30</td><td>Sections 6.3-6.5</td></tr> 
-      <tr><td></td><td><em>Exam II covering Chapters 4-6</em></td></tr> 
+      <tr><td></td><td><em>Exam II</em> (take-home) covering Chapters 4-6</td></tr> 
       <tr><td></td><td>Happy Halloween!</td></tr> 
     <tr><td><strong>Week 10</strong></td><td><strong>The Sampling Distribution of the Sample Mean</strong></td></tr>
       <tr><td>11/2-11/6</td><td>Sections 7.1-7.3</td></tr>  
@@ -46,10 +46,11 @@ Note: This is a tentative schedule. Some sections may take more or less time tha
       <tr><td>11/23-11/27</td><td>Sections 9.3-9.5</td></tr>
     <tr><td><strong>Week 14</strong></td><td><strong>Hypothesis Tests for One Population Mean</strong></td></tr>
       <tr><td>11/30-12/4</td><td>Sections 9.6-9.8</td></tr>
-      <tr><td></td><td><em>Exam III covering Chapters 7-9</em></td></tr> 
+      <tr><td></td><td><em>Exam III</em> (take-home) covering Chapters 7-9</td></tr> 
     <tr><td><strong>Week 15</strong></td><td><strong>Inferences for Two Population Means</strong></td></tr>
       <tr><td>12/7-12/11</td><td>Sections 10.1-10.2</td></tr>
+      <tr><td>12/7-12/11</td><td><em>Project Due</em></td></tr>
     <tr><td><strong>Finals Week</strong></td><td><strong></strong></td></tr>
-      <tr><td>12/14-12/18</td><td>Cumulative Final Exam (take-home), timeframe TBA</td></tr>
+      <tr><td>12/14-12/18</td><td><em>Cumulative Final Exam</em> (take-home), timeframe TBA</td></tr>
 </tbody>
 </table>
