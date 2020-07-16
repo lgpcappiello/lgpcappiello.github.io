@@ -40,11 +40,12 @@ Note: This is a tentative schedule. Some sections may take more or less time tha
       <tr><td></td><td><em>Project Proposal Due</em></td></tr>
     <tr><td><strong>Week 11</strong></td><td><strong>Confidence Intervals for One Population Mean</strong></td></tr>
       <tr><td>11/9-11/13</td><td>Sections 8.1-8.2</td></tr>  
-      <tr><td></td><td>Campus closed Nov 11 for Veteran's Day</td></tr> 
+      <tr><td></td><td><em>Campus closed Nov 11 for Veteran's Day</em></td></tr> 
     <tr><td><strong>Week 12</strong></td><td><strong>Hypothesis Tests for One Population Mean</strong></td></tr>
       <tr><td>11/16-11/20</td><td>Sections 8.3-9.2</td></tr>
     <tr><td><strong>Week 13</strong></td><td><strong>Hypothesis Tests for One Population Mean</strong></td></tr>
       <tr><td>11/23-11/27</td><td>Sections 9.3-9.5</td></tr>
+      <tr><td></td><td><em>Campus closed Nov 26-27.</em> Enjoy your long weekend!</td></tr>
     <tr><td><strong>Week 14</strong></td><td><strong>Hypothesis Tests for One Population Mean</strong></td></tr>
       <tr><td>11/30-12/4</td><td>Sections 9.6-9.8</td></tr>
       <tr><td></td><td><em>Exam III</em> (take-home) covering Chapters 7-9</td></tr> 
