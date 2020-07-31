@@ -109,9 +109,9 @@ analytics:
 author:
   name             : "Lauren Cappiello"
   avatar           : "https://avatars2.githubusercontent.com/u/46605262?s=460&v=4"
-  bio              : "Applied Statistics PhD candidate at the University of California, Riverside."
-  location         : "Riverside, CA"
-  email            : lauren.cappiello@email.ucr.edu
+  bio              : "Assistant Professor of Mathematics & Statistics at Sacramento State."
+  location         : "Sacramento, CA"
+  email            : cappiello@csus.edu
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
