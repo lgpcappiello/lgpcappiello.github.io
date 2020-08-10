@@ -8,8 +8,8 @@ author_profile: true
 ## Department of Mathematics & Statistics at Sacramento State
 ### Assistant Professor
 #### Fall 2020
-- [STAT 1 Introduction to Statistics](https://lgpcappiello.github.io/teaching/stat1/)
-- [MATH 26A Calculus I for the Social and Life Sciences](https://lgpcappiello.github.io/teaching/math26a/)
+- STAT 1 Introduction to Statistics
+- MATH 26A Calculus I for the Social and Life Sciences
 
 ## Department of Statistics at UC Riverside
 ### Instructor
