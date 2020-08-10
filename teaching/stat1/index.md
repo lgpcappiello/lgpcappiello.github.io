@@ -2,8 +2,6 @@
 layout: single
 title: "STAT 1: Introduction to Statistics"
 author_profile: true
-sidebar:
-  nav: "teaching"
 ---
 *This page is under development. The course syllabus will be posted shortly!*
 
