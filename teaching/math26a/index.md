@@ -2,8 +2,6 @@
 layout: single
 title: "MATH 26A: Calculus I for the Social and Life Sciences"
 author_profile: true
-sidebar:
-  nav: "teaching"
 ---
 *This page is under development. The course syllabus will be posted shortly!*
 
