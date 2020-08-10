@@ -8,8 +8,8 @@ author_profile: true
 ## Department of Mathematics & Statistics at Sacramento State
 ### Assistant Professor
 #### Fall 2020
-- STAT 1 Introduction to Statistics
-- MATH 26A Calculus I for the Social and Life Sciences
+- [STAT 1 Introduction to Statistics](https://csus.instructure.com/) (Canvas Link)
+- [MATH 26A Calculus I for the Social and Life Sciences](https://csus.instructure.com/) (Canvas Link)
 
 ## Department of Statistics at UC Riverside
 ### Instructor
