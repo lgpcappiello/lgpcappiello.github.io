@@ -5,23 +5,10 @@ layout: single
 author_profile: true
 ---
 
-## Lead Consultant
-## Graduate Quantitative Methods Center at UC Riverside 
+## Lead Consultant, Graduate Quantitative Methods Center at UC Riverside 
 ### July 2018 -- June 2019
 
-<a href="https://gradquant.ucr.edu/" target="blank">UCR GradQuant</a> works with graduate students and postdoctoral research from all departments to provide assistance in quantitative and computational methods. Consultations include both course support and research assistance. While at GradQuant I worked on questions related to all of my consultation offerings, as well as a number of problems related to SPSS, Stata, Excel, and general programming logic. I also developed and presented workshops, instructional labs, and departmental seminars on statistics and statistical computing. As the lead consultant, I supervised and managed a team of part-time consultants. I also piloted the instructional labs program, and assisted with administrative tasks such as hiring, scheduling, and website management.
-
-### Consultation types offered: 
-- Basic Statistics
-- Advanced Statistics
-- Nonparametric Methods
-- Mathematics
-- Mathematical Statistics and Probability Theory
-- Experimental Design
-- Data Mining and Machine Learning
-- LaTeX
-- SAS
-- R
+<a href="https://gradquant.ucr.edu/" target="blank">UCR GradQuant</a> works with graduate students and postdoctoral research from all departments to provide assistance in quantitative and computational methods. Consultations include both course support and research assistance. I also developed and presented workshops, instructional labs, and departmental seminars on statistics and statistical computing. 
 
 ### Workshops, instructional labs, and departmental seminars: 
 - Introduction to Statistical Inference
