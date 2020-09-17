@@ -9,8 +9,8 @@ author_profile: true
 ### Assistant Professor
 #### Fall 2020 (online)
 My office hours for Fall 2020 are TR 2-3:30PM or by appointment. Material for all sections is on [Canvas](https://csus.instructure.com/). 
-- STAT 1 Introduction to Statistics, [Video Lectures](https://www.youtube.com/playlist?list=PLuMDlHzKEzEFDn6yfD9D3DCsp_j2AfDvm)
-- MATH 26A Calculus I for the Social and Life Sciences, [Video Lectures](https://www.youtube.com/playlist?list=PLuMDlHzKEzEHVDBeTH5I_ghfON5ev4vCv)
+- STAT 1 Introduction to Statistics, <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEFDn6yfD9D3DCsp_j2AfDvm" target="_blank">Video Lectures</a>
+- MATH 26A Calculus I for the Social and Life Sciences, <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEHVDBeTH5I_ghfON5ev4vCv">Video Lectures</a>
 
 ## Department of Statistics at UC Riverside
 ### Instructor
