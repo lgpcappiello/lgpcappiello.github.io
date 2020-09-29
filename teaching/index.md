@@ -8,9 +8,9 @@ author_profile: true
 ## Department of Mathematics & Statistics at Sacramento State
 ### Assistant Professor
 #### Fall 2020 (online)
-My office hours for Fall 2020 are TR 2-3:30PM or by appointment. Material for all sections is on [Canvas](https://csus.instructure.com/). This semester, my classes are flipped (see links for video lecture content).
-- STAT 1 Introduction to Statistics, <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEFDn6yfD9D3DCsp_j2AfDvm" target="_blank">Video Lectures</a>
-- MATH 26A Calculus I for the Social and Life Sciences, <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEHVDBeTH5I_ghfON5ev4vCv">Video Lectures</a>
+My office hours for Fall 2020 are TR 2-3:30PM or by appointment. Material for all sections is on [Canvas](https://csus.instructure.com/). 
+- STAT 1 Introduction to Statistics, <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEFDn6yfD9D3DCsp_j2AfDvm" target="_blank">flipped class video lectures</a>
+- MATH 26A Calculus I for the Social and Life Sciences, <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEHVDBeTH5I_ghfON5ev4vCv">flipped class video lectures</a>
 
 ## Department of Statistics at UC Riverside
 ### Instructor
