@@ -10,6 +10,7 @@ author_profile: true
 My S21 office hours are TBD (or by appointment). 
 
 *Spring 2021 (online)*
+
 Material for all sections is on [Canvas](https://csus.instructure.com/). 
 - STAT 1 Introduction to Statistics
 - MATH 26A Calculus I for the Social and Life Sciences
