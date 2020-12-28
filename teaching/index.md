@@ -7,9 +7,12 @@ author_profile: true
 
 ## Department of Mathematics & Statistics at Sacramento State
 ### Assistant Professor
-My office hours for Fall 2020 are TR 2-3:30PM or by appointment. 
-#### Fall 2020, Spring 2021 (online)
+Spring 2021 office hours TBA (or by appointment). 
+#### Spring 2021 (online)
 Material for all sections is on [Canvas](https://csus.instructure.com/). 
+- STAT 1 Introduction to Statistics
+- MATH 26A Calculus I for the Social and Life Sciences
+#### Fall 2020 (online)
 - STAT 1 Introduction to Statistics (<a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEFDn6yfD9D3DCsp_j2AfDvm" target="_blank">flipped class video lectures</a>)
 - MATH 26A Calculus I for the Social and Life Sciences (<a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEHVDBeTH5I_ghfON5ev4vCv" target="_blank">flipped class video lectures</a>)
 
