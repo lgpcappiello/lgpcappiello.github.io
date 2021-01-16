@@ -20,7 +20,7 @@ title                    : #"Lauren Cappiello"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Lauren Cappiello"
-description              : # "An amazing website."
+description              : "test."
 url                      : "https://lgpcappiello.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -109,7 +109,7 @@ analytics:
 author:
   name             : "Dr. Lauren Cappiello"
   avatar           : "https://avatars2.githubusercontent.com/u/46605262?s=460&v=4"
-  bio              : "Pronouns: she/her<br><br>Assistant Professor of Mathematics & Statistics at Sacramento State"
+  bio              : "Assistant Professor of Mathematics & Statistics at Sacramento State<br>Pronouns: she/her"
   location         : "Sacramento, CA"
   email            : cappiello@csus.edu
   links:
