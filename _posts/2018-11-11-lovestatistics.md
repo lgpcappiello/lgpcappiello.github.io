@@ -6,7 +6,7 @@ tags:
   - just for fun
 ---
 
-*This post was originally written for UCR GradQuant and the UCR Graduate Student Resource Center blog.*
+*This post was originally written for UCR GradQuant and the UCR Graduate Student Resource Center blog. It has been lightly edited for relevance.*
 
 However you feel about statistics – if you love it, are confused by it, or even if you consider it best used as a way to strike fear in the hearts of thine enemies – a basic understanding of the subject is quickly becoming not only a highly desirable skill, but a necessary approach to disseminating information. Most of us already know how to be critical, but developing some level of enthusiasm for data helps nurture the desire to keep asking for more of it. And more data = more information. This is a healthy sense of skepticism, one that sends us down a path of exploration rather than a path of dismissal. 
 
@@ -33,4 +33,4 @@ Keeping up with current events is enormously important and factoids about bread 
 
 <p align="center"><img src="https://media.giphy.com/media/26xBI73gWquCBBCDe/giphy.gif" alt="Confused Winona Ryder" height="200" ></p>
 
-At this point, you may be asking yourself if these concepts are really all that accessible. Everyone who can think logically can learn math! If you do not have an extensive mathematics or statistics background, it may take a little bit of additional work, but it’s certainly not impossible! Whether you want to learn more, are starting from zero, or already consider yourself an expert, GradQuant is happy to hear from you. Our consultants love to teach and to talk about people’s research. Stop by our drop-in hours or schedule consultation any time (more detailed information at gradquant.ucr.edu). GradQuant staff have also curated a variety of resources (available on our website) to help you develop your quantitative knowhow from the comfort of your couch. 
+At this point, you may be asking yourself if these concepts are really all that accessible. Everyone who can think logically can learn math! If you are uncomfortable with math, it may take a little bit of additional work, but you can do it! 
