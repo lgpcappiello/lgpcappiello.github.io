@@ -1,4 +1,4 @@
-## Meet the Rescues
+## Meet the Rescue Animals
 
 ### Daisy
 
