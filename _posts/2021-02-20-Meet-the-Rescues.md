@@ -30,6 +30,4 @@ Sokka is also named after Avatar the Last Airbender, but we didn't name him! The
 
 ### Big and Little Turtle
 
-These came home with me (as tiny babies) from Chinatown in Los Angeles circa 2014. The friend I'd gone to LA with passed away unexpectedly in 2017 and they're a sweet reminder of her.
-
-They're not very photogenic. 
+Two red-eared sliders came home with me (as tiny babies) from Chinatown in Los Angeles circa 2014. The friend I'd gone to LA with passed away unexpectedly in 2017 and they're a sweet reminder of her.
