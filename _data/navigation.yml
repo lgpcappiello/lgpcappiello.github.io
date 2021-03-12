@@ -2,8 +2,8 @@
 main:
   - title: "Home"
     url: https://lgpcappiello.github.io/
-  - title: "About"
-    url: https://lgpcappiello.github.io/about/
+  # - title: "About"
+  #   url: https://lgpcappiello.github.io/about/
   # - title: "Education"
   #  url: /education/
   - title: "Teaching"
