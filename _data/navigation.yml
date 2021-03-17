@@ -8,6 +8,8 @@ main:
   #  url: /education/
   - title: "Teaching"
     url: /teaching/
+  - title: "Student Resources"
+    url: /resources/
   - title: "Research"
     url: /research/
   # - title: "Consulting"
