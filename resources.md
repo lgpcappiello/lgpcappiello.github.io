@@ -1,4 +1,9 @@
-# Student Resources
+---
+permalink: /resources/
+title: "Student Resources"
+layout: single
+author_profile: true
+---
 
 ## Run R Online
 
