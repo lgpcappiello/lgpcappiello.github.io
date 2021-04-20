@@ -7,10 +7,15 @@ author_profile: true
 
 ## Research Interests
 - Applied statistics and data analysis
+- Nonparametric methods
 - Undergraduate statistics education
 
-## Publications and Conferences
+I am interested primarily in medical and social science applications and my background is in nonparametric methods in causal inference. I would also be interested in collaborating on work for K-12 statistics education projects. 
 
-- L Cappiello, X Cui, and Z Zhang (2020) "Applied Machine Learning Methods in Adjusting for Population Differences". Invited talk at the Orange County Biostatistics Symposium out of Irvine, California. (*Symposium moved online due to COVID-19.*)
+## Student research
 
-- L Cappiello and J Flegal (2016) ”A Novel Estimation Technique for a Five-Parameter Bivariate Beta Distribution”. Poster presented at the International Biometric Society Eastern North American Region Spring Meeting in Austin, Texas.
+If you are a student interested in statistics research, [send me an email](mailto:cappiello@csus.edu)! 
+
+### Publications and Conferences
+
+For a complete list of my publications and presentations, see my [CV](https://lgpcappiello.github.io/CappielloCV.pdf). 
