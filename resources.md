@@ -18,6 +18,7 @@ author_profile: true
 ## Open Source Textbooks
 
 - [OpenIntro Statistics](https://leanpub.com/openintro-statistics)
+- [Introductory Statistics by OpenStax](https://openstax.org/details/books/introductory-statistics)
 - [R for Data Science](https://r4ds.had.co.nz/introduction.html)
 - [Advanced R](http://adv-r.had.co.nz/) (This is a companion website for the textbook, but it has lots of good information!)
 
