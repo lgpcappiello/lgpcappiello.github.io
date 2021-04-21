@@ -14,7 +14,7 @@ I am interested primarily in medical and social science applications and my back
 
 ## Student research
 
-If you are a student interested in statistics research, [send me an email](mailto:cappiello@csus.edu)! 
+If you are a student interested in statistics research, [send me an email](mailto:cappiello@csus.edu)! I would be happy to chat with you about your options.
 
 ### Publications and Conferences
 
