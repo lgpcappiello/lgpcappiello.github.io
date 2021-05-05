@@ -16,17 +16,13 @@ A couple of friends started feeding a stray cat that wandered into their yard in
 
 <img src="http://lgpcappiello.github.io/images/IMG-7187.jpg" alt="Suki" height="400"> <img src="http://lgpcappiello.github.io/images/IMG-8387.jpg" alt="Suki in a sweater" height="400">
 
-We rescued Suki after moving to Sacramento in summer 2020. I found her on Craigslist. The guy who got rid of her had a newborn and was keeping her outside all the time because he didn't know how to manage such a high energy dog. She's an Austrailian cattle dog mix - a smart, high-energy breed! With a little structure and a lot of exercise, her energy is under control. We named her after a character in Avatar the Last Airbender.
-
-She's my best friend! 
+We rescued Suki after moving to Sacramento in summer 2020. I found her on Craigslist. The guy who got rid of her had a newborn and was keeping her outside all the time because he didn't know how to manage such a high energy dog. She's an Austrailian cattle dog mix - a smart, eager-to-please, high-energy breed! She loves to learn and we do a lot of little tricks with her. We named her after a character in Avatar the Last Airbender. She's my best friend.
 
 ## Sokka
 
-<img src="http://lgpcappiello.github.io/images/IMG-9041.jpg" alt="Sokka in the sunshine" height="400"> <img src="http://lgpcappiello.github.io/images/IMG-9057.jpg" alt="Sokka being a goober" height="400">
+<img src="http://lgpcappiello.github.io/images/IMG-9041.jpg" alt="Sokka in the sunshine" height="400"> <img src="http://lgpcappiello.github.io/images/IMG-9057.jpg" alt="Sokka being a goober" height="400"> <img src="http://lgpcappiello.github.io/images/IMG-9511.jpg" alt="Sokka napping on my pillow after shoving all of the blankets aside" height="400"> 
 
-We got Sokka from Sacramento Independent Animal Rescuers in January 2021. He loves to snuggle but has pretty severe isolation distress. He came to us very shy and we are working one-on-one with a trainer to get his confidence up. 
-
-Sokka is also named after Avatar the Last Airbender, but we didn't name him! The rescue named him and he came to us (and to Suki!) with his name.
+We got Sokka from Sacramento Independent Animal Rescuers in January 2021. He loves to snuggle but has pretty severe isolation distress. He came to us very shy, but we spent some time working with a trainer to get his confidence up. He's doing great! Sokka is also named after Avatar the Last Airbender, but we didn't name him! The rescue named him and he came to us (and to Suki!) with his name. My sister found him for us on Petfinder and it felt like fate :)
 
 ## The Turtles
 
