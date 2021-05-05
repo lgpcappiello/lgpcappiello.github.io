@@ -7,7 +7,16 @@ author_profile: true
 
 ## Department of Mathematics & Statistics at Sacramento State
 ### Assistant Professor
-My S21 office hours are TR 2:00 - 3:30 PM (or by appointment). <a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointnment.</a>
+My S21 office hours are TR 2:00 - 3:30 PM (or by appointment). <a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointment.</a>
+
+*Fall 2021*
+- STAT 1 Introduction to Statistics (online)
+- STAT 115A Introduction to Probability Theory
+
+*Summer 2021 (online)*
+
+Material is on [Canvas](https://csus.instructure.com/). 
+- STAT 1 Introduction to Statistics
 
 *Spring 2021 (online)*
 
