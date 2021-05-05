@@ -20,7 +20,7 @@ We rescued Suki after moving to Sacramento in summer 2020. I found her on Craigs
 
 ## Sokka
 
-<img src="http://lgpcappiello.github.io/images/IMG-9041.jpg" alt="Sokka in the sunshine" height="400"> <img src="http://lgpcappiello.github.io/images/IMG-9057.jpg" alt="Sokka being a goober" height="400"> <img src="http://lgpcappiello.github.io/images/IMG-9511.jpg" alt="Sokka napping on my pillow after shoving all of the blankets aside" height="400"> 
+<img src="http://lgpcappiello.github.io/images/IMG-9041.jpg" alt="Sokka in the sunshine" height="400"> <img src="http://lgpcappiello.github.io/images/IMG-9057.jpg" alt="Sokka being a goober" height="400"> <img src="https://lgpcappiello.github.io/images/IMG_9511.JPG" alt="Sokka napping on my pillow after shoving all of the blankets aside" height="400"> 
 
 We got Sokka from Sacramento Independent Animal Rescuers in January 2021. He loves to snuggle but has pretty severe isolation distress. He came to us very shy, but we spent some time working with a trainer to get his confidence up. He's doing great! Sokka is also named after Avatar the Last Airbender, but we didn't name him! The rescue named him and he came to us (and to Suki!) with his name. My sister found him for us on Petfinder and it felt like fate :)
 
