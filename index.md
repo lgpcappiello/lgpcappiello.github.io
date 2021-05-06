@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Welcome!"
+title: "Lauren Cappiello"
 author_profile: true
 ---
 
