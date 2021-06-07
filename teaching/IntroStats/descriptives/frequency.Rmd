@@ -80,4 +80,4 @@ We can also use a histogram to identify **modes**. For numeric data, especially 
 **Multimodal**: three or more prominent peaks
 
 
-<center><b><a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/plots">Next up: Graphical Displays</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/design.html">Back to: Experimental Design</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a></center></b>
+<center><b><a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/plots">Back to: Graphical Displays</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/design.html">Back to: XXXX</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a></center></b>

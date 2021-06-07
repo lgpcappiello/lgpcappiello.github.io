@@ -50,4 +50,4 @@ stripchart(mtcars$wt, method="stack",pch=16,xlab="title",
 
 We will see more graphical presentations as we move through this module. 
 
-<center><b><a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/plots">Next up: Graphical Displays</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/design.html">Back to: Experimental Design</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a></center></b>
+<center><b><a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/frequency.html">Next up: Frequency Distributions</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/design.html">Back to: Experimental Design</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a></center></b>
