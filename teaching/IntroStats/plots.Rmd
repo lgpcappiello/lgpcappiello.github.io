@@ -43,6 +43,10 @@ Good data visualization is *easy to interpret*! Data visualization should have l
 
 We may also use graphs to examine the **distribution** of the data. A distribution relates values/categories to how often they occur. Think of distributing treats among a group of dogs. We could distribute the treats evenly or based on each dog's behavior/tricks.
 
-A **dot plot** is a single-variable scatterplot. 
+A **dot plot** is a single-variable scatterplot.
+
+```{r}
+dotchart(mtcars$mpg)
+```
 
 We will see more graphical presentations as we move through this module. 

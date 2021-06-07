@@ -5,8 +5,8 @@ author_profile: true
 ---
 
 Module 1: Descriptive Statistics
-- [Statistics Terminology](https://lgpcappiello.github.io/teaching/IntroStats/terminology.html)
-- [Data Basics](https://lgpcappiello.github.io/teaching/IntroStats/databasics.html)
-- [Sampling](https://lgpcappiello.github.io/teaching/IntroStats/sampling.html)
-- [Experimental Design](https://lgpcappiello.github.io/teaching/IntroStats/design.html)
-- [Graphical Presentations](https://lgpcappiello.github.io/teaching/IntroStats/plots.html)
+- <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/terminology" target="blank">Statistics Terminology</a>
+- <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/databasics" target="blank">Data Basics</a>
+- <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/sampling.html" target="blank">Sampling</a>
+- <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/design.html" target="blank">Experimental Design</a>
+- <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/plots.html" target="blank">Data Basics</a>
