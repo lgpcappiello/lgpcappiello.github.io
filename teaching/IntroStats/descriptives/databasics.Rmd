@@ -1,5 +1,6 @@
 ---
 title: "Data Basics"
+output: html_document
 ---
 
 <p>Data are often organized in what we call a&nbsp;<strong>data matrix</strong>. If you've ever seen data in a spreadsheet, that's a data matrix!</p>
@@ -61,6 +62,6 @@ title: "Data Basics"
     <li>If you're unsure whether a variable is discrete or continuous, pick a number with some decimal places - like 1.83 - and ask yourself if that value makes sense. If it doesn't, it's probably discrete. (Ex: number of siblings)</li>
 </ul>
 
-<a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/sampling">Next up: Sampling</a>
+<a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/sampling.html">Next up: Sampling</a>
 
 <a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a>

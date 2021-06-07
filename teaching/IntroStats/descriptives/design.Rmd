@@ -1,6 +1,8 @@
 ---
 title: "Experimental Design"
+output: html_document
 ---
+
 <p>When we do research, we have two options:</p>
 <ol>
     <li>Conduct an&nbsp;<strong>experiment</strong>, where researchers assign treatments to cases.&nbsp;
@@ -46,6 +48,6 @@ title: "Experimental Design"
 </ul>
 <p>This helps avoid bias (placebo effect, doctor's expectations for outcome, etc.)!</p>
 
-<a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/plots">Next up: Graphical Displays</a>
+<a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/plots.html">Next up: Graphical Displays</a>
 
 <a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a>

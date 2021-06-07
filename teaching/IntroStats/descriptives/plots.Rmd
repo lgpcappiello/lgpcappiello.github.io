@@ -1,7 +1,5 @@
 ---
 title: "Graphical Presentations"
-layout: single
-author_profile: true
 output: html_document
 ---
 
