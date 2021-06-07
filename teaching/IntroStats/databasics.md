@@ -2,7 +2,6 @@
 title: "Data Basics"
 layout: single
 author_profile: true
-output: html_document
 ---
 
 <p>Data are often organized in what we call a&nbsp;<strong>data matrix</strong>. If you've ever seen data in a spreadsheet, that's a data matrix!</p>

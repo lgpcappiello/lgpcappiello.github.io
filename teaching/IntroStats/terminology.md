@@ -2,7 +2,6 @@
 title: "Statistics Terminology"
 layout: single
 author_profile: true
-output: html_document
 ---
 
 There are two ways to think about statistics:
@@ -21,3 +20,7 @@ For example, a poll suggests that 75% of voters will select a Candidate A. Peopl
   - This is complicated and expensive! There's a reason the United States only does a census every 10 years.
 - We can also take a **sample**, a subset of the population we get data from.
   - If you think of the population as a pie, the sample is a small slice. If it's a good pie, the small slice will tell you that.
+
+<a href="https://lgpcappiello.github.io/teaching/IntroStats/databasics">Next up: Data Basics</a>
+
+<a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a>
