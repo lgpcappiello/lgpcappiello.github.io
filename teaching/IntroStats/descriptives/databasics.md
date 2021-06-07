@@ -5,7 +5,7 @@ author_profile: true
 ---
 
 <p>Data are often organized in what we call a&nbsp;<strong>data matrix</strong>. If you've ever seen data in a spreadsheet, that's a data matrix!</p>
-<table style="border-collapse: collapse; width: 47.3244%; height: 145px;" border="1">
+<table>
     <tbody>
         <tr style="height: 29px;">
             <td style="width: 24.4596%; height: 29px;"></td>
