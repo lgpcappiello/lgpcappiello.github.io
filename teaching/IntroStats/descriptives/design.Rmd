@@ -48,6 +48,4 @@ output: html_document
 </ul>
 <p>This helps avoid bias (placebo effect, doctor's expectations for outcome, etc.)!</p>
 
-<a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/plots.html">Next up: Graphical Displays</a>
-
-<a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a>
+<center><b><a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/plots.html">Next up: Graphical Displays</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/sampling.html">Back to: Sampling</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a></center></b>

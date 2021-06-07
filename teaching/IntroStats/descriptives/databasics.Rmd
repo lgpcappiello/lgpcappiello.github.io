@@ -62,6 +62,4 @@ output: html_document
     <li>If you're unsure whether a variable is discrete or continuous, pick a number with some decimal places - like 1.83 - and ask yourself if that value makes sense. If it doesn't, it's probably discrete. (Ex: number of siblings)</li>
 </ul>
 
-<a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/sampling.html">Next up: Sampling</a>
-
-<a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a>
+<center><b> <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/sampling.html">Next up: Sampling</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/terminology.html">Back to: Terminology</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a> </center></b>
