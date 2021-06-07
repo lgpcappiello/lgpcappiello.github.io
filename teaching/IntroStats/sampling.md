@@ -2,7 +2,6 @@
 title: "Sampling"
 layout: single
 author_profile: true
-output: html_document
 ---
 
 <p>How do we get samples? We want a sample that represents our population. <strong>Representative samples </strong>reflect the relevant characteristics of our population.&nbsp;</p>
