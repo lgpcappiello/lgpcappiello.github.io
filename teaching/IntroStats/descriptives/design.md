@@ -2,7 +2,6 @@
 title: "Experimental Design"
 layout: single
 author_profile: true
-output: html_document
 ---
 <p>When we do research, we have two options:</p>
 <ol>
@@ -48,3 +47,7 @@ output: html_document
     <li>If neither subject nor the researchers who interact with them know the treatment group, it is&nbsp;<strong>double blind.</strong></li>
 </ul>
 <p>This helps avoid bias (placebo effect, doctor's expectations for outcome, etc.)!</p>
+
+<a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/plots">Next up: Graphical Displays</a>
+
+<a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a>
