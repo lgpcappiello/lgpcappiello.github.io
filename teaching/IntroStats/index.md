@@ -10,3 +10,4 @@ Module 1: Descriptive Statistics
 - <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/sampling.html" target="blank">Sampling</a>
 - <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/design.html" target="blank">Experimental Design</a>
 - <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/plots.html" target="blank">Graphical Displays</a>
+- <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/frequency.html" target="blank">Frequency Distributions</a>
