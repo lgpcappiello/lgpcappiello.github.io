@@ -1,0 +1,49 @@
+---
+title: "Graphical Presentations"
+permalink: /plots/
+layout: single
+author_profile: true
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+We would like to be able to get a quick overview of our data. One way to do this is with graphs.
+
+A **bar plot** represents categorical data with bars. Each bar's height is based on the number of observations in that category.
+
+```{r include=FALSE}
+df <- data.frame(Level=c("freshman","sophomore","junior","senior"),
+                Count=c(12, 10, 3, 5))
+df$Level <- ordered(df$Level, levels = c("freshman","sophomore","junior","senior"))
+library(ggplot2)
+```
+
+```{r}
+p<-ggplot(data=df, aes(x=Level, y=Count)) +
+  geom_bar(stat="identity", fill="steelblue")+
+  theme_minimal()
+p + ggtitle("Barplot of Class Level") + theme(plot.title = element_text(hjust = 0.5))
+```
+
+The bar plot above shows the class level breakdown for students in an Introductory Statistics course. Based on the plot, there are 5 seniors. How many sophomores are there? Freshman?
+
+A **scatterplot** shows the relationship between two (numeric) variables.
+
+```{r}
+plot(mtcars$wt, mtcars$mpg, pch=16,
+     main = "Scatterplot of Car Weight vs MPG",
+     xlab="Weight (1000 lbs)", ylab="Miles Per Gallon")
+```
+
+At a glance, we can see that (in general) heavier cars have lower MPG.
+
+Good data visualization is *easy to interpret*! Data visualization should have labels: title, axis labels, numbers/categories clearly marked, and a legend if necessary. 
+
+We may also use graphs to examine the **distribution** of the data. A distribution relates values/categories to how often they occur. Think of distributing treats among a group of dogs. We could distribute the treats evenly or based on each dog's behavior/tricks.
+
+A **dot plot** is a single-variable scatterplot. 
+
+We will see more graphical presentations as we move through this module. 
