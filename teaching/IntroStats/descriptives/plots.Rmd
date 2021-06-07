@@ -44,7 +44,8 @@ We may also use graphs to examine the **distribution** of the data. A distributi
 A **dot plot** is a single-variable scatterplot.
 
 ```{r}
-dotchart(mtcars$mpg)
+stripchart(mtcars$wt, method="stack",pch=16,xlab="title",
+           main="Dot Plot")
 ```
 
 We will see more graphical presentations as we move through this module. 

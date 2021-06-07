@@ -1,0 +1,83 @@
+---
+title: "Frequency Distributions"
+output: html_document
+---
+
+### Qualitative Variables
+**Frequency** (**count**): the number of times a particular value occurs.
+
+A **frequency distribution** lists each distinct value with its frequency. 
+
+| Class | Frequency | 
+| ----- | ----- |
+| freshman | 12 |
+| sophomore | 10 |
+| junior | 3 |
+| senior | 5 |
+
+Note that a bar plot is the visual representation of this!
+
+**Relative frequency** is the ratio of the frequency to the total number of observations.
+
+\[
+  \text{relative frequency} = \frac{\text{frequency}}{\text{number of observations}}
+\]
+
+This is also called the **proportion**. The **percentage** can be obtained by multiplying the proportion by 100.
+
+A **relative frequency distribution** lists each distinct value with its relative frequency.
+
+| Class | Frequency | Relative Frequecy
+| ----- | ----- | ----- |
+| freshman | 12 | $12/30 = 0.4$ |
+| sophomore | 10 | $10/30 \approx 0.3333$ |
+| junior | 3 | $3/30 = 0.1$ |
+| senior | 5 | $5/30 \approx 0.1667$
+
+### Quantitative Variables
+We can also apply this concept to numeric data. A dot plot is one graphical representation of this, but we would like to be able to visualize larger, more complex data sets. We can do this using **bins**, which group numeric data into equal-width consecutive intervals.
+
+*Ex:* A random sample of weights from 10 men, ages 18-24:
+
+\[\quad 218.1 \quad 151.3 \quad 178.7 \quad 187.0 \quad	165.8 \quad	188.7 \quad	175.4 \quad	182.5 \quad	187.5 \quad	165.0\]
+
+The **minimum** (smallest value) is 151.3 and the **maximum** (largest value) is 218.1. There are lots of ways to break these into "bins", but what about...
+
+- 150 - 170 
+- 170 - 190 
+- 190 - 210 
+- 210 - 230 
+
+Each bin has an equal width of 20, but if someone a weight of 190, would I use the second or third bin?? We need there to be no overlap. Instead, we can use:
+
+| Weight |	Count |
+| ------ | ------ |
+| 150 - <170	| 3 |
+| 170 - <190	| 6 |
+| 190 - <210	| 0 |
+| 210 - <230	| 1 |
+
+We will visualize this using a **histogram**.
+
+Frequency histogram
+
+Relative frequency histogram
+
+Notice that these are the same shape! This gives us insight into the shape of the data distribution, literally how the values are distributed across the bins.
+
+When a histogram trails off to one side, we say it is **skewed**.
+
+
+Data sets with roughly equal tails are **symmetric**.
+
+
+We can also use a histogram to identify **modes**. For numeric data, especially continuous variables, we think of modes as *prominent peaks*.
+
+**Unimodal**: one prominent peak
+
+**Bimodal**: two prominent peaks
+
+**Multimodal**: three or more prominent peaks
+
+
+<center><b><a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/plots">Next up: Graphical Displays</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/design.html">Back to: Experimental Design</a> | <a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a></center></b>
