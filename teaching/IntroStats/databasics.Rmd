@@ -1,6 +1,5 @@
 ---
 title: "Data Basics"
-permalink: /databasics/
 layout: single
 author_profile: true
 output: html_document

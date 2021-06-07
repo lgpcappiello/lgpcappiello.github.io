@@ -1,6 +1,5 @@
 ---
 title: "Statistics Terminology"
-permalink: /terminology/
 layout: single
 author_profile: true
 output: html_document

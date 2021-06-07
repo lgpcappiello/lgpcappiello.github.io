@@ -1,6 +1,5 @@
 ---
 title: "Graphical Presentations"
-permalink: /plots/
 layout: single
 author_profile: true
 output: html_document
