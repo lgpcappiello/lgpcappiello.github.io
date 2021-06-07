@@ -16,3 +16,7 @@ author_profile: true
     <span style="text-decoration: underline;">Ex. availability bias</span>. Shark attacks. Shark attacks are actually extremely uncommon, but the media tends to report on extreme anecdotes, making us more prone to this kind of bias!
 </p>
 <p>We avoid bias by taking random samples. One type of random sample is a&nbsp;<strong>simple random sample</strong>. We can think of this as "raffle sampling", like drawing names out of a hat. Each case (or each possible sample) has an equal chance of being selected. Knowing that A is selected doesn't tell us anything about whether B is selected. Instead of drawing from a hat, we usually use a&nbsp;<strong>random number generator</strong> using a computer.</p>
+
+<a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/design">Next up: Experimental Design</a>
+
+<a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a>

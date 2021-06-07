@@ -62,3 +62,7 @@ author_profile: true
     <li>Sometimes, categories can be represented by numbers. Ask yourself if it makes sense to do math with those numbers. If it doesn't make sense, it's probably a categorical variable. (Ex: zip codes)</li>
     <li>If you're unsure whether a variable is discrete or continuous, pick a number with some decimal places - like 1.83 - and ask yourself if that value makes sense. If it doesn't, it's probably discrete. (Ex: number of siblings)</li>
 </ul>
+
+<a href="https://lgpcappiello.github.io/teaching/IntroStats/descriptives/sampling">Next up: Sampling</a>
+
+<a href="https://lgpcappiello.github.io/teaching/IntroStats">Return to Course Notes Homepage</a>
