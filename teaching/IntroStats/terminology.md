@@ -2,7 +2,6 @@
 title: "Statistics Terminology"
 layout: single
 author_profile: true
-output: html_document
 ---
 
 There are two ways to think about statistics:
