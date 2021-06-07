@@ -1,7 +1,5 @@
 ---
 title: "Statistics Terminology"
-layout: single
-author_profile: true
 ---
 
 There are two ways to think about statistics:

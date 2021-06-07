@@ -1,7 +1,5 @@
 ---
 title: "Experimental Design"
-layout: single
-author_profile: true
 ---
 <p>When we do research, we have two options:</p>
 <ol>
