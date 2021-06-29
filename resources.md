@@ -7,6 +7,8 @@ author_profile: true
 
 ## Run R Online
 
+<iframe width='100%' height='300' src='https://rdrr.io/snippets/embed/' frameborder='0'></iframe>
+
 - [RStudio Cloud](https://rstudio.cloud/projects)
 - [RDRR.io](https://rdrr.io/snippets/)
 
