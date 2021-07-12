@@ -20,7 +20,7 @@ Courses taught:
 
 *Online Mini-Lectures (2020-2021 School Year)*
 - <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEFDn6yfD9D3DCsp_j2AfDvm" target="_blank">Introduction to Statistics</a>
-- <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEHVDBeTH5I_ghfON5ev4vCv" target="_blank">Calculus I for the Social and Life Sciences</a>)
+- <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEHVDBeTH5I_ghfON5ev4vCv" target="_blank">Calculus I for the Social and Life Sciences</a>
 
 ## Department of Statistics at UC Riverside
 ### Instructor
