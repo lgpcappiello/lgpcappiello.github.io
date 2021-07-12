@@ -6,7 +6,7 @@ author_profile: true
 
 ## Welcome!
 
-I am an Assistant Professor in the Mathematics and Statistics Department at CSU, Sacramento. My background is in statistics and I received my PhD in Applied Statistics from UC, Riverside. My research interests include applied projects, particularly in biological and social science fields, and higher education, especially when it comes to getting students excited about statistics! I'm also interested in data/statistics ethics, both in the questions themselves and in bringing conversations about ethics into the statisitcs classroom. 
+I am an Assistant Professor in the Mathematics and Statistics Department at CSU, Sacramento. My background is in statistics and I received my PhD in Applied Statistics from UC, Riverside. My research interests include applied projects, particularly in biological and social science fields, and higher education, especially when it comes to getting students excited about statistics! I'm also interested in data/statistics ethics, both in the questions themselves and in bringing conversations about ethics into the statistics classroom. 
 
 When I'm not working, I'm an enthusiastic tabletop gamer and am slowly making my way back into the world of powerlifting after an extended haitus (thanks, graduate school!). I also *love* animals and have a growing menagerie of rescues. <a href="https://lgpcappiello.github.io/Meet-the-Rescues/">You can read about them here</a>. For informal updates, dog/cat photos, and bad jokes, I am also (semi) active on <a href="https://twitter.com/lgpcappiello" target="_blank">Twitter</a>.
 
