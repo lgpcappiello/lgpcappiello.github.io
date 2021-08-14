@@ -6,11 +6,11 @@ author_profile: true
 ---
 
 ## Research Interests
+- Biostatistics
 - Applied statistics and data analysis
 - Nonparametric methods
-- Undergraduate statistics education
 
-I am interested primarily in medical and social science applications and my background is in nonparametric methods in causal inference. I would also be interested in collaborating on work for K-12 statistics education projects. 
+I am also interested in collaborating on K-16 statistics education projects. 
 
 ## Student research
 
