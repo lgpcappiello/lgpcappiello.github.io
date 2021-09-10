@@ -20,6 +20,7 @@ author_profile: true
 - [Stat 1 Course Notes](https://bookdown.org/lgpcappiello/IntroStats/) (These are my own teaching notes for Stat 1.)
 - [OpenIntro Statistics](https://leanpub.com/openintro-statistics)
 - [Introductory Statistics by OpenStax](https://openstax.org/details/books/introductory-statistics)
+- [Probability Course](http://www.probabilitycourse.com/) (This covers a lot of the Stat 115AB material.)
 - [R for Data Science](https://r4ds.had.co.nz/introduction.html)
 - [Advanced R](http://adv-r.had.co.nz/) (This is a companion website for the textbook, but it has lots of good information!)
 
