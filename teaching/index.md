@@ -7,7 +7,7 @@ author_profile: true
 
 ## Department of Mathematics & Statistics at Sacramento State
 ### Assistant Professor
-My Su21 office hours are TR 9:30-10:30 AM (or by appointment). <a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointment.</a>
+My Fall 2021 office hours are MWF 1-2 PM (in person at Shasta 257) and R 3-4 PM (via Zoom). If these hours are not convenient, I am also available by appointment. (<a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointment.</a>)
 
 Courses taught:
 
