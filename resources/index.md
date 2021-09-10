@@ -17,6 +17,7 @@ author_profile: true
 
 ## Open Source Textbooks
 
+- [Stat 1 Course Notes](https://bookdown.org/lgpcappiello/IntroStats/) (These are my own teaching notes for Stat 1.)
 - [OpenIntro Statistics](https://leanpub.com/openintro-statistics)
 - [Introductory Statistics by OpenStax](https://openstax.org/details/books/introductory-statistics)
 - [R for Data Science](https://r4ds.had.co.nz/introduction.html)
