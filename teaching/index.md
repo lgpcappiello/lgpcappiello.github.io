@@ -7,12 +7,13 @@ author_profile: true
 
 ## Department of Mathematics & Statistics at Sacramento State
 ### Assistant Professor
-My Fall 2021 office hours are MWF 1-2 PM (in person at Shasta 257) and R 3-4 PM (via Zoom). If these hours are not convenient, I am also available by appointment. (<a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointment.</a>)
+My Spring 2022 office hours are TR 3-4 PM (via Zoom), M 3-4 PM (Stat 1 only; Shasta 257 and via Zoom), W 3-4 PM (Stat 115B only; Shasta 257 and via Zoom). If these hours are not convenient, I am also available by appointment. (<a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointment.</a>)
 
 Courses taught:
 
 - STAT 1 Introduction to Statistics 
 - STAT 115A Introduction to Probability Theory
+- STAT 115B Introduction to Mathematical Statistics
 - MATH 26A Calculus I for the Social and Life Sciences
 
 *Course Notes*
