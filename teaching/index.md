@@ -7,7 +7,13 @@ author_profile: true
 
 ## Department of Mathematics & Statistics at Sacramento State
 ### Assistant Professor
-My Spring 2022 office hours are TR 3-4 PM (via Zoom), M 3-4 PM (Stat 1 only; Shasta 257 and via Zoom), W 3-4 PM (Stat 115B only; Shasta 257 and via Zoom). If these hours are not convenient, I am also available by appointment. (<a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointment.</a>)
+My Spring 2022 office hours are 
+
+- Tuesday/Thursday 3-4 PM (via Zoom)
+- Monday 3-4 PM (Stat 1 only; Shasta 257 and via Zoom)
+- Wwednesday 3-4 PM (Stat 115B only; Shasta 257 and via Zoom)
+
+If these hours are not convenient, I am also available by appointment. (<a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointment.</a>)
 
 Courses taught:
 
