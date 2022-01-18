@@ -8,9 +8,7 @@ author_profile: true
 ## Research Interests
 - Biostatistics
 - Applied statistics and data analysis
-- Nonparametric methods
-
-I am also interested in collaborating on K-16 statistics education projects. 
+- Nonparametric methods 
 
 ## Student research
 
