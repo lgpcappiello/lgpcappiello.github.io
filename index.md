@@ -10,7 +10,7 @@ I am an Assistant Professor in the Mathematics and Statistics Department at CSU,
 
 When I'm not working, I'm an enthusiastic tabletop gamer and I usually have several unfinished crafting projects laying around. I also love animals and have a growing menagerie of rescues. <a href="https://lgpcappiello.github.io/Meet-the-Rescues/">You can read about them here</a>. For informal updates, dog/cat photos, and bad jokes, I am also (semi) active on <a href="https://twitter.com/lgpcappiello" target="_blank">Twitter</a>.
 
-My goal for this site is to share teaching materials and information on my research. Course materials may be found under "Teaching", with original LaTeX and markdown files on my Github. I am always open to collaboration and mentoring student research and am happy to work on projects outside of the current scope of my research. I also do consulting work as time permits. Please feel free to reach out to me with any questions. 
+Selected course materials may be found under "Teaching", with original LaTeX and markdown files on my Github. I am always open to collaboration and mentoring student research and am happy to work on projects outside of the current scope of my research. I also do consulting work as time permits. Please feel free to reach out to me with any questions. 
 
 ### Curriculum Vitae
 My CV may be found <a href="https://lgpcappiello.github.io/CappielloCV.pdf" target="_blank">here</a> (last update: Sep-2021).
