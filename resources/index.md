@@ -26,7 +26,8 @@ author_profile: true
 
 ## Sac State Student Resources
 
-- [PAL (Peer Assisted Learning)](https://www.csus.edu/college/natural-sciences-mathematics/peer-assisted-learning-program-pal/) for Stat 1 and Math 12, 29, 30, 31, 32
+- [Supplemental Instruction](https://www.csus.edu/student-affairs/centers-programs/peer-academic-resource/supplemental-instruction.html) for Stat 1 and a variety of other historically challenging general education courses.
+- [PAL (Peer Assisted Learning)](https://www.csus.edu/college/natural-sciences-mathematics/peer-assisted-learning-program-pal/) for Math 12, 29, 30, 31, 32
 - [Math Lab](https://www.csus.edu/college/natural-sciences-mathematics/mathematics-statistics/) for lower division math help, on-demand during standard business hours. (Click on "Math Lab Information" to access the most up-to-date schedule.)
 - [Commit to Study](https://www.csus.edu/college/natural-sciences-mathematics/center-science-math-success/commit-study.html) for anyone taking classes in NSM
 - [Campus resource list (compiled by Dr. Wiscons)](http://webpages.csus.edu/wiscons/more/SacStateCampusResources.html)
