@@ -114,7 +114,13 @@ PLATFORMS
   x86_64-darwin-18
 
 DEPENDENCIES
+  jekyll
+  jekyll-feed
+  jekyll-gist
+  jekyll-include-cache
+  jekyll-paginate
   jekyll-remote-theme
+  jekyll-sitemap
   minimal-mistakes-jekyll
 
 BUNDLED WITH
