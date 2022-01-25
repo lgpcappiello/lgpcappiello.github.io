@@ -1,8 +1,9 @@
 ---
 title: "A Gentle Introduction to Probability Using Dice"
 tags:
-  - r programming
-  - just for fun
+  - probability
+  - education
+  - dice
 ---
 
 <html>
@@ -12,9 +13,6 @@ tags:
 <meta charset="utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-
-<meta name="author" content="Dr. Lauren Cappiello" />
 
 
 <title>A Gentle Introduction to Probability Using Dice</title>
