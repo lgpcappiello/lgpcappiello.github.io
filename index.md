@@ -13,4 +13,4 @@ When I'm not working, I'm an enthusiastic tabletop gamer and I usually have seve
 Selected course materials may be found under "Teaching", with original LaTeX and markdown files on my Github. I am always open to collaboration and mentoring student research and am happy to work on projects outside of the current scope of my research. I also do consulting work as time permits. Please feel free to reach out to me with any questions. 
 
 ### Curriculum Vitae
-My CV may be found <a href="https://lgpcappiello.github.io/CappielloCV.pdf" target="_blank">here</a> (last update: Sep-2021).
+My CV may be found <a href="https://lgpcappiello.github.io/CappielloCV.pdf" target="_blank">here</a> (last update: Jan-2022).
