@@ -1,0 +1,34 @@
+I"N<h2 id="midterm-topics">Midterm Topics</h2>
+<h3 id="the-midterm-may-not-cover-everything-but-every-one-of-these-topics-is-fair-game">The midterm may not cover everything, but every one of these topics is fair game.</h3>
+
+<ul>
+  <li>Type I and II errors, power</li>
+  <li>Hypothesis tests for paired samples</li>
+  <li>Hypothesis tests for two-sample means</li>
+  <li>Sample size calculations for two-sample means</li>
+  <li>ANOVA tables and their interpretation (one-way, two-way, factorial)
+    <ul>
+      <li>Hypotheses</li>
+      <li>Assumptions</li>
+      <li>Relationships between cells in an ANOVA table</li>
+      <li>Interactions between factors</li>
+      <li>Appropriate conclusions</li>
+    </ul>
+  </li>
+  <li>Multiple comparisons
+    <ul>
+      <li>Bonferroni correction</li>
+      <li>Tukey’s method</li>
+    </ul>
+  </li>
+  <li>Experimental design (when to use each design)
+    <ul>
+      <li>completely randomized</li>
+      <li>randomized block</li>
+      <li>factorial</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Note: Previous quizzes are a good example of how I approach test questions.</p>
+:ET

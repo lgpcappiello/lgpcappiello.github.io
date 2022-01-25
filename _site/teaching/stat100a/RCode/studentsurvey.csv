@@ -1,0 +1,66 @@
+﻿year,major,postgrad,pets,want
+Junior,Biology,Other,3,4
+Senior,Biology,MedicalSchool,0,3
+Junior,Biology,MedicalSchool,2,3
+Senior,Biochemistry,GradSchool,0,2
+Junior,Statistics,Work,0,5
+Senior,Sociology,GradSchool,1,3
+Senior,Math,Work,0,3
+Senior,Music,GradSchool,0,4
+Junior,CMDB,Other,0,3
+Senior,Earth Science,GradSchool,1,3
+Junior,CMDB,MedicalSchool,3,5
+Junior,Biochemistry,GradSchool,5,4
+Senior,Biochemistry,GradSchool,1,4
+Sophomore,Chemistry,PharmacySchool,1,4
+Senior,Biology,GradSchool,0,4
+Senior,Biology,MedicalSchool,0,3
+Junior,Biology,Teaching,0,4
+Junior,Biochemistry,PharmacySchool,0,2
+Junior,Biology,MedicalSchool,1,3
+Junior,CMDB,MedicalSchool,1,4
+Senior,Mechanical Engineering,Work,0,4
+Junior,Biochemistry,MedicalSchool,1,4
+Junior,Mechanical Engineering,OtherMedical,0,3
+Senior,Anthropology,MedicalSchool,1,4
+Sophomore,Biochemistry,OtherMedical,0,4
+Senior,Microbiology,MedicalSchool,1,3
+Senior,Mechanical Engineering,Work,0,4
+Junior,Biology,PharmacySchool,0,3
+Senior,Biochemistry,MedicalSchool,2,3
+Senior,CMDB,GradSchool,0,1
+Senior,Microbiology,GradSchool,1,2
+Senior,Psychology,GradSchool,0,5
+Junior,Biology,MedicalSchool,5,4
+Junior,Neuroscience,MedicalSchool,0,5
+Junior,Microbiology,GradSchool,3,3
+Junior,Biochemistry,GradSchool,4,2
+Junior,Math,Teaching,0,2
+Junior,Neuroscience,Work,2,3
+Junior,Biochemistry,Teaching,2,3
+Sophomore,Neuroscience,OtherMedical,0,4
+Other,Biology,Other,5,4
+Junior,Biology,MedicalSchool,0,3
+Junior,Public Policy,Work,2,3
+Sophomore,Biology,MedicalSchool,0,4
+Senior,Biochemistry,,1,4
+Senior,Mechanical Engineering,Work,3,3
+Junior,CMDB,MedicalSchool,0,3
+Senior,Biology,Work,2,3
+Senior,Biology,,0,4
+Sophomore,Neuroscience,MedicalSchool,1,4
+Junior,Biology,GradSchool,2,4
+Sophomore,Biology,Unsure,2,3
+Junior,Biology,Unsure,0,4
+Junior,Biology,MedicalSchool,0,4
+Sophomore,Business Economics,Unsure,1,4
+Junior,Biochemistry,MedicalSchool,0,4
+Senior,Mechanical Engineering,Work,2,3
+Other,Mechanical Engineering,Work,0,1
+Junior,Biochemistry,GradSchool,1,2
+Other,Geology,Work,5,2
+Senior,Business Econ,Work,1,1
+Sophomore,Biology,GradSchool,0,4
+Senior,CMDB,Work,1,3
+Senior,CMDB,GradSchool,0,2
+Sophomore,Microbiology,GradSchool,0,1
