@@ -171,8 +171,6 @@ pre code {
 
 
 <h1 class="title toc-ignore">A Gentle Introduction to Probability Using Dice</h1>
-<h4 class="author">Dr. Lauren Cappiello</h4>
-<h4 class="date">1/25/2022</h4>
 
 </div>
 
