@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+---
+title: "A Gentle Introduction to Probability Using Dice"
+tags:
+  - r programming
+  - just for fun
+---
 
 <html>
 
