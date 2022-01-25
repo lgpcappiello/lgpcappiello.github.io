@@ -2,8 +2,8 @@
 title: "A Gentle Introduction to Probability Using Dice"
 tags:
   - education
-  - statistics
-  - just for fun
+  - statistircs
+  - probability
 ---
 
 <html>
