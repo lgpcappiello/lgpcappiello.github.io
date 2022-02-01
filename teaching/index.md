@@ -29,6 +29,9 @@ Courses taught:
 - <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEFDn6yfD9D3DCsp_j2AfDvm" target="_blank">Introduction to Statistics</a>
 - <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEHVDBeTH5I_ghfON5ev4vCv" target="_blank">Calculus I for the Social and Life Sciences</a>
 
+*Shiny Apps*
+- <a href="https://lgpcappiello.github.io/teaching/shinyapps/">A list of my Shiny Apps and the code to run them.</a>
+
 ## Department of Statistics at UC Riverside
 ### Instructor
 - [STAT 100B Introduction to Statistics (Fall 2019)](https://lgpcappiello.github.io/teaching/stat100b/)
