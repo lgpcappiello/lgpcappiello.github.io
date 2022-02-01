@@ -11,6 +11,6 @@ Here is a collection of Shiny Apps I've written, some for teaching and some just
 
 ### <a href="https://lgpcappiello.shinyapps.io/SimulateCLT/">Simulating the Central Limit Theorem</a>
 
-### <a href="https://lgpcappiello.shinyapps.io/charactergenerator/>Character Generator</a>
+### <a href="https://lgpcappiello.shinyapps.io/charactergenerator/">Character Generator</a>
 
 <a href="https://github.com/lgpcappiello/shinyapps">Here is the GitHub Repository with all of my Shiny Apps (including one or two under development)</a>
