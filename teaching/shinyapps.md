@@ -7,9 +7,13 @@ author_profile: true
 
 ## Shiny Apps
 
-Here is a collection of Shiny Apps I've written, some for teaching and some just for fun. I've also included a link to the GitHub repo, should you want the original code.
+Here is a collection of Shiny Apps I've written. I've also included a link to the GitHub repo, should you want the original code.
+
+### Teaching Tools
 
 - <a href="https://lgpcappiello.shinyapps.io/SimulateCLT/">Simulating the Central Limit Theorem</a>
+
+### Just For Fun
 
 - <a href="https://lgpcappiello.shinyapps.io/charactergenerator/">Character Generator</a>
 
