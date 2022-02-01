@@ -10,6 +10,9 @@ author_profile: true
 - [RStudio Cloud](https://rstudio.cloud/projects)
 - [RDRR.io](https://rdrr.io/snippets/)
 
+## Shiny Apps
+- <a href="https://lgpcappiello.github.io/teaching/shinyapps/">A list of my Shiny Apps and the code to run them.</a>
+
 ## [Rossman and Chance Applets](https://www.rossmanchance.com/applets/index2021.html)
 
 - [Normal Probability Calculator](http://www.rossmanchance.com/applets/2021/normcalc/NormCalc.html)
