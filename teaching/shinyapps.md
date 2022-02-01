@@ -1,3 +1,10 @@
+---
+permalink: /teaching/shinyapps/
+title: "Teaching"
+layout: single
+author_profile: true
+---
+
 ## Shiny Apps
 
 Here is a collection of Shiny Apps I've written, some for teaching and some just for fun. I've also included a link to the GitHub repo, should you want the original code.
