@@ -19,3 +19,9 @@ Here is a collection of Shiny Apps I've written. I've also included a link to th
 - <a href="https://lgpcappiello.shinyapps.io/charactergenerator/">Character Generator</a>
 
 <a href="https://github.com/lgpcappiello/shinyapps">Here is the GitHub Repository with all of my Shiny Apps (including one or two under development)</a>
+
+## Simulation Code
+
+Here is some additional simulation code that hasn't made it into Shiny Apps yet.
+
+- <a href="https://github.com/lgpcappiello/shinyapps/blob/master/consistency.R">Simulating consistency with a fair coin</a>
