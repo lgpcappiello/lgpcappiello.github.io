@@ -32,6 +32,8 @@ Courses taught:
 - <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEFDn6yfD9D3DCsp_j2AfDvm" target="_blank">Introduction to Statistics</a>
 - <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEHVDBeTH5I_ghfON5ev4vCv" target="_blank">Calculus I for the Social and Life Sciences</a>
 
+Note: the captions for these videos are generated automatically by YouTube. If you need more accurate captions for a particular video(s), please let me know and I will get them fixed as soon as possible.
+
 ## Department of Statistics at UC Riverside
 ### Instructor
 - [STAT 100B Introduction to Statistics (Fall 2019)](https://lgpcappiello.github.io/teaching/stat100b/)
