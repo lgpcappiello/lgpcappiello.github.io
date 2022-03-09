@@ -32,7 +32,7 @@ Courses taught:
 - <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEFDn6yfD9D3DCsp_j2AfDvm" target="_blank">Introduction to Statistics</a>
 - <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEHVDBeTH5I_ghfON5ev4vCv" target="_blank">Calculus I for the Social and Life Sciences</a>
 
-Note: the captions for these videos are generated automatically by YouTube. If you notice any inaccurate or confusing captions, please let me know and I will get them fixed as soon as possible.
+Note: much of the captioning for these videos was generated automatically by YouTube. If you notice any inaccurate or confusing captions, please let me know and I will get them fixed as soon as possible.
 
 ## Department of Statistics at UC Riverside
 ### Instructor
