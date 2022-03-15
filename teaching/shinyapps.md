@@ -11,6 +11,7 @@ Here is a collection of Shiny Apps I've written. I've also included a link to th
 
 ### Teaching Tools
 
+- <a href="https://lgpcappiello.shinyapps.io/normcalc/">Normal Distribution Calculator</a>
 - <a href="https://lgpcappiello.shinyapps.io/SimulateCLT/">Simulating the Central Limit Theorem</a>
 - <a href="https://lgpcappiello.shinyapps.io/NormalApproxBinom/">Visualizing the Normal Approximation to the Binomial Distribution</a>
 
