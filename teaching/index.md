@@ -23,7 +23,7 @@ Courses taught:
 - MATH 26A Calculus I for the Social and Life Sciences
 
 *Course Notes*
-- <a href="https://bookdown.org/content/8276840e-199a-4028-ad4d-b2dd93b7ee48/">Introduction to Statistics</a>
+- <a href="https://bookdown.org/lgpcappiello/IntroStats/">Introduction to Statistics</a>
 
 *Shiny Apps*
 - <a href="https://lgpcappiello.github.io/teaching/shinyapps/">A list of my Shiny Apps and the code to run them.</a>
