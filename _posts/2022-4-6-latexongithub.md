@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+---
+title: "Using LaTeX Equations in Github Pages"
+tags:
+  - github
+  - latex
+  - tutorial
+---
 
 <html>
 
