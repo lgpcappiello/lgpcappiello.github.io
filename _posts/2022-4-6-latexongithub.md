@@ -1,11 +1,10 @@
 ---
-title: "Rolling with Advantage and Disadvantage"
+title: "Using LaTeX Equations in Github Pages"
 tags:
   - github
   - latex
   - tutorial
 ---
-<!DOCTYPE html>
 
 <html>
 
@@ -180,7 +179,7 @@ pre code {
 <p>Step 2. Write your document using standard markdown syntax <em>and LaTeX math</em>!. Unlike a Markdown file, RMarkdown can also compile quite a bit of LaTeX, most notably mathematical equations. I haven’t tried to do anything too bizarre, but it seems to work well with everything I’ve wanted to do in math mode.</p>
 <p>Step 3. Compile to HTML. This will save your work as an HTML document.</p>
 <p>Step 4. Upload your HTML document to Github.</p>
-<p>Step 5. Open the HTML file in an editor (<em>not in a browser or in RStudio</em>) and add your Github pages header information to the top of the file. If you don’t have a way to edit HTML files on your local machine, upload your file to Github and edit it directly on the Github website. I add my header as markdown, which necessitates changing the file extension to <code>.md</code> (markdown can handle html, so this works ok). You may also want to remove the title and header information from the RMarkdown file.</p>
+<p>Step 5. Open the HTML file in an editor (<em>not in a browser or in RStudio</em>) and add your Github pages header information to the top of the file. If you don’t have a way to edit HTML files on your local machine, upload your file to Github and edit it directly on the Github website. I add my header as markdown, which necessitates changing the file extension to <code>.md</code> (markdown can handle html, so this works ok). If you change the file type to markdown, make sure to delete <code><!DOCTYPE html></code> from the top of the file. You may also want to remove the title and header information from the RMarkdown file.</p>
 <p>Step 6. Save and push any necessary changes. Et voila!</p>
 
 
