@@ -1,9 +1,9 @@
 ---
 title: "Rolling with Advantage and Disadvantage"
 tags:
-  - education
-  - statistics
-  - probability
+  - github
+  - latex
+  - tutorial
 ---
 <!DOCTYPE html>
 
