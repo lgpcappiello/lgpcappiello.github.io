@@ -20,4 +20,6 @@ If you are a student interested in statistics research, [send me an email](mailt
 
 ### Publications and Conferences
 
+You can [check out my dissertation here](https://lgpcappiello.github.io/research/Dissertation.pdf).
+
 For a complete list of my publications and presentations, see my [CV](https://lgpcappiello.github.io/CappielloCV.pdf). 
