@@ -11,7 +11,7 @@ author_profile: true
 - Nonparametric methods 
 - Statistics and mathematics education
 
-Some of my ongoing projects are related to
+### Some of my ongoing projects are on
 
 - Statistics Education
 - Mathematics Education
