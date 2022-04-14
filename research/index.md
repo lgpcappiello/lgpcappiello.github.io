@@ -9,6 +9,13 @@ author_profile: true
 - Biostatistics
 - Applied statistics and data analysis
 - Nonparametric methods 
+- Statistics and mathematics education
+
+Some of my ongoing projects are related to
+
+- Statistics Education
+- Mathematics Education
+- Survey Analysis for a Physical Therapy Study
 
 ## Student research
 
