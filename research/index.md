@@ -5,7 +5,7 @@ layout: single
 author_profile: true
 ---
 
-## Research Interests
+## Interests
 - Biostatistics
 - Applied statistics and data analysis
 - Nonparametric methods 
