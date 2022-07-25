@@ -11,7 +11,7 @@ author_profile: true
 - Nonparametric methods 
 - Statistics and mathematics education
 
-Some of my ongoing projects are in
+Some of my ongoing collaborative projects are in
 
 - mathematics and statistics education.
 - survey analysis for a physical therapy study.
