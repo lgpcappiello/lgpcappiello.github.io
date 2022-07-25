@@ -26,6 +26,6 @@ If you are a student interested in statistics research, [send me an email](mailt
 
 ### Publications and Conferences
 
-You can [check out my dissertation, *Adjusting for Population Differences Using Applied Machine Learning Methods*, here](https://lgpcappiello.github.io/research/Dissertation.pdf).
+You can [check out my dissertation, *Adjusting for Population Differences Using Applied Machine Learning Methods*, here](https://lgpcappiello.github.io/research/Dissertation.pdf). (For the "too long, didn't read" version, [here are the slides for the 15 minute talk](https://lgpcappiello.github.io/research/ResearchTalk_CSUS.pdf) I gave on this work when I applied to Sac State!)
 
 For a complete list of my publications and presentations, see my [CV](https://lgpcappiello.github.io/CappielloCV.pdf). 
