@@ -1,6 +1,6 @@
 ---
 permalink: /research/
-title: "Research"
+title: "Research and Consulting"
 layout: single
 author_profile: true
 ---
@@ -9,6 +9,7 @@ author_profile: true
 - Biostatistics
 - Applied statistics and data analysis
 - Nonparametric methods 
+- Causal inference
 - Statistics and mathematics education
 
 Some of my ongoing collaborative projects are in
