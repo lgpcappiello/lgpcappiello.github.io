@@ -1,5 +1,5 @@
 ---
-permalink: /teaching/stat128
+permalink: /teaching/stat128/
 title: "Statistical Computing (Stat 128)"
 layout: single
 author_profile: true
