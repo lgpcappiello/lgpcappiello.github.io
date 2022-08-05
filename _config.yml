@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Lauren Cappiello
-email:
+email: cappiello@csus.edu
 description: test description
 twitter_username: lgpcappiello
 github_username: lgpcappiello
@@ -59,9 +59,6 @@ author:
   avatar : "https://avatars2.githubusercontent.com/u/46605262?s=460&v=4"
   bio    : "Assistant Professor of Mathematics & Statistics at Sacramento State<br>Pronouns: she/her"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/lgpcappiello"
