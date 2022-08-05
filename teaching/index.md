@@ -32,5 +32,5 @@ I am also available by appointment. (<a href="https://calendly.com/lcappiello/30
 
 ## Department of Statistics at UC Riverside
 ### Course Websites
-- [STAT 100B Introduction to Statistics (Fall 2019)](https://lgpcappiello.github.io/teaching/stat100b/)
 - [STAT 100A Introduction to Statistics (Summer 2019)](https://lgpcappiello.github.io/teaching/stat100a/)
+- [STAT 100B Introduction to Statistics (Fall 2019)](https://lgpcappiello.github.io/teaching/stat100b/)
