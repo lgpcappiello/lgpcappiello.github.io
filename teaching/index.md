@@ -20,6 +20,7 @@ Courses taught:
 - STAT 1 Introduction to Statistics 
 - STAT 115A Introduction to Probability Theory
 - STAT 115B Introduction to Mathematical Statistics
+- <a href="https://lgpcappiello.github.io/teaching/stat128/">STAT 128 Statistical Computing</a>
 - MATH 26A Calculus I for the Social and Life Sciences
 
 *Course Notes*
