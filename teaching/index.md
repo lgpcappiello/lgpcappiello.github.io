@@ -11,7 +11,7 @@ My Fall 2022 office hours are
 
 - MWF 2-2:50 PM in Shasta 153
 
-If these hours are not convenient, I am also available by appointment. (<a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointment.</a>)
+I am also available by appointment. (<a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointment.</a>)
 
 Courses taught:
 
