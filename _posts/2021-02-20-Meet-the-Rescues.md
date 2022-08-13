@@ -1,4 +1,8 @@
-# Meet the Rescue Animals
+---
+title: "Meet the Rescues"
+tags:
+  - just for fun
+---
 
 ## Daisy
 
