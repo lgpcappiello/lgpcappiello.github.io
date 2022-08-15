@@ -22,7 +22,7 @@ The catio I built outside my home office window.
 
 <img src="http://lgpcappiello.github.io/images/IMG-1800-Original.jpeg" width="45%">
 
-<img src="http://lgpcappiello.github.io/images/IMG-1082-Original.jpeg" width="45%">
+<img src="http://lgpcappiello.github.io/images/IMG-1082-Original.jpeg" width="75%">
 
 A bed frame to squeeze one more guest bed space into the office. 
 
