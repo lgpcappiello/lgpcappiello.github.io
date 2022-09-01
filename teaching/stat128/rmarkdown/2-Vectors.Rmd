@@ -1,5 +1,5 @@
 ---
-title: "(Atomic) Vectors"
+title: "(Atomic) Vectors and Factors"
 author: ""
 date: "Lab 2"
 output: html_document
@@ -9,7 +9,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# One-Dimensional Objects
+# Vectors
+
+## One-Dimensional Objects
 
 We got a brief introduction to 1-D objects in R when we discussed naming and storing objects. R has a variety of different types of objects that store different types and dimensions of information. 
 
@@ -99,9 +101,9 @@ You can also create logical vectors by using logical operators within the `c()` 
 logi2 <- c(2>3, 5!=6)
 ```
 
-# Basic Features
+## Basic Features
 
-## Checking Length
+### Checking Length
 
 You can check the length of a vector using `length()`:
 
@@ -109,7 +111,7 @@ You can check the length of a vector using `length()`:
 length(logi1)
 ```
 
-## Vectorized Operations
+### Vectorized Operations
 
 We can do math on vectors directly! They don't need to be of exactly the same type, but they do need to be of the same class. We can check the class using `class()`.
 
@@ -150,13 +152,13 @@ Let's try a couple of operations with `v3` and `v4`:
 
 What happened? 
 
-### What about character and logical vectors?
+#### What about character and logical vectors?
 
 We can't do math with character vectors.
 
 We *can* do math with logical vectors, though. Since logical vectors are *binary*, R will treat `TRUE` and 1 and `FALSE` as 0. Why might this be useful?
 
-## Accessing Individual Elements
+### Accessing Individual Elements
 
 Sometimes we may want to access or use specific elements from a vector without creating new objects for each element. An *index* is the location of an element in a vector. R starts its indexing at 1. Let's get the first element from `v5`.
 
@@ -177,3 +179,135 @@ And we can ask for several indices at once:
 ```{r}
 v3[c(3,1)]
 ```
+
+# Factors
+
+Factors are R's way of working with categorical data. 
+
+```{r}
+hair <- c("Blonde", "Black", "Black", "Red", "Blonde", "Brown", "Black")
+typeof(hair)
+```
+
+To make this more useful as categorical data, we convert to `factor`:
+
+```{r}
+hair <- as.factor(hair)
+```
+
+## Levels
+
+Levels are part of what makes factors easier to work with than basic character data. These show all of the *unique* or distinct values the variable takes on. 
+
+This also allows us to give R more information than the data might originally contain. How?
+
+```{r}
+directions <- c("North", "West", "North", "East", "North", "West", "East")
+f <- factor(directions)
+```
+
+The data is clearly working with the cardinal directions - north, east, south, and west - but since "south" is missing from the data, it's also missing from the levels. If we wanted to write up or plot these data, we would probably want south represented. Luckily, we can add it in by telling R exactly what the levels should be:
+
+```{r}
+f <- factor(directions,
+            levels = c("North", "East", "South", "West")) 
+```
+
+*Side note*: what about that equals sign?
+
+We can also take this a step further and abbreviate the level names using `labels`:
+
+```{r}
+f <- factor(directions,
+            levels = c("North", "East", "South", "West"),
+            labels = c("N", "E", "S", "W"))
+```
+
+### On Your Own
+
+Convert the following character vector to a factor, then give it levels `cat`, `dog`, `bird`, and `fish`. Save this factor in an object called `pets`.
+
+```{r}
+animals <- c("cat","dog","dog","cat","fish","fish","dog","cat")
+```
+
+## Removing Extraneous Levels
+
+Other times, we may work with the data in such a way where R has factor levels for which there are no observations *and we might not want them anymore*. In this case, we can use `droplevels` to reduce the levels to only those for which we have data.
+
+```{r}
+record <- c("win", "loss", "loss", "win", "loss", "win")
+f <- factor(record,
+           levels = c("loss", "tie", "win"))
+f.new <- droplevels(f)
+```
+
+## Ordered Factors
+
+Sometimes the levels of a variable have some natural ordering. For example, it's common to have survey questions with response options "strongly disagree", "disagree", "neutral", "agree", and "strongly agree".
+
+To order a factor, we give R the labels in our desired order (from "lowest" to "highest") and add `ordered = TRUE`.
+
+```{r}
+record = c("win", "tie", "loss", "tie", "loss", "win", "win")
+f = factor(record, 
+           ordered = TRUE, 
+           levels = c("loss", "tie", "win"))
+```
+
+### On Your Own
+
+Take your `pets` factor and order the levels in whatever way you like. Then, drop any unnecessary levels. 
+
+## Basic Features
+
+For the most part, the basic features available to use for vectors are the same for factors.
+
+We can examine the length:
+```{r}
+
+```
+
+...convert to other variable types:
+```{r}
+
+```
+
+...get the `class` (which will give us more information than just the `type`):
+```{r}
+
+```
+
+...name the elements:
+
+```{r}
+named1 <- c(sally = "win", tom = "win", ed = "lost", jane = "tie")
+named1 <- factor(named1)
+```
+
+...and access elements:
+```{r}
+
+```
+
+### Frequency Tables
+
+For a factor, the `summary` function will give a quick table overview of the contents of a factor. The `table` function will do basically the same thing.
+
+```{r}
+
+```
+
+We can extend the use of table to create two-way tables:
+
+```{r}
+hair <- c("Blonde", "Black", "Black", "Red", "Blonde", "Brown", "Black")
+own_pets <- c(TRUE, FALSE, TRUE, TRUE, FALSE, FALSE, FALSE)
+
+hair <- factor(hair)
+own_pets <- factor(own_pets)
+
+table(hair, own_pets)
+```
+
+What needs to be true for these tables to make sense?
