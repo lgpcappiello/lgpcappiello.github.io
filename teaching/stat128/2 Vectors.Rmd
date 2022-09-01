@@ -1,0 +1,179 @@
+---
+title: "(Atomic) Vectors"
+author: ""
+date: "Lab 2"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# One-Dimensional Objects
+
+We got a brief introduction to 1-D objects in R when we discussed naming and storing objects. R has a variety of different types of objects that store different types and dimensions of information. 
+
+A vector is a 1-D object, meaning that it stores a sequence of elements in a particular order. In general, the only rule here is that the elements all need to be the same type - numeric, character, etc. In our intro to R lab, we saw vectors with one element:
+
+```{r}
+a <- 2
+```
+
+To create vectors with multiple elements, we use the **concatenate** function: `c()`:
+
+```{r}
+v <- c(1,2,3)
+```
+
+### On Your Own
+
+Create a vector named `v2` of the (ordered) numbers: 5, 2, 9, and 10.
+
+```{r}
+
+```
+
+## Types of Data
+
+The data types available in R are `double`, `integer`, `complex`, `logical`, `character`, and `raw`. 
+
+- Double: Real numbers
+- Integer: Integer numbers
+- Complex: Complex numbers
+- Logical: A vector containing True/False values
+- Character: a vector containing *strings*.
+- Raw: holds raw bytes (bytes are a unit of digital information storage). The `raw` type is almost never used in practice. 
+
+Unlike in other programming languages, we don't need to tell R which data type we're using. However, we may occasionally want to change whatever R did automatically. We can set this up when we create a vector, but I think the easiest way to manage this is to let R do its thing and then use `as.type` to make the change (where "type" is replaced by the desired data type). For example, 
+
+```{r}
+v.double <- as.double(v)
+```
+
+We can also create vectors by combine other vectors of the same type:
+
+```{r eval=F}
+v.combined <- c(v, v2)
+```
+
+### On Your Own
+
+Convert the variable `v2` to character.
+
+```{r}
+
+```
+
+Vectors of all variable types can also include `NA`, which indicates a missing value. 
+
+We can check which type R is using for a variable using `typeof()`. Let's check `v` and `v2` to make sure we got what we wanted (`v` should be a double; `v2` should be character).
+
+```{r}
+
+```
+
+## More on the Character Type
+
+We enter character type values as strings enclosed in double or single quotes. 
+
+```{r}
+char1 <- c("banana","apple")
+```
+
+is exactly equivalent to 
+
+```{r}
+char1 <- c('banana','apple')
+```
+
+## More on the Logical Type
+
+Logical vectors can be entered directly using `TRUE` and `FALSE` or `T` and `F`. This is one place where R being case sensitive is really important - you can use `t` and `f` as variable names, but `T` and `F` are reserved. 
+
+```{r}
+logi1 <- c(FALSE, TRUE, T, F)
+```
+You can also create logical vectors by using logical operators within the `c()` function.
+
+```{r}
+logi2 <- c(2>3, 5!=6)
+```
+
+# Basic Features
+
+## Checking Length
+
+You can check the length of a vector using `length()`:
+
+```{r}
+length(logi1)
+```
+
+## Vectorized Operations
+
+We can do math on vectors directly! They don't need to be of exactly the same type, but they do need to be of the same class. We can check the class using `class()`.
+
+Operations are performed element-by-element. 
+
+```{r}
+v3 <- c(1, 5, 6)
+v4 <- c(-0.41, -1.20,  pi)
+class(v3)
+class(v4)
+```
+
+Notice that `class()` tells us that both vectors are numeric, so we're good to go with the math. Let's try a few operations with `v3` and `v4`:
+
+```{r}
+
+```
+
+This can sometimes feel a little weird, especially if you've taken vector calculus. That's ok!
+
+If we use a scalar (including an object holding only one value, like `a <- 3`), it will apply that scalar operation to every element in the vector. Let's try a few with `v3`:
+
+```{r}
+
+```
+
+### Vectors of different lengths
+
+```{r}
+v5 <- c(10,20)
+```
+
+Let's try a couple of operations with `v3` and `v4`:
+
+```{r}
+
+```
+
+What happened? 
+
+### What about character and logical vectors?
+
+We can't do math with character vectors.
+
+We *can* do math with logical vectors, though. Since logical vectors are *binary*, R will treat `TRUE` and 1 and `FALSE` as 0. Why might this be useful?
+
+## Accessing Individual Elements
+
+Sometimes we may want to access or use specific elements from a vector without creating new objects for each element. An *index* is the location of an element in a vector. R starts its indexing at 1. Let's get the first element from `v5`.
+
+You should add comments to the following code chunks describing what they do. 
+
+```{r}
+v5[1]
+```
+
+We can also tell R to exclude specific elements by using the negative of the element we want to exclude.
+
+```{r}
+v5[-1]
+```
+
+And we can ask for several indices at once:
+
+```{r}
+v3[c(3,1)]
+```

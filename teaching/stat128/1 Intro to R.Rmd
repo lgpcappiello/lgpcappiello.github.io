@@ -1,0 +1,216 @@
+---
+title: "Introduction to R and RStudio"
+author: "Lauren Cappiello"
+date: "Lab 1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Welcome to R Markdown! 
+
+You will use RMarkdown for almost everything in this class! This file is your first lab. Labs will consist of a mix of things we will do together (you're encouraged to include any additional course notes here as well!) and things you will prompted to do either on your own or with your classmates.
+
+Start by removing your prof's name and replacing it with your name in the heading information.
+
+## Markdown Syntax
+
+Markdown is what we call a *markup language*, which just means that it functions like a text editor but instead of clicking a button for formatting, you use symbols and commands to control the formatting.
+
+Let's start by knitting the document. This takes all of those symbols and commands and turns them into a finished product. While you are still learning, I recommend knitting early and often!
+
+We've already read past a couple of examples! **Fill in what each item does:**
+
+- The pound sign (#):
+- Adding additional pound signs: 
+- Putting an asterisk around a word or phrase:
+- Writing a list using dashes (like this one!): 
+
+The following syntax allows you to add a link: [here is a link to a Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/).
+
+### On your own
+
+Using the Markdown Cheat Sheet, create a numbered list of four items. You can choose what those items are. Make the third item appear bold and the fourth item appear as code (note that code is a way of displaying text and *not* a way to write and run R code!). Make sure to knit your document to confirm that your list is working!
+
+
+
+
+### Final Comments on RMarkdown
+
+1. You can write HTML syntax directly in Markdown (and RMarkdown) files. If you happen to know some HTML, great. If not, that's fine; we won't use it.
+
+2. In RMarkdown (but not in Markdown more generally), you can insert LaTeX math. I may occasionally insert mathematical expressions this way. Often, you can view the compiled equation by mousing over it. You can also see the equations by knitting the document. We may briefly discuss LaTeX math later in the semester, but for now we're going to move on. 
+
+## Using R with RMarkdown
+
+This is what an R code chunk looks like in an RMarkdown document:
+
+```{r}
+2+2
+```
+
+To run a chunk of code, you can click the little green arrow in the top right corner of the chunk. You can also run lines individually by clicking on the line you want to run and pressing Control+Enter (command+return on a Mac) on your keyboard. To run multiple lines at once, highlight the lines you wish to run before pressing Control+Enter.
+
+Maybe it goes without saying, but you can only write R code in the R code chunks - Markdown commands won't work!
+
+## Comments
+
+We use the pound sign to add *comments* to R code. The compiler (the thing that translates the R code into something the computer can understand) ignores comments, so we use them as notes-to-self or as notes to other people who might read our code. I try to write comments for each line or code - or short code chunk - to say what that bit of code does. That way, when I go to read code that I haven't looked at in a while, I know exactly what's going on without having to decipher the code itself! 
+
+```{r}
+# The following line calculates and prints the value of 2+2.
+2+2
+```
+
+We can also put a comment at the end of a line of code. 
+
+```{r}
+2+2 # Find and print the value of 2+2
+```
+
+Sometimes, when we first start learning R, it can feel kind of silly to write so many comments. (Obviously `2+2` is going to calculate 2+2!) BUT it's a really good habit to have - as you spend more time working in R, your code will get more complex and it'll get harder to decipher at a glance. Your life will be way easier if you write more comments than you need then if you forget and try to add comments in later. We'll use comments a lot throughout this class (in fact, I am going to require it!), so let's keep moving. 
+
+## Arithmetic Operators
+
+To do statistics, we need to be able to perform mathematical operations! R is a great calculator. **We will fill in some expressions in the code chunk below.**
+
+```{r}
+# Addition:
+
+# Subtraction:
+
+# Multiplication:
+
+# Division:
+
+# Exponent:
+
+```
+
+## Relational Operators
+
+Relational operators compare two values and return `TRUE` or `FALSE`. For example,
+
+```{r}
+2 > 3 # check if 2 > 3
+```
+
+Returns `FALSE` (because clearly 2 > 3 is a false statement). **Fill in appropriate statements for the code chunk below.**
+
+```{r}
+# Check less than:
+
+# Check greater than or equal to:
+
+# Check less than or equal to:
+
+# Check if two things are not equal to each other:
+
+# Check for equality:
+
+```
+
+This may not seem very useful yet - we can check these expressions by eye! In practice, it's not that easy!
+
+You might have these things in your R Environment already, but go ahead and run the following R code chunk to make sure. Recall that when we write `a = 29.325`, we are telling R to remember the value 29.325 and to save it as `a`. Then, we can reference `a` later and R will know what that means. **Add comments to this code chunk to explain what is being calculated.**
+
+```{r}
+a = 29.325
+b = log(a)
+c = a/b
+```
+
+I *can* check what `c` is and compare it to things manually
+```{r}
+# Print the value of c:
+c
+```
+
+...but if I'm running a lot of code and I need to know if c is different from 12, it'll be way more efficient to check that directly:
+
+```{r}
+# Check if c is different from 12:
+c == 12
+## OR ##
+c != 12
+```
+Notice that I can use as many pound signs as I want in a comment. Sometimes I like to do this for emphasis or to make particular comments easy to find when browsing through a lot of code. 
+
+### On Your Own
+
+In the empty code chunk below, check if a is greater than 10.
+```{r}
+
+```
+
+Check if b is less than or equal to 10.
+```{r}
+
+```
+
+Check if c is equal to 8.
+```{r}
+
+```
+
+## Logical Operators
+
+Logical operators allow us to add "and"/"or" to statements using relational operators. For example, I might want to know if a > b AND a > c. If you've learned any set theory, it's the same idea: "and" checks if both statements are true; "or" checks if one or both statements are true.
+
+```{r}
+# Check if a > b AND a > c
+(a > b) & (a > c)
+```
+
+```{r}
+# Check if a > b OR a < c
+(a > b) | (a < c)
+```
+
+We can negate an operation using an exclamation point, just like we did when we used the "not equal to" operator, `!=`. We know that a < 10 is `FALSE`, so
+
+```{r}
+!(a < 10)
+```
+
+## Assignment Operators
+
+Assignment operators assign *values* to *objects* (stuff stored in the R Environment). We've already seen one assignment operator: 
+
+```{r}
+# Assign the value of 7 to an object named "d"
+d = 7
+```
+
+Now, if we use `d` anywhere, R will know what that means. The other commonly used assignment operator is `<-`
+```{r}
+# Assign the value of 6 to an object named "d2"
+d2 <- 7
+```
+
+Which I think of as a little arrow that puts the number 6 into the object named `d2`. In general, these two operators can be used interchangeably. You may use whichever one you prefer. 
+
+### On your own
+
+Create an object named `my_object` and assign it the value 32. Then, check if `my_object` is greater than or equal to c. (Note that this time you will need to create your own R code chunk!)
+
+## Naming Conventions
+
+When it comes to naming objects in R, there are a few things to consider.
+
+First, R has some rules: 
+
+1. Object names can start with a letter or a period. The remaining characters can be letters, numbers, `.` or `_`
+2. Some names already exist in R and can cause problems if you try to use them as names. We can view a list of reserved names by running the following line of code:
+```{r}
+?Reserved
+```
+3. R is case sensitive! 
+
+We also want to avoid using the names of existing R functions, but we haven't seen any of those yet so we'll worry about that later!
+
+Second, I have just one rule about names: **names should be meaningful**. Just like comments, meaningful names will make it easier to read your code later and to find any errors. 
+
+Final note: we name objects to store them in R so that we can use them later. Using them later requires typing those names again, so you probably don't want to use excessively long names. 
