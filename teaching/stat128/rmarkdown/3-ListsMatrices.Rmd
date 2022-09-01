@@ -1,0 +1,19 @@
+---
+title: "Lists and Matrices"
+author: "Lauren Cappiello"
+date: "Lab 3"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+Let's load in the results from the class survey and look at some categorical data.
+
+```{r}
+#surv <- read.csv("https://lgpcappiello.github.io/teaching/stat128/SurveyResponses.csv")
+#View(surv)
+```
