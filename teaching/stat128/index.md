@@ -9,10 +9,10 @@ This page is a work in progress. Selected course materials for Stat 128 (Fall 20
 
 ## Labs
 
-Class time is spent working through labs, so these also serve as a scaffolded version of the course notes.
+Class is presented as a hands-on workthrough of each lab. Labs borrow heavily from work by [Rebecca Kurtz-Garcia](https://rpkgarcia.github.io/rpkgarcia/). 
 
 1. [Introduction to R, RStudio, and RMarkdown](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/1-Intro-to-R.html)
 2. [Vectors and Factors](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/2-Vectors.html)
 3. Lists and Matrices
 
-The original RMarkdown files can be found [here](https://github.com/lgpcappiello/lgpcappiello.github.io/tree/master/teaching/stat128/rmarkdown). 
+Original RMarkdown files can be found [here](https://github.com/lgpcappiello/lgpcappiello.github.io/tree/master/teaching/stat128/rmarkdown). 
