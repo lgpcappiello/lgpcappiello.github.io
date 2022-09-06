@@ -1,0 +1,137 @@
+---
+title: "Lists"
+author: "Lauren Cappiello"
+date: "Lab 3"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+A *list* is an array of objects, which is to say that the elements in a list are themselves objects. Unlike other data storage types we've discussed, the objects in a list can belong to different classes. In short, lists are a collection of objects of different types and lengths.
+
+```{r}
+mylist <- list(10, c("abc", "item"), c(1.23, 1.5, 6), c(TRUE, FALSE))
+mylist
+```
+We can examine the contents of a list using `str`:
+
+```{r}
+
+```
+
+## Nested Lists
+
+A list can contain all sorts of objects, so why not have a list that contains other lists? These are called *nested lists* or *recursive vectors*. 
+
+```{r}
+lst2 <- list(1, 3, c("abc", "ABC"), mylist, TRUE)
+str(lst2)
+```
+It's lists all the way down. 
+
+# Basic Features
+
+Even though lists are a little different from vectors, a lot of the same basic features apply.
+
+## Length
+
+```{r}
+
+```
+
+This tells us how many objects are in the list, but does not tell us anything about those objects or how many elements might be in each. 
+
+We can also use the concatenate function to combine lists, like we used it to combine numbers and strings into vectors.
+
+```{r}
+lst_char <-  list("a", "b", "c")
+lst_num <- list(100, 99, 0)
+lst <- c(lst_num, lst_char)
+str(lst)
+```
+
+## Coercion
+
+We can convert vectors and factors to lists using `as.list`. 
+
+```{r}
+v1 <- c(5,9,3.6,4.9,pi)
+l1 <- as.list(v1)
+str(l1)
+```
+
+How does this conversion take place? What does R do with the vector when turning it into a list?
+
+We can also convert lists to other types using `as.*`, but this will only work if the conversion is sensible.
+
+```{r}
+as.numeric(l1) # works
+
+# The next line doesn't work.
+# You will need to comment this out to knit the document. 
+# as.numeric(lst2) 
+```
+We can also use `unlist`, where R will just guess what type of vector is most appropriate.
+
+```{r}
+unlist(l1)
+unlist(lst2)
+```
+How did R deal with the mix of vector types in `lst2`?
+
+## Testing/Class
+
+As with vectors, we can determine if an object is a list using `is.list` or `class`.
+
+```{r}
+is.list(l1)
+```
+
+```{r}
+class(l1)
+```
+
+## Names
+
+Names start to get more important as we move into lists and matrices because it starts to get more difficult to keep track of what everything means. For example, I might want a list with vectors containing first names, last names, and years of birth.
+
+```{r}
+lst3 <- list(first = c("Dwayne","Nicolas"),
+             second = c("Johnson","Cage"),
+             birthyear = c(1972,1964))
+lst3
+```
+
+## Accessing Things from a List
+
+List output is structured to identify each object in the list using [[]] instead of []. 
+
+```{r}
+mylist
+```
+We can use this to access objects from the list.
+
+```{r}
+mylist[[2]]
+```
+
+This isolates that object, which can then be interacted with as an object of whatever type it is:
+
+```{r}
+class(mylist[[2]])
+# returns the first item from the second object in the list "mylist"
+mylist[[2]][1] 
+```
+
+With named lists, we can also access elements using the dollar sign and the desired object's name:
+
+```{r}
+lst3$second
+```
+
+## On Your Own
+
+Create a list containing a numeric vector named "num1" and a character vector named "cha1". Then access the first element in `cha1` from your list. 
+
