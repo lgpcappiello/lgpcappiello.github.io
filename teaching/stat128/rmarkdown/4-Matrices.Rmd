@@ -1,0 +1,169 @@
+---
+title: "Matrices and Data Frames"
+author: "Lauren Cappiello"
+date: "Lab 4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Matrices
+
+A matrix is a two-dimensional array of data of the same type. To create a matrix, we need to tell R the data along with the number of rows and columns.
+
+```{r}
+m1 <- matrix(c(1, 9, 2, 0, 5, 7, 3, 8, 4), 
+           nrow=3, ncol=3)
+```
+
+R labels both rows and columns in the output. When R puts the data into the matrix, by default it fills in column-by-column. We can override this with the `byrow` command:
+
+```{r}
+m2 <- matrix(c(1, 9, 2, 0, 5, 7, 3, 8, 4), 
+           nrow=3, ncol=3,
+           byrow = TRUE)
+```
+
+We can create matrices of doubles, integers, logicals, characters, etc. but mostly they are used for numeric data. 
+
+## On Your Own
+
+Use R to create and store the matrix 
+
+1, 5, 19
+
+6, 2, 9
+
+0, 12, 13
+
+in R.
+
+## Vectorized Operations
+
+As with vectors, we can use matrices with arithmetic operations. These are vectorized operations and NOT matrix math.
+
+```{r}
+#multiply by a scalar
+
+
+# add matrices
+
+
+#multiply matrices
+
+```
+
+What about matrix math? We won't need it in this class, but R can absolutely handle that!
+
+```{r}
+# actual matrix multiplication
+m1 %*% m2
+```
+
+# Data Frames
+
+Data frames are a collection of same-length vectors of (potentially) different types. This is how most data is stored.
+
+We can create a data frame manually using a set of same-length vectors.
+
+```{r}
+age <- c(1, 8, 10, 30, 31)
+gender <- c("Female", "Female", "Male","Female","Male")
+married <- c(FALSE, FALSE, FALSE, TRUE, TRUE)
+simpsons <- data.frame(age, gender, married)
+simpsons
+```
+
+We can see the class of each column in a data frame using the command
+
+```{r}
+sapply(simpsons, class)
+```
+# Basic Features
+
+## Dimensions
+
+To quickly see the size or dimensions of a matrix/data frame, there are three important functions.
+
+```{r}
+dim(simpsons)
+
+nrow(simpsons)
+
+ncol(simpsons)
+```
+
+## Accessing Elements
+
+In vectors, we access individual elements using `[index]` (or some list of indices). For vectors and data frames, we access individual elements using `[row index, column index]`. 
+
+```{r}
+m <- matrix(c(1, 9, 2, 0, 5, 7, 3, 8, 4), 
+           nrow=3, ncol=3)
+m
+```
+
+```{r}
+m[1,2]
+```
+
+```{r}
+m[c(1,2),c(1,3)]
+```
+
+We can access entire rows/columns by leaving one dimension blank.
+
+```{r}
+# isolate the second row
+m[2,]
+
+#isolate the second column
+m[,2]
+```
+
+We also have a special access ability with data frames (as with lists): the dollar sign. This will allow us to access specific columns using their names. 
+
+```{r}
+age1 <- simpsons$age
+age1
+```
+
+## Coercion
+
+We sometimes need to convert matrices to data frames and vice versa.
+
+```{r}
+m <- as.data.frame(m)
+m
+
+m <- as.matrix(m)
+m
+```
+
+We also routinely need to change the type of individual columns in a data frame.
+
+```{r}
+simpsons$gender <- as.factor(simpsons$gender)
+simpsons$gender
+```
+## Names
+
+In both matrices and data frames, we are able to name both rows and columns. Data frames will always have column names, but matrices may not. In part, this is because data frames are used to store and work with data, whereas matrices are used more for linear algebra type calculations. 
+
+```{r}
+rownames(simpsons)
+colnames(simpsons)
+```
+
+We can also assign row and column names.
+
+```{r}
+rownames(simpsons) <- c("Maggie", "Lisa", "Bart", "Marge", "Homer")
+colnames(simpsons) <- c("Age", "Gender", "Married")
+simpsons
+```
+# Other Object Types
+
+There are other object types. You may occasionally run into them, or you may find yourself needing one. For example, you may find that you need a three- or four-dimensional object (called arrays), but we will not use these in this class.

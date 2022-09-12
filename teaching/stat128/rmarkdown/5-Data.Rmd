@@ -1,0 +1,34 @@
+---
+title: "Working With Data Sets"
+author: "Lauren Cappiello"
+date: "Lab 5"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Pulling Data Into R
+
+Let's pull in the results for the survey we did on the first day of class. R will automatically create a data frame when we do this. You can pull in data directly from the web:
+
+```{r}
+stdat <- read.csv("https://lgpcappiello.github.io/teaching/stat128/SurveyResponses.csv")
+```
+
+...or you can use the import dataset wizard in RStudio. Data import can get a little complicated, so if the data are stored on your computer, this is what I recommend. You can find this wizard in the **Environment** tab. 
+
+## Examining Real Data
+
+Usually, we don't want to try to print out a lot of data right in the RMarkdown file or in the console. To avoid this, we can use the `View` command:
+
+```{r}
+View(stdat)
+```
+
+We can quickly examine a matrix or data frame using the `head` function, which shows only the first six rows:
+
+```{r}
+# head(stdat)
+```
