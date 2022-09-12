@@ -13,6 +13,6 @@ Class is presented as a hands-on workthrough of each lab. Labs borrow heavily fr
 
 1. [Introduction to R, RStudio, and RMarkdown](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/1-Intro-to-R.html)
 2. [Vectors and Factors](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/2-Vectors.html)
-3. Lists and Matrices
+3. [Lists](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/3-Lists.html)
 
 Original RMarkdown files can be found [here](https://github.com/lgpcappiello/lgpcappiello.github.io/tree/master/teaching/stat128/rmarkdown). 
