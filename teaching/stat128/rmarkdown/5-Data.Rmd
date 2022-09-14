@@ -17,14 +17,15 @@ Let's pull in the results for the survey we did on the first day of class. R wil
 stdat <- read.csv("https://lgpcappiello.github.io/teaching/stat128/SurveyResponses.csv")
 ```
 
-...or you can use the import dataset wizard in RStudio. Data import can get a little complicated, so if the data are stored on your computer, this is what I recommend. You can find this wizard in the **Environment** tab. 
+...or you can use the import dataset wizard in RStudio. Data import can get a little complicated, so if the data are stored on your computer, this is what I recommend. You can find this wizard in the **Environment** tab.
 
-## Examining Real Data
+# Examining Real Data
 
 Usually, we don't want to try to print out a lot of data right in the RMarkdown file or in the console. To avoid this, we can use the `View` command:
 
 ```{r}
-View(stdat)
+# View data in a separate window. 
+# View(stdat)
 ```
 
 We can quickly examine a matrix or data frame using the `head` function, which shows only the first six rows:
@@ -32,3 +33,149 @@ We can quickly examine a matrix or data frame using the `head` function, which s
 ```{r}
 # head(stdat)
 ```
+
+We see pretty quickly that there are some issues here. Let's use what we've learned to clean up this dataset. We'll start with the variable names:
+
+```{r}
+names(stdat)
+names(stdat) <- c("major","gender","year","age","classes","units","livecampus","working",
+                  "grade","statclass","height","shoe","pets","parent")
+names(stdat) # much better!
+```
+
+Now let's check out these data. The `summary` function will run the summary command on each variable in the dataset.
+
+```{r}
+summary(stdat)
+```
+
+# Data Manipulation and Cleaning
+
+## Sorting Data
+
+We can sort a vector using the `sort` function, which defaults to smallest-to-largest.
+
+```{r}
+sort(stdat$age) # default
+sort(stdat$age, decreasing = TRUE) # largest-to-smallest
+```
+
+We can get the order of a variable using the `order` function. This returns the ranks of the variable.
+
+```{r}
+order(stdat$age)
+```
+
+So the first number is 20th when sorted from smallest to largest, the second is 14th, etc.
+
+This can then be used to rearrange the data. To rearrange the data frame based on the age variable,
+
+```{r}
+ord1 <- stdat[order(stdat$age),]
+head(ord1)
+```
+
+We can also sort based on one variable and then another. (For character data, R will sort by alphabetical order.)
+
+```{r}
+ord2 <- stdat[order(stdat$age, stdat$major),]
+head(ord2)
+```
+
+### On Your Own
+
+Use the `order` function to arrange the data by target grade (`grade`) and then height.
+
+## Reassignment
+
+Now, let's examine the number of classes you are all taking.
+
+```{r}
+stdat$classes
+class(stdat$classes)
+```
+
+We probably want this to be a numeric variable. There are a few ways to pull things out of strings, including the `grepl` function, but for now we'll use the simplest, direct approach.
+
+Let's imagine there's too much data to do this completely manually. What happens if we try to convert this to a numeric variable?
+
+```{r}
+as.numeric(stdat$classes)
+class.num <- as.numeric(stdat$classes) # save this for now so we can use it later!
+```
+
+This isn't what we want, but it does provide us with some useful information! If I can extract the places where R is giving an `NA` because of characters in the string, I can use that to examine only those entries. The `which` function takes a logical statement on an object and returns the *indices* at which the statement is true. We will also use the function `is.na`, which returns TRUE wherever there is missing data stored as `NA`.
+
+```{r}
+is.na(class.num) 
+which(is.na(class.num)) # gets the indices where class.num is missing
+ind <- which(is.na(class.num))
+```
+
+So now I know where there are issues. Let's check those out in the original data (which we have been careful *not* to change so far!).
+
+```{r}
+stdat$classes[c(ind)]
+```
+
+Now what? Since we've narrowed this down to only three entries, we can fix this quickly and directly. (There are other ways to do this that don't require us to look at the data so much, but this is a good exercise!)
+
+Let's assume that all of the numbers in these strings are the number of classes each person is taking. Then I want to replace these three entries with 6, 4, and 6, respectively - we can modifiy those entries directly in the vector.
+
+```{r}
+stdat$classes[c(ind)] <- c(6,4,6)
+stdat$classes
+
+stdat$classes <- as.numeric(stdat$classes) # overwrite the classes vector with the numeric version
+stdat$classes
+```
+
+### On Your Own
+
+Examine the `units` variable in `stdat`. Convert it to numeric, modifying any strings to be numbers. Comment on how you decided to convert the range into a number. (There's no wrong answer here - sometimes we have to make a decision and we just do the best we can!)
+
+## Adding and Removing Variables
+
+To remove something from the R environment, we use `rm`.
+
+```{r}
+rm(class.num) # we don't need this anymore
+```
+
+We might want to add a variable if, for example, we wanted to do some kind of conversion. Let's convert height (in inches) to centimeters and store it in the dataframe as a new variable.
+
+```{r}
+stdat$cmHt <- stdat$height*2.54
+```
+
+We can also add new columns and rows to a matrix using `cbind` and `rbind`, respectively.
+
+```{r}
+m1 <- matrix(1:9, nrow=3, ncol=3)
+m1
+
+v1 <- 10:12
+m1 <- cbind(m1, v1)
+m1
+
+v2 <- 13:16
+m1 <- rbind(m1, v2)
+m1
+```
+
+### On Your Own
+
+Create a new variable, `unitRatio`, in the `stdat` dataframe. This variable should contain the ratio of units to classes (the average units per class for each person).
+
+## Selecting Based on a Condition
+
+We saw this a little bit when we used `is.na` to select based on the condition that there is missing data.
+
+```{r}
+stdat[stdat$age < 21,]
+stdat[stdat$major == "Computer Science",]
+```
+
+### On Your Own
+
+Get all of the data for people whose `year` is "Junior".
