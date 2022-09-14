@@ -15,6 +15,6 @@ Class is presented as a hands-on workthrough of each lab. Labs borrow heavily fr
 2. [Vectors and Factors](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/2-Vectors.html)
 3. [Lists](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/3-Lists.html)
 4. [Matrices and Data Frames](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/4-Matrices.html)
-5. Working with Data Sets
+5. [Working with Data Sets](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/5-Data.html)
 
 Original RMarkdown files can be found [here](https://github.com/lgpcappiello/lgpcappiello.github.io/tree/master/teaching/stat128/rmarkdown). 
