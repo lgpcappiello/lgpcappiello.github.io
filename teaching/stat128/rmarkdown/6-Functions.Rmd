@@ -1,0 +1,160 @@
+---
+title: "Functions Part 1"
+author: "Lauren Cappiello"
+date: 'Lab 6'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In R, functions are another type of object. We use functions to perform a task repeatedly or in different settings; functions are there to make our code more efficient. We can use built in R functions (we've used several already!) or create our own. 
+
+## The Anatomy of an R Function
+
+The general template for a function call is 
+
+```{r eval=FALSE}
+function_name(arg1, arg2, ...)
+```
+
+where 
+
+- `function_name` is the actual name of the function
+- `arg1`, `arg2`, etc. are "arguments" or information/values passed to the function
+
+## Building a Function 
+
+The general template for building a function is 
+
+```{r eval=FALSE}
+function_name <- function(arg1 = default, arg2, ...){
+  # Function body
+  ...
+  return(return_value)
+}
+```
+
+where
+
+- `function_name` is the actual name of the function
+- `arg1`, `arg2`, etc. are "arguments" or information/values passed to the function. These can have default values (as in `arg1 = default`) or not. Some functions may not have any arguments.
+- The function body contains a collection of code that defines what the function does.
+- `return_value` is the output of the function. You may only return one object. (If you need to return more than one, put them into a list and return that!)
+
+### A Simple Function
+
+```{r}
+# Convert temperature from Fahrenheit (F) to Celsius (C)
+# ARGUMENTS: temp_F, a numeric vector in F units
+# RETURNS:   temp_C, a numeric vector (of the same length as temp_F) in C units
+f2c <- function(temp_F){
+  temp_C <- (temp_F - 32) * 5 / 9
+  return(temp_C)
+}
+
+f2c(temp_F = 100) # convert 100 degrees F to degrees C
+```
+
+We can also call a function without using the names of the arguments. We just need to make sure we put the arguments into the function call in order.
+
+```{r}
+f2c(100)
+```
+
+If we try to call a function without necessary arguments, we get an error
+```{r eval=FALSE}
+f2c()
+```
+
+Sometimes, we may want to avoid this by including default arguments.
+
+```{r}
+# An example function, does simply algebra 
+# ARGUMENTS: a = 1 (default), a numeric vector of length 1 
+#            b, a numeric vector of length 1
+# RETURNS:   d, a numeric vector of length 1
+example_func <- function(a = 1, b){
+  c = a + b
+  d = c + 1
+  
+  # returns a+b+1
+  return(d)
+}
+
+# Call example function
+example_func(a = 2,  b= 3)
+# or
+example_func(2, 3) # in order!
+```
+
+Since this function is written with a default value for $a$, we can also run it without providing any `a`:
+```{r}
+example_func(b=2) 
+```
+
+In this case, we do need to specify `b=`, because including arguments *in order* means that if we only wrote `example_func(2)`, R would assume that `a=2` and wouldn't know what to do about `b` (since it doesn't have a default)!
+
+By convention, most R functions are built with this in mind, so arguments with defaults are placed toward the end. 
+
+### Live Example
+
+Let's build a function in class.
+
+```{r}
+
+```
+
+### On Your Own
+
+Write a function named `func` that takes in argument `x`, which has default value `0`. The function should calculate `x+4` and return the answer. Test your function with `x=3`.
+
+## Lexical Scoping
+
+What? Basically, the stuff that happens in the function doesn't get stored in the global environment. This helps keep R tidy. This is mostly something to keep in mind as you work on troubleshooting your code!
+
+Sometimes you may have an object defined in multiple places. When this happens, R uses a system of rules to determine which definition it will use. In other words, how and where we define an object determines the objects scope, or range of places that we can use this object. The system of rules R uses for searching for objects is called lexical scoping, as opposed to other types of scoping. With this system R looks for objects that are called in a function within the itself, then any enclosing environments, then the global environment, and lastly looking at objects in packages or built-in objects. This is the same searching method that we see in Python and Java.
+
+## Built-In Functions
+
+We've actually already seen a lot of built-in R functions!
+
+- `c()`
+- `class()`
+- `matrix()`
+- `as.numeric()`
+
+and others!
+
+Let's use the built-in dataset `mtcars` and calculate the mean, median, variance, standard deviation, square root, range, and summary of the `mpg` variable. 
+
+```{r}
+
+```
+
+## Help Files
+
+```{r}
+?rep
+```
+
+- **Title**
+- **Description**: An introduction to the high-level objectives of the function, typically about one paragraph long.
+- **Usage**: A description of the syntax of the function (in other words, how the function is called). This is where you find all the arguments that you can supply to the function, as well as any default values of these arguments.
+- **Arguments**: A description of each argument. Usually this includes a specification of the class (for example, character, numeric, list, and so on). This section is an important one to understand, because arguments are frequently a cause of errors in R.
+- **Details**: Extended details about how the function works, provides longer descriptions of the various ways to call the function (if applicable), and a longer discussion of the arguments.
+- **Value**: A description of the class of the value returned by the function.
+- **See also**: Links to other relevant functions. In most of the R editors, you can click these links to read the Help files for these functions.
+- **Examples**: Worked examples of real R code that you can paste into your console and run.
+
+### On Your Own
+
+Run the following code chunk:
+
+```{r}
+v1 <- c(1,4,7,2, NA)
+mean(v1)
+```
+
+Examine the help file for `mean`. How can we get the function to give us a mean for `v1` (without returning `NA`)? Change the code chunk above to do this. 
