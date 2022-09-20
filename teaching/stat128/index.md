@@ -16,6 +16,7 @@ Class is presented as a hands-on workthrough of each lab. Labs borrow heavily fr
 3. [Lists](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/3-Lists.html)
 4. [Matrices and Data Frames](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/4-Matrices.html)
 5. [Working with Data Sets](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/5-Data.html)
-6. Functions
+6. [Functions](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/6-Functions.html)
+7. [If Statements](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/7-IfElse.html)
 
 Original RMarkdown files can be found [here](https://github.com/lgpcappiello/lgpcappiello.github.io/tree/master/teaching/stat128/rmarkdown). 
