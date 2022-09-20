@@ -1,0 +1,166 @@
+---
+title: "If Statements"
+author: "Lauren Cappiello"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## If
+
+We can use `if` to execute commands only when certain conditions are met.
+
+```{r eval=F}
+if(<value>){
+  # commands
+}
+```
+
+Checks the condition, `<value>` and if it is true, runs the commands. (If `<value>` is false, R skips directly to the end of the curly brackets.)
+
+```{r}
+x <- 1
+if(x > 0){
+  print("positive")
+}
+```
+Often `if` statements are set up like this with some relational operator as the `value`.
+
+### On Your Own
+
+Write an `if` statement that prints out a short phrase when x is equal to 1. 
+
+## If Else
+
+The operator `else` can be paired with an `if` statement. If the `if` statement is false, then the `else` code will run. If the `if` statement is true, the `if` code will run. (One or the other will run, but never both.)
+
+```{r}
+x <- -1
+
+if(x > 0){ # check if x > 0
+  print("x > 0") # runs if x > 0 is true
+}else{ # note the placement of the else
+  print("x <= 0")
+}
+```
+
+### On Your Own
+
+Copy and paste your code chunk from the last *On Your Own* prompt. Modify it to print out a different short phrase when x is not equal to 1.
+
+## Else If
+
+Sometimes we have reason to do a sequence of checks that are all related, where code will only run if all the previous statements were false and the current criteria is true. The operator `else if` can be used to implement this.
+
+```{r}
+x = -3
+
+if(x > 0){
+    type = "positive"
+} else if (x < 0) {
+    type = "negative"
+} else if(x == 0){
+    type = "zero"
+} else {
+    type = "Error"
+}
+
+type 
+```
+
+What's the logic here? 
+
+Another example with `else if` used in a function:
+
+```{r}
+toyfun <- function(X,Y,Do){
+  if(Do == "Add"){
+    Z = X+Y
+
+  }else if(Do =="Subtract"){
+    Z = X-Y
+
+  }else if(Do =="Multiply"){
+    Z = X*Y
+
+    
+  }else if(Do =="Penguin"){
+    Z = c("<('' )")
+    
+  } else{
+    Z = c(X,Y)
+  }
+  
+  return(Z)
+}
+toyfun(2,4,"Add")
+toyfun(2,4,"Subtract")
+toyfun(2,4,"Penguin")
+toyfun(2,4,"typo")
+```
+
+### On Your Own
+
+Implement a sequence that checks if a logical statement is `TRUE` or `FALSE`. Use the final `else` statement to allow for the possibility that there is some error and the input is neither true nor false. If `TRUE`, print "yes"; if `FALSE`, print "no"; otherwise print "error". 
+
+## IfElse
+
+Finally, we have a shortcut function that can sometimes help keep our code clean.
+
+```{r eval=F}
+ifelse(test, yes, no)
+```
+
+- `test` is the logical statement 
+- `yes` is what the code does if `test` results in `TRUE`
+- `no` is what the code does if `test` results in `FALSE`
+
+```{r}
+x <- 0
+x.info <- ifelse(x < 0, "negative", "nonnegative"); x.info
+```
+
+We can also pass the `ifelse` function a vector and it will check each element individually. For example, in the mtcars data set, we can find the proportion of cars that have `mpg > 25` and `hp > 60`
+
+```{r}
+fast_efficient <- ifelse(mtcars$mpg > 25 & mtcars$hp>60, TRUE, FALSE)
+sum(fast_efficient)/length(fast_efficient)
+```
+
+### On Your Own
+
+Modify your code from the second *On Your Own* prompt to use an `ifelse` function. 
+
+## Nested If Chains
+
+```{r}
+x <- 105
+if(x>0){
+  if(x>100){
+     type = "large positive number"
+  } else {
+     type = "positive number"
+  }
+} else if(x<0) {
+  type = "negative number"
+} else if(x==0){
+  type = "zero"
+}else {
+  type = "Error"
+}
+
+type 
+```
+
+We can also nest `ifelse` statements by making the `yes` and `no` results other `ifelse` statements, but this can get tough to follow pretty quickly! 
+
+```{r}
+x <- 0
+
+numInf <- ifelse(x > 0, "positive", 
+                 ifelse(x < 0, "negative", 
+                        ifelse(x == 0, "zero", "error")))
+numInf
+```
