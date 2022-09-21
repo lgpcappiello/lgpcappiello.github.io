@@ -6,7 +6,7 @@ author_profile: true
 
 ## Welcome!
 
-I am an Assistant Professor in the Mathematics and Statistics Department at CSU, Sacramento. My background is in statistics and I received my PhD in Applied Statistics from UC, Riverside. My research interests include biostatistics and applied statistics, particularly in biological and social science fields. 
+I am an Assistant Professor in the Mathematics and Statistics Department at CSU, Sacramento. My research interests include biostatistics and applied statistics, particularly in biological and social science fields. 
 
 When I'm not working, I'm an enthusiastic tabletop gamer and I usually have several <a href="https://lgpcappiello.github.io/Crafting-Projects/">unfinished crafting projects</a> laying around. I also love animals and have a <a href="https://lgpcappiello.github.io/Meet-the-Rescues/">growing menagerie of rescues</a>. 
 
