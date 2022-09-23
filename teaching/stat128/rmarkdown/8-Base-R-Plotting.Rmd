@@ -1,0 +1,297 @@
+---
+title: "Base R Plotting"
+author: "Lauren Cappiello"
+date: '2022-09-23'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+For this lab, we will work with a random sample of the 2000 Behavioral Risk Factor Surveillance System (BRFSS), an annual telephone survey of 350,000 people in the United States. The BRFSS is designed to identify risk factors in the adult population and report emerging health trends. The website (http://www.cdc.gov/brfss) contains a complete description of the survey, including the research questions that motivate the study and many interesting results derived from the data. 
+
+```{r}
+source("http://www.openintro.org/stat/data/cdc.R")
+```
+
+## Histograms
+
+```{r}
+hist(cdc$height)
+```
+
+Let's check out the help file to see how we can control the histogram. 
+
+Most base R plotting functions have a lot of the same arguments (all of which have at least relatively reasonable defaults):
+
+- `main` : the main title that appears at the top of the plot
+- `xlab` and `ylab` : the x- and y-axis titles, respectively
+- `xlim` and `ylim` : the range of x- and y-values
+- `axes` : whether to draw the axes on the plot (usually defaults to `TRUE`)
+
+```{r}
+# notice that I can break up the function call into multiple lines at commas
+hist(cdc$height,
+     main = "Histogram of Heights, 2000 BRFSS Data",
+     xlab = "Height (in)")
+```
+
+What can we do that's specific to histograms? Let's go back to the help file.
+
+```{r}
+hist(cdc$height, breaks=20, freq=TRUE,
+     main = "Histogram of Heights, 2000 BRFSS Data",
+     xlab = "Height (in)",
+     border = "purple", col = "pink")
+```
+
+### Adding Colors in R
+
+- **Using Color Names**: R has names for 657 colors. You can take a look at them all with the `colors()` function (or Google them).
+- **Using Hex Values as Colors**: Instead of using a color name, color can also be defined with a hexadecimal value. We define a color as a 6 hexadecimal digit number of the form `#RRGGBB`. Where the RR is for red, GG for green and BB for blue and value ranges from 00 to FF. Usually we get these from Google too.
+- **Using RGB Values**: The function `rgb()` allows us to specify red, green and blue component with a number between 0 and 1. This function returns the corresponding hex code.
+- **Using a Color Palette**: R offers 5 built in color palettes which can be used to quickly generate color vectors of desired length. They are: `rainbow()`, `heat.colors()`, `terrain.colors()`, `topo.colors()` and `cm.colors()`. We pass in the number of colors that we want.
+
+### On Your Own
+
+Create a histogram of `weight`. Give it an appropriate title and axis labels; make it have 15 breaks; and add some color.
+
+### Comparing Distributions
+
+```{r}
+hist(cdc$height[cdc$gender == "m"], breaks=20,
+     main = "Male and Female Heights, 2000 BRFSS Data",
+     xlab = "Height (in)",
+     # ylim = c(0,3000), 
+     col=rgb(1,0,0,0.25))
+hist(cdc$height[cdc$gender == "f"], breaks=20,
+     col=rgb(0,0,1,0.25),
+     add=TRUE) # add to existing plot
+```
+
+## Boxplots
+
+```{r}
+boxplot(cdc$weight, main = "Boxplot of Weight", ylab = "Weight ")
+```
+
+For boxplots, recall:
+
+- The line in the center is the median ($Q2$). 
+- The bottom and top of the box are drawn at the first ($Q1$) and third ($Q3$) quartiles. 
+- The interquartile range ($IQR$) is $Q3-Q1$.
+- The lines above and below the box are called the whiskers. The upper whisker is either $Q3 + 1.5\times IQR$, or the largest data value, whichever is smallest. 
+- The lower whisker is either the $Q1 - 1.5 \times IQR$, or the smallest data value, whichever is largest. 
+- If data values exceed the whiskers, they are considered outliers and are plotted as circles.
+
+One can use boxplots to compare different groups using `~` character. On the right side of `~` is the numeric variable, and the left side of `~` is a grouping variable (character, logical, factor).
+
+```{r}
+boxplot(cdc$weight ~ cdc$gender,
+        main = "",
+        xlab = "Gender",
+        ylab = "Weight ")
+```
+
+### On Your Own
+
+Create side-by-side boxplots of `wtdesire` broken down by gender. Make sure to give your graph appropriate title and axis labels. 
+
+## Scatter Plots
+
+We can create scatter plots using the generic `plot` function. (Generic meaning it will create different plots depending on the data input.) To create a scatterplot,
+
+```{r}
+plot(cdc$height, cdc$weight) # plot(X, Y)
+```
+
+If we examine the help file, we can see a variety of options, many of which are the same ones we saw for histograms.
+
+### On Your Own
+
+Create a scatter plot of `weight` versus `wtdesire`. Make sure to give your graph appropriate title and axis labels. 
+
+## Bar Charts
+
+Bar charts allow us to visualize categorical data (like pie charts but in a way that's actually useful). As an argument, they take in tabled information about a categorical variable.
+
+```{r}
+freq.tab <- table(cdc$genhlth)/nrow(cdc) # convert frequency table to proportions
+
+barplot(freq.tab, main = "Barplot of General Health",
+        ylab = "Proportion",
+        col = "yellow")
+```
+
+### On Your Own
+
+Create a barplot of gender. Make sure to give your graph appropriate title and axis labels. 
+
+## Adding Lines to an Existing Plot
+
+We can add a line to an existing plot - to draw attention to specific values or provide additional insight/context - using the function `abline`. 
+
+The `abline` function has five main uses:
+
+- For a line, $ax + b$, we input `a` and `b`: `abline(a,b)`
+  - We can also input the coefficients as a vector: `abline(coef = c(a,b))`
+  - And we can automatically input coefficients from a regression run in R. 
+- For a vertical line, we input the x-value: `abline(v = x)`
+- For a horizontal line, we input the y-value: `abline(h = y)`
+
+```{r}
+hist(cdc$weight, breaks=20, main="Distribution of Weight",
+     xlab="Weight", 
+     border = "mediumpurple4",
+     col = "mediumpurple1")
+
+abline(v=mean(cdc$weight),
+       col="mediumblue")
+```
+
+```{r}
+# Add a line on scatter plot 
+plot(cdc$height, cdc$weight, 
+     xlab = "Height", 
+     ylab = "Weight", 
+     col = "darkblue")
+
+# Add a thicker solid line 
+abline(h = median(cdc$weight), col = "red", lwd = 2)
+
+# Add a dashed line
+abline(v = median(cdc$height), col = "red", lty = 2)
+```
+
+### On Your Own
+
+The regression line that uses height to predict weight is $$\text{weight} = -192.74 + 5.40\times\text{height}$$ Add this line to the scatterplot below. 
+
+```{r}
+plot(cdc$height, cdc$weight, 
+     xlab = "Height", 
+     ylab = "Weight", 
+     col = "darkblue")
+```
+
+**Note** As an aside, the command used to generate the coefficients for this regression line is:
+```{r}
+reg1 <- lm(cdc$weight ~ cdc$height)
+reg1$coef
+```
+
+## Adding Lines Between Points
+
+Sometimes, we would rather add a line connecting two points, rather than a continuous vertical, horizontal or linear line. To do this we can use the lines() function.
+
+Add a line on scatter plot:
+```{r}
+plot(cdc$height, cdc$weight, 
+     xlab = "Height", 
+     ylab = "Weight", 
+     col = "darkblue")
+# Add line connecting two points
+lines(x = c(55, 84),
+      y = c(400, 200),  col = "red", lwd = 2)
+# Add line connecting a series of points:
+lines(x = c(50,   60,  70,  80,  90),
+      y = c(100, 350, 225, 300, 425), col = "green", lwd = 2)
+```
+
+## Adding Individual Points
+
+We can also add points to any base R graph using the points() function.
+
+```{r}
+# Add a line on scatter plot 
+plot(cdc$height, cdc$weight, 
+     xlab = "Height", 
+     ylab = "Weight", 
+     col = "darkblue")
+
+# Make a solid line 
+points(mean(cdc$height), mean(cdc$weight), col = "red", pch = 16)
+
+# Sample random points to plot 
+set.seed(62)
+random_index = sample(1:nrow(cdc), 20)
+points(cdc$height[random_index], cdc$weight[random_index], 
+       col = "yellow", pch = 8)
+```
+
+## The `par` Help File
+
+We've seen, but haven't discussed, a variety of other graphical arguments that can be used to adjust our plots.
+
+- `lty`: line type (dotted, dashed, etc.)
+- `lwd`: the line width (a positive number, defaults to 1)
+- `pch`: the point type (open circles, dots, squares, etc.)
+
+The `par` help file discusses these options along with many others.
+
+## Adding Legends
+
+If necessary, we can also add a legend to a plot using the `legend` function.
+
+```{r}
+hist(cdc$weight, breaks=20, main="Distribution of Weight",
+     xlab="Weight (kg)", 
+     border = "mediumpurple4",
+     col = "mediumpurple1")
+
+abline(v=mean(cdc$weight),
+       col="mediumblue",
+       lty=2,
+       lwd=2)
+
+legend("topright", # this can also be a value on the x-axis
+       legend = c("Mean Weight"),
+       lty = 2, 
+       col = "mediumblue", 
+       lwd = 2)
+```
+
+Another example:
+
+```{r}
+plot(cdc$height, cdc$weight, 
+     xlab = "Height", 
+     ylab = "Weight", 
+     col = "darkblue")
+
+# Make a solid line 
+abline(h = median(cdc$weight), col = "red", lwd = 2)
+
+# Add a single point
+points(mean(cdc$height), mean(cdc$weight), col = "red", pch = 16)
+
+# Sample random points to plot 
+set.seed(62)
+random_index = sample(1:nrow(cdc), 20)
+points(cdc$height[random_index], cdc$weight[random_index], 
+       col = "orange", pch = 8)
+
+# Make a legend
+legend("topleft", 
+       legend = c("All Data Values", 
+                  "Mean", 
+                  "Sample Data", 
+                  "Median Weight"), 
+       pch = c(1, 16, 8, NA), 
+       col = c("darkblue", "red", "orange", "red"), 
+       lty = c(NA, NA, NA, 1),
+       lwd = c(NA, NA, NA, 2))
+```
+
+## What Makes a Good Plot?
+
+In general,
+
+- An informative title
+- Appropriately labeled axes
+- Nothing cut off
+- Units of measurement
+- Legends (where appropriate)
+
+Good plots communicate a clear message. The less someone has to know before they can understand your plot, the better! 
