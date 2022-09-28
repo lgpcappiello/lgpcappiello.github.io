@@ -22,7 +22,7 @@ I am also available by appointment. (<a href="https://calendly.com/lcappiello/30
 
 ### Selected Course Materials
 
-- <a href="https://bookdown.org/lgpcappiello/IntroStats/">Course notes for Introduction to Statistics</a>
+- <a href="https://bookdown.org/lgpcappiello/introstats/">Course notes for Introduction to Statistics</a>
 - <a href="https://lgpcappiello.github.io/teaching/shinyapps/">A list of my Shiny Apps and the code to run them.</a>
 - Online Mini-Lectures (2020-2021 School Year)
     - <a href="https://www.youtube.com/playlist?list=PLuMDlHzKEzEFDn6yfD9D3DCsp_j2AfDvm" target="_blank">Introduction to Statistics</a>
