@@ -162,13 +162,13 @@ x <- list(a = 1:10,
 lapply(x, mean)
 ```
 
-Consider the built-in data set `iris`. If we use the `as.list()` function, each column will be converted into an element of a list.
+Consider the built-in data set `iris`. If we use the `as.list()` function, each column is converted into an element of a list.
 ```{r}
 head(iris)
 str(as.list(iris))
 ```
 
-So if we use `lapply()` it will iterate over the *columns*. We can find all values within a variable that are greater than the variable mean (for columns 1-4, the numeric variables).
+So if we use `lapply()` in this case, it will iterate over the *columns*. We can find all values within a variable that are greater than the variable mean (for columns 1-4, the numeric variables).
 
 ```{r}
 lapply(iris[,1:4], function(column){
@@ -183,4 +183,49 @@ Use `lapply` to find the range for each item in the list `data_lst` (which shoul
 
 # `sapply()`
 
+The `sapply` function works basically the same as the `lapply` function. The primary difference is that `sapply` attempts to simplify the result into a vector or matrix (instead of a list). This simplification works the same way as in `apply`. 
 
+```{r}
+lapply(data_lst, sum) # returns a list
+
+sapply(data_lst, sum) # returns a vector
+```
+
+### On Your Own
+
+Use `sapply` to find the range for each item in the list `data_lst`.
+
+# `tapply()`
+
+The `tapply` function breaks the data set up into groups and applies a function to each group.
+
+Arguments:
+
+- `X`: A 1 dimensional object
+- `INDEX`: A grouping factor or a list of factors
+- `FUN`: The function to be applied
+
+```{r}
+data = data.frame(name=c("Amy","Jose","Ray","Kim","Sam","Eve","Bob"), 
+                  age=c(24, 22, 21, 23, 20, 24, 21),
+                  gender=factor(c("F","M","M","F","M","F","M"))) 
+tapply(data$age, data$gender, min) # age, grouped by gender, min for each group
+```
+
+### On Your Own
+
+For the `ChickWeight` data, use `tapply` find the mean weight for each chick. 
+
+# `mapply()`
+
+The `mapply` function is a multivariate version of `sapply`. It applies `FUN` to the first elements of each `...` argument, the second elements, the third elements, and so on.
+
+Arguments:
+
+- `FUN`: The function to be applied
+- `...`: Arguments to vectorize over (vectors or lists of strictly positive length, or all of zero length).
+
+```{r}
+mapply(rep, times = 1:4, x = 4:1)
+```
+More information and examples: http://adv-r.had.co.nz/Functionals.html 
