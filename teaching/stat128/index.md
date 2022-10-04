@@ -19,5 +19,7 @@ Class is presented as a hands-on workthrough of each lab. Labs borrow heavily fr
 6. [Functions](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/6-Functions.html)
 7. [If Statements](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/7-IfElse.html)
 8. [Base R Plotting](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/8-Base-R-Plotting.html)
+9. [Loops](https://lgpcappiello.github.io/teaching/stat128/rmarkdown/9-Loops.html)
+10. Apply Type Functions
 
 Original RMarkdown files can be found [here](https://github.com/lgpcappiello/lgpcappiello.github.io/tree/master/teaching/stat128/rmarkdown). 
