@@ -1,0 +1,186 @@
+---
+title: "Apply Type Functions"
+author: "Lauren Cappiello"
+date: "10/4/2022"
+output: html_document
+---
+
+Loops are a great, relatively straightforward way to repeatedly execute a chunk of code. However, they aren't especially efficient. Enter: the `apply` type function:
+
+- `replicate()`
+- `apply()`
+- `lapply()`
+- `sapply()`
+- `tapply()`
+- `mapply()`
+
+These functions run code chunks in a non-sequential way that is often more efficient than a loop (as long as the elements in your object aren't dependent on other elements in your object).
+
+# `replicate()`
+
+We will start with replicate because it's arguably the easiest of these functions to use. The `replicate` function repeats a function call `n` times.
+
+```{r}
+replicate(n=4, "Hello")
+
+replicate(10, factorial(7))
+
+# histogram of the means from 100 random samples of size n=10 from a standard normal distribution 
+hist(replicate(100, mean(rnorm(10))),
+     main = "", xlab="Means") 
+```
+
+### A Similar Function for Simple Value Replication
+
+The function `rep` replicates the values in the first argument. This is *not* part of the `apply` family, but may serve a similar purpose to `replicate`.
+
+Suppose I want to represent all of the possible combinations when rolling two four-sided dice. 
+
+```{r}
+v1 <- rep(1:4, times=4) # replicate the sequence 1:4, four times
+v2 <- rep(1:4, each=4) # replicate 1:4, with each number replicated 4 times (in a row)
+data.frame(v1, v2)
+```
+
+# `apply()`
+
+The `apply` function applies a given function to the rows or columns of matrices (or arrays). It assembles the returned values into a vector, array, or list, which it returns. 
+
+The `apply()` arguments:
+
+- `X`: an array (matrix)
+- `MARGIN` 
+    - `1` indicates rows
+    - '2' indicates columns
+    - `c(1,2)` indicates rows and columns
+- `FUN`: the function to be applied
+- `...`: additional arguments to be passed to `FUN`
+
+```{r}
+data <- matrix(1:9, nrow=3, ncol=3)
+# the following is equivalent to the command: colMeans(data)
+apply(data, 2, mean) # data, columns, mean --> get column means
+
+# the following is equivalent to the command: rowSums(data)
+apply(data, 1, sum) # data, rows, sum --> get row sums
+```
+
+We can also use `apply` functions on user-defined functions.
+
+```{r}
+# Define the function within the apply statement:
+apply(data, 2, function(x){
+    y <- sum(x)^2 # sum of the input vector (here a column) squared
+    return(y)
+  }
+)
+
+# Define the function outside of the apply statement:
+fn <- function(x){
+    y <- sum(x)^2 # sum of the input vector (here a column) squared
+    return(y)
+}
+apply(data, 2, fn)
+```
+
+The values that `apply()` returns depends on the function `FUN`. 
+
+- If `FUN` returns an element of length 1, then `apply` will return a vector. 
+- If `FUN` always returns an element of length $n>1$, then `apply` will return a matrix with n rows, and the number of columns will correspond to how many rows/columns were iterated over. 
+- Finally, if `FUN` returns an object that would vary in length, then `apply` will return a list where each element corresponds to a row or column that was iterated over. 
+
+In short, `apply` prioritizes returning a vector, array (matrix), and list (in that order). What is returned depends on the output of `FUN`.
+
+Note: running `apply` on a data frame will cause R to convert the data frame using `as.matrix`. This is often not what we want, so be cautious doing that. 
+
+### Example: Extra Arguments, Array Output
+
+```{r}
+x <- cbind(x1 = 3, x2 = c(4:1, 2:5))
+
+fun1 <- function(x, c1, c2){
+  mean_vec <- c(mean(x[c1]), mean(x[c2]))
+  return(mean_vec)
+}
+
+apply(x, 1, fun1,  c1 = "x1", c2 = c("x1","x2"))
+```
+
+### Example: List Output
+
+```{r}
+mat <- matrix(c(-1, 1, 0, 
+                2, -2, 20, 
+                62,-2, -6), nrow = 3)
+
+CheckPos <- function(Vec){
+  # Subset values of Vec that are even
+  PosVec <- Vec[Vec > 0]
+  
+  # Return only the even values
+  return(PosVec)
+}
+
+# Check Positive values by column 
+apply(mat, 2, CheckPos)
+```
+
+### On Your Own
+
+Use an apply function to find the interquartile range (`IQR()`) of each variable in the `ChickWeight` data. (This dataset is built into R.)
+
+```{r}
+
+```
+
+# `lapply()`
+
+The `lapply` function is used to apply a function to each element of a list. It collects the returned values into another list, which it returns. 
+
+Arguments:
+
+- `X`: a list
+- `FUN`: the function to be applied
+- `...`: additional arguments to be passed to `FUN`
+
+```{r}
+data_lst <- list(item1 = 1:5,
+                item2 = seq(4,36,8),
+                item3 = c(1,3,5,7,9))
+data_vector <- 1:8
+
+lapply(data_lst, sum)
+lapply(data_vector, sum) # lapply performs an `as.list` command on X if it's not already a list
+```
+
+```{r}
+x <- list(a = 1:10, 
+          beta = exp(-3:3), 
+          logic = c(TRUE,FALSE,FALSE,TRUE))
+
+# compute the list mean for each list element
+lapply(x, mean)
+```
+
+Consider the built-in data set `iris`. If we use the `as.list()` function, each column will be converted into an element of a list.
+```{r}
+head(iris)
+str(as.list(iris))
+```
+
+So if we use `lapply()` it will iterate over the *columns*. We can find all values within a variable that are greater than the variable mean (for columns 1-4, the numeric variables).
+
+```{r}
+lapply(iris[,1:4], function(column){
+  big_values <- column[column > mean(column)]
+  return(big_values)
+})
+```
+
+### On Your Own
+
+Use `lapply` to find the range for each item in the list `data_lst` (which should already be in your R environment from an earlier code chunk).
+
+# `sapply()`
+
+

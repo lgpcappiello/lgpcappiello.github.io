@@ -1,0 +1,257 @@
+---
+title: "Loops"
+author: "Lauren Cappiello"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<center>![](https://i.kym-cdn.com/photos/images/newsfeed/001/393/650/27f.jpg){width="300"}</center>
+
+Loops let us tell R to run a series of commands multiple times. R has two types of loops: `while` and `for`. 
+
+## While Loops
+
+A `while` loop performs a task until a particular condition is no longer met. 
+
+```{r eval = FALSE}
+while( condition ){
+  this
+  code 
+  chunk
+  will 
+  not
+  run
+}
+```
+
+- `condition` is any logical statement. 
+    - While it is `TRUE`, the loop will continue to repeat. 
+    - When it becomes `FALSE`, the loop will finish its current iteration and stop.
+
+With `while` loops, it is very important to make sure that something in the loop will cause the condition to (eventually) become `FALSE`! Otherwise your loop will continue to run forever.
+
+This loop saves the first 20 Fibonacci numbers:
+
+```{r}
+fibs <- c(0, 1)
+itr <- 2
+
+while(itr <= 20){ 
+  itr <- itr+1
+  fibs <- append(fibs, fibs[itr-1]+fibs[itr-2])
+}
+fibs
+```
+
+Note that if the condition is false at the start, the loop will never run.
+
+```{r}
+x <- 0
+while(x == 2){
+  print("loops")
+}
+```
+
+Another thing that can be frustrating about `while` loops is that they don't stop as soon as the condition becomes false, they stop when the condition is false AND the commands within the loop reach the end. Say I want to print out all Fibonacci numbers under 200. I might try:
+
+```{r}
+fibs <- c(0, 1)
+itr <- 2
+
+while(fibs[itr] < 200){ # while(fibs[itr] + fibs[itr-1] < 200){ # 
+  itr <- itr+1
+  fibs <- append(fibs, fibs[itr-1]+fibs[itr-2])
+}
+fibs
+```
+
+But this condition is only false after I've hit the number 233, which has already been added to the vector. This needs to be reworked in order to run properly.  
+
+### On Your Own
+
+Use a `while` loop to print out 5, then 4, then 3, then 2, then 1.
+
+```{r}
+x <- 5
+
+# while loop
+
+```
+
+## For Loops
+
+The `for` statement in R is more flexible than in other programming languages. It will iterate over any type of items in a vector or list (in the order they appear in the vector).
+
+```{r eval=FALSE}
+for(var in iterable){
+  this
+  code 
+  chunk
+  will 
+  not
+  run
+}
+```
+
+Here, `var` is the variable that takes on - one-by-one - the items in `iterable`.
+
+Iterature through a vector:
+
+```{r}
+# Iterate through a vector
+colors <- c("red","green","blue","yellow")
+
+for (x in colors) {
+  print(x)
+}
+```
+Iterate through a list:
+
+```{r}
+lst <- list(3.14, "Hi", c(1,2,3))
+
+for (i in lst) {
+  print(i)
+}
+```
+Print 'Hello!' 3 times using a sequence:
+
+```{r}
+for (x in 1:3) {
+  print("Hello!")
+}
+```
+
+Use another type of sequencing:
+
+```{r}
+for (x in seq(from=2,to=8,by=2)) {
+  print(x^2)
+}
+```
+
+Different people have different needs and preferences, but when I have to write a loop, I almost always find myself writing `for` loops over a sequence of numbers.
+
+### On Your Own
+
+Use a `for` loop to store the first 10 Fibonacci numbers in a vector, `fibs`. You may want to use the first `while` loop example to get started. 
+
+```{r}
+fibs <- numeric(10) # empty numeric vector of length 10
+
+## For loop goes here ## 
+
+```
+
+## Breaks
+
+The break statement is used to exit the loop immediately. The program continues after the loop.
+
+```{r}
+x <- 5
+
+# If statement starts as TRUE,  the loop will never run 
+while (x != 0 ) {
+  print(x)
+  x = x - 1
+  
+  if(x == 2){
+    print("Entered IF statement, stop loop")
+    break 
+  }
+  
+}
+```
+
+If not given an adequate stopping criteria or `break` statement the loop will continue forever. For example, if we started the above example at x = -2. The `break` statement is particularly important for `while` loops, but can also be used in `for` loops. However, `for` loops have virtually no risk of running indefinitely.
+
+```{r}
+colors <- c("red","green","blue","yellow")
+for (x in colors) {
+  if (x == "blue"){
+       break 
+  }
+  print(x)
+}
+```
+
+### On Your Own
+
+While it may not be ideal, one way to "fix" a difficult `while` loop is to throw a break in there. Use a `break` to stop the following loop from storing Fibonacci numbers greater than 200. 
+
+```{r}
+fibs <- c(0, 1)
+itr <- 2
+
+while(fibs[itr] < 200){
+  itr <- itr+1
+  fibs <- append(fibs, fibs[itr-1]+fibs[itr-2])
+}
+fibs
+```
+
+
+## Next
+
+We can use a `next` command in loops in order to skip executing a command.
+
+```{r}
+for(i in 1:10){
+  
+  i <- i^2
+  
+  if(i <5){
+    next
+  }
+  
+  print(i)
+}
+```
+
+The code runs until it hits the `next` statement, at which point it moves directly to the next iteration of the loop. In this case, it will not print when i=1 or when i=4, but it will continue the loop so that the rest of the iterations will print their results. 
+
+### On Your Own
+
+Use a `next` to stop the following loop from storing Fibonacci numbers greater than 200. 
+
+```{r}
+fibs <- c(0, 1)
+itr <- 2
+
+while(fibs[itr] < 200){
+  itr <- itr+1
+  fibs <- append(fibs, fibs[itr-1]+fibs[itr-2])
+}
+fibs
+```
+
+## Nested Loops
+
+Loops in loops in loops
+
+```{r}
+for(i in 4:6){
+  for(j in 1:3){
+    statement = paste("i=", i, ", j=", j)
+    print(statement)
+  }
+}
+```
+
+These are especially good for iterating through matrices
+
+```{r}
+mymat <- matrix(nrow=5, ncol=5)
+mymat
+
+for(i in 1:5){
+  for(j in 1:5){
+    mymat[i,j] <- i*j
+  }
+}
+mymat
+```
+
