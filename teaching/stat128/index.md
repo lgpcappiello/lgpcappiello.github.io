@@ -9,7 +9,7 @@ This page is a work in progress. Selected course materials for Stat 128 (Fall 20
 
 ## Labs
 
-Class is presented as a hands-on workthrough of each lab. Labs borrow heavily from work by [Rebecca Kurtz-Garcia](https://rpkgarcia.github.io/rpkgarcia/). 
+Class is presented as a hands-on workthrough of each lab. Labs borrow heavily from work by <a href="https://rpkgarcia.github.io/rpkgarcia/" target="blank">Rebecca Kurtz-Garcia</a>. 
 
 1. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/1-Intro-to-R.html" target="blank">Introduction to R, RStudio, and RMarkdown</a>
 2. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/2-Vectors.html" target="blank">Vectors and Factors</a>
