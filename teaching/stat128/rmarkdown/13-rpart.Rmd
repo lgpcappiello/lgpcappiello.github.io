@@ -1,0 +1,201 @@
+---
+title: "RPart"
+author: "Lauren Cappiello"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Recursive Partioning
+
+In this lab, we will work on applying recursive partitioning (tree) models; identify and assess when a model might be overfitting; and assess and compare different models. 
+
+We will start with simulated data. 
+
+```{r}
+# The rpart package will allow us to create tree models.
+library(rpart)
+set.seed(0)
+```
+
+The data we simulate is based on the piecewise model
+\[
+y =
+    \begin{cases}
+        4 & & x < 50\\
+        2 & & x \le 50
+    \end{cases}
+\]
+
+```{r}
+n = 100
+x = seq(n)
+true_model = function(x){
+    # Piecewise constant
+    out = rep(2, length.out = length(x))
+    out[x < 50] = 4
+    out
+}
+y = true_model(x) + rnorm(n)
+
+d = data.frame(x = x, y = y)
+```
+
+## Building Models
+
+Obviously the true model isn't linear, but let's see what happens when we create a linear regression model with these data:
+
+```{r}
+fit_lm = lm(y ~ x, data = d)
+
+plot(x, y)
+lines(x, true_model(x), lty = 2)
+lines(x, predict(fit_lm), col = "blue")
+```
+
+Now let's try with the recursive partitioning. We should check out the help file before we get started. 
+
+```{r}
+# Use the defaults:
+fit_rpart = rpart(y ~ x, data = d)
+
+plot(x, y)
+lines(x, true_model(x), lty = 2)
+lines(x, predict(fit_rpart), col = "red")
+
+plot(fit_rpart)
+text(fit_rpart)
+```
+
+Did we capture the truth? It's not **terrible**, but it's not good either. To work on this, `rpart` has "tuning parameters" that we can adjust in order to adjust the model to better fit the data.
+
+```{r}
+fit_overfit = rpart(y ~ x, data = d, minsplit = 4, cp = 0.0001)
+
+plot(x, y)
+lines(x, true_model(x), lty = 2)
+lines(x, predict(fit_rpart), col = "red")
+lines(x, predict(fit_overfit), col = "blue")
+```
+
+This is doing a really good job fitting the **data**, but it's a terrible fit to the underlying model (and would therefore be a poor fit if we tried to use it to predict $y$ for new values of $x$)! This is a case of *overfitting*.
+
+We want our models to be *parsimonious*, which is sort of like "conservative". Basically, we want the simplest model that reasonably explains the data; you can think of it as finding a good balance between simplicity and usefulness. 
+
+```{r}
+fit_parsimonious = rpart(y ~ x, data = d, minbucket = 30)
+
+plot(x, y)
+lines(x, true_model(x), lty = 2)
+lines(x, predict(fit_rpart), col = "red")
+lines(x, predict(fit_overfit), col = "blue")
+lines(x, predict(fit_parsimonious), col = "green")
+```
+
+## Evaluating Models 
+
+Next, we generate new $y$ data from the true model (and add some random variation).
+
+```{r}
+d2 = data.frame(x, truth = true_model(x))
+d2$y = d2$truth + rnorm(n)
+```
+
+One way to examine how well the model worked for making new predictions is to examine the mean squared error for each model. For the original model, 
+
+```{r}
+error = predict(fit_rpart, d2) - d2$y
+mean(error^2)
+```
+
+Does the best model minimize or maximize MSE?
+
+Next, we will find the MSE for all of the models - the regression, the original rpart model, the overfitted model, and the idealized parsimonious model. 
+
+```{r}
+models = list(fit_lm, fit_rpart, fit_overfit, fit_parsimonious)
+names(models) = c("linear", "default", "overfit", "parsimonious")
+
+mse = function(fit, data = d2, out = data$y){
+  error = predict(fit, data) - out
+  mean(error^2)   
+}
+
+mse(fit_rpart)
+
+# Apply to all the models:
+lapply(models, mse)
+```
+
+Unsurprisingly, the parsimonious model is the best! 
+
+In this case, we found new data and tested the performance of the models on that new data. But what happens if I can't get new data? We can split up a dataset into "training data" and "testing data". This means that we will use some of the data (maybe 80%) to build the model and set the remaining 20% aside to test model performance. 
+
+```{r}
+# External data:
+body = read.csv("https://raw.githubusercontent.com/clarkfitzg/21fall_stat128/main/Howell_us.csv")
+head(body)
+
+# Randomly pick data to use for testing (validation)
+n = nrow(body)
+val = sample(n, size = round(0.2 * n)) # select 20% of the data
+body_test = body[val,] # test data
+body_train = body[-val, ] # training data
+rm(body) # get rid of original data so we don't accidentally use it!
+```
+
+Next we will fit the model with the training data, using `age` to predict `height`.
+
+```{r}
+# Sort data so lines function works later
+body_train = body_train[order(body_train$age), ]
+
+# Let's model height as a function of age.
+fit1 = rpart(height_in ~ age, data = body_train)
+
+with(body_train, plot(age, height_in))
+lines(body_train$age, predict(fit1), col = "blue", lwd = 2)
+```
+
+We can include additional input variables in the same way as in a `lm` or `glm` command:
+
+```{r}
+fit2 = rpart(height_in ~ age + sex, data = body_train)
+
+male = body_train$sex == "male"
+
+with(body_train[male, ], plot(age, height_in, col = "red"))
+lines(body_train$age[male], predict(fit2)[male], col = "red", lwd = 2)
+with(body_train[!male, ], points(age, height_in, col = "blue"))
+lines(body_train$age[!male], predict(fit2)[!male], col = "blue", lwd = 2)
+```
+
+The last two models are regression models with interaction terms. Note that trees cannot handle interaction terms. 
+
+```{r}
+# * does all possible first order and interaction terms
+fit3 = lm(height_in ~ age*sex, data = body_train)
+
+# : does exactly one interaction effect
+fit4 = lm(height_in ~ age:sex, data = body_train)
+```
+
+Which model is best? Let's examine how each performs using the test data that we held back from model creation.
+
+```{r}
+models2 = list(fit1, fit2, fit3, fit4)
+names(models2) = c("rpart age", "rpart age sex", "lm age*sex", "lm age:sex")
+
+# Apply to all the models:
+lapply(models2, mse, body_test, body_test$height_in)
+```
+
+### Cross Validation
+
+An approach called *cross validation* generalizes this idea of splitting the data into a test and a training dataset. 
+
+```{r}
+
+```
