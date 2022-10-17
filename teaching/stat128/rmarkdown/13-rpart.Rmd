@@ -143,7 +143,6 @@ n = nrow(body)
 val = sample(n, size = round(0.2 * n)) # select 20% of the data
 body_test = body[val,] # test data
 body_train = body[-val, ] # training data
-rm(body) # get rid of original data so we don't accidentally use it!
 ```
 
 Next we will fit the model with the training data, using `age` to predict `height`.
@@ -192,10 +191,50 @@ names(models2) = c("rpart age", "rpart age sex", "lm age*sex", "lm age:sex")
 lapply(models2, mse, body_test, body_test$height_in)
 ```
 
-### Cross Validation
+### On Your Own
 
-An approach called *cross validation* generalizes this idea of splitting the data into a test and a training dataset. 
+Use the `Titanic` dataset (a slightly simplified version of the other Titantic data we worked with) to build several models. We want to predict survival. Which model is best?
+
+To do:
+
+- Create `test` and `train` datasets.
+- Create four models: two logistic regression models (see Lab 12) and two RPart models (mess around with the tuning parameters).
+- Use your training data to test the models and examine their mean squared error. 
 
 ```{r}
+data(Titanic)
+```
 
+## Cross Validation
+
+An approach called *cross validation* generalizes the idea of splitting the data into a test and a training dataset:
+
+1. Divide the data into $s$ groups, $g_1$, $g_2$, $\dots$, $g_s$, each of size $s/n$. 
+2. For each group separately, fit a model on the full data *except for the data in group $i$*.
+3. Determine the error for each group, using $g_i$ at the testing data for the $i$th model. 
+4. The model error is the *mean* of the group errors.
+
+This allows us to use more of our data for the training sample. For data sets that aren't too large, we often let $s=n$. This is called "leave-one-out" cross validation. 
+
+Lucky for us, this is built into the RPart package! Using cross-validation, `rpart` will examine a variety of trees using `age` and `sex` to predict `height_in`.
+
+```{r}
+fit5 <- rpart(height_in ~ age + sex, data = body, 
+              control = rpart.control(xval = nrow(body), minbucket = 2, cp = 0))
+printcp(fit5) 
+# "prune" the tree so that splits (branches) must decrease overall lack of fit by 0.02
+# in the original call, splits did not have to decrease lack of fit at all
+fit6 <- prune(fit5, cp=0.02) 
+plot(fit6); text(fit6) # plot the tree
+printcp(fit6)
+```
+
+Let's examine the MSE for all our models.
+
+```{r}
+models3 = list(fit1, fit2, fit3, fit4, fit5, fit6)
+names(models3) = c("rpart age", "rpart age sex", "lm age*sex", "lm age:sex", "cv.all", "cv.fin")
+
+# Apply to all the models:
+lapply(models3, mse, body_test, body_test$height_in)
 ```
