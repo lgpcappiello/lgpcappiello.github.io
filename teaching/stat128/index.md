@@ -23,7 +23,7 @@ Class is presented as a hands-on workthrough of each lab. Labs borrow heavily fr
 10. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/10-apply.html" target="blank">Apply Type Functions</a>
 11. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/11-apply.html" target="blank">Some Inference</a> (adapted from a lab by <a href="https://www.joshedgemath.com/" target="blank">Dr. Josh Edge</a>)
 12. Regression
-13. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/13-rpart.html" target="blank">Recursive Partioning</a> (adapted from <a href="http://webpages.csus.edu/fitzgerald/" target="blank">Clark Fitzgerald's</a> Stat 128 rpart code).
+13. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/13-rpart.html" target="blank">Recursive Partitioning</a> (adapted from <a href="http://webpages.csus.edu/fitzgerald/" target="blank">Clark Fitzgerald's</a> Stat 128 rpart code).
 14. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/14-simulation.html" target="blank">Simulation</a>
 
 Original RMarkdown files can be found <a href="https://github.com/lgpcappiello/lgpcappiello.github.io/tree/master/teaching/stat128/rmarkdown" target="blank">here</a>. 
