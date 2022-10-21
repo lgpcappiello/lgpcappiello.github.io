@@ -1,0 +1,224 @@
+---
+title: "Simulation Studies"
+author: "Lauren Cappiello"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## What are simulation studies?
+
+Often we have a particular theory or idea about how things work. To verify that our theory is correct, we can simulate a data set with known properties, and then check if the data set matches our theory. 
+
+For example, suppose you want to calculate a 95% confidence interval for the heights of all college students. Our theory on confidence intervals says that we expect that a 95% confidence interval will capture the true mean about 95% of the time. If we simply go out and take a sample of data from “real-life” and then calculate the a confidence interval we have no idea if that confidence interval captures the truth because the true average height of all college students is unknown. It's not feasible to sample every college student, so we will never know if the true mean actually falls within our interval. Furthermore, in this example we only calculated one confidence interval. If we did know the true mean, our results would only indicate whether the confidence interval captured the mean. It would not tell us about the rate at which confidence intervals capture the mean. 
+
+What we can do instead is simulate this process:
+
+1. Randomly generate data with a true mean of $\mu$.
+2. Estimate a 95% confidence interval using the appropriate methods and see if this confidence interval contains $\mu$.
+3. Repeat this process a lot. 
+
+If our theory about confidence intervals is correct, we would expect that 95% of our confidence intervals would capture the true mean $\mu$, and the rest would not.
+
+## Random Variables
+
+You can review basic random variables [here](https://bookdown.org/lgpcappiello/introstats/random-variables.html#random-variables).
+
+The distributions that are readily available in R can be found using 
+
+```{r eval=FALSE}
+?Distributions
+```
+
+## Generating Random Variables 
+
+Each distribution in R has four corresponding functions. Let `dist` be a stand-in for the distribution of interest. These functions are:
+
+- `ddist()` the density function, which amounts to plugging $x$ into the probability function. This will generate the probability of $x$ for a discrete distribution. 
+- `pdist()` the cumulative distribution function, which generates the probability of observing a value $\le x$.
+- `qdist()` the quantile function, generates what value corresponds to a given percentile.
+- `rdist()` generates a random value from the specified distribution. 
+
+```{r eval=F}
+?dnorm
+```
+
+```{r}
+rnorm(1)
+```
+
+```{r}
+rnorm(20)
+```
+
+```{r}
+rnorm(5, mean=3, sd=7)
+```
+
+For $X \sim N(5, 4)$, let's use R to find $P(X < 2)$.
+
+```{r}
+pnorm(2, mean=5, sd=4)
+```
+
+and $P(X > 2)$
+
+```{r}
+1 - pnorm(2, mean=5, sd=4)
+```
+
+### On Your Own
+
+Generate 30 values from a binomial distribution with a size $n=100$ and success probability $p=0.2$. Then, find $P(X \ge 50)$ for this distribution. 
+
+## Setting a Seed
+
+Random number generation is super useful, but if we're not careful we'll get a different value each time!
+
+To keep things consistent and to make sure our results are exactly replicable, we will set a seed. You can set your seed to be any number you like. 
+
+```{r}
+set.seed(42)
+rnorm(1)
+```
+
+If you look at your neighbor's computer, you should have gotten different values the last time we ran `rnorm`, but you should get the same value from the line after we set that seed.
+
+We only need to set the seed once. Usually I do this at the very top of each project. 
+
+## The Sample Function
+
+The `sample` function lets draw random values from a given vector. We can sample with or without replacement and have the option to assign probabilities to certain events.
+
+For example, we can simulate a coin flip for a fair coin.
+
+```{r}
+sample(c("Heads", "Tails"), size=1)
+```
+
+The `sample` function defaults to treating everything in the vector as equally likely events.
+
+To simulate a single flip of a weighted coin, 
+
+```{r}
+sample(c("Heads", "Tails"), size=1 , prob = c(0.2, 0.8))
+```
+
+`sample` also defaults to sampling without replacement. To simulate 10 flips of our weighted coin, we need to sample with replacement:
+
+```{r}
+sample(c("Heads", "Tails"), size=10 , replace = TRUE, prob = c(0.2, 0.8))
+```
+
+### On Your Own
+
+Use the `sample` function to take a random sample of 25 students from the `HairEyeColor` dataset. 
+
+Hint: `sample` draws from a vector, but you want a random sample of 25 *rows* of this dataset. How can you randomly generate the indices for 25 rows?
+
+```{r}
+data("HairEyeColor")
+```
+
+## The Replicate Function
+
+We learned about `replicate` when we discussed the `apply` type functions, but it can also be useful for simulation.
+
+Suppose we wish to find the probability we get exactly 3 heads if we flip a coin 10 times. We can replicate flipping a coin 10 times, and count how many of these times we see exactly 3 heads.
+
+```{r}
+coin_flip_heads3 <- function(){
+  coin_flip <- sample(c("Heads", "Tails"), size=10 , 
+                      prob = c(0.5, 0.5), replace = TRUE)
+  num_heads <- length(which(coin_flip == "Heads"))
+  
+  if(num_heads == 3){
+    heads3 = TRUE
+  } else{
+    heads3 = FALSE
+  }
+  return(heads3)
+}
+
+# Generates flipping a coin 3 times
+# Returns TRUE if exactly 3 flips resulted in heads
+# Returns FALSE if otherwise 
+coin_flip_heads3()
+
+# Replicate the experiment 10,000 times
+see_heads3 <- replicate(10000, coin_flip_heads3())
+
+# How many of these experiments results in 3 heads???
+# Probability of seeing exactly 3 heads is approximately 12%
+table(see_heads3)/10000
+```
+
+## Example: Central Limit Theorem
+
+Let $X_1, \dots, X_n$ be independent and identically distributed random variables with mean $\mu$ and variance $\sigma^2$. For a sufficiently large sample size, $$\bar{X} \sim N\left(\mu, \frac{\sigma}{\sqrt{n}}\right)$$
+
+To simulate this, we will draw random samples from 
+
+```{r}
+# Simulate a sample of 50 observations that are uniformly distributed 
+gen_unif_mean = function(the_min, the_max){
+        gen_data = runif(50, the_min, the_max)
+        the_mean = mean(gen_data)
+        the_parameters = c(the_min, the_max)
+        results = list(the_mean, the_parameters)
+        names(results) = c("mean", "parameters")
+        return(results)
+}
+
+# Simulate 10000 samples, each of size 50, where the minimum value is -5
+# And the maximum value is 5
+set.seed(123)
+sim_means <- replicate(10000, gen_unif_mean(the_min = -5, the_max=5)$mean)
+
+
+# histogram of results
+hist(sim_means, freq = FALSE)
+curve(dnorm(x, mean = 0, sd = 0.41), add = TRUE) # add curve with true values 
+# Note that we could also estimate the  mean and sd using the data.
+```
+
+### Example: Monto Carlo Simulation to Estimate $\pi$
+
+The idea behind the Monte Carlo simulation is that we will "observe" the result for each sample (in this case by plotting), which will allow us to see where the simulation converges.
+
+To estimate $\pi$, we will
+
+1. "Draw" a 1x1 square.
+2. Uniformly scatter $k$ points over the square.
+3. Count the number of points having a distance from the origin of less than 1.
+4. The ratio of the inside count to the outside count approximates $\pi/4$. 
+
+We will continue to run this simulation, increasing the sample size, until the estimate of $\pi$ changes by no more than $10^{-10}$ between consecutive iterations. Because this may be an unrealistic goal, I have also added a `break` statement to get out of the `while` loop if it runs more than 100,000 times.
+
+```{r}
+k <- 1000
+diff <- 1
+itr <- 1
+count.in <- 0
+tot.sim <- 0
+pi.apprx <- numeric(length=0)
+
+while(abs(diff) > 10^(-10)){
+  x <- runif(k, 0, 1)
+  y <- runif(k, 0, 1)
+  dist <- sqrt(x^2 + y^2)
+  tot.sim <- tot.sim + length(dist)
+  count.in <- count.in + sum(dist < 1)
+  pi.apprx <- append(pi.apprx, 4 * (count.in/tot.sim))
+  
+  if(itr > 1) diff <- pi.apprx[itr] - pi.apprx[itr-1]
+  itr <- itr + 1
+  
+  if(itr > 10000000) break;
+}
+plot(pi.apprx); abline(h=pi)
+pi.apprx[length(pi.apprx)]
+```
+
