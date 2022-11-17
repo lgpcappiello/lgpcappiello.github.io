@@ -1,0 +1,171 @@
+---
+title: "Machine Learning Part 1: Regression"
+author: "Lauren Cappiello"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Supervised Machine Learning
+
+Most machine learning applications use what we call *supervised* learning, where there are some input variables ($X$, a matrix) and an output variable ($Y$, a vector). An algorithm maps the input to the output, $$Y = f(X)$$ The goal is to develop a model that, when new input data is entered into the model, you can predict the output values for that data with some degree of accuracy. Within supervised machine learning, there are two groupings: 
+
+- classification, where the output variable is a category.
+- regression, where the output variable is numeric.
+
+## Linear Regression
+
+Probably the most common form of machine learning is regression modeling fit through a process called ordinary least squares. The basic model looks like $$ Y_i = \sum_{j=1}^k B_k X_i + \epsilon_i$$ where $\epsilon_i$ is some unknown error term. To run a least square regression in R, we use the `lm` command, which takes the form `y ~ g(X)` where `g(X)` is essentially what the model looks like with the beta coefficients removed. 
+
+### A Single Input Variable
+
+For example, the `geyser` dataset in R lists `duration` (eruption time in minutes) and `waiting` (time between eruptions) for Old Faithful geyser in Yellowstone National Park. If we wanted to use `waiting` to predict `geyser`, the input $X$ would be `waiting` and the output $Y$ would be `duration`. The model looks like $$Y_i = \beta_0 + \beta_1X_i + \epsilon_i$$ To use the `lm` function, we would write
+
+```{r}
+library(MASS)
+data("geyser")
+mod1 <- lm(duration ~ waiting, data=geyser)
+plot(geyser$waiting, geyser$duration, pch=20, xlab="Waiting Time", ylab="Eruption Duration")
+abline(mod1$coefficients)
+summary(mod1)
+```
+
+Based on the coefficients, the model is approximately $$\hat{y_i} = 7.313 - 0.053x_i$$ but the $R^2$ value, which is a measure the strength of the linear relationship (from 0 - no linear relationship - to 1 - perfect linear relationship) is relatively low, so this model may not have strong predictive capabilities. We can also see this in the graph - there doesn't appear to be a strong linear relationship here. 
+
+#### On Your Own
+
+Find the regression model that uses tree `Height` (input) to predict tree `Volume`. 
+
+```{r}
+data("trees")
+```
+
+### Predictions
+
+To make predictions based on regression-type models, we can use the `predict` function.
+
+Arguments: 
+- `object`: a model object like the one saved when running a `lm` function
+- `newdata`: a data frame with the same variable name(s) as the original input
+
+```{r}
+waiting.new <- data.frame(waiting = c(55, 67, 82, 94)) 
+pred.val <- predict(mod1, newdata = waiting.new)
+# Another useful function: round()
+round(pred.val, 2)
+```
+
+### Residuals
+
+Residuals are the leftover variation in the data after accounting for the model: $$e_i = y_i - \hat{y}_i$$ where $\hat{y}$ represents a predicted value. For a single input variable, this is the vertical distance between the regression line and the actual data point. 
+
+These allow us to examine how well a linear regression model fits a dataset. In R, we can use the `plot` function on an object saved from a `lm` call. This will automatically use the residuals to create a number of useful *diagnostic plots*. For now, let's focus on the q-q plot we talked about in the previous lab. We will also plot the residuals versus the fitted values. Ideally, this plot will result in what looks like a completely random scatter. 
+
+```{r}
+std.resid1 <- (mod1$residuals - mean(mod1$residuals))/sd(mod1$residuals)
+qqnorm(std.resid1, ylab="Standardized Residuals")
+abline(0,1)
+plot(mod1$fitted.values, mod1$residuals, ylab="Residuals", xlab="Fitted Values")
+```
+
+The Q-Q plot deviates quite a bit in the tails - a little bit of deviation is normal, but this is pretty extensive. The plot of residuals versus fitted values suggests there is some kind of grouping that is not explained by the data (possibly there is some unmeasured variable that could help explain that and would improve the predictive capabilities of the model). 
+
+#### On Your Own
+
+Examine the q-q plot and residuals vs fitted value plot for your model on the `trees` data. 
+
+### Multiple Input Variables
+
+There is a *lot* to cover related to this topic! We are only going to skim the surface. 
+
+Let's examine the Ames housing data again. This time, we will attempt to predict sale `price` using a number of the other available variables:
+
+- $x_1$: `area`
+- $x_2$: `Lot.Area`
+- $x_3$: `Utilities`
+- $x_4$: `Bldg.Type`
+- $x_5$: `House.Style`
+- $x_6$: `Overall.Qual`
+- $x_7$: `Overall.Cond`
+- $x_8$: `Year.Built`
+- $x_9$: `Yr.Sold`
+
+[This website](https://www.openintro.org/data/index.php?data=ames) explains what each variable represents. 
+
+We approach the `lm` function much the same as before, but now with 
+
+```{r}
+source("https://www.openintro.org/data/R/ames.R")
+# names(ames)
+mod2 <- lm(price ~ area + Lot.Area + Utilities + Bldg.Type + House.Style + 
+             Overall.Qual + Overall.Cond + Year.Built + Yr.Sold, 
+           data = ames)
+```
+
+The model itself is a bit more involved, so we will focus on its predictive capabilities instead of trying to work out the equation for the model.
+
+```{r}
+summary(mod2)$r.squared
+
+std.resid2 <- (mod2$residuals - mean(mod2$residuals))/sd(mod2$residuals)
+
+qqnorm(std.resid2, ylab="Standardized Residuals")
+abline(0,1)
+plot(mod2$fitted.values, mod2$residuals, ylab="Residuals", xlab="Fitted Values")
+```
+
+#### On Your Own
+
+Change your model on the `trees` data to use both `Height` and `Girth` to predict `Volume`. Examine the $R^2$ value, q-q plot, and residuals versus fitted plot. Is this a good model? 
+
+## Logistic Regression
+
+Logistic regression falls somewhere between classification and regression. This is a type of model where the output variable is **binary**. 
+
+In the following dataset, scientists examined hiring discrimination based on name. They created several fake resumes and examined whether the resume resulted in an initial callback. The input variables (randomly assigned to each resume) will be:
+
+- `job_city`
+- `college_degree`
+- `years_experinece`
+- `honors`
+- `military`
+- `has_email_address`
+- `race`
+- `gender`
+
+We want to use these variables to try to predict whether a resume will result in a callback. 
+
+[More Information](https://www.openintro.org/data/index.php?data=resume)
+
+```{r}
+source("https://www.openintro.org/data/R/resume.R")
+```
+
+The `received_callback` variable is 1 for a callback and 0 otherwise. In the logistic regression model, we think of these values as probabilities and will model the **probability** of receiving a callback (rather than directly classifying into 0 and 1 when doing predictions). Probabilities the values between 0 and 1, so ideally we would constrain the model to do the same. Typically, we use the following: $$\text{logit}(p_i) = \text{log}_e \left(\frac{p_i}{1-p_i}\right)$$ and the regression model is of the form $$\text{logit}(P) = \sum_{j=1}^k B_k X_i + \epsilon_i$$ more details of the theory behind this transformation are outside the scope of this class.
+
+To run a logistic regression model in R, we use the more general `glm` call (generalized linear model). The argument `family` is used to tell R that this will be a logistic regression; `family=binomial` will tell R to use the logit transformation. 
+
+```{r}
+mod3 <- glm(received_callback ~ job_city + college_degree + years_experience + honors + military + has_email_address + race + gender, data=resume,
+           family = binomial)
+summary(mod3)
+```
+
+To interpret predicted values for a logistic regression model, we need to back transform them into probabilities:
+
+\[
+\text{log}_e \left(\frac{p}{1-p}\right) = X\beta \implies p = \frac{e^{X\beta}}{1+e^{X\beta}}
+\]
+where $X$ is a matrix with $n$ rows and $k$ columns and $\beta$, $p$ are vectors of length $k$ and $n$, respectively.
+
+```{r}
+# calculate directly:
+pred.prob <- exp(predict(mod3)) / (1 + exp(predict(mod3)))
+summary(pred.prob)
+
+# we can also get this from the model output directly:
+pred.prob2 <- mod3$fitted.values
+summary(pred.prob2)
+```

@@ -1,0 +1,72 @@
+---
+title: "Machine Learning Part 2"
+author: "Lauren Cappiello"
+date: "10/13/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Packages 
+
+R packages are a collection of R functions, complied code and sample data. They are stored under a directory called “library” in the R environment. By default, R installs a set of packages during installation. More packages are added later, when they are needed for some specific purpose. When we start the R console, only the default packages are available by default. Other packages which are already installed have to be loaded explicitly to be used by the R program that is going to use them.
+
+To see a list of all packages installed on your device.
+
+```{r eval=FALSE}
+library()
+```
+
+To see a list of all packages that are currently loaded (note that yours may look different).
+
+```{r}
+search()
+```
+
+When adding a new package to our library we only have to install it once. We can do so with the following command: `install.packages("library name")`. Alternatively, we can click on "Tools" in the menu bar, then "Install Packages..." to use the RStudio package install wizard. 
+
+To use an installed package, we load it using `library("library name")`.
+
+```{r}
+install.packages("caret")
+library(caret)
+```
+
+# The Titanic Dataset
+
+We will work with the titanic dataset, which is a popular dataset used in learning machine learning applications. Typically, the desired output is `Survived` and the rest of the variables (except `Name`) are used as input variables. 
+
+```{r}
+titanic <- read.csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
+```
+
+Let's take a look at the dataaset:
+
+```{r}
+str(titanic)
+summary(as.factor(titanic$Survived))
+```
+Before we start, we might also wish to visualize the dataset.
+
+### On Your Own
+
+Create 3-4 plots based on the titanic dataset. What do you observe? Does it seem like any of the input variables might be especially useful in predicting whether an individual survived?
+
+# Model Fitting
+
+## Training Data
+
+In machine learning applications, we have another way to examine how good our model is. We use most of the data to **train** the model and hold some back to **test** the model. This helps us manage **overfitting**, where the model works really well for the data it's built on, but won't work well for new data.
+
+```{r}
+set.seed(0) # make sure R does the same random number generation each time the program runs
+length.train <- round(0.8*nrow(titanic)) # 80% of the data will be training data
+train.ind <- sample(1:nrow(titanic), length.train)
+train.dat <- titanic[train.ind, ] # indices for training
+test.dat <- titanic[-train.ind, ] # remaining data
+```
+
+## Cross-Validation
+
