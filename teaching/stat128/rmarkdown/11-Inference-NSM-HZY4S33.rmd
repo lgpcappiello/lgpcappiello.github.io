@@ -1,0 +1,55 @@
+---
+title: "Statistical Inference"
+author: "Lauren Cappiello"
+output: html_document
+---
+
+Standard hypothesis test are readily available as built in R functions:
+
+- t tests
+- ANOVA
+- chi-square tests
+- etc.
+
+Consider the `chickwts` dataset.
+
+```{r}
+head(chickwts)
+```
+
+In general, if you know what standard test you want to perform, you can look up the appropriate function online and you have all the tools you need to run it based on what we've already learned. For example, we might perform an ANOVA to see if there is a difference in weight between the different diets.
+
+```{r}
+# ?aov
+test1 <- aov(weight~feed, chickwts) #runs an ANOVA along with a bunch of other stuff
+names(test1) # see what the aov command stored for us
+anova(test1) # examine the ANOVA output
+par(mfrow=c(2,2))
+plot(test1) # default plots are diagnostic plots
+```
+
+Because statistical inference in R follows so directly from what we've already learned (and some things we will learn in the next labs), we will focus on running alternate approaches to inference.
+
+# Nonparametric Tests
+
+There are lots of nonparametric tests built into R, but let's take a moment to work through a couple.
+
+## On Your Own
+
+What follows is an explanation of a hypothesis test in R, the Wilcoxon signed-rank test. See if you can convert this explanation to R code.
+
+Suppose we have some paired data on dock jumps, a type of dog agility competition.
+
+```{r}
+dognames <- c("Suki","Harvey","Sausage","Heidi","Beans")
+jump1 <- c(24.3,26.3,31.2,19.9,23.1)
+jump2 <- c(24.6,27.1,30.0,22.5,24.1)
+dockjump <- data.frame(dognames, jump1, jump2)
+dockjump
+```
+
+We wish to determine if the average difference between these pairs is nonzero.
+
+1. Calculate the difference $d$ between the first and second jump for each dog and store this in a new variable.
+2. Find the absolute value of each difference $d$. Sort these values and assign a rank, $r$ to each sorted value (1 is the minimum, $n=5$ is the maximum).
+3. Calculate $$\sum_{i=1}^{n} \text{sign}(d_i)r_i$$ where $\text{sign}(x) = 1$ if $x > 0$ and $\text{sign}(x) = -1$ if $x < 0$. 
