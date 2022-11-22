@@ -16,7 +16,7 @@
 title: Lauren Cappiello
 email: cappiello@csus.edu
 description: test description
-twitter_username: lgpcappiello
+# twitter_username: lgpcappiello
 github_username: lgpcappiello
 minimal_mistakes_skin: default
 search: true
@@ -58,19 +58,13 @@ author:
   name   : "Lauren Cappiello"
   avatar : "https://avatars2.githubusercontent.com/u/46605262?s=460&v=4"
   bio    : "Assistant Professor of Mathematics & Statistics at Sacramento State<br>Pronouns: she/her"
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/lgpcappiello"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/lgpcappiello"
+#  links:
+#    - label: "GitHub"
+#      icon: "fab fa-fw fa-github"
+#      url: "https://github.com/lgpcappiello"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/lgpcappiello"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/lgpcappiello"
