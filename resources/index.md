@@ -20,10 +20,11 @@ author_profile: true
 
 ## Open Source Textbooks
 
-- [Stat 1 Course Notes](https://bookdown.org/lgpcappiello/introstats/) (These are my own teaching notes for Stat 1.)
+- [Introduction to Statistics](https://bookdown.org/lgpcappiello/introstats/) (These are my own teaching notes for Stat 1.)
 - [OpenIntro Statistics](https://leanpub.com/openintro-statistics)
 - [Introductory Statistics by OpenStax](https://openstax.org/details/books/introductory-statistics)
 - [Probability Course](http://www.probabilitycourse.com/) (This covers a lot of the Stat 115AB material.)
+- [The R Inferno](https://www.burns-stat.com/pages/Tutor/R_inferno.pdf)
 - [R for Data Science](https://r4ds.had.co.nz/introduction.html)
 - [Advanced R](http://adv-r.had.co.nz/) (This is a companion website for the textbook, but it has lots of good information!)
 
