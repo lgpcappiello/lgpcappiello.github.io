@@ -12,11 +12,6 @@ author_profile: true
 - Causal inference
 - Statistics and mathematics education
 
-Some of my ongoing collaborative projects are in
-
-- mathematics and statistics education.
-- survey analysis for a physical therapy study.
-
 ## Student research
 
 If you are a student interested in statistics research, [send me an email](mailto:cappiello@csus.edu)! I would be happy to chat with you about your options.
