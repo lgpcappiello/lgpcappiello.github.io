@@ -6,9 +6,10 @@ author_profile: true
 ---
 
 ## Department of Mathematics & Statistics at Sacramento State
-### Fall 2022 drop-in hours
+### Spring 2023 drop-in hours
 
-- MWF 2-2:50 PM in Shasta 153
+- Tuesday/Thursday 12:15-1:15 PM in Shasta 153
+- Wednesday (time TBD) via Zoom
 
 I am also available by appointment. (<a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointment.</a>)
 
@@ -19,6 +20,7 @@ I am also available by appointment. (<a href="https://calendly.com/lcappiello/30
 - STAT 115B Introduction to Mathematical Statistics
 - <a href="https://lgpcappiello.github.io/teaching/stat128/">STAT 128 Statistical Computing</a>
 - MATH 26A Calculus I for the Social and Life Sciences
+- Math107A Fundamental Mathematical Concepts
 
 ### Selected Course Materials
 
