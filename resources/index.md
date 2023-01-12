@@ -27,7 +27,7 @@ author_profile: true
 - [The R Inferno](https://www.burns-stat.com/pages/Tutor/R_inferno.pdf)
 - [R for Data Science](https://r4ds.had.co.nz/introduction.html)
 - [Advanced R](http://adv-r.had.co.nz/) (This is a companion website for the textbook, but it has lots of good information!)
-- [Exploring Elementary Mathematics by Dr. Kimberly Elce](https://lgpcappiello.github.io/teaching/Math107Book.pdf) by (This is the textbook for Math 107A.) 
+- [Exploring Elementary Mathematics](https://lgpcappiello.github.io/teaching/Math107Book.pdf) (This is the textbook for Math 107A, written by [Dr. Elce](https://www.csus.edu/faculty/e/kelce/).) 
 
 ## Sac State Student Resources
 
