@@ -20,7 +20,7 @@ I am also available by appointment. (<a href="https://calendly.com/lcappiello/30
 - STAT 115B Introduction to Mathematical Statistics
 - <a href="https://lgpcappiello.github.io/teaching/stat128/">STAT 128 Statistical Computing</a>
 - MATH 26A Calculus I for the Social and Life Sciences
-- Math107A Fundamental Mathematical Concepts
+- MATH 107A Fundamental Mathematical Concepts
 
 ### Selected Course Materials
 
