@@ -6,10 +6,11 @@ author_profile: true
 ---
 
 ## Interests
-- Biostatistics
+
 - Applied statistics and data analysis
 - Nonparametric methods 
 - Causal inference
+- Biostatistics
 - Statistics and mathematics education
 
 ## Student research
