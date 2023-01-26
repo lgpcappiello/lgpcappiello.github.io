@@ -1,5 +1,5 @@
 ---
-permalink: /teaching/stat128/
+permalink: /teaching/stat1/
 layout: single
 title: "STAT 1: Introduction to Statistics"
 author_profile: true
