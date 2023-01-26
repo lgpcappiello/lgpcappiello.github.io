@@ -5,6 +5,8 @@ title: "STAT 1: Introduction to Statistics"
 author_profile: true
 ---
 
+## Slides
+
 ### Chapter 1
 - [1.2 Statistics Terminology](https://lgpcappiello.github.io/teaching/stat1/slides/1_2-Statistics-Terminology.html)
 - [1.3 Sampling and Design](https://lgpcappiello.github.io/teaching/stat1/slides/1_3-Sampling-Design.html)
