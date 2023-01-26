@@ -10,11 +10,11 @@ author_profile: true
 Slides are based on my [Introduction to Statistics](https://bookdown.org/lgpcappiello/introstats/).
 
 ### Chapter 1
-- [1.2 Statistics Terminology](https://lgpcappiello.github.io/teaching/stat1/slides/1_2-Statistics-Terminology.html)
-- [1.3 Sampling and Design](https://lgpcappiello.github.io/teaching/stat1/slides/1_3-Sampling-Design.html)
-- [1.4 Frequency Distributions](https://lgpcappiello.github.io/teaching/stat1/slides/1_4-Frequency-Distributions.html)
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/1_2-Statistics-Terminology.html" target="blank">1.2 Statistics Terminology</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/1_3-Sampling-Design.html" target="blank">1.3 Sampling and Design</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/1_4-Frequency-Distributions.html" target="blank">1.4 Frequency Distributions</a>
 
 ### Chapter 2
-- [2.2 Measures of Central Tendency](https://lgpcappiello.github.io/teaching/stat1/slides/2_2-Central-Tendency.html)
-- [2.3 Measures of Variability](https://lgpcappiello.github.io/teaching/stat1/slides/2_3-Variability.html)
-- [2.4 Measures of Position](https://lgpcappiello.github.io/teaching/stat1/slides/2_4-Position.html)
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/2_2-Central-Tendency.html" target="blank">2.2 Measures of Central Tendency</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/2_3-Variability.html" target="blank">2.3 Measures of Variability</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/2_4-Position.html" target="blank">2.4 Measures of Position</a>
