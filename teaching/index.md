@@ -15,7 +15,7 @@ I am also available by appointment. (<a href="https://calendly.com/lcappiello/30
 
 ### Courses Taught
 
-- STAT 1 Introduction to Statistics 
+- <a href="https://lgpcappiello.github.io/teaching/stat1/">STAT 1 Introduction to Statistics</a>
 - STAT 115A Introduction to Probability Theory
 - STAT 115B Introduction to Mathematical Statistics
 - <a href="https://lgpcappiello.github.io/teaching/stat128/">STAT 128 Statistical Computing</a>
