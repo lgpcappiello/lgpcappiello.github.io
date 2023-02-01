@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>2.2 Central Tendency</title>
+  <title>3.2 Sample Spaces and Events</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -19,7 +19,7 @@
     var SLIDE_CONFIG = {
       // Slide settings
       settings: {
-                title: '2.2 Central Tendency',
+                title: '3.2 Sample Spaces and Events',
                         useBuilds: true,
         usePrettify: true,
         enableSlideAreas: true,
@@ -3094,6 +3094,9 @@ font-style: italic;
 summary {
 display: list-item;
 }
+details > summary > p:only-child {
+display: inline;
+}
 slides > slide {
 -webkit-transition: all 0.4s ease-in-out;
 -moz-transition: all 0.4s ease-in-out;
@@ -3136,102 +3139,178 @@ ul.task-list{list-style: none;}
           </hgroup>
   </slide>
 
-<slide class=""><hgroup><h2>Measures of Central Tendency</h2></hgroup><article  id="measures-of-central-tendency">
+<slide class=""><hgroup><h2>Probability</h2></hgroup><article  id="probability">
 
-<p>What values are most common or most likely?</p>
-
-<p>Three ways to measure:</p>
+<p><strong>Probability</strong> is the science of uncertainty.</p>
 
 <ul>
-<li>mode</li>
-<li>mean</li>
-<li>median</li>
+<li>When we run an experiment, we are unsure of what the outcome will be.</li>
+<li>Because of this uncertainty, we say an experiment is a <strong>random process</strong>.</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Mode</h2></hgroup><article  id="mode">
+</article></slide><slide class=""><hgroup><h2>Probability</h2></hgroup><article  id="probability-1">
 
-<p><strong>Mode</strong>: the most commonly occurring value.</p>
+<p>The probability of an event is the proportion of times it would occur if the experiment were run infinitely many times.</p>
 
-<ul>
-<li>Used when working with categorical variables.</li>
-</ul>
+<p>For a collection of <em>equally likely events</em>, this looks like: \[
+  \text{probability of event} = \frac{\text{number of ways event can occur}}{\text{number of possible outcomes}}
+\]</p>
 
-</article></slide><slide class=""><hgroup><h2>Mean</h2></hgroup><article  id="mean">
+<p>An <strong>event</strong> is some specified possible outcome (or collection of outcomes) we are interested in observing.</p>
 
-<p><strong>Mean</strong>: this is what we usually think of as the &ldquo;average&rdquo;.</p>
+</article></slide><slide class=""><hgroup><h2>Example</h2></hgroup><article  id="example">
 
-<ul>
-<li>Denoted \(\bar{x}\).</li>
-<li>Add up all of the values and divide by the number of observations (\(n\)): \[
-\bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n} = \sum_{i=1}^n \frac{x_i}{n}
-\]</li>
-<li>\(x_i\) is the \(i\)th observation a</li>
-<li>\(\sum_{i=1}^n\) is the sum of all observations from 1 through \(n\).
+<p>You want to roll a 6 on a six-sided die.</p>
 
 <ul>
-<li>This is called <em>summation notation</em>.</li>
+<li>There are six possible outcomes \(\{1,2,3,4,5,6\}\).</li>
+<li>We assume that each die face is equally likely to appear on a single roll of the die.
+
+<ul>
+<li>The die is <em>fair</em>.</li>
 </ul></li>
+<li>The probability of rolling a 6 is \[\frac{\text{number of ways to roll a 6}}{\text{number of possible rolls}} = \frac{1}{6}\]</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Median</h2></hgroup><article  id="median">
+</article></slide><slide class=""><hgroup><h2>Example</h2></hgroup><article  id="example-1">
 
-<p><strong>Median</strong>: the middle number when the data are ordered from smallest to largest.</p>
+<p>We can extend this to a collection of events.</p>
 
 <ul>
-<li>If there are an odd number of observations, this will be the number in the middle:
+<li>The probability of rolling a 5 or a 6: \[\frac{\text{number of ways to roll a 5 or 6}}{\text{number of possible rolls}} = \frac{2}{6}\]</li>
+</ul>
 
-<center>
+</article></slide><slide class=""><hgroup><h2>Sample Spaces</h2></hgroup><article  id="sample-spaces">
 
-{1, 3, <strong>7</strong>, 9, 9} has median 7
+<p>The collection of all possible outcomes is called a <strong>sample space</strong>, denoted \(S\).</p>
 
-</center></li>
-<li>If there are an even number of observations, there will be two numbers in the middle. The median will be their average.
+<ul>
+<li>For the six-sided die, \(S=\{1,2,3,4,5,6\}\).</li>
+</ul>
 
-<center>
+</article></slide><slide class=""><hgroup><h2>Probability Notation</h2></hgroup><article  id="probability-notation">
 
-{1, 2, <strong>4, 7</strong>, 9, 9} has median \(\frac{4+7}{2}=5.5\)
+<p>To simplify our writing, we use <strong>probability notation</strong>:</p>
 
-</center></li>
+<ul>
+<li>Events are assigned capital letters.</li>
+<li>\(P(A)\) denotes the probability of event \(A\).</li>
+<li>Sometimes we will also shorten simple events to just a number.
+
+<ul>
+<li>For example, \(P(1)\) might represent &ldquo;the probability of rolling a 1&rdquo;.</li>
+</ul></li>
 </ul>
 
 </article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
 
-<p>The mean is sensitive to extreme values and skew. The median is not!</p>
+<p>We can estimate probabilities from a sample using a frequency distribution.</p>
 
-<center>
+<p><strong>Example</strong>: Consider the frequency distribution.</p>
 
 <table class = 'rmdtable'>
 <tr class="header">
-<th align="left">\(x\): 1, 3, 7, 9, 9</th>
-<th align="left">\(y\): 1, 3, 7, 9, 45</th>
+<th align="center">Class</th>
+<th align="center">Frequency</th>
 </tr>
 <tr class="odd">
-<td align="left">\(\text{median} = 7\)</td>
-<td align="left">\(\text{median} = 7\)</td>
+<td align="center">freshman</td>
+<td align="center">12</td>
 </tr>
 <tr class="even">
-<td align="left">\(\bar{x} = \frac{29}{5} = 5.8\)</td>
-<td align="left">\(\bar{y} = \frac{65}{5} = 13\)</td>
+<td align="center">sophomore</td>
+<td align="center">10</td>
+</tr>
+<tr class="odd">
+<td align="center">junior</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">senior</td>
+<td align="center">5</td>
 </tr>
 </table>
 
-</center>
+</article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
 
-<p><br></p>
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="center">Class</th>
+<th align="center">Frequency</th>
+</tr>
+<tr class="odd">
+<td align="center">freshman</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">sophomore</td>
+<td align="center">10</td>
+</tr>
+<tr class="odd">
+<td align="center">junior</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">senior</td>
+<td align="center">5</td>
+</tr>
+</table>
 
-<p>Changing that 9 out for a 45 changes the <em>mean</em> a lot! But the <em>median</em> is 7 for both \(x\) and \(y\).</p>
+<p><br> If a student is selected at random, the probability of selecting a sophomore is \[\frac{10 \text{ sophomores }}{30 \text{ students}} \approx 0.3333\]</p>
 
-<p>Because the median is not affected by extreme observations or skew, we say it is a <strong>resistant measure</strong> or that it is <strong>robust</strong>.</p>
+</article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
 
-</article></slide><slide class=""><hgroup><h2>Which measure should we use?</h2></hgroup><article  id="which-measure-should-we-use">
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="center">Class</th>
+<th align="center">Frequency</th>
+</tr>
+<tr class="odd">
+<td align="center">freshman</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">sophomore</td>
+<td align="center">10</td>
+</tr>
+<tr class="odd">
+<td align="center">junior</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">senior</td>
+<td align="center">5</td>
+</tr>
+</table>
 
-<ul>
-<li>Mean: symmetric, numeric data</li>
-<li>Median: skewed, numeric data</li>
-<li>Mode: categorical data</li>
-</ul>
+<p><br> The probability of selecting a junior <strong>or</strong> a senior is \[\frac{3\text{ juniors }+5\text{ seniors }}{30\text{ students }} = \frac{8}{30} \approx 0.2667\]</p>
 
-<p>Note: If the mean and median are roughly equal, it is reasonable to assume the distribution is roughly symmetric.</p></article></slide>
+</article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="center">Class</th>
+<th align="center">Frequency</th>
+</tr>
+<tr class="odd">
+<td align="center">freshman</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">sophomore</td>
+<td align="center">10</td>
+</tr>
+<tr class="odd">
+<td align="center">junior</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">senior</td>
+<td align="center">5</td>
+</tr>
+</table>
+
+<p><br> Using probability notation, let \(A\) be the event we selected a junior and \(B\) be the event we selected a senior. Then \[P(A \text{ or } B) = \frac{8}{30} \approx 0.2667\]</p></article></slide>
 
 
   <slide class="backdrop"></slide>

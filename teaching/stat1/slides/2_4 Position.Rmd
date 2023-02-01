@@ -1,0 +1,117 @@
+---
+title: "2.4 Position"
+author: "Dr. Lauren Cappiello"
+output:
+  ioslides_presentation:
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Measures of Position
+
+The **interquartile range** (**IQR**) represents the middle 50% of the data. 
+
+- This is another measure of variability!
+
+## Percentiles
+
+- Recall that the *median* cut the data in half: 50% of the data is below and 50% is above the median. 
+- This is also called the **50th percentile**. 
+- The **$p$th percentile** is the value for which $p$% of the data is below it.
+
+***
+
+To get the middle 50%, we will split the data into four parts:
+
+| 1	| 2	| 3	| 4 |
+| :-: | :-: | :-: | :-: |
+| 25%	| 25%	| 25%	| 25% |
+
+The 25th and 75th percentiles, along with the median, divide the data into four parts. 
+
+## Quartiles
+
+We call these three measurements the **quartiles**:
+
+- **Q1**, the first quartile, is the median of the lower 50% of the data.
+- **Q2**, the second quartile, is the median.
+- **Q3**, the third quartile, is the median of the upper 50% of the data.
+
+## Example
+
+Consider {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+- Cutting the data in half: {1, 2, 3, 4, 5 | 6, 7, 8, 9, 10}
+- So the median (Q2) is $\frac{5+6}{2}=5.5$.
+- Q1 is the median of {1, 2, 3, 4, 5}, or 3
+- Q3 is the median of {6, 7, 8, 9, 10}, or 8
+
+**Note:** this is a "quick and dirty" way of finding quartiles. A computer will give a more exact result. 
+
+## Interquartile Range
+
+Then the interquartile range is
+\[
+  \text{IQR} = \text{Q3}-\text{Q1}
+\]
+
+- The IQR is resistant to extreme values. 
+
+## Which measure to use?
+
+- mean and standard deviation when the data are symmetric 
+- median and IQR when the data are skewed
+
+## Box Plots
+
+Box plots summarize the data with 5 statistics plus extreme observations:
+
+```{r}
+set.seed(0)
+x <- c(rpois(45,2),-2.5)
+boxplot(x, ylim=c(-3,7), col="lightblue")
+legend(x=0.62,y=6.8,legend="Upper Whisker",box.lty=0)
+legend(x=0.68,y=3.8,legend="Q3",box.lty=0)
+legend(x=1.2,y=2.8,legend="Median",box.lty=0)
+legend(x=0.68,y=1.8,legend="Q1",box.lty=0)
+legend(x=1.1,y=0.8,legend="Lower Whisker",box.lty=0)
+legend(x=0.68,y=-1.7,legend="Potential Outlier",box.lty=0)
+```
+
+## Drawing a box plot:
+
+1. Draw the vertical axis to include all possible values in the data.
+2. Draw a horizontal line at the median, at $\text{Q1}$, and at $\text{Q3}$. Use these to form a box.
+3. Draw the **whiskers**. The whiskers' upper limit is $\text{Q3}+1.5\times\text{IQR}$ and the lower limit is $\text{Q1}-1.5\times\text{IQR}$. The actual whiskers are then drawn *at the next closest data points within the limits*.
+5. Any points outside the whisker limits are included as individual points. These are **potential outliers**. 
+
+We won't draw box plots by hand, but understanding how they are drawn will help us understand how to interpret them!
+
+## Outliers
+
+(Potential) outliers can help us...
+
+- examine skew (outliers in the negative direction suggest left skew; outliers in the positive direction suggest right skew).
+- identify issues with data collection or entry, especially if the value of the outliers doesn't make sense.
+
+## Descriptive Measures for Populations
+
+- We've thought about calculating various descriptive statistics from a sample.
+- Our long-term goal is to estimate descriptive information about a population. 
+- At the population level, these values are called **parameters**. 
+
+***
+
+- When we find a measure of center, spread, or position, we use a sample to calculate a single value. 
+- These single values are called **point estimates**.
+    - They are used to *estimate* the corresponding population parameter. 
+
+| Point Estimate | Parameter |
+|-|-|
+| sample mean: $\bar{x}$ | population mean: $\mu$ |
+| sample standard deviation: $s$ | population standard deviation: $\sigma$ |
+
+

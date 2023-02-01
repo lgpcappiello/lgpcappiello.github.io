@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>2.2 Central Tendency</title>
+  <title>3.4 Rules of Probability</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -19,7 +19,7 @@
     var SLIDE_CONFIG = {
       // Slide settings
       settings: {
-                title: '2.2 Central Tendency',
+                title: '3.4 Rules of Probability',
                         useBuilds: true,
         usePrettify: true,
         enableSlideAreas: true,
@@ -3094,6 +3094,9 @@ font-style: italic;
 summary {
 display: list-item;
 }
+details > summary > p:only-child {
+display: inline;
+}
 slides > slide {
 -webkit-transition: all 0.4s ease-in-out;
 -moz-transition: all 0.4s ease-in-out;
@@ -3136,102 +3139,125 @@ ul.task-list{list-style: none;}
           </hgroup>
   </slide>
 
-<slide class=""><hgroup><h2>Measures of Central Tendency</h2></hgroup><article  id="measures-of-central-tendency">
+<slide class=""><hgroup><h2>Rules of Probability</h2></hgroup><article  id="rules-of-probability">
 
-<p>What values are most common or most likely?</p>
+<p>Consider a six-sided die. \[P(\text{roll a 1 or 2}) = \frac{\text{2 ways}}{\text{6 outcomes}} = \frac{1}{3}\] We get the same result by taking \[P(\text{roll a 1})+P(\text{roll a 2}) = \frac{1}{6}+\frac{1}{6} = \frac{1}{3}\] It turns out this is widely applicable!</p>
 
-<p>Three ways to measure:</p>
+</article></slide><slide class=""><hgroup><h2>Addition Rule for Disjoint Outcomes</h2></hgroup><article  id="addition-rule-for-disjoint-outcomes">
+
+<p>If \(A_1\) and \(A_2\) are disjoint outcomes, then the probability that one of them occurs is \[P(A_1 \text{ or } A_2) = P(A_1)+P(A_2)\] This can also be extended to more than two disjoint outcomes: \[P(A_1 \text{ or } A_2 \text{ or } \dots \text{ or } A_k) = P(A_1)+P(A_2)+\dots + P(A_k)\] for \(k\) disjoint outcomes.</p>
+
+</article></slide><slide class=""><hgroup><h2>Example: A deck of cards.</h2></hgroup><article  id="example-a-deck-of-cards.">
 
 <ul>
-<li>mode</li>
-<li>mean</li>
-<li>median</li>
+<li>Let \(A\) be the event that a card drawn is a diamond.</li>
+<li>Let \(B\) be the event it is a face card.</li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Mode</h2></hgroup><article  id="mode">
+<p>\(A\): \(\quad 2\diamondsuit\) \(3\diamondsuit\) \(4\diamondsuit\) \(5\diamondsuit\) \(6\diamondsuit\) \(7\diamondsuit\) \(8\diamondsuit\) \(9\diamondsuit\) \(10\diamondsuit\) \(J\diamondsuit\) \(Q\diamondsuit\) \(K\diamondsuit\) \(A\diamondsuit\)</p>
 
-<p><strong>Mode</strong>: the most commonly occurring value.</p>
+<p>\(B\): \(\quad J\heartsuit\) \(Q\heartsuit\) \(K\heartsuit\) \(J\clubsuit\) \(Q\clubsuit\) \(K\clubsuit\) \(J\diamondsuit\) \(Q\diamondsuit\) \(K\diamondsuit\) \(J\spadesuit\) \(Q\spadesuit\) \(K\spadesuit\)</p>
 
-<ul>
-<li>Used when working with categorical variables.</li>
-</ul>
+</article></slide><slide class=""><hgroup><h2>Example: A deck of cards.</h2></hgroup><article  id="example-a-deck-of-cards.-1">
 
-</article></slide><slide class=""><hgroup><h2>Mean</h2></hgroup><article  id="mean">
-
-<p><strong>Mean</strong>: this is what we usually think of as the &ldquo;average&rdquo;.</p>
-
-<ul>
-<li>Denoted \(\bar{x}\).</li>
-<li>Add up all of the values and divide by the number of observations (\(n\)): \[
-\bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n} = \sum_{i=1}^n \frac{x_i}{n}
-\]</li>
-<li>\(x_i\) is the \(i\)th observation a</li>
-<li>\(\sum_{i=1}^n\) is the sum of all observations from 1 through \(n\).
-
-<ul>
-<li>This is called <em>summation notation</em>.</li>
-</ul></li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2>Median</h2></hgroup><article  id="median">
-
-<p><strong>Median</strong>: the middle number when the data are ordered from smallest to largest.</p>
-
-<ul>
-<li>If there are an odd number of observations, this will be the number in the middle:
+<p>The collection of cards that are diamonds or face cards (or both) is</p>
 
 <center>
 
-{1, 3, <strong>7</strong>, 9, 9} has median 7
-
-</center></li>
-<li>If there are an even number of observations, there will be two numbers in the middle. The median will be their average.
-
-<center>
-
-{1, 2, <strong>4, 7</strong>, 9, 9} has median \(\frac{4+7}{2}=5.5\)
-
-</center></li>
-</ul>
-
-</article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
-
-<p>The mean is sensitive to extreme values and skew. The median is not!</p>
-
-<center>
-
-<table class = 'rmdtable'>
-<tr class="header">
-<th align="left">\(x\): 1, 3, 7, 9, 9</th>
-<th align="left">\(y\): 1, 3, 7, 9, 45</th>
-</tr>
-<tr class="odd">
-<td align="left">\(\text{median} = 7\)</td>
-<td align="left">\(\text{median} = 7\)</td>
-</tr>
-<tr class="even">
-<td align="left">\(\bar{x} = \frac{29}{5} = 5.8\)</td>
-<td align="left">\(\bar{y} = \frac{65}{5} = 13\)</td>
-</tr>
-</table>
+\(\quad A\diamondsuit\) \(2\diamondsuit\) \(3\diamondsuit\) \(4\diamondsuit\) \(5\diamondsuit\) \(6\diamondsuit\) \(7\diamondsuit\) \(8\diamondsuit\) \(9\diamondsuit\) \(10\diamondsuit\) \(J\diamondsuit\) \(Q\diamondsuit\) \(K\diamondsuit\) \(J\clubsuit\) \(Q\clubsuit\) \(K\clubsuit\) \(J\heartsuit\) \(Q\heartsuit\) \(K\heartsuit\) \(J\spadesuit\) \(Q\spadesuit\) \(K\spadesuit\)
 
 </center>
 
-<p><br></p>
+<p><br> Looking at these cards, I can see that there are 22 of them, so \[P(A \text{ or } B) = \frac{22}{52}\]</p>
 
-<p>Changing that 9 out for a 45 changes the <em>mean</em> a lot! But the <em>median</em> is 7 for both \(x\) and \(y\).</p>
-
-<p>Because the median is not affected by extreme observations or skew, we say it is a <strong>resistant measure</strong> or that it is <strong>robust</strong>.</p>
-
-</article></slide><slide class=""><hgroup><h2>Which measure should we use?</h2></hgroup><article  id="which-measure-should-we-use">
+</article></slide><slide class=""><hgroup><h2>Example: A deck of cards.</h2></hgroup><article  id="example-a-deck-of-cards.-2">
 
 <ul>
-<li>Mean: symmetric, numeric data</li>
-<li>Median: skewed, numeric data</li>
-<li>Mode: categorical data</li>
+<li>If I try to apply the addition rule for disjoint outcomes, \[P(A)=\frac{13}{52}\] and \[P(B)=\frac{12}{52}\]</li>
+<li>And we get \(\frac{13+15}{52} = \frac{25}{52}\).</li>
+<li>But we know \(P(A \text{ or } B) = \frac{22}{52}\).</li>
 </ul>
 
-<p>Note: If the mean and median are roughly equal, it is reasonable to assume the distribution is roughly symmetric.</p></article></slide>
+</article></slide><slide class=""><hgroup><h2>Example: A deck of cards.</h2></hgroup><article  id="example-a-deck-of-cards.-3">
+
+<p>What happened?</p>
+
+<ul>
+<li>When I added these, I <em>double counted</em> \(J\diamondsuit\), \(Q\diamondsuit\), and \(K\diamondsuit\)
+
+<ul>
+<li>(the cards that are in both \(A\) and \(B\)).</li>
+</ul></li>
+<li>I need to subtract off the double count \[\frac{13}{52}+\frac{12}{52}-\frac{3}{52}\]</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>General Addition Rule</h2></hgroup><article  id="general-addition-rule">
+
+<p>For any two events \(A\) and \(B\), the probability that <em>at least</em> one will occur is \[P(A \text{ or } B) = P(A)+P(B)-P(A \text{ and }B).\]</p>
+
+<ul>
+<li>The general addition rule applies to <em>any</em> two events, even disjoint events.
+
+<ul>
+<li>For disjoint events, \(P(A \text{ and } B) = 0\).</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Inclusive or</h2></hgroup><article  id="inclusive-or">
+
+<ul>
+<li>When we say &ldquo;or&rdquo;, we include the situations where:
+
+<ul>
+<li>A is true</li>
+<li>B is true</li>
+<li>both A and B are true.</li>
+</ul></li>
+<li>This is an <em>inclusive or</em>.</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>Complements</h2></hgroup><article  id="complements">
+
+<p>The <strong>complement</strong> of an event is all of the outcomes in the sample space that are <em>not</em> in the event. For an event \(A\), we denote its complement by \(A^c\).</p>
+
+</article></slide><slide class=""><hgroup><h2>Example</h2></hgroup><article  id="example">
+
+<ul>
+<li>For a single roll of a six-sided die, the sample space is all possible rolls: 1, 2, 3, 4, 5, or 6.</li>
+<li>Let event \(A\) be rolling a 1 or a 2.</li>
+<li>Then \(A^c\) is rolling a 3, 4, 5, or 6.</li>
+</ul>
+
+<p>In probability notation: \[S = \{1, 2, 3, 4, 5, 6\}\] \[A=\{1,2\}\] \[A^c=\{3, 4, 5, 6\}\]</p>
+
+</article></slide><slide class=""><hgroup><h2>Property</h2></hgroup><article  id="property">
+
+<p>\[P(A \text{ or } A^c)=1\]</p>
+
+<ul>
+<li>Using the addition rule, \[P(A \text{ or } A^c) = P(A)+P(A^c) = 1\]</li>
+<li>Make sure you can convince yourself that \(A\) and \(A^c\) are <em>always</em> disjoint.</li>
+</ul>
+
+</article></slide><slide class=""><hgroup><h2>The Complement Rule</h2></hgroup><article  id="the-complement-rule">
+
+<p>\[P(A) = 1-P(A^c)\]</p>
+
+</article></slide><slide class=""><hgroup><h2>Checkpoint</h2></hgroup><article  id="checkpoint">
+
+<p>Consider rolling 2 six-sided dice and taking their sum.</p>
+
+<p>The event of interest \(A\) is a sum less than 12. Find</p>
+
+<ol>
+<li>\(A^c\)</li>
+<li>\(P(A^c)\)</li>
+<li>\(P(A)\)</li>
+</ol>
+
+<p>Hint #1: how many ways can you get a sum of at least 12?</p>
+
+<p>Hint #2: there are 36 possible outcomes.</p></article></slide>
 
 
   <slide class="backdrop"></slide>
