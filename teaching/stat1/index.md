@@ -24,3 +24,10 @@ Slides are based on my [Introduction to Statistics](https://bookdown.org/lgpcapp
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/3_3-Probability-Distributions.html" target="blank">3.3 Probability Distributions</a>
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/3_4-Probability-Rules.html" target="blank">3.4 Rules of Probability</a>
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/3_5-Conditional-Probability.html" target="blank">3.5 Conditional Probability</a>
+
+### Chapter 4
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/4_2-Discrete-Random-Variables.html" target="blank">4.2 Discrete Random Variables</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/4_3-Binomial-Distribution.html" target="blank">4.3 The Binomial Distribution</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/4_4-Normal-Distribution.html" target="blank">4.4 The Normal Distribution</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/4_5-Area-Under-Standard-Normal.html" target="blank">4.5 Area Under the Standard Normal Curve</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/4_6-Working-with-Normal.html" target="blank">4.6 Working with Normally Distributed Variables</a>
