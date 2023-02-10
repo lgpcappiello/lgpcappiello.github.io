@@ -20,7 +20,7 @@ author_profile: true
 
 ## Open Source Textbooks
 
-- [Introduction to Statistics](https://bookdown.org/lgpcappiello/introstats/) (These are my own teaching notes for Stat 1.)
+- [Introduction to Statistics](https://bookdown.org/lgpcappiello/introstats/) (This is my own text that I use in Stat 1.)
 - [OpenIntro Statistics](https://leanpub.com/openintro-statistics)
 - [Introductory Statistics by OpenStax](https://openstax.org/details/books/introductory-statistics)
 - [Probability Course](http://www.probabilitycourse.com/) (This covers a lot of the Stat 115AB material.)
