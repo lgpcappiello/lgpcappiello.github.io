@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction to Statistics</title>
-  <meta name="description" content="Introduction to Statistics." />
+  <title>Chapter 10 ANOVA | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 10 ANOVA | Introduction to Statistics." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction to Statistics" />
+  <meta property="og:title" content="Chapter 10 ANOVA | Introduction to Statistics" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Introduction to Statistics." />
+  <meta property="og:description" content="Chapter 10 ANOVA | Introduction to Statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction to Statistics" />
+  <meta name="twitter:title" content="Chapter 10 ANOVA | Introduction to Statistics" />
   
-  <meta name="twitter:description" content="Introduction to Statistics." />
+  <meta name="twitter:description" content="Chapter 10 ANOVA | Introduction to Statistics." />
   
 
 <meta name="author" content="Dr. Lauren Cappiello" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction-to-data.html"/>
+<link rel="prev" href="chi-square-tests.html"/>
+<link rel="next" href="regression-and-correlation.html"/>
 <script src="libs/header-attrs-2.20.1/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -365,55 +365,163 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Introduction to Statistics</h1>
-<p class="author"><em>Dr. Lauren Cappiello</em></p>
-</div>
-<div id="welcome-to-statistics" class="section level1 unnumbered hasAnchor">
-<h1>Welcome to Statistics!<a href="index.html#welcome-to-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="course-learning-outcomes" class="section level2 unnumbered hasAnchor">
-<h2>Course Learning Outcomes<a href="index.html#course-learning-outcomes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Students will be able to:</p>
+<div id="anova" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> ANOVA<a href="anova.html#anova" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chapter-overview-9" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Chapter Overview<a href="anova.html#chapter-overview-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this chapter, we extend the concepts from Chapter 6 to answer questions like “is there a difference between these means?” We will also consider hypothesis tests for whether a sample represents the population or closely matches a particular distribution.</p>
+<p><strong>Chapter Learning Outcomes/Objectives</strong></p>
+<p>Perform and interpret inference for</p>
 <ol style="list-style-type: decimal">
-<li>Organize, summarize, and interpret data in tabular, graphical, and pictorial formats.</li>
-<li>Organize and interpret bivariate data and learn simple linear regression and correlation.</li>
-<li>Understand the basic rules of probability.</li>
-<li>Use the binomial distribution as a model for discrete variables.</li>
-<li>Use the normal distribution as a model for continuous variables.</li>
-<li>Apply statistical inference techniques of parameter estimation such as point estimation and confidence interval estimation.</li>
-<li>Apply techniques of testing various statistical hypotheses concerning population parameters.</li>
+<li>Interpret an ANOVA.</li>
+<li>Use the Bonferroni correction to conduct multiple comparisons.</li>
 </ol>
 </div>
-<div id="for-the-instructor" class="section level2 unnumbered hasAnchor">
-<h2>For the Instructor<a href="index.html#for-the-instructor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Thanks for checking out my Introduction to Statistics text! Sections are designed to be short, easy-to-read introductions to each concept. Some of the more conceptual sections do not have section exercises, but I am working on adding exercises wherever it seems appropriate. The topics and course ordering reflect the department syllabus for the 3-unit Introduction to Statistics at Sacramento State. I am sure there are topics we’ve left out, but there are only so many things one can cover in 15 weeks.</p>
-<p>Each Chapter is designed to take approximately two weeks of class time. In an ideal world, I would cover at least the first eight in a 15 week semester. However, with assessment, activities, student questions, holidays, etc., I usually get through the first six or seven. Sometimes I introduce regression at the end of Chapter 2. Rarely do I get to ANOVA. Despite the time constraints, I am working on including additional topics.</p>
-<p>This text is a work in progress and gets updated every semester that I each Introduction to Statistics (which is very nearly every semester) and sometimes during winter and summer breaks.</p>
-<p>Currently, I am working on</p>
+<div id="what-is-the-analysis-of-variance-anova" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> What is the Analysis of Variance (ANOVA)<a href="anova.html#what-is-the-analysis-of-variance-anova" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Now that we’ve examined tests for one and two means, it’s natural to wonder about three or more means. For example, we might want to compare three different medications: treatment 1 (<span class="math inline">\(t_1\)</span>), treatment 2 (<span class="math inline">\(t_2\)</span>), and treatment 3 (<span class="math inline">\(t_3\)</span>). Based on what we’ve learned so far, we might think to do pairwise comparisons, examining <span class="math inline">\(t_1\)</span> vs <span class="math inline">\(t_2\)</span>, then <span class="math inline">\(t_2\)</span> vs <span class="math inline">\(t_3\)</span>, then <span class="math inline">\(t_1\)</span> vs <span class="math inline">\(t_3\)</span>. Unfortunately, this tends to increase our Type I error!</p>
+<p>Think of it this way: if I set my confidence level to 95%, I’m setting my Type I error rate to <span class="math inline">\(\alpha=0.05\)</span>. In general terms, this means that about 1 out of every 20 times I run my experiment, I would make a type I error. If I went ahead and ran, say, 20 tests comparing two means, my <em>overall</em> Type I error rate is going to increase - there’s a pretty significant chance that at least one of those comparisons will results in a Type I error!</p>
+<p>Instead, we will use a test that allows us to ask: “Are all these means the same?” This is called the <strong>an</strong>alysis <strong>o</strong>f <strong>va</strong>riance, or ANOVA.</p>
 <ul>
-<li>overhauling the entire thing to remove some of the examples borrowed from OpenIntro (another great resource) and from Weiss’ <em>Introductory Statistics</em> from when this was just the typed version of my course notes.</li>
-<li>adding section exercises and additional topics.</li>
-<li>including subsections with brief introductions to R programming.</li>
+<li><span class="math inline">\(H_0\)</span>: The mean outcome is the same across all groups.</li>
+<li><span class="math inline">\(H_A\)</span>: At least one mean differs from the rest.</li>
 </ul>
-<p>Note that the problems with the pdf or epub downloads are known issues. I will tackle those when the text is in a more finished state. Currently, it is designed to be viewed fully online (or you can right click and “print page” - save to pdf - to download each chapter individually).</p>
-<p>Please feel free to reach out to me with any questions, comments, or concerns by emailing me at <a href="mailto:cappiello@csus.edu" class="email">cappiello@csus.edu</a></p>
+<p>In statistical notation, these hypotheses look like:</p>
+<ul>
+<li><span class="math inline">\(H_0: \mu_1 = \mu_2 = \dots = \mu_k\)</span></li>
+<li><span class="math inline">\(H_A: \mu_i \ne \mu_j\)</span> for at least one pair <span class="math inline">\((i, j)\)</span></li>
+</ul>
+<p>where <span class="math inline">\(k\)</span> is the number of means being compared and the notation <span class="math inline">\(\mu_i\)</span> represents the mean for the <span class="math inline">\(i\)</span>th group (<span class="math inline">\(i\)</span> can take on any whole number value between 1 and <span class="math inline">\(k\)</span>).</p>
+<p>For ANOVA, we have three key conditions:</p>
+<ol style="list-style-type: decimal">
+<li>Observations are independent within and across groups.</li>
+</ol>
+<p>Independence within groups is the way we’ve been thinking about independence already. We want to convince ourselves that for any particular group, the observations do not impact each other. For independence across groups, we want to convince ourselves that the groups do not impact each other. Note: if we have a simple random sample, this assumption is always satisfied.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Data within each group are approximately normal.</li>
+</ol>
+<p>If you make a histogram of the data for each group, each histogram will look approximately bell-shaped.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Variability is approximately equal across groups.</li>
+</ol>
+<p>Take the standard deviation for each group and check if they are approximately equal. A boxplot is an appropriate way to do this visually.</p>
+<center>
+<font size='4'><strong>Why Variance?</strong>
+</center>
+<p></font></p>
+<p>You may have seen the name “analysis of variance” and wondered what the variance has to do with comparing many means. Consider the following boxplots:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p>
+<p>Is there a difference in the means for Experiment 1? What about Experiment 2?</p>
+<p>In fact, the means are <span class="math inline">\(\mu_1 = \mu_4 = 2\)</span>, <span class="math inline">\(\mu_2 = \mu_5 = 1\)</span>, and <span class="math inline">\(\mu_3 = \mu_6 = 0.5\)</span>. But the variances for the Experiment 1 groups are much larger than for the Experiment 2 groups! The larger variances in Experiment 1 obscure any differences between the group means. It is for this reason that we analyze variance as part of our test for differences in means.</p>
+<blockquote>
+<p>Aside: Why can’t we look at the data first and just test the two means that have the largest difference?</p>
+<p>When we look at the data <em>and then choose a test</em>, this inflates our Type I error rate! It’s bad practice and not something we want to engage in as scientists.</p>
+</blockquote>
+<p>In order to perform an ANOVA, we need to consider whether the sample means differ more than we would expect them to based on natural variation (remember that we expect random samples to produce slightly different sample statistics each time!). This type of variation is called <strong>mean square between groups</strong> or <span class="math inline">\(MSG\)</span>. It has associated degrees of freedom <span class="math inline">\(df_G = k-1\)</span> where <span class="math inline">\(k\)</span> is the number of groups. Note that <span class="math display">\[MSG = \frac{SSG}{df_G}\]</span> where <span class="math inline">\(SSE\)</span> is the <strong>sum of squares group</strong>. If the null hypothesis is true, variation in the sample means is due to chance. In this case, we would expect the MSG to be relatively small.</p>
+<p>When I say “relatively small”, I mean we need to compare this quantity to something. We need some quantity that will give us an idea of how much variability to expect if the null hypothesis is true. This is the <strong>mean square error</strong> or <span class="math inline">\(MSE\)</span>, which has degrees of freedom <span class="math inline">\(df_E = n-k\)</span>. Again, we have the relationship that <span class="math display">\[MSE = \frac{SSE}{df_E}\]</span> where <span class="math inline">\(SSE\)</span> is the <strong>sum of squares error</strong>. These calculations are very similar to the calculation for variance (and standard deviation)! (Note: we will not calculate these quantities by hand, but if you are interested in the mathematical details they are available in the OpenIntro Statistics textbook in the footnote on page 289.)</p>
+<p>We compare these two quantities by examining their ratio: <span class="math display">\[F = \frac{MSG}{MSE}\]</span> This is the test statistic for the ANOVA.</p>
 </div>
-<div id="for-the-student" class="section level2 unnumbered hasAnchor">
-<h2>For the Student<a href="index.html#for-the-student" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are a lot of ways to approach an introductory statistics class. Historically, the topics found in this text have been taught in a way that emphasizes hand calculations and the use of tables full of numbers.</p>
-<p>My philosophy is a little different. This class is designed for students who will need to read statistical results and may need to produce basic statistics using a computer. If you go on to be a scientist and need more statistical know how, this course will give you enough background knowledge to take the inevitable next course in statistics. There is plenty of math in this text, but none of these situations require the ability to do that math by hand.</p>
-<p>In many sections, the math is provided and explained but not emphasized. This is intentional. Instead, we focus on the “why”… Why do we care about this topic? Why is this concept important? Why do I run this test when I have that kind of data? …and we focus on the interpretation. What does this number tell us about an experiment? What can we conclude based on these statistical results?</p>
-<p>We see statistics all the time in the media - in the form of graphs, tables, averages, predictions about elections or sports, you name it! Hopefully, by learning the whys and the interpretation, you will finish this text feeling like you can read and understand statistical results when you run into them in the real world.</p>
-<div id="r-programming" class="section level3 unnumbered hasAnchor">
-<h3>R Programming<a href="index.html#r-programming" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This text is designed to teach you introductory statistics with the option to learn some R (a statistical programming language) along the way. As a result, some sections have some introductory material on R. R is an incredibly powerful tool, but we’re going to keep it relatively simple. Using R will save us the headache of doing a lot of calculations by hand.</p>
-<p>Since we are only going to use R for a few simple commands, we will run it completely online at the website <a href="https://rdrr.io/snippets/" target="blank">rdrr.io/snippets</a> (bookmark this website!)</p>
-<p>For now, you can run R right here in the course notes! This is exactly what you will see on the rdrr.io website. Type in your command and click the green “Run” button. Try running the command <code>print("Welcome to Statistics!")</code>.</p>
-<iframe width="100%" height="500" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
-<p>If it prints out “Sorry, something went wrong. All I know is:”, just press the “Run” button again.</p>
+<div id="the-f-distribution" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> The F-Distribution<a href="anova.html#the-f-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <span class="math inline">\(\boldsymbol{F}\)</span><strong>-test</strong> relies on something called the <span class="math inline">\(F\)</span> distribution. The <span class="math inline">\(F\)</span> distribution has two parameters: <span class="math inline">\(df_1=df_G\)</span> and <span class="math inline">\(df_1=df_E\)</span>. The <span class="math inline">\(F\)</span> distribution always takes on positive values, so an <em>extreme</em> or <em>unusual</em> value for the <span class="math inline">\(F\)</span> distribution will correspond to a large (positive) number.</p>
+<p>When we run an ANOVA, we almost always use the p-value approach. If you are using <code>R</code> for your distributions, the command is <code>pf(F, df1, df2, lower.tail=FALSE)</code> where <code>F</code> is the test statistic.</p>
+<blockquote>
+<p><em>Example:</em> Suppose I have a test with 100 observations and 5 groups. I find <span class="math inline">\(MSG = 0.041\)</span> and <span class="math inline">\(MSE = 0.023\)</span>. Then <span class="math display">\[df_G = k-1 = 5-1 = 4\]</span> and <span class="math display">\[df_E = n-k = 100-5 = 95\]</span> The test statistic is <span class="math display">\[f = \frac{0.041}{0.023} = 1.7826\]</span> To find the p-value using <code>R</code>, I would write the command</p>
+</blockquote>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb86-1"><a href="anova.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pf</span>(<span class="fl">1.7826</span>, <span class="dv">4</span>, <span class="dv">95</span>, <span class="at">lower.tail=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<pre><code>## [1] 0.1387132</code></pre>
+<blockquote>
+<p>and find a p-value of 0.1387.</p>
+</blockquote>
+<p><a href="https://homepage.divms.uiowa.edu/~mbognar/applets/f.html" target="blank">Here is a nice F-distribution applet</a>. For this applet, <span class="math inline">\(\nu_1 = df_1\)</span> and <span class="math inline">\(\nu_2 = df_2\)</span>. Plug in your <span class="math inline">\(F\)</span> test statistic where it indicates “x =” and your p=value will appear in the red box next to “P(X&gt;x)”. When you enter your degrees of freedom, a visualization will appear similar to those in the Rossman and Chance applets we used previously.</p>
+<center>
+<font size='4'><strong>The ANOVA Table</strong>
+</center>
+<p></font></p>
+<p>Generally, when we run an ANOVA, we create an ANOVA table (or we have software create one for us!). This table looks something like this</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>df</th>
+<th>Sum of Squares</th>
+<th>Mean Squares</th>
+<th>F Value</th>
+<th>P-Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>group</td>
+<td><span class="math inline">\(df_G\)</span></td>
+<td><span class="math inline">\(SSG\)</span></td>
+<td><span class="math inline">\(MSG\)</span></td>
+<td><span class="math inline">\(F\)</span></td>
+<td>p-value</td>
+</tr>
+<tr class="even">
+<td>error</td>
+<td><span class="math inline">\(df_E\)</span></td>
+<td><span class="math inline">\(SSE\)</span></td>
+<td><span class="math inline">\(MSE\)</span></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><em>Example:</em> chick weights</p>
+<p><code>R</code> has data on the weights of chicks fed six different feeds (diets). Assume these data are based on a random sample of chicks. There are <span class="math inline">\(n=71\)</span> total observations and <span class="math inline">\(k=6\)</span> different feeds. Let’s assume we want to test with a 0.05 level of significance.</p>
+<p>The ANOVA hypotheses are</p>
+<ul>
+<li><span class="math inline">\(H_0\)</span>: the mean weight is the same for all six feeds.</li>
+<li><span class="math inline">\(H_A\)</span>: at least one feed has a mean weight that differs.</li>
+</ul>
+<p>The summaries for these data are</p>
+</blockquote>
+<pre><code>##         casein horsebean linseed meatmeal soybean sunflower
+## n        12.00     10.00   12.00    11.00   14.00     12.00
+## Mean    323.58    160.20  218.75   276.91  246.43    328.92
+## Std Dev  64.43     38.63   52.24    64.90   54.13     48.84</code></pre>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-88-1.png" width="672" /><img src="IntroStats_files/figure-html/unnamed-chunk-88-2.png" width="672" /></p>
+<blockquote>
+<p>The group sizes are relatively small, so it’s difficult to determine how far from normality these data are based on the histograms. We may also run into some issues with constant variance. However, for the sake of the example, let’s push ahead with the ANOVA! Since we usually use software to calculate ANOVAs, I’ve used <code>R</code> to create the following ANOVA table:</p>
+</blockquote>
+<pre><code>## Analysis of Variance Table
+## 
+## Response: chickwts$weight
+##               Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+## chickwts$feed  5 231129   46226  15.365 5.936e-10 ***
+## Residuals     65 195556    3009                      
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<blockquote>
+<p>From the table, we can confirm that <span class="math inline">\(df_G = 6-1 = 5\)</span> and <span class="math inline">\(df_E = 71 - 6 = 65\)</span>. The F test statistic is <span class="math display">\[MSG/MSE = 46226 / 3009 = 15.365\]</span> Finally, the p-value is <span class="math inline">\(5.936\times10^{-10}\)</span>. Clearly <span class="math inline">\(5.936\times10^{-10} &lt; \alpha = 0.05\)</span>, so we will reject the null hypothesis and conclude that at least one of the feed groups has a mean weight that differs.</p>
+</blockquote>
+</div>
+<div id="multiple-comparisons-and-type-i-error-rate" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Multiple Comparisons and Type I Error Rate<a href="anova.html#multiple-comparisons-and-type-i-error-rate" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s return for a moment to our ANOVA hypotheses:</p>
+<ul>
+<li><span class="math inline">\(H_0\)</span>: The mean outcome is the same across all groups.</li>
+<li><span class="math inline">\(H_A\)</span>: At least one mean differs from the rest.</li>
+</ul>
+<p>If we reject <span class="math inline">\(H_0\)</span> and conclude that “at least one mean differs from the rest”, how do we determine which mean(s) differ? <em>If</em> we reject <span class="math inline">\(H_0\)</span>, we will perform a series of two-sample t-tests. But wait! What about the Type I error? Isn’t this exactly what we decided we couldn’t do when we introduced ANOVA?</p>
+<p>In order to avoid this increased Type I error rate, we run these <strong>mulitple comparisons</strong> with a modified significance level. There are several ways to do this, but the most common way is with the <strong>Bonferroni correction</strong>. Here, if we want to test at the <span class="math inline">\(100(1-\alpha)\)</span> level of significance, we run each of our pairwise comparisons with <span class="math display">\[\alpha^* = \alpha/K\]</span> where <span class="math inline">\(K\)</span> is the number of comparisons being considered. For <span class="math inline">\(k\)</span> groups, there are <span class="math display">\[K = \frac{k(k-1)}{2}\]</span> possible pairwise comparisons.</p>
+<p>For these comparisons, we use a special pooled estimate of the standard deviation, <span class="math inline">\(s_{\text{pooled}}\)</span> in place of <span class="math inline">\(s_1\)</span> and <span class="math inline">\(s_2\)</span>: <span class="math display">\[\text{standard error} = \sqrt{\frac{s_{\text{pooled}}^2}{n_1} + \frac{s_{\text{pooled}}^2}{n_2}}\]</span> Other than changing <span class="math inline">\(\alpha\)</span> to <span class="math inline">\(\alpha^*\)</span> and the standard error to this new formula, the test is exactly the same as that discussed in the previous section. Note that <span class="math display">\[s_{\text{pooled}} = \sqrt{MSE}\]</span> and the degrees of freedom is <span class="math inline">\(df_E\)</span>.</p>
+<blockquote>
+<p><em>Example</em>: chick weights</p>
+<p>Let’s extend our discussion on the chick weights to multiple comparisons. Since we were able to conclude that at least one feed has a weight that differs, we want to find out where the difference(s) lie!</p>
+<p>We will test all possible pairwise comparisons. This will require <span class="math inline">\(K = \frac{6(6-1)}{2} = 15\)</span> tests. The pooled standard deviation is <span class="math inline">\(s_{pooled} = \sqrt{3009} \approx 54.85\)</span>. Let’s walk through the test of casein <span class="math inline">\((\bar{x}_1 = 323.58, n=12)\)</span> vs horsebean <span class="math inline">\((\bar{x}_2 = 160.20, n=10)\)</span>:</p>
+<ul>
+<li><span class="math inline">\(H_0: \mu_1 = \mu_2\)</span></li>
+<li><span class="math inline">\(H_A: \mu_1 \ne \mu_2\)</span></li>
+</ul>
+<p>The estimated difference and standard error are <span class="math display">\[\bar{x}_1 - \bar{x}_2 = 323.58 - 160.20 = 163.38 \quad\quad SE = \sqrt{\frac{54.85^2}{11}+\frac{54.85^2}{9}} = 25.65\]</span> which results in a test statistic of <span class="math inline">\(t=6.37\)</span> and a p-value of <span class="math inline">\(1.11\times10^{-8}\)</span>. We then compare this to <span class="math inline">\(\alpha^* = 0.05/15 = 0.0033\)</span>. Since the p-value of <span class="math inline">\(1.11\times10^{-8} &lt; \alpha^* = 0.0033\)</span>, we reject the null hypothesis and conclude there is a significant difference in mean chick weight between the casein and horsebean feeds.</p>
+<p>In order to complete the pairwise comparisons, we would then run the remaining 14 tests. I will leave this as an optional exercise for the particularly motivated student.</p>
+</blockquote>
+<p>Note: occasionally, we may reject <span class="math inline">\(H_0\)</span> in the ANOVA but may fail to find any statistically significant differences when performing multiple comparisons with the Bonferroni correction. This is ok! It just means we were unable to identify which specific groups differ.</p>
 
-</div>
 </div>
 </div>
             </section>
@@ -421,8 +529,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="introduction-to-data.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="chi-square-tests.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="regression-and-correlation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

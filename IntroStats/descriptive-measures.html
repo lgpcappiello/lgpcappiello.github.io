@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction to Statistics</title>
-  <meta name="description" content="Introduction to Statistics." />
+  <title>Chapter 2 Descriptive Measures | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 2 Descriptive Measures | Introduction to Statistics." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction to Statistics" />
+  <meta property="og:title" content="Chapter 2 Descriptive Measures | Introduction to Statistics" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Introduction to Statistics." />
+  <meta property="og:description" content="Chapter 2 Descriptive Measures | Introduction to Statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction to Statistics" />
+  <meta name="twitter:title" content="Chapter 2 Descriptive Measures | Introduction to Statistics" />
   
-  <meta name="twitter:description" content="Introduction to Statistics." />
+  <meta name="twitter:description" content="Chapter 2 Descriptive Measures | Introduction to Statistics." />
   
 
 <meta name="author" content="Dr. Lauren Cappiello" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction-to-data.html"/>
+<link rel="prev" href="introduction-to-data.html"/>
+<link rel="next" href="probability-concepts.html"/>
 <script src="libs/header-attrs-2.20.1/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -365,55 +365,313 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Introduction to Statistics</h1>
-<p class="author"><em>Dr. Lauren Cappiello</em></p>
-</div>
-<div id="welcome-to-statistics" class="section level1 unnumbered hasAnchor">
-<h1>Welcome to Statistics!<a href="index.html#welcome-to-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="course-learning-outcomes" class="section level2 unnumbered hasAnchor">
-<h2>Course Learning Outcomes<a href="index.html#course-learning-outcomes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Students will be able to:</p>
+<div id="descriptive-measures" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Descriptive Measures<a href="descriptive-measures.html#descriptive-measures" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chapter-overview-1" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Chapter Overview<a href="descriptive-measures.html#chapter-overview-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the previous chapter, we thought about descriptive statistics using tables and graphs. Next, we summarize data by computing numbers. Some of these numbers you may already be familiar with, such as averages and percentiles. Numbers used to describe data are called <em>descriptive measures</em>.</p>
+<p><strong>Chapter Learning Objectives/Outcomes</strong></p>
+<p>After completing Chapter 2, you will be able to:</p>
 <ol style="list-style-type: decimal">
-<li>Organize, summarize, and interpret data in tabular, graphical, and pictorial formats.</li>
-<li>Organize and interpret bivariate data and learn simple linear regression and correlation.</li>
-<li>Understand the basic rules of probability.</li>
-<li>Use the binomial distribution as a model for discrete variables.</li>
-<li>Use the normal distribution as a model for continuous variables.</li>
-<li>Apply statistical inference techniques of parameter estimation such as point estimation and confidence interval estimation.</li>
-<li>Apply techniques of testing various statistical hypotheses concerning population parameters.</li>
+<li>Calculate and interpret measures of center.</li>
+<li>Calculate and interpret measures of variation.</li>
+<li>Find and interpret measures of position.</li>
+<li>Summarize data using boxplots.</li>
 </ol>
+<p><strong>R objectives</strong></p>
+<ol style="list-style-type: decimal">
+<li>Generate measures of center.</li>
+<li>Generate measures of variability.</li>
+<li>Generate measures of position.</li>
+<li>Create box plots.</li>
+</ol>
+<p>This chapter’s outcomes correspond to course outcomes (1) organize, summarize, and interpret data in tabular, graphical, and pictorial formats, (2) organize and interpret bivariate data and learn simple linear regression and correlation, and (6) apply statistical inference techniques of parameter estimation such as point estimation and confidence interval estimation.</p>
 </div>
-<div id="for-the-instructor" class="section level2 unnumbered hasAnchor">
-<h2>For the Instructor<a href="index.html#for-the-instructor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Thanks for checking out my Introduction to Statistics text! Sections are designed to be short, easy-to-read introductions to each concept. Some of the more conceptual sections do not have section exercises, but I am working on adding exercises wherever it seems appropriate. The topics and course ordering reflect the department syllabus for the 3-unit Introduction to Statistics at Sacramento State. I am sure there are topics we’ve left out, but there are only so many things one can cover in 15 weeks.</p>
-<p>Each Chapter is designed to take approximately two weeks of class time. In an ideal world, I would cover at least the first eight in a 15 week semester. However, with assessment, activities, student questions, holidays, etc., I usually get through the first six or seven. Sometimes I introduce regression at the end of Chapter 2. Rarely do I get to ANOVA. Despite the time constraints, I am working on including additional topics.</p>
-<p>This text is a work in progress and gets updated every semester that I each Introduction to Statistics (which is very nearly every semester) and sometimes during winter and summer breaks.</p>
-<p>Currently, I am working on</p>
+<div id="measures-of-central-tendency" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Measures of Central Tendency<a href="descriptive-measures.html#measures-of-central-tendency" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>One research question we might ask is : what values are most common or most likely?</p>
+<p><strong>Mode</strong>: the most commonly occurring value. We can use this for numeric variables, but typically we use the mode when talking about categorical data.</p>
+<p><strong>Mean</strong>: this is what we usually think of as the “average”. Denoted <span class="math inline">\(\bar{x}\)</span>. Add up all of the values and divide by the number of observations (<span class="math inline">\(n\)</span>):
+<span class="math display">\[
+  \bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n} = \sum_{i=1}^n \frac{x_i}{n}
+\]</span>
+where <span class="math inline">\(x_i\)</span> denotes the <span class="math inline">\(i\)</span>th observation and <span class="math inline">\(\sum_{i=1}^n\)</span> is the sum of all observations from 1 through <span class="math inline">\(n\)</span>. This is called <em>summation notation</em>.</p>
+<p><strong>Median</strong>: the middle number when the data are ordered from smallest to largest.</p>
 <ul>
-<li>overhauling the entire thing to remove some of the examples borrowed from OpenIntro (another great resource) and from Weiss’ <em>Introductory Statistics</em> from when this was just the typed version of my course notes.</li>
-<li>adding section exercises and additional topics.</li>
-<li>including subsections with brief introductions to R programming.</li>
+<li>If there are an odd number of observations, this will be the number in the middle:
+<center>
+{1, 3, <strong>7</strong>, 9, 9} has median 7
+</center></li>
+<li>If there are an even number of observations, there will be two numbers in the middle. The median will be their average.
+<center>
+{1, 2, <strong>4, 7</strong>, 9, 9} has median <span class="math inline">\(\frac{4+7}{2}=5.5\)</span>
+</center></li>
 </ul>
-<p>Note that the problems with the pdf or epub downloads are known issues. I will tackle those when the text is in a more finished state. Currently, it is designed to be viewed fully online (or you can right click and “print page” - save to pdf - to download each chapter individually).</p>
-<p>Please feel free to reach out to me with any questions, comments, or concerns by emailing me at <a href="mailto:cappiello@csus.edu" class="email">cappiello@csus.edu</a></p>
+<p>The mean is sensitive to extreme values and skew. The median is not!</p>
+<table border="1">
+<tbody>
+<tr>
+<td style="width: 9%; text-align: center;">
+</td>
+<td style="width: 40%; text-align: center;">
+<span class="math inline">\(x\)</span>: 1, 3, 7, 9, 9
+</td>
+<td style="width: 40%; text-align: center;">
+<span class="math inline">\(y\)</span>: 1, 3, 7, 9, 45
+</td>
+</tr>
+<tr>
+<td style="width: 9%; text-align: center;">
+<strong>Median</strong>
+</td>
+<td style="width: 40%; text-align: center;">
+<span class="math inline">\(\text{median} = 7\)</span>
+</td>
+<td style="width: 40%; text-align: center;">
+<span class="math inline">\(\text{median} = 7\)</span>
+</td>
+</tr>
+<tr>
+<td style="width: 9%; text-align: center;">
+<strong>Mean</strong>
+</td>
+<td style="width: 40%; text-align: center;">
+<span class="math inline">\(\bar{x} = \frac{29}{5} = 5.8\)</span>
+</td>
+<td style="width: 40%; text-align: center;">
+<span class="math inline">\(\bar{y} = \frac{65}{5} = 13\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Notice how changing that 9 out for a 45 changes the <em>mean</em> a lot! But the <em>median</em> is 7 for both <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
+<p>Because the median is not affected by extreme observations or skew, we say it is a <strong>resistant measure</strong> or that it is <strong>robust</strong>.</p>
+<p>Which measure should we use?</p>
+<ul>
+<li>Mean: symmetric, numeric data</li>
+<li>Median: skewed, numeric data</li>
+<li>Mode: categorical data</li>
+</ul>
+<p>Note: If the mean and median are roughly equal, it is reasonable to assume the distribution is roughly symmetric.</p>
+<div id="r-finding-measures-of-center" class="section level3 unnumbered hasAnchor">
+<h3>R: Finding Measures of Center<a href="descriptive-measures.html#r-finding-measures-of-center" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To find a mean in R, we use the command <code>mean</code>. Let’s use the <code>Loblolly</code> pine data again and find the <code>mean</code> tree height.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="descriptive-measures.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attach</span>(Loblolly)</span>
+<span id="cb13-2"><a href="descriptive-measures.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(height)</span></code></pre></div>
+<pre><code>## [1] 32.3644</code></pre>
+<p>From R, we can see that the sample mean height of the Loblolly pines is 32.36 feet. (Note that R will often print things out with ## and a number in square brackets. This is just to help us keep track of things if we write a lot of lines of code. You can ignore that number in the brackets!)</p>
+<p>Is a mean the appropriate measure of center? We can quickly check the skew with a histogram:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="descriptive-measures.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(height)</span></code></pre></div>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>It might be a little bit hard to tell with this histogram, but it does not look particularly skewed. Let’s use our other trick: if the mean and median are approximatly equal, we can say the distribution is approximately symmetric (and therefore the mean is an appropriate measure of center). To calculate the median, we use the command <code>median</code>:</p>
+<pre><code>## [1] 34</code></pre>
+<p>The sample median of the Loblolly pine heights is 34 feet. Since the mean and median are approximately equal, it would be reasonable to use the mean in this case. To find a mode (for a categorical variable), we would repeat the same process but with the command <code>mode</code>.</p>
 </div>
-<div id="for-the-student" class="section level2 unnumbered hasAnchor">
-<h2>For the Student<a href="index.html#for-the-student" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are a lot of ways to approach an introductory statistics class. Historically, the topics found in this text have been taught in a way that emphasizes hand calculations and the use of tables full of numbers.</p>
-<p>My philosophy is a little different. This class is designed for students who will need to read statistical results and may need to produce basic statistics using a computer. If you go on to be a scientist and need more statistical know how, this course will give you enough background knowledge to take the inevitable next course in statistics. There is plenty of math in this text, but none of these situations require the ability to do that math by hand.</p>
-<p>In many sections, the math is provided and explained but not emphasized. This is intentional. Instead, we focus on the “why”… Why do we care about this topic? Why is this concept important? Why do I run this test when I have that kind of data? …and we focus on the interpretation. What does this number tell us about an experiment? What can we conclude based on these statistical results?</p>
-<p>We see statistics all the time in the media - in the form of graphs, tables, averages, predictions about elections or sports, you name it! Hopefully, by learning the whys and the interpretation, you will finish this text feeling like you can read and understand statistical results when you run into them in the real world.</p>
-<div id="r-programming" class="section level3 unnumbered hasAnchor">
-<h3>R Programming<a href="index.html#r-programming" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This text is designed to teach you introductory statistics with the option to learn some R (a statistical programming language) along the way. As a result, some sections have some introductory material on R. R is an incredibly powerful tool, but we’re going to keep it relatively simple. Using R will save us the headache of doing a lot of calculations by hand.</p>
-<p>Since we are only going to use R for a few simple commands, we will run it completely online at the website <a href="https://rdrr.io/snippets/" target="blank">rdrr.io/snippets</a> (bookmark this website!)</p>
-<p>For now, you can run R right here in the course notes! This is exactly what you will see on the rdrr.io website. Type in your command and click the green “Run” button. Try running the command <code>print("Welcome to Statistics!")</code>.</p>
-<iframe width="100%" height="500" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
-<p>If it prints out “Sorry, something went wrong. All I know is:”, just press the “Run” button again.</p>
+</div>
+<div id="measures-of-variability" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Measures of Variability<a href="descriptive-measures.html#measures-of-variability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>How much do the data vary?</p>
+<p>Should we care? Yes! The more variable the data, the harder it is to be confident in our measures of center!</p>
+<p>If you live in a place with extremely variable weather, it is going to be much harder to be confident in how to dress for tomorrow’s weather… but if you live in a place where the weather is always the same, it’s much easier to be confident in what you plan to wear.</p>
+<p>We want to think about how far observations are from the measure of center.</p>
+<p>One easy way to think about variability is the <strong>range</strong> of the data: <span class="math display">\[\text{range} = \text{maximum} - \text{minimum}\]</span> This is quick and convenient, but it is <em>extremely</em> sensitive to outliers! It also takes into account only two of the observations - we would prefer a measure of variability that takes into account <em>all</em> the observations.</p>
+<p><strong>Deviation</strong> is the distance of an observation from the mean: <span class="math inline">\(x - \bar{x}\)</span>. If we want to think about how far - on average - a typical observation is from the center, our intuition might be to take the average deviance… but it turns out that summing up the deviances will <em>always</em> result in 0! Conceptually, this is because the stuff below the mean (negative numbers) and the stuff above the mean (positive numbers) end up canceling each other out until we end up at 0. (If you are interested, <em>Appendix A: Average Deviance</em> has a mathematical proof of this using some relatively straightforward algebra.)</p>
+<p>One way to deal with this is to make all of the numbers positive, which we accomplish by squaring the deviance.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center">Deviance</th>
+<th align="center">Squared Deviance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(x\)</span></td>
+<td align="center"><span class="math inline">\(x - \bar{x}\)</span></td>
+<td align="center"><span class="math inline">\((x - \bar{x})^2\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">-1.2</td>
+<td align="center">1.44</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">1.8</td>
+<td align="center">3.24</td>
+</tr>
+<tr class="even">
+<td align="center">3</td>
+<td align="center">-0.2</td>
+<td align="center">0.04</td>
+</tr>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">0.8</td>
+<td align="center">0.64</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">-1.2</td>
+<td align="center">1.44</td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(\bar{x}=3.2\)</span></td>
+<td align="center">Total = 0</td>
+<td align="center">Total = 6.8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variance</strong> (denoted <span class="math inline">\(s^2\)</span>) is the average squared distance from the mean:
+<span class="math display">\[
+  s^2 = \frac{(x_1-\bar{x})^2 + (x_2-\bar{x})^2 + \dots + (x_n-\bar{x})^2}{n-1} = \frac{1}{n-1}\sum_{i=1}^n (x_i - \bar{x})^2
+\]</span>
+where <span class="math inline">\(n\)</span> is the sample size. Notice that we divide by <span class="math inline">\(n-1\)</span> and NOT by <span class="math inline">\(n\)</span>. There are some mathematical reasons why we do this, but the short version is that it’ll be a better estimate when we talk about inference.</p>
+<p>Finally, we come to <strong>standard deviation</strong> (denoted <span class="math inline">\(s\)</span>). <span class="math display">\[s = \sqrt{s^2}\]</span> The standard deviation is the square root of the variance. We say that a “typical” observation is within about one standard deviation of the mean (between <span class="math inline">\(\bar{x}-s\)</span> and <span class="math inline">\(\bar{x}+s\)</span>).</p>
+<p>In practice (including in this class), we will use a computer to calculate the variance and standard deviation.</p>
+<p>We will think about one more measure of variability, the interquartile range, in the next section.</p>
+<div id="r-finding-measures-of-variability" class="section level3 unnumbered hasAnchor">
+<h3>R: Finding Measures of Variability<a href="descriptive-measures.html#r-finding-measures-of-variability" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To find a range in R, we get started using the command <code>range</code>. Let’s keep using the <code>Loblolly</code> pine data again and find the <code>mean</code> tree height.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="descriptive-measures.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attach</span>(Loblolly)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="descriptive-measures.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(height)</span></code></pre></div>
+<pre><code>## [1]  3.46 64.10</code></pre>
+<p>This command gives us the minimum and maximum values. Then to calculate the range, we would find <span class="math inline">\(64.10 - 3.46\)</span>. We can also do this in R, because R doubles as a calculator!</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="descriptive-measures.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fl">64.1</span> <span class="sc">-</span> <span class="fl">3.46</span></span></code></pre></div>
+<pre><code>## [1] 60.64</code></pre>
+<p>The sample range of the Loblolly pine heights is 60.64 feet.</p>
+<p>To find the variance and standard deviation, we use the commands <code>var</code> and <code>sd</code>, respectively:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="descriptive-measures.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(height)</span></code></pre></div>
+<pre><code>## [1] 427.3979</code></pre>
+<p>The sample variance of the Loblolly pine heights is 427.4.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="descriptive-measures.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(height)</span></code></pre></div>
+<pre><code>## [1] 20.6736</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="descriptive-measures.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">detach</span>(Loblolly)</span></code></pre></div>
+<p>The sample standard deviation of the Loblolly pine heights is 20.67 feet.</p>
+</div>
+</div>
+<div id="measures-of-position" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Measures of Position<a href="descriptive-measures.html#measures-of-position" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <strong>interquartile range</strong> (<strong>IQR</strong>) represents the middle 50% of the data.</p>
+<p>Recall that the <em>median</em> cut the data in half: 50% of the data is below and 50% is above the median. This is also called the <strong>50th percentile</strong>. The <strong><span class="math inline">\(p\)</span>th percentile</strong> is the value for which <span class="math inline">\(p\)</span>% of the data is below it.</p>
+<p>To get the middle 50%, we will split the data into four parts:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">25%</td>
+<td align="center">25%</td>
+<td align="center">25%</td>
+<td align="center">25%</td>
+</tr>
+</tbody>
+</table>
+<p>The 25th and 75th percentiles, along with the median, divide the data into four parts. We call these three measurements the <strong>quartiles</strong>:</p>
+<ul>
+<li><strong>Q1</strong>, the first quartile, is the median of the lower 50% of the data.</li>
+<li><strong>Q2</strong>, the second quartile, is the median.</li>
+<li><strong>Q3</strong>, the third quartile, is the median of the upper 50% of the data.</li>
+</ul>
+<blockquote>
+<p><em>Example:</em> Consider {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}</p>
+<ul>
+<li>Cutting the data in half: {1, 2, 3, 4, 5 | 6, 7, 8, 9, 10}, the median (Q2) is <span class="math inline">\(\frac{5+6}{2}=5.5\)</span>.</li>
+<li>Q1 is the median of {1, 2, 3, 4, 5}, or 3</li>
+<li>Q3 is the median of {6, 7, 8, 9, 10}, or 8</li>
+</ul>
+</blockquote>
+<p><strong>Note:</strong> this is a “quick and dirty” way of finding quartiles. A computer will give a more exact result.</p>
+<p>Then the interquartile range is
+<span class="math display">\[
+  \text{IQR} = \text{Q3}-\text{Q1}
+\]</span></p>
+<p>This is another measure of variability and is resistant to extreme values. In general, we prefer the mean and standard deviation when the data are symmetric and we prefer the median and IQR when the data are skewed.</p>
+<div id="box-plots" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Box Plots<a href="descriptive-measures.html#box-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Our measures of position are the foundation for constructing what we call a box plot, which summarizes the data with 5 statistics plus extreme observations:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>Drawing a box plot:</p>
+<ol style="list-style-type: decimal">
+<li>Draw the vertical axis to include all possible values in the data.</li>
+<li>Draw a horizontal line at the median, at <span class="math inline">\(\text{Q1}\)</span>, and at <span class="math inline">\(\text{Q3}\)</span>. Use these to form a box.</li>
+<li>Draw the <strong>whiskers</strong>. The whiskers’ upper limit is <span class="math inline">\(\text{Q3}+1.5\times\text{IQR}\)</span> and the lower limit is <span class="math inline">\(\text{Q1}-1.5\times\text{IQR}\)</span>. The actual whiskers are then drawn <em>at the next closest data points within the limits</em>.</li>
+<li>Any points outside the whisker limits are included as individual points. These are <strong>potential outliers</strong>.</li>
+</ol>
+<p>(Potential) outliers can help us…</p>
+<ul>
+<li>examine skew (outliers in the negative direction suggest left skew; outliers in the positive direction suggest right skew).</li>
+<li>identify issues with data collection or entry, especially if the value of the outliers doesn’t make sense.</li>
+</ul>
+<p>As with most things in this text, we won’t draw a lot of boxplots by hand. However, understanding how they are drawn will help us understand how to interpret them!</p>
+</div>
+<div id="r-measures-of-position" class="section level3 unnumbered hasAnchor">
+<h3>R: Measures of Position<a href="descriptive-measures.html#r-measures-of-position" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let’s continue using the Loblolly pine data.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="descriptive-measures.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attach</span>(Loblolly)</span></code></pre></div>
+<p>We can get the quartiles quickly using the <code>summary</code> command. This will also give us the minimum, mean, and maximum. That’s fine!</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="descriptive-measures.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(height)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    3.46   10.47   34.00   32.36   51.36   64.10</code></pre>
+<p>So <span class="math inline">\(Q1 = 10.46\)</span>, <span class="math inline">\(Q2 = \text{Median} = 34\)</span>, and <span class="math inline">\(Q3 = 51.35\)</span>. We can also quickly get the interquartile range using the <code>IQR</code> command.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="descriptive-measures.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">IQR</span>(height)</span></code></pre></div>
+<pre><code>## [1] 40.895</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="descriptive-measures.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">detach</span>(Loblolly)</span></code></pre></div>
+</div>
+<div id="r-box-plots" class="section level3 unnumbered hasAnchor">
+<h3>R: Box Plots<a href="descriptive-measures.html#r-box-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="descriptive-measures.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attach</span>(Loblolly)</span></code></pre></div>
+<p>To create a boxplot in R, we use the command <code>boxplot</code>. We can use some of the same arguments we used with the <code>hist</code> command to give it titles and color:</p>
+<ul>
+<li><code>main</code> is where I can give the plot a new title. (Make sure to put the title in quotes!)</li>
+<li><code>ylab</code> is the y-axis (vertical axis) title.</li>
+<li><code>col</code> allows us to give R a specific color for the bars.</li>
+</ul>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="descriptive-measures.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(height,</span>
+<span id="cb34-2"><a href="descriptive-measures.html#cb34-2" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">&quot;Boxplot of Loblolly Pine Heights&quot;</span>, </span>
+<span id="cb34-3"><a href="descriptive-measures.html#cb34-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;Height (feet)&quot;</span>,</span>
+<span id="cb34-4"><a href="descriptive-measures.html#cb34-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p>R will automatically create the entire box plot, including showing any outliers. (Which we should note that there aren’t any in the <code>height</code> variable!)</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="descriptive-measures.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">detach</span>(Loblolly)</span></code></pre></div>
+</div>
+</div>
+<div id="descriptive-measures-for-populations" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Descriptive Measures for Populations<a href="descriptive-measures.html#descriptive-measures-for-populations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>So far, we’ve thought about calculating various descriptive statistics from a sample, but our long-term goal is to estimate descriptive information about a population. At the population level, these values are called <strong>parameters</strong>.</p>
+<p>When we find a measure of center, spread, or position, we use a sample to calculate a single value. These single values are called <strong>point estimates</strong> and they are used to <em>estimate</em> the corresponding population parameter. For example, we use <span class="math inline">\(\bar{x}\)</span> to estimate the population mean, denoted <span class="math inline">\(\mu\)</span> (Greek letter “mu”) and <span class="math inline">\(s\)</span> to estimate the population standard deviation, denoted <span class="math inline">\(\sigma\)</span> (Greek letter “sigma”).</p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Point Estimate</th>
+<th>Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>sample mean: <span class="math inline">\(\bar{x}\)</span></td>
+<td>population mean: <span class="math inline">\(\mu\)</span></td>
+</tr>
+<tr class="even">
+<td>sample standard deviation: <span class="math inline">\(s\)</span></td>
+<td>population standard deviation: <span class="math inline">\(\sigma\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>…and so on and so forth. For each quantity we calculate from a sample (point estimate), there is some corresponding unknown population level value (parameter) that we wish to estimate.</p>
+<p>We will discuss this in more detail when we discuss Random Variables and Statistical Inference.</p>
 
-</div>
 </div>
 </div>
             </section>
@@ -421,8 +679,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="introduction-to-data.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction-to-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="probability-concepts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

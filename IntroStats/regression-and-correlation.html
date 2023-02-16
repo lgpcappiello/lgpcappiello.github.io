@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction to Statistics</title>
-  <meta name="description" content="Introduction to Statistics." />
+  <title>Chapter 11 Regression and Correlation | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 11 Regression and Correlation | Introduction to Statistics." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction to Statistics" />
+  <meta property="og:title" content="Chapter 11 Regression and Correlation | Introduction to Statistics" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Introduction to Statistics." />
+  <meta property="og:description" content="Chapter 11 Regression and Correlation | Introduction to Statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction to Statistics" />
+  <meta name="twitter:title" content="Chapter 11 Regression and Correlation | Introduction to Statistics" />
   
-  <meta name="twitter:description" content="Introduction to Statistics." />
+  <meta name="twitter:description" content="Chapter 11 Regression and Correlation | Introduction to Statistics." />
   
 
 <meta name="author" content="Dr. Lauren Cappiello" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction-to-data.html"/>
+<link rel="prev" href="anova.html"/>
+<link rel="next" href="appendices.html"/>
 <script src="libs/header-attrs-2.20.1/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -365,53 +365,227 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Introduction to Statistics</h1>
-<p class="author"><em>Dr. Lauren Cappiello</em></p>
-</div>
-<div id="welcome-to-statistics" class="section level1 unnumbered hasAnchor">
-<h1>Welcome to Statistics!<a href="index.html#welcome-to-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="course-learning-outcomes" class="section level2 unnumbered hasAnchor">
-<h2>Course Learning Outcomes<a href="index.html#course-learning-outcomes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Students will be able to:</p>
+<div id="regression-and-correlation" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Regression and Correlation<a href="regression-and-correlation.html#regression-and-correlation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chapter-overview-10" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Chapter Overview<a href="regression-and-correlation.html#chapter-overview-10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We will extend our conversation on descriptive measures for quantitative variables to include the relationship between two variables.</p>
+<p><strong>Chapter Learning Outcomes/Objectives</strong></p>
 <ol style="list-style-type: decimal">
-<li>Organize, summarize, and interpret data in tabular, graphical, and pictorial formats.</li>
-<li>Organize and interpret bivariate data and learn simple linear regression and correlation.</li>
-<li>Understand the basic rules of probability.</li>
-<li>Use the binomial distribution as a model for discrete variables.</li>
-<li>Use the normal distribution as a model for continuous variables.</li>
-<li>Apply statistical inference techniques of parameter estimation such as point estimation and confidence interval estimation.</li>
-<li>Apply techniques of testing various statistical hypotheses concerning population parameters.</li>
+<li>Calculate and interpret a correlation coefficient.</li>
+<li>Calculate and interpret a regression line.</li>
+<li>Use a regression line to make predictions.</li>
 </ol>
 </div>
-<div id="for-the-instructor" class="section level2 unnumbered hasAnchor">
-<h2>For the Instructor<a href="index.html#for-the-instructor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Thanks for checking out my Introduction to Statistics text! Sections are designed to be short, easy-to-read introductions to each concept. Some of the more conceptual sections do not have section exercises, but I am working on adding exercises wherever it seems appropriate. The topics and course ordering reflect the department syllabus for the 3-unit Introduction to Statistics at Sacramento State. I am sure there are topics we’ve left out, but there are only so many things one can cover in 15 weeks.</p>
-<p>Each Chapter is designed to take approximately two weeks of class time. In an ideal world, I would cover at least the first eight in a 15 week semester. However, with assessment, activities, student questions, holidays, etc., I usually get through the first six or seven. Sometimes I introduce regression at the end of Chapter 2. Rarely do I get to ANOVA. Despite the time constraints, I am working on including additional topics.</p>
-<p>This text is a work in progress and gets updated every semester that I each Introduction to Statistics (which is very nearly every semester) and sometimes during winter and summer breaks.</p>
-<p>Currently, I am working on</p>
+<div id="linear-equations" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Linear Equations<a href="regression-and-correlation.html#linear-equations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>From your previous math classes, you should have a passing familiarity with linear equations like <span class="math inline">\(y=mx+b\)</span>. In statistics, we write these as <span class="math display">\[y=b_0 + b_1x\]</span> where <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> are constants, <span class="math inline">\(x\)</span> is the independent variable, and <span class="math inline">\(y\)</span> is the dependent variable. The graph of a linear function is always a (straight) line.</p>
+<p>The <strong>y-intercept</strong> is <span class="math inline">\(b_0\)</span>, the value the dependent variable takes when the independent variable <span class="math inline">\(x=0\)</span>. The <strong>slope</strong> is <span class="math inline">\(b_1\)</span>, the change in <span class="math inline">\(y\)</span> for a 1-unit change in <span class="math inline">\(x\)</span>.</p>
+<p>A <strong>scatterplot</strong> shows the relationship between two (numeric) variables.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
+<p>At a glance, we can see that (in general) heavier cars have lower MPG. We call this type of data <strong>bivariate data</strong>. Now consider</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-91-1.png" width="672" /></p>
+<p>This relationship can be modeled perfectly with a straight line:
+<span class="math display">\[
+y = 8 + 3.25x
+\]</span>
+When we can do this - model a relationship perfectly - we know the exact value of <span class="math inline">\(y\)</span> whenever we know the value of <span class="math inline">\(x\)</span>. This is nice (we would love to be able to do this all the time!) but typically data is more complex than this.</p>
+<p>Linear regression takes the idea of fitting a line and allows the relationship to be imperfect. Imagine in the previous scenario that you buy an $8 pound of coffee each month and individual coffees cost $3.25… but what if your pound of coffee didn’t always cost $8? Or your coffee drinks didn’t always cost $3.25? In this case, you might get a plot that looks something like this:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-92-1.png" width="672" /></p>
+<p>The linear regression line looks like
+<span class="math display">\[
+y = \beta_0 + \beta_1x + \epsilon
+\]</span></p>
 <ul>
-<li>overhauling the entire thing to remove some of the examples borrowed from OpenIntro (another great resource) and from Weiss’ <em>Introductory Statistics</em> from when this was just the typed version of my course notes.</li>
-<li>adding section exercises and additional topics.</li>
-<li>including subsections with brief introductions to R programming.</li>
+<li><span class="math inline">\(\beta\)</span> is the Greek letter “beta”.</li>
+<li><span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are constants.</li>
+<li>Error (the fact that the points don’t all line up perfectly) is represented by <span class="math inline">\(\epsilon\)</span>.</li>
 </ul>
-<p>Note that the problems with the pdf or epub downloads are known issues. I will tackle those when the text is in a more finished state. Currently, it is designed to be viewed fully online (or you can right click and “print page” - save to pdf - to download each chapter individually).</p>
-<p>Please feel free to reach out to me with any questions, comments, or concerns by emailing me at <a href="mailto:cappiello@csus.edu" class="email">cappiello@csus.edu</a></p>
+<p>Think of this as the 2-dimensional version of a point estimate!</p>
+<p>We estimate <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> using data and denote the estimated line by
+<span class="math display">\[
+\hat{y} = b_0 + b_1x
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\hat{y}\)</span>, “y-hat”, is the estimated value of <span class="math inline">\(y\)</span>.</li>
+<li><span class="math inline">\(b_0\)</span> is the estimate for <span class="math inline">\(\beta_0\)</span>.</li>
+<li><span class="math inline">\(b_1\)</span> is the estimate for <span class="math inline">\(\beta_1\)</span>.</li>
+</ul>
+<p>We drop the error term <span class="math inline">\(\epsilon\)</span> when we estimate the constants for a regression line; we assume that the mean error is 0, so <em>on average</em> we can ignore this error.</p>
+<p>We use a regression line to make predictions about <span class="math inline">\(y\)</span> using values of <span class="math inline">\(x\)</span>.</p>
+<ul>
+<li><span class="math inline">\(y\)</span> is the <strong>response variable</strong>.</li>
+<li><span class="math inline">\(x\)</span> is the <strong>predictor variable</strong>.</li>
+</ul>
+<blockquote>
+<p><em>Example</em>: (from OpenIntro Statistics 8.1.2) Researchers captured 104 brushtail possums and took a variety of body measurements on each before releasing them back into the wild. We consider two measurements for each possum: total body length and head length.</p>
+</blockquote>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-93-1.png" width="672" /></p>
+<blockquote>
+<p>Clearly, the relationship isn’t perfectly linear, but there does appear to be some kind of linear relationship (as body length increases, head length also increases). We want to try to use body length (<span class="math inline">\(x\)</span>) to predict head length (<span class="math inline">\(y\)</span>).</p>
+<p>The regression model for these data is <span class="math display">\[\hat{y}=42.7 + 0.57x\]</span></p>
+</blockquote>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-94-1.png" width="672" /></p>
+<blockquote>
+<p>To predict the head length for a possum with a body length of 80cm, we just need to plug in 80 for body length (<span class="math inline">\(x\)</span>): <span class="math display">\[\hat{y}=42.7 + 0.57(80) = 88.3\text{mm}.\]</span> Note: because the regression line is built using the data’s original units (cm for body length, mm for head length), the regression line will preserve those units. That means that when we plugged in a value in cm, the equation spit out a predicted value in mm.</p>
+</blockquote>
 </div>
-<div id="for-the-student" class="section level2 unnumbered hasAnchor">
-<h2>For the Student<a href="index.html#for-the-student" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are a lot of ways to approach an introductory statistics class. Historically, the topics found in this text have been taught in a way that emphasizes hand calculations and the use of tables full of numbers.</p>
-<p>My philosophy is a little different. This class is designed for students who will need to read statistical results and may need to produce basic statistics using a computer. If you go on to be a scientist and need more statistical know how, this course will give you enough background knowledge to take the inevitable next course in statistics. There is plenty of math in this text, but none of these situations require the ability to do that math by hand.</p>
-<p>In many sections, the math is provided and explained but not emphasized. This is intentional. Instead, we focus on the “why”… Why do we care about this topic? Why is this concept important? Why do I run this test when I have that kind of data? …and we focus on the interpretation. What does this number tell us about an experiment? What can we conclude based on these statistical results?</p>
-<p>We see statistics all the time in the media - in the form of graphs, tables, averages, predictions about elections or sports, you name it! Hopefully, by learning the whys and the interpretation, you will finish this text feeling like you can read and understand statistical results when you run into them in the real world.</p>
-<div id="r-programming" class="section level3 unnumbered hasAnchor">
-<h3>R Programming<a href="index.html#r-programming" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This text is designed to teach you introductory statistics with the option to learn some R (a statistical programming language) along the way. As a result, some sections have some introductory material on R. R is an incredibly powerful tool, but we’re going to keep it relatively simple. Using R will save us the headache of doing a lot of calculations by hand.</p>
-<p>Since we are only going to use R for a few simple commands, we will run it completely online at the website <a href="https://rdrr.io/snippets/" target="blank">rdrr.io/snippets</a> (bookmark this website!)</p>
-<p>For now, you can run R right here in the course notes! This is exactly what you will see on the rdrr.io website. Type in your command and click the green “Run” button. Try running the command <code>print("Welcome to Statistics!")</code>.</p>
-<iframe width="100%" height="500" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
-<p>If it prints out “Sorry, something went wrong. All I know is:”, just press the “Run” button again.</p>
+<div id="correlation" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Correlation<a href="regression-and-correlation.html#correlation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We’ve talked about the strength of linear relationships, but it would be nice to formalize this concept. The <strong>correlation</strong> between two variables describes the strength of their linear relationship. It always takes values between -1 and 1. We denote the correlation (or correlation coefficient) by <span class="math inline">\(R\)</span>: <span class="math display">\[R = \frac{1}{n-1}\sum_{i=1}^n\left(\frac{x_i - \bar{x}}{s_x}\times\frac{y_i - \bar{y}}{s_y}\right)\]</span> where <span class="math inline">\(s_x\)</span> and <span class="math inline">\(s_y\)</span> are the respective standard deviations for <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. The sample size <span class="math inline">\(n\)</span> is the total number of <span class="math inline">\((x,y)\)</span> pairs.</p>
+<blockquote>
+<p><em>Example</em>: Consider</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="center"><span class="math inline">\(y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">3</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">4</td>
+</tr>
+<tr class="even">
+<td align="center"><span class="math inline">\(\bar{x} = 2\)</span></td>
+<td align="center"><span class="math inline">\(\bar{y} = 3.333\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span class="math inline">\(s_x = 1\)</span></td>
+<td align="center"><span class="math inline">\(s_y = 0.577\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Like we did with variance/standard deviation, I recommend using a table to calculate the correlation between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>:</p>
+<table>
+<colgroup>
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+<col width="20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x - \bar{x}\)</span></th>
+<th align="center"><span class="math inline">\(\frac{x - \bar{x}}{s_x}\)</span></th>
+<th align="center"><span class="math inline">\(y - \bar{y}\)</span></th>
+<th align="center"><span class="math inline">\(\frac{y - \bar{y}}{s_y}\)</span></th>
+<th align="center"><span class="math inline">\(\frac{x - \bar{x}}{s_x}\times\frac{y - \bar{y}}{s_y}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">-1</td>
+<td align="center">-1</td>
+<td align="center">-0.333</td>
+<td align="center">-0.577</td>
+<td align="center">0.577</td>
+</tr>
+<tr class="even">
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">-0.333</td>
+<td align="center">-0.577</td>
+<td align="center">0.000</td>
+</tr>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0.667</td>
+<td align="center">1.155</td>
+<td align="center">1.155</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">sum = 1.732</td>
+</tr>
+</tbody>
+</table>
+<p>So <span class="math inline">\(R = \frac{1}{3-1}(1.732) = 0.866\)</span></p>
+</blockquote>
+<p>Correlations</p>
+<ul>
+<li>close to -1 suggest strong, negative linear relationships.</li>
+<li>close to +1 suggest strong, positive linear relationships.</li>
+<li>close to 0 have little-to-no linear relationship.</li>
+</ul>
+<p>Note: the sign of the correlation will match the sign of the slope!</p>
+<ul>
+<li>If <span class="math inline">\(R &lt; 0\)</span>, there is a downward trend and <span class="math inline">\(b_1 &lt; 0\)</span>.</li>
+<li>If <span class="math inline">\(R &gt; 0\)</span>, there is an upward trend and <span class="math inline">\(b_1 &gt; 0\)</span>.</li>
+<li>If <span class="math inline">\(R \approx 0\)</span>, there is no relationship and <span class="math inline">\(b_1 \approx 0\)</span>.</li>
+</ul>
+<p>A final note: correlations only represent <em>linear</em> trends. Consider the following scatterplot:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-95-1.png" width="672" /></p>
+<p>Obviously there’s a strong relationship between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. In fact, there’s a perfect relationship here: <span class="math inline">\(y = x^2\)</span>. But the <em>correlation</em> between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is 0! This is one reason why it’s important to examine the data both through visual and numeric measures.</p>
+</div>
+<div id="finding-a-regression-line" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Finding a Regression Line<a href="regression-and-correlation.html#finding-a-regression-line" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Residuals</strong> are the leftover <em>stuff</em> (variation) in the data after accounting for model fit: <span class="math display">\[\text{data} = \text{prediction} + \text{residual}\]</span> Each observation has its own residual. The residual for an observation <span class="math inline">\((x,y)\)</span> is the difference between observed (<span class="math inline">\(y\)</span>) and predicted (<span class="math inline">\(\hat{y}\)</span>): <span class="math display">\[e = y - \hat{y}\]</span> We denote the residuals by <span class="math inline">\(e\)</span> and find <span class="math inline">\(\hat{y}\)</span> by plugging <span class="math inline">\(x\)</span> into the regression equation. If an observation lands above the regression line, <span class="math inline">\(e &gt; 0\)</span>. If below, <span class="math inline">\(e &lt; 0\)</span>.</p>
+<p>When we estimate the parameters for the regression, our goal is to get each residual as close to 0 as possible. We might think to try minimizing <span class="math display">\[\sum_{i=1}^n e_i = \sum_{i=1}^n (y_i - \hat{y}_i)\]</span> but that would just give us very large negative residuals. As with the variance, we will use squares to shift the focus to magnitude:
+<span class="math display">\[\begin{align}
+\sum_{i=1}^n e_i^2 &amp;= \sum_{i=1}^n (y_i - \hat{y}_i)^2 \\
+&amp; = \sum_{i=1}^n [y_i - (b_0 + b_1 x_i)]^2
+\end{align}\]</span>
+This will allow us to shrink the residuals toward 0: the values <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> that minimize this will make up our regression line.</p>
+<p>This is a calculus-free course, so we’ll skip the proof of the minimization part. The slope can be estimated as <span class="math display">\[b_1 = \frac{s_y}{s_x}\times R\]</span> and the intercept as <span class="math display">\[b_0 = \bar{y} - b_1 \bar{x}\]</span></p>
+<div id="coefficient-of-determination" class="section level3 hasAnchor" number="11.4.1">
+<h3><span class="header-section-number">11.4.1</span> Coefficient of Determination<a href="regression-and-correlation.html#coefficient-of-determination" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>With the correlation and regression line in hand, we will add one last piece for considering the fit of a regression line. The <strong>coefficient of determination</strong>, <span class="math inline">\(R^2\)</span>, is the square of the correlation coefficient. This value tells us how much of the variability around the regression line is accounted for by the regression. An easy way to interpret this value is to assign it a letter grade. For example, if <span class="math inline">\(R^2 = 0.84\)</span>, the predictive capabilities of the regression line get a B.</p>
+<blockquote>
+<p><em>Example</em>: Consider two measurements taken on the Old Faithful Geyser in Yellowstone National Park: <code>eruptions</code>, the length of each eruption and <code>waiting</code>, the time between eruptions. Each is measured in minutes.</p>
+</blockquote>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-96-1.png" width="672" /></p>
+<blockquote>
+<p>There does appear to be some kind of linear relationship here, so we will see if we can use the wait time to predict the eruption duration. The sample statistics for these data are</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"></th>
+<th align="center"><code>waiting</code></th>
+<th align="center"><code>eruptions</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">mean</td>
+<td align="center"><span class="math inline">\(\bar{x}=70.90\)</span></td>
+<td align="center"><span class="math inline">\(\bar{y}=3.49\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">sd</td>
+<td align="center"><span class="math inline">\(s_x=13.60\)</span></td>
+<td align="center"><span class="math inline">\(s_y=1.14\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(R = 0.90\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Since we want to use wait time to predict eruption duration, wait time is <span class="math inline">\(x\)</span> and eruption duration is <span class="math inline">\(y.\)</span> Then <span class="math display">\[b_1 = \frac{1.14}{13.60}\times 0.90 \approx 0.076 \]</span> and <span class="math display">\[b_0 = 3.49 - 0.076\times 70.90 \approx -1.87\]</span> so the estimated regression line is <span class="math display">\[\hat{y} = -1.87 + 0.076x\]</span></p>
+<p>To interpret <span class="math inline">\(b_1\)</span>, the slope, we would say that for a one-minute increase in waiting time, we would predict a 0.076 minute increase in eruption duration. The intercept is a little bit trickier. Plugging in 0 for <span class="math inline">\(x\)</span>, we get a predicted eruption duration of <span class="math inline">\(-1.87\)</span> minutes. There are two issues with this. First, a negative eruption duration doesn’t make sense… but it also doesn’t make sense to have a waiting time of 0 minutes.</p>
+</blockquote>
+<p>It’s important to stop and think about our predictions. Sometimes, the numbers don’t make sense and it’s easy to see that there’s something wrong with the prediction. Other times, these issues are more insidious. Usually, all of these issues result from what we call <em>extrapolation</em>, applying a model estimate for values outside of the data’s range for <span class="math inline">\(x\)</span>. Our linear model is only an approximation, and we don’t know anything about how the relationship outside of the scope of our data!</p>
+<p>Consider the following data with the best fit line drawn on the scatterplot.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-97-1.png" width="672" /></p>
+<p>The best fit line is <span class="math display">\[\hat{y} = 2.69 + 0.179x\]</span> and the correlation is <span class="math inline">\(R=0.877\)</span>. Then the coefficient of determination is <span class="math inline">\(R^2 = 0.767\)</span> (think: a C grade), so the model has decent predictive capabilities. More precisely, the model accounts for 76.7% of the variability about the regression line. Now suppose we wanted to predict the value of <span class="math inline">\(y\)</span> when <span class="math inline">\(x=0.1\)</span>: <span class="math display">\[\hat{y} = 2.66 + 0.181\times0.1 = 2.67\]</span> This seems like a perfectly reasonable number… But what if I told you that I generated the data using the model <span class="math inline">\(y = 2\ln(x) + \text{random error}\)</span>? (If you’re not familiar with the natural log, <span class="math inline">\(\ln\)</span>, don’t worry about it! You won’t need to use it.) The true (population) best-fit model would look like this:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-98-1.png" width="672" /></p>
+<p>The vertical lines at <span class="math inline">\(x=5\)</span> and <span class="math inline">\(x=20\)</span> show the bounds of our data. The blue dot at <span class="math inline">\(x=0.1\)</span> is the predicted value <span class="math inline">\(\hat{y}\)</span> based on the linear model. The dashed horizontal line helps demonstrate just how far this estimate is from the true population value! This does <em>not</em> mean there’s anything inherently wrong with our model. If it works well from <span class="math inline">\(x=5\)</span> to <span class="math inline">\(x=20\)</span>, great, it’s doing its job!</p>
 
 </div>
 </div>
@@ -421,8 +595,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="introduction-to-data.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="anova.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="appendices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

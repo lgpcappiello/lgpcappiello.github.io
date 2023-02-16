@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Module 7 Regression | Course Notes for Introduction to Statistics</title>
+  <meta name="description" content="Course notes for Introduction to Statistics." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Module 7 Regression | Course Notes for Introduction to Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Course notes for Introduction to Statistics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Module 7 Regression | Course Notes for Introduction to Statistics" />
+  
+  <meta name="twitter:description" content="Course notes for Introduction to Statistics." />
+  
+
+<meta name="author" content="Dr. Lauren Cappiello" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-hypothesis-testing.html"/>
+
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to Data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#module-overview"><i class="fa fa-check"></i><b>1.1</b> Module Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#statistics-terminology"><i class="fa fa-check"></i><b>1.2</b> Statistics Terminology</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#data-basics"><i class="fa fa-check"></i><b>1.3</b> Data Basics</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sampling"><i class="fa fa-check"></i><b>1.4</b> Sampling</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#experimental-design"><i class="fa fa-check"></i><b>1.5</b> Experimental Design</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#frequency-distributions"><i class="fa fa-check"></i><b>1.6</b> Frequency Distributions</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="index.html"><a href="index.html#qualitative-variables"><i class="fa fa-check"></i><b>1.6.1</b> Qualitative Variables</a></li>
+<li class="chapter" data-level="1.6.2" data-path="index.html"><a href="index.html#quantitative-variables"><i class="fa fa-check"></i><b>1.6.2</b> Quantitative Variables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="descriptive-measures.html"><a href="descriptive-measures.html"><i class="fa fa-check"></i><b>2</b> Descriptive Measures</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="descriptive-measures.html"><a href="descriptive-measures.html#module-overview-1"><i class="fa fa-check"></i><b>2.1</b> Module Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>2.2</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="2.3" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-variability"><i class="fa fa-check"></i><b>2.3</b> Measures of Variability</a></li>
+<li class="chapter" data-level="2.4" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-position"><i class="fa fa-check"></i><b>2.4</b> Measures of Position</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="descriptive-measures.html"><a href="descriptive-measures.html#box-plots"><i class="fa fa-check"></i><b>2.4.1</b> Box Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="descriptive-measures.html"><a href="descriptive-measures.html#descriptive-measures-for-populations"><i class="fa fa-check"></i><b>2.5</b> Descriptive Measures for Populations</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="probability-concepts.html"><a href="probability-concepts.html"><i class="fa fa-check"></i><b>3</b> Probability Concepts</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="probability-concepts.html"><a href="probability-concepts.html#module-overview-2"><i class="fa fa-check"></i><b>3.1</b> Module Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="probability-concepts.html"><a href="probability-concepts.html#experiments-sample-spaces-and-events"><i class="fa fa-check"></i><b>3.2</b> Experiments, Sample Spaces, and Events</a></li>
+<li class="chapter" data-level="3.3" data-path="probability-concepts.html"><a href="probability-concepts.html#probability-distributions"><i class="fa fa-check"></i><b>3.3</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="probability-concepts.html"><a href="probability-concepts.html#venn-diagrams"><i class="fa fa-check"></i><b>3.3.1</b> Venn Diagrams</a></li>
+<li class="chapter" data-level="3.3.2" data-path="probability-concepts.html"><a href="probability-concepts.html#probability-axioms"><i class="fa fa-check"></i><b>3.3.2</b> Probability Axioms</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="probability-concepts.html"><a href="probability-concepts.html#rules-of-probability"><i class="fa fa-check"></i><b>3.4</b> Rules of Probability</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="probability-concepts.html"><a href="probability-concepts.html#addition-rules"><i class="fa fa-check"></i><b>3.4.1</b> Addition Rules</a></li>
+<li class="chapter" data-level="3.4.2" data-path="probability-concepts.html"><a href="probability-concepts.html#complements"><i class="fa fa-check"></i><b>3.4.2</b> Complements</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="probability-concepts.html"><a href="probability-concepts.html#conditional-probability"><i class="fa fa-check"></i><b>3.5</b> Conditional Probability</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="probability-concepts.html"><a href="probability-concepts.html#multiplication-rules"><i class="fa fa-check"></i><b>3.5.1</b> Multiplication Rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="random-variables.html"><a href="random-variables.html"><i class="fa fa-check"></i><b>4</b> Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="random-variables.html"><a href="random-variables.html#module-overview-3"><i class="fa fa-check"></i><b>4.1</b> Module Overview</a></li>
+<li class="chapter" data-level="4.2" data-path="random-variables.html"><a href="random-variables.html#discrete-random-variables"><i class="fa fa-check"></i><b>4.2</b> Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="random-variables.html"><a href="random-variables.html#the-mean-and-standard-deviation"><i class="fa fa-check"></i><b>4.2.1</b> The Mean and Standard Deviation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="random-variables.html"><a href="random-variables.html#the-binomial-distribution"><i class="fa fa-check"></i><b>4.3</b> The Binomial Distribution</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="random-variables.html"><a href="random-variables.html#mean-and-variance"><i class="fa fa-check"></i><b>4.3.1</b> Mean and Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="random-variables.html"><a href="random-variables.html#the-normal-distribution"><i class="fa fa-check"></i><b>4.4</b> The Normal Distribution</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="random-variables.html"><a href="random-variables.html#the-standard-normal-distribution"><i class="fa fa-check"></i><b>4.4.1</b> The Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="random-variables.html"><a href="random-variables.html#area-under-the-standard-normal-curve"><i class="fa fa-check"></i><b>4.5</b> Area Under the Standard Normal Curve</a></li>
+<li class="chapter" data-level="4.6" data-path="random-variables.html"><a href="random-variables.html#working-with-normally-distributed-variables"><i class="fa fa-check"></i><b>4.6</b> Working with Normally Distributed Variables</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="random-variables.html"><a href="random-variables.html#normal-distribution-probabilities"><i class="fa fa-check"></i><b>4.6.1</b> Normal Distribution Probabilities</a></li>
+<li class="chapter" data-level="4.6.2" data-path="random-variables.html"><a href="random-variables.html#empirical-rule-for-variables"><i class="fa fa-check"></i><b>4.6.2</b> Empirical Rule for Variables</a></li>
+<li class="chapter" data-level="4.6.3" data-path="random-variables.html"><a href="random-variables.html#percentiles"><i class="fa fa-check"></i><b>4.6.3</b> Percentiles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html"><i class="fa fa-check"></i><b>5</b> Introduction to Inference</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#module-overview-4"><i class="fa fa-check"></i><b>5.1</b> Module Overview</a></li>
+<li class="chapter" data-level="5.2" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#sampling-distributions"><i class="fa fa-check"></i><b>5.2</b> Sampling Distributions</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#sampling-error"><i class="fa fa-check"></i><b>5.2.1</b> Sampling Error</a></li>
+<li class="chapter" data-level="5.2.2" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#the-sampling-distribution-of-barx"><i class="fa fa-check"></i><b>5.2.2</b> The Sampling Distribution of <span class="math inline">\(\bar{X}\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#developing-confidence-intervals"><i class="fa fa-check"></i><b>5.3</b> Developing Confidence Intervals</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#interpreting-a-confidence-interval"><i class="fa fa-check"></i><b>5.3.1</b> Interpreting a Confidence Interval</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#other-levels-of-confidence"><i class="fa fa-check"></i><b>5.4</b> Other Levels of Confidence</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#confidence-level-precision-and-sample-size"><i class="fa fa-check"></i><b>5.4.1</b> Confidence Level, Precision, and Sample Size</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#confidence-intervals-sigma-unknown"><i class="fa fa-check"></i><b>5.5</b> Confidence Intervals, <span class="math inline">\(\sigma\)</span> Unknown</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#the-t-distribution"><i class="fa fa-check"></i><b>5.5.1</b> The T-Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#summary-of-confidence-interval-settings"><i class="fa fa-check"></i><b>5.6</b> Summary of Confidence Interval Settings</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html"><i class="fa fa-check"></i><b>6</b> Introduction to Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#module-overview-5"><i class="fa fa-check"></i><b>6.1</b> Module Overview</a></li>
+<li class="chapter" data-level="6.2" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#logic-of-hypothesis-testing"><i class="fa fa-check"></i><b>6.2</b> Logic of Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#decision-errors"><i class="fa fa-check"></i><b>6.2.1</b> Decision Errors</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#confidence-interval-approach-to-hypothesis-testing"><i class="fa fa-check"></i><b>6.3</b> Confidence Interval Approach to Hypothesis Testing</a></li>
+<li class="chapter" data-level="6.4" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#critical-value-approach-to-hypothesis-testing"><i class="fa fa-check"></i><b>6.4</b> Critical Value Approach to Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#test-statistics"><i class="fa fa-check"></i><b>6.4.1</b> Test statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#p-value-approach-to-hypothesis-testing"><i class="fa fa-check"></i><b>6.5</b> P-Value Approach to Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#p-values"><i class="fa fa-check"></i><b>6.5.1</b> P-Values</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#hypothesis-tests-for-two-means"><i class="fa fa-check"></i><b>6.6</b> Hypothesis Tests for Two Means</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#paired-samples"><i class="fa fa-check"></i><b>6.6.1</b> Paired Samples</a></li>
+<li class="chapter" data-level="6.6.2" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#independent-samples"><i class="fa fa-check"></i><b>6.6.2</b> Independent Samples</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>7</b> Regression</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="regression.html"><a href="regression.html#module-overview-6"><i class="fa fa-check"></i><b>7.1</b> Module Overview</a></li>
+<li class="chapter" data-level="7.2" data-path="regression.html"><a href="regression.html#regression-1"><i class="fa fa-check"></i><b>7.2</b> Regression</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Notes for Introduction to Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="regression" class="section level1" number="7">
+<h1><span class="header-section-number">Module 7</span> Regression</h1>
+<div id="module-overview-6" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Module Overview</h2>
+<p>We now extend our conversation on descriptive measures for quantitative variables to think more deeply about the relationship between two variables.</p>
+<p><strong>Module Learning Objectives/Outcomes</strong></p>
+<p>After completing Module 2, you will be able to:</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Calculate and interpret a regression equation.</li>
+<li>Use a regression equation to make predictions.</li>
+<li>Find and interpret the coefficient of determination.</li>
+<li>Find and interpret the linear correlation coefficient.</li>
+</ol>
+<p>This module’s outcomes correspond to course outcomes (2) organize and interpret bivariate data and learn simple linear regression and correlation.</p>
+</div>
+<div id="regression-1" class="section level2" number="7.2">
+<h2><span class="header-section-number">7.2</span> Regression</h2>
+<p>From your previous math classes, you should have a passing familiarity with linear equations like <span class="math inline">\(y=mx+b\)</span>. In statistics, we write these as <span class="math display">\[y=b_0 + b_1x\]</span> where <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> are constants, <span class="math inline">\(x\)</span> is the independent variable, and <span class="math inline">\(y\)</span> is the dependent variable. The graph of a linear function is always a (straight) line.</p>
+<p>The <strong>y-intercept</strong> is <span class="math inline">\(b_0\)</span>, the value the dependent variable takes when the independent variable <span class="math inline">\(x=0\)</span>. The <strong>slope</strong> is <span class="math inline">\(b_1\)</span>, the change in <span class="math inline">\(y\)</span> for a 1-unit change in <span class="math inline">\(x\)</span>.</p>
+<p>A <strong>scatterplot</strong> shows the relationship between two (numeric) variables.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>At a glance, we can see that (in general) heavier cars have lower MPG. We call this type of data <strong>bivariate data</strong>.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>This relationship can be modeled perfectly with a straight line:
+<span class="math display">\[
+y = 8 + 3.25x
+\]</span>
+When we can do this - model a relationship perfectly - we know the exact value of <span class="math inline">\(y\)</span> whenever we know the value of <span class="math inline">\(x\)</span>. This is nice (we would love to be able to do this all the time!) but typically data is more complex than this.</p>
+<p>Linear regression takes the idea of fitting a line and allows the relationship to be imperfect. Imagine in the previous scenario that you buy an $8 pound of coffee each month and individual coffees cost $3.25… but what if your pound of coffee didn’t always cost $8? Or your coffee drinks didn’t always cost $3.25? In this case, you might get a plot that looks something like this:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p>The linear regression line looks like
+<span class="math display">\[
+y = \beta_0 + \beta_1x + \epsilon
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\beta\)</span> is the Greek letter “beta.”</li>
+<li><span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are constants.</li>
+<li>Error (the fact that the points don’t all line up perfectly) is represented by <span class="math inline">\(\epsilon\)</span>.</li>
+</ul>
+<p>Think of this as the 2-dimensional version of a point estimate!</p>
+<p>We estimate <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> using data and denote the estimated line by
+<span class="math display">\[
+\hat{y} = b_0 + b_1x
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\hat{y}\)</span>, “y-hat,” is the estimated value of <span class="math inline">\(y\)</span>.</li>
+<li><span class="math inline">\(b_0\)</span> is the estimate for <span class="math inline">\(\beta_0\)</span>.</li>
+<li><span class="math inline">\(b_1\)</span> is the estimate for <span class="math inline">\(\beta_1\)</span>.</li>
+</ul>
+<p>We drop the error term <span class="math inline">\(\epsilon\)</span> when we estimate the constants for a regression line; we assume that the mean error is 0, so <em>on average</em> we can ignore this error.</p>
+<p>We use a regression line to make predictions about <span class="math inline">\(y\)</span> using values of <span class="math inline">\(x\)</span>.</p>
+<ul>
+<li><span class="math inline">\(y\)</span> is the <strong>response variable</strong>.</li>
+<li><span class="math inline">\(x\)</span> is the <strong>predictor variable</strong>.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-hypothesis-testing.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IntroStats.pdf", "IntroStats.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

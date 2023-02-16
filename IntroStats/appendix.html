@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Appendix | Introduction to Statistics</title>
+  <meta name="description" content="Appendix | Introduction to Statistics." />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Appendix | Introduction to Statistics" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Appendix | Introduction to Statistics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Appendix | Introduction to Statistics" />
+  
+  <meta name="twitter:description" content="Appendix | Introduction to Statistics." />
+  
+
+<meta name="author" content="Dr. Lauren Cappiello" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="regression-and-correlation.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome to Statistics!</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#course-learning-outcomes"><i class="fa fa-check"></i>Course Learning Outcomes</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#for-the-instructor"><i class="fa fa-check"></i>For the Instructor</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#for-the-student"><i class="fa fa-check"></i>For the Student</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#r-programming"><i class="fa fa-check"></i>R Programming</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introduction-to-data.html"><a href="introduction-to-data.html"><i class="fa fa-check"></i><b>1</b> Introduction to Data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#chapter-overview"><i class="fa fa-check"></i><b>1.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#statistics-terminology"><i class="fa fa-check"></i><b>1.2</b> Statistics Terminology</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-data.html"><a href="introduction-to-data.html#r-entering-data"><i class="fa fa-check"></i>R: Entering Data</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-data.html"><a href="introduction-to-data.html#section-exercises"><i class="fa fa-check"></i>Section Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction-to-data.html"><a href="introduction-to-data.html#sampling-and-design"><i class="fa fa-check"></i><b>1.3</b> Sampling and Design</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#statistical-sampling"><i class="fa fa-check"></i><b>1.3.1</b> Statistical Sampling</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#experimental-design"><i class="fa fa-check"></i><b>1.3.2</b> Experimental Design</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-data.html"><a href="introduction-to-data.html#r-random-number-generation"><i class="fa fa-check"></i>R: Random Number Generation</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-data.html"><a href="introduction-to-data.html#section-exercises-1"><i class="fa fa-check"></i>Section Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction-to-data.html"><a href="introduction-to-data.html#frequency-distributions"><i class="fa fa-check"></i><b>1.4</b> Frequency Distributions</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#qualitative-variables"><i class="fa fa-check"></i><b>1.4.1</b> Qualitative Variables</a></li>
+<li class="chapter" data-level="1.4.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#quantitative-variables"><i class="fa fa-check"></i><b>1.4.2</b> Quantitative Variables</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-data.html"><a href="introduction-to-data.html#r-histograms"><i class="fa fa-check"></i>R: Histograms</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="descriptive-measures.html"><a href="descriptive-measures.html"><i class="fa fa-check"></i><b>2</b> Descriptive Measures</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="descriptive-measures.html"><a href="descriptive-measures.html#chapter-overview-1"><i class="fa fa-check"></i><b>2.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>2.2</b> Measures of Central Tendency</a>
+<ul>
+<li class="chapter" data-level="" data-path="descriptive-measures.html"><a href="descriptive-measures.html#r-finding-measures-of-center"><i class="fa fa-check"></i>R: Finding Measures of Center</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-variability"><i class="fa fa-check"></i><b>2.3</b> Measures of Variability</a>
+<ul>
+<li class="chapter" data-level="" data-path="descriptive-measures.html"><a href="descriptive-measures.html#r-finding-measures-of-variability"><i class="fa fa-check"></i>R: Finding Measures of Variability</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-position"><i class="fa fa-check"></i><b>2.4</b> Measures of Position</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="descriptive-measures.html"><a href="descriptive-measures.html#box-plots"><i class="fa fa-check"></i><b>2.4.1</b> Box Plots</a></li>
+<li class="chapter" data-level="" data-path="descriptive-measures.html"><a href="descriptive-measures.html#r-measures-of-position"><i class="fa fa-check"></i>R: Measures of Position</a></li>
+<li class="chapter" data-level="" data-path="descriptive-measures.html"><a href="descriptive-measures.html#r-box-plots"><i class="fa fa-check"></i>R: Box Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="descriptive-measures.html"><a href="descriptive-measures.html#descriptive-measures-for-populations"><i class="fa fa-check"></i><b>2.5</b> Descriptive Measures for Populations</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="probability-concepts.html"><a href="probability-concepts.html"><i class="fa fa-check"></i><b>3</b> Probability Concepts</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="probability-concepts.html"><a href="probability-concepts.html#chapter-overview-2"><i class="fa fa-check"></i><b>3.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="probability-concepts.html"><a href="probability-concepts.html#experiments-sample-spaces-and-events"><i class="fa fa-check"></i><b>3.2</b> Experiments, Sample Spaces, and Events</a></li>
+<li class="chapter" data-level="3.3" data-path="probability-concepts.html"><a href="probability-concepts.html#probability-distributions"><i class="fa fa-check"></i><b>3.3</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="probability-concepts.html"><a href="probability-concepts.html#venn-diagrams"><i class="fa fa-check"></i><b>3.3.1</b> Venn Diagrams</a></li>
+<li class="chapter" data-level="3.3.2" data-path="probability-concepts.html"><a href="probability-concepts.html#probability-axioms"><i class="fa fa-check"></i><b>3.3.2</b> Probability Axioms</a></li>
+<li class="chapter" data-level="" data-path="probability-concepts.html"><a href="probability-concepts.html#exercises"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="probability-concepts.html"><a href="probability-concepts.html#rules-of-probability"><i class="fa fa-check"></i><b>3.4</b> Rules of Probability</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="probability-concepts.html"><a href="probability-concepts.html#addition-rules"><i class="fa fa-check"></i><b>3.4.1</b> Addition Rules</a></li>
+<li class="chapter" data-level="3.4.2" data-path="probability-concepts.html"><a href="probability-concepts.html#complements"><i class="fa fa-check"></i><b>3.4.2</b> Complements</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="probability-concepts.html"><a href="probability-concepts.html#conditional-probability"><i class="fa fa-check"></i><b>3.5</b> Conditional Probability</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="probability-concepts.html"><a href="probability-concepts.html#multiplication-rules"><i class="fa fa-check"></i><b>3.5.1</b> Multiplication Rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="random-variables.html"><a href="random-variables.html"><i class="fa fa-check"></i><b>4</b> Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="random-variables.html"><a href="random-variables.html#chapter-overview-3"><i class="fa fa-check"></i><b>4.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="4.2" data-path="random-variables.html"><a href="random-variables.html#discrete-random-variables"><i class="fa fa-check"></i><b>4.2</b> Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="random-variables.html"><a href="random-variables.html#the-mean-and-standard-deviation"><i class="fa fa-check"></i><b>4.2.1</b> The Mean and Standard Deviation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="random-variables.html"><a href="random-variables.html#the-binomial-distribution"><i class="fa fa-check"></i><b>4.3</b> The Binomial Distribution</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="random-variables.html"><a href="random-variables.html#mean-and-variance"><i class="fa fa-check"></i><b>4.3.1</b> Mean and Variance</a></li>
+<li class="chapter" data-level="" data-path="random-variables.html"><a href="random-variables.html#binomial-probabilities-in-r"><i class="fa fa-check"></i>Binomial Probabilities in R</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="random-variables.html"><a href="random-variables.html#the-normal-distribution"><i class="fa fa-check"></i><b>4.4</b> The Normal Distribution</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="random-variables.html"><a href="random-variables.html#the-standard-normal-distribution"><i class="fa fa-check"></i><b>4.4.1</b> The Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="random-variables.html"><a href="random-variables.html#area-under-the-standard-normal-curve"><i class="fa fa-check"></i><b>4.5</b> Area Under the Standard Normal Curve</a>
+<ul>
+<li class="chapter" data-level="" data-path="random-variables.html"><a href="random-variables.html#r-normal-distribution-probabilities"><i class="fa fa-check"></i>R: Normal Distribution Probabilities</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="random-variables.html"><a href="random-variables.html#working-with-normally-distributed-variables"><i class="fa fa-check"></i><b>4.6</b> Working with Normally Distributed Variables</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="random-variables.html"><a href="random-variables.html#normal-distribution-probabilities"><i class="fa fa-check"></i><b>4.6.1</b> Normal Distribution Probabilities</a></li>
+<li class="chapter" data-level="4.6.2" data-path="random-variables.html"><a href="random-variables.html#empirical-rule-for-variables"><i class="fa fa-check"></i><b>4.6.2</b> Empirical Rule for Variables</a></li>
+<li class="chapter" data-level="4.6.3" data-path="random-variables.html"><a href="random-variables.html#percentiles"><i class="fa fa-check"></i><b>4.6.3</b> Percentiles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html"><i class="fa fa-check"></i><b>5</b> Introduction to Confidence Intervals</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#chapter-overview-4"><i class="fa fa-check"></i><b>5.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="5.2" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#sampling-distributions"><i class="fa fa-check"></i><b>5.2</b> Sampling Distributions</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#sampling-error"><i class="fa fa-check"></i><b>5.2.1</b> Sampling Error</a></li>
+<li class="chapter" data-level="5.2.2" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#the-central-limit-theorem"><i class="fa fa-check"></i><b>5.2.2</b> The Central Limit Theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#developing-confidence-intervals"><i class="fa fa-check"></i><b>5.3</b> Developing Confidence Intervals</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#interpreting-a-confidence-interval"><i class="fa fa-check"></i><b>5.3.1</b> Interpreting a Confidence Interval</a></li>
+<li class="chapter" data-level="5.3.2" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#exercises-1"><i class="fa fa-check"></i><b>5.3.2</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#other-levels-of-confidence"><i class="fa fa-check"></i><b>5.4</b> Other Levels of Confidence</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#r-finding-critical-values"><i class="fa fa-check"></i>R: Finding Critical Values</a></li>
+<li class="chapter" data-level="5.4.1" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#breaking-down-a-confidence-interval"><i class="fa fa-check"></i><b>5.4.1</b> Breaking Down a Confidence Interval</a></li>
+<li class="chapter" data-level="5.4.2" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#confidence-level-precision-and-sample-size"><i class="fa fa-check"></i><b>5.4.2</b> Confidence Level, Precision, and Sample Size</a></li>
+<li class="chapter" data-level="5.4.3" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#exercises-2"><i class="fa fa-check"></i><b>5.4.3</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#confidence-intervals-for-a-mean"><i class="fa fa-check"></i><b>5.5</b> Confidence Intervals for a Mean</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#the-t-distribution"><i class="fa fa-check"></i><b>5.5.1</b> The T-Distribution</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#r-t-critical-values"><i class="fa fa-check"></i>R: T Critical Values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction-to-confidence-intervals.html"><a href="introduction-to-confidence-intervals.html#r-confidence-intevals-for-a-mean"><i class="fa fa-check"></i>R: Confidence Intevals for a Mean</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html"><i class="fa fa-check"></i><b>6</b> Introduction to Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#chapter-overview-5"><i class="fa fa-check"></i><b>6.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="6.2" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#logic-of-hypothesis-testing"><i class="fa fa-check"></i><b>6.2</b> Logic of Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#decision-errors"><i class="fa fa-check"></i><b>6.2.1</b> Decision Errors</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#confidence-interval-approach-to-hypothesis-testing"><i class="fa fa-check"></i><b>6.3</b> Confidence Interval Approach to Hypothesis Testing</a></li>
+<li class="chapter" data-level="6.4" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#critical-value-approach-to-hypothesis-testing"><i class="fa fa-check"></i><b>6.4</b> Critical Value Approach to Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#test-statistics"><i class="fa fa-check"></i><b>6.4.1</b> Test statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#p-value-approach-to-hypothesis-testing"><i class="fa fa-check"></i><b>6.5</b> P-Value Approach to Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#p-values"><i class="fa fa-check"></i><b>6.5.1</b> P-Values</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#r-hypothesis-tests-for-a-mean"><i class="fa fa-check"></i>R: Hypothesis Tests for a Mean</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="inference-for-a-proportion.html"><a href="inference-for-a-proportion.html"><i class="fa fa-check"></i><b>7</b> Inference for a Proportion</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="inference-for-a-proportion.html"><a href="inference-for-a-proportion.html#chapter-overview-6"><i class="fa fa-check"></i><b>7.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="7.2" data-path="inference-for-a-proportion.html"><a href="inference-for-a-proportion.html#confidence-intervals-for-a-proportion"><i class="fa fa-check"></i><b>7.2</b> Confidence Intervals for a Proportion</a></li>
+<li class="chapter" data-level="7.3" data-path="inference-for-a-proportion.html"><a href="inference-for-a-proportion.html#hypothesis-tests-for-a-proportion"><i class="fa fa-check"></i><b>7.3</b> Hypothesis Tests for a Proportion</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="inference-for-a-proportion.html"><a href="inference-for-a-proportion.html#confidence-interval-approach"><i class="fa fa-check"></i><b>7.3.1</b> Confidence Interval Approach</a></li>
+<li class="chapter" data-level="7.3.2" data-path="inference-for-a-proportion.html"><a href="inference-for-a-proportion.html#critical-value-approach"><i class="fa fa-check"></i><b>7.3.2</b> Critical Value Approach</a></li>
+<li class="chapter" data-level="7.3.3" data-path="inference-for-a-proportion.html"><a href="inference-for-a-proportion.html#p-value-approach"><i class="fa fa-check"></i><b>7.3.3</b> P-Value Approach</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="inference-for-a-proportion.html"><a href="inference-for-a-proportion.html#r-hypothesis-tests-for-a-proportion"><i class="fa fa-check"></i>R: Hypothesis Tests for a Proportion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html"><i class="fa fa-check"></i><b>8</b> Inference: Comparing Parameters</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#chapter-overview-7"><i class="fa fa-check"></i><b>8.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="8.2" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-proportions"><i class="fa fa-check"></i><b>8.2</b> Hypothesis Tests for Two Proportions</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#confidence-intervals-for-two-proportions"><i class="fa fa-check"></i><b>8.2.1</b> Confidence Intervals for Two Proportions</a></li>
+<li class="chapter" data-level="8.2.2" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#critical-values-test-statistics-and-p-values"><i class="fa fa-check"></i><b>8.2.2</b> Critical Values, Test Statistics, and P-Values</a></li>
+<li class="chapter" data-level="" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#r-hypothesis-tests-for-two-proportions"><i class="fa fa-check"></i>R: Hypothesis Tests for Two Proportions</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-means"><i class="fa fa-check"></i><b>8.3</b> Hypothesis Tests for Two Means</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#paired-samples"><i class="fa fa-check"></i><b>8.3.1</b> Paired Samples</a></li>
+<li class="chapter" data-level="8.3.2" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#independent-samples"><i class="fa fa-check"></i><b>8.3.2</b> Independent Samples</a></li>
+<li class="chapter" data-level="" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#r-hypothesis-tests-for-two-means"><i class="fa fa-check"></i>R: Hypothesis Tests for Two Means</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="chi-square-tests.html"><a href="chi-square-tests.html"><i class="fa fa-check"></i><b>9</b> Chi-Square Tests</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="chi-square-tests.html"><a href="chi-square-tests.html#chapter-overview-8"><i class="fa fa-check"></i><b>9.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="9.2" data-path="chi-square-tests.html"><a href="chi-square-tests.html#inference-for-a-population-variance"><i class="fa fa-check"></i><b>9.2</b> Inference for a Population Variance</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="chi-square-tests.html"><a href="chi-square-tests.html#the-chi-square-distribution"><i class="fa fa-check"></i><b>9.2.1</b> The Chi-Square Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="chi-square-tests.html"><a href="chi-square-tests.html#the-ratio-of-two-variances"><i class="fa fa-check"></i><b>9.3</b> The Ratio of Two Variances</a></li>
+<li class="chapter" data-level="9.4" data-path="chi-square-tests.html"><a href="chi-square-tests.html#goodness-of-fit"><i class="fa fa-check"></i><b>9.4</b> Goodness of Fit</a></li>
+<li class="chapter" data-level="9.5" data-path="chi-square-tests.html"><a href="chi-square-tests.html#contingency-tables"><i class="fa fa-check"></i><b>9.5</b> Contingency Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>10</b> ANOVA</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="anova.html"><a href="anova.html#chapter-overview-9"><i class="fa fa-check"></i><b>10.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="10.2" data-path="anova.html"><a href="anova.html#what-is-the-analysis-of-variance-anova"><i class="fa fa-check"></i><b>10.2</b> What is the Analysis of Variance (ANOVA)</a></li>
+<li class="chapter" data-level="10.3" data-path="anova.html"><a href="anova.html#the-f-distribution"><i class="fa fa-check"></i><b>10.3</b> The F-Distribution</a></li>
+<li class="chapter" data-level="10.4" data-path="anova.html"><a href="anova.html#multiple-comparisons-and-type-i-error-rate"><i class="fa fa-check"></i><b>10.4</b> Multiple Comparisons and Type I Error Rate</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>11</b> Regression and Correlation</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#chapter-overview-10"><i class="fa fa-check"></i><b>11.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="11.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#linear-equations"><i class="fa fa-check"></i><b>11.2</b> Linear Equations</a></li>
+<li class="chapter" data-level="11.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>11.3</b> Correlation</a></li>
+<li class="chapter" data-level="11.4" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#finding-a-regression-line"><i class="fa fa-check"></i><b>11.4</b> Finding a Regression Line</a>
+<ul>
+<li class="chapter" data-level="11.4.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#coefficient-of-determination"><i class="fa fa-check"></i><b>11.4.1</b> Coefficient of Determination</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix</a>
+<ul>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#appendix-a-important-links-and-additional-resources"><i class="fa fa-check"></i>Appendix A: Important Links and Additional Resources</a>
+<ul>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#applets"><i class="fa fa-check"></i>Applets</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#run-r-online"><i class="fa fa-check"></i>Run R Online</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#appendix-b-average-deviance"><i class="fa fa-check"></i>Appendix B: Average Deviance</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#appendix-c-deriving-a-confidence-interval"><i class="fa fa-check"></i>Appendix C: Deriving a Confidence Interval</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="appendix" class="section level1 unnumbered hasAnchor">
+<h1>Appendix<a href="appendix.html#appendix" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="appendix-a-important-links-and-additional-resources" class="section level2 unnumbered hasAnchor">
+<h2>Appendix A: Important Links and Additional Resources<a href="appendix.html#appendix-a-important-links-and-additional-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="applets" class="section level3 unnumbered hasAnchor">
+<h3>Applets<a href="appendix.html#applets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://lgpcappiello.shinyapps.io/normcalc/">Normal Distribution Calculator</a></li>
+<li><a href="http://www.rossmanchance.com/applets/">Rossman and Chance Applets</a></li>
+<li><a href="https://lgpcappiello.shinyapps.io/SimulateCLT/">Simulating the Central Limit Theorem</a></li>
+</ul>
+</div>
+<div id="run-r-online" class="section level3 unnumbered hasAnchor">
+<h3>Run R Online<a href="appendix.html#run-r-online" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><a href="https://rdrr.io/snippets/">Run R Online</a></li>
+<li><a href="https://login.rstudio.cloud/">RStudio Cloud</a></li>
+</ul>
+</div>
+</div>
+<div id="appendix-b-average-deviance" class="section level2 unnumbered hasAnchor">
+<h2>Appendix B: Average Deviance<a href="appendix.html#appendix-b-average-deviance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The deviance of an observation from its mean is <span class="math inline">\(x - \bar{x}\)</span>. We denote the deviation for the <span class="math inline">\(i\)</span>th observation as <span class="math inline">\(x_i - \bar{x}\)</span>. So the sum over all <span class="math inline">\(n\)</span> deviances is</p>
+<p><span class="math display">\[\begin{align}
+\text{Sum of Deviances} &amp;= \Sigma_{i=1}^n (x_i - \bar{x}) \\
+&amp;= (x_1 - \bar{x}) + (x_2 - \bar{x}) + \dots + (x_{n-1} - \bar{x}) + (x_n - \bar{x}) \\
+&amp;= x_1 - \bar{x} + x_2 - \bar{x} + \dots + x_{n-1} - \bar{x} + x_n - \bar{x} \\
+&amp;= x_1 + x_2 + \dots + x_{n-1} + x_n - \bar{x} - \bar{x} - \dots - \bar{x} - \bar{x} \\
+&amp;= (x_1 + x_2 + \dots + x_{n-1} + x_n) - (\bar{x} + \bar{x} + \dots + \bar{x} + \bar{x})
+\end{align}\]</span></p>
+<p>where the first half is the sum over all of the <span class="math inline">\(x\)</span> values and the term (<span class="math inline">\(\bar{x}\)</span>) appears <span class="math inline">\(n\)</span> times. So we can rewrite this as</p>
+<p><span class="math display">\[
+\text{Sum of Deviances} = \Sigma_{i=1}^n (x_i) - n\bar{x}
+\]</span>
+Now notice that, because <span class="math inline">\(\bar{x} = \frac{\Sigma_{i=1}^n (x_i)}{n}\)</span>, we can multiply both sides by <span class="math inline">\(n\)</span> to get <span class="math inline">\(n\bar{x} = \Sigma_{i=1}^n (x_i)\)</span> and rewrite the sum over the deviances as</p>
+<p><span class="math display">\[\begin{align}
+\text{Sum of Deviances} &amp;= n\bar{x} - n\bar{x} \\ &amp;=0
+\end{align}\]</span></p>
+</div>
+<div id="appendix-c-deriving-a-confidence-interval" class="section level2 unnumbered hasAnchor">
+<h2>Appendix C: Deriving a Confidence Interval<a href="appendix.html#appendix-c-deriving-a-confidence-interval" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Assume we are taking a sample from a normal distribution with mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>. We will assume the value of <span class="math inline">\(\sigma\)</span> is known to us. Then <span class="math inline">\(\bar{X}\)</span> is Normal(<span class="math inline">\(\mu, \sigma/\sqrt{n}\)</span>). If we standardize <span class="math inline">\(\bar{X}\)</span>, we get <span class="math display">\[Z = \frac{\bar{X}-\mu}{\sigma/\sqrt{n}}.\]</span></p>
+<p>We want some interval <span class="math inline">\((a,b)\)</span>. We will start by considering <span class="math inline">\(a &lt; Z &lt; b\)</span>, so <span class="math inline">\(a &lt; Z\)</span> and <span class="math inline">\(Z &lt; b\)</span> (or <span class="math inline">\(b &gt; Z\)</span>). Then</p>
+<p><span class="math display">\[
+\begin{aligned}
+Z &amp;&lt; b\\
+\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} &amp;&lt; b\\
+\bar{X}-\mu &amp;&lt; b\sigma/\sqrt{n} \\
+\bar{X}-b\sigma/\sqrt{n} &amp;&lt; \mu 
+\end{aligned}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\begin{aligned}
+a &amp;&lt; Z  \\
+a &amp;&lt; \frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \\
+a\sigma/\sqrt{n} &amp;&lt; \bar{X}-\mu \\
+\mu &amp;&lt; \bar{X}-a\sigma/\sqrt{n}
+\end{aligned}
+\]</span></p>
+<p>putting these together, <span class="math display">\[ \bar{X}-b\frac{\sigma}{\sqrt{n}} &lt; \mu &lt;  \bar{X}-a\frac{\sigma}{\sqrt{n}}.\]</span> If we want to be 95% confident, then we want <span class="math inline">\(P(a &lt; Z &lt; b)=0.95\)</span>: <span class="math display">\[P\left(\bar{X}-b\frac{\sigma}{\sqrt{n}} &lt; \mu &lt;  \bar{X}-a\frac{\sigma}{\sqrt{n}}\right) = 0.95.\]</span> To calculate the 95% confidence interval, we need to find <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> such that <span class="math inline">\(P(a &lt; Z &lt; b)=0.95\)</span>.</p>
+<p>We want this interval to be as narrow (small) as possible. Why? Narrower intervals are more informative. If I say I’m 95% confident that tomorrow’s high will be between -100 and 200 degrees Fahrenheit, that’s a useless interval. If I change it to between 70 and 100, that’s a little better. Changing it to between 85 and 90 is even better. This is what we mean by more informative.</p>
+<p>It turns out that with a symmetric distribution like the normal distribution, the way to make a confidence interval as narrow as possible is to take advantage of this symmetry. Each of the plots below show a shaded area of 0.95. The narrowest interval (along the horizontal axis) is the first interval, which is shaded on <span class="math inline">\((-1.96 &lt; Z &lt; 1.96)\)</span>.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
+<p>Using the symmetry of the normal distribution, we find that the narrowest interval uses <span class="math inline">\(a = -1.96\)</span> and <span class="math inline">\(b = 1.96\)</span>, which results in the 95% confidence interval <span class="math display">\[\left(\bar{x} - z_*\frac{\sigma}{\sqrt{n}}, \bar{x} + z_*\frac{\sigma}{\sqrt{n}}\right)\]</span> where <span class="math inline">\(z_* = 1.96\)</span>.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="regression-and-correlation.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IntroStats.pdf", "IntroStats.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

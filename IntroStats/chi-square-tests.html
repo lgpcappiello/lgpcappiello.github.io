@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction to Statistics</title>
-  <meta name="description" content="Introduction to Statistics." />
+  <title>Chapter 9 Chi-Square Tests | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 9 Chi-Square Tests | Introduction to Statistics." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction to Statistics" />
+  <meta property="og:title" content="Chapter 9 Chi-Square Tests | Introduction to Statistics" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Introduction to Statistics." />
+  <meta property="og:description" content="Chapter 9 Chi-Square Tests | Introduction to Statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction to Statistics" />
+  <meta name="twitter:title" content="Chapter 9 Chi-Square Tests | Introduction to Statistics" />
   
-  <meta name="twitter:description" content="Introduction to Statistics." />
+  <meta name="twitter:description" content="Chapter 9 Chi-Square Tests | Introduction to Statistics." />
   
 
 <meta name="author" content="Dr. Lauren Cappiello" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction-to-data.html"/>
+<link rel="prev" href="inference-comparing-parameters.html"/>
+<link rel="next" href="anova.html"/>
 <script src="libs/header-attrs-2.20.1/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -365,55 +365,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Introduction to Statistics</h1>
-<p class="author"><em>Dr. Lauren Cappiello</em></p>
-</div>
-<div id="welcome-to-statistics" class="section level1 unnumbered hasAnchor">
-<h1>Welcome to Statistics!<a href="index.html#welcome-to-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="course-learning-outcomes" class="section level2 unnumbered hasAnchor">
-<h2>Course Learning Outcomes<a href="index.html#course-learning-outcomes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Students will be able to:</p>
+<div id="chi-square-tests" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Chi-Square Tests<a href="chi-square-tests.html#chi-square-tests" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chapter-overview-8" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Chapter Overview<a href="chi-square-tests.html#chapter-overview-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this chapter, we will continue our discussion on statistical inference with a discussion on hypothesis testing. In hypothesis testing, we take a more active approach to our data by asking questions about population parameters and developing a framework to answer those questions. We will root this discussion in confidence intervals before learning about several other approaches to hypothesis testing.</p>
+<p><strong>Chapter Learning Outcomes/Objectives</strong></p>
 <ol style="list-style-type: decimal">
-<li>Organize, summarize, and interpret data in tabular, graphical, and pictorial formats.</li>
-<li>Organize and interpret bivariate data and learn simple linear regression and correlation.</li>
-<li>Understand the basic rules of probability.</li>
-<li>Use the binomial distribution as a model for discrete variables.</li>
-<li>Use the normal distribution as a model for continuous variables.</li>
-<li>Apply statistical inference techniques of parameter estimation such as point estimation and confidence interval estimation.</li>
-<li>Apply techniques of testing various statistical hypotheses concerning population parameters.</li>
+<li>Perform and interpret inference for
+<ol style="list-style-type: lower-alpha">
+<li>a population variance.</li>
+<li>the ratio of two variances.</li>
+<li>tests of goodness of fit and contingency tables.</li>
+</ol></li>
 </ol>
+<p>This chapter’s outcomes correspond to course outcomes (6) apply statistical inference techniques of parameter estimation such as point estimation and confidence interval estimation and (7) apply techniques of testing various statistical hypotheses concerning population parameters.</p>
 </div>
-<div id="for-the-instructor" class="section level2 unnumbered hasAnchor">
-<h2>For the Instructor<a href="index.html#for-the-instructor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Thanks for checking out my Introduction to Statistics text! Sections are designed to be short, easy-to-read introductions to each concept. Some of the more conceptual sections do not have section exercises, but I am working on adding exercises wherever it seems appropriate. The topics and course ordering reflect the department syllabus for the 3-unit Introduction to Statistics at Sacramento State. I am sure there are topics we’ve left out, but there are only so many things one can cover in 15 weeks.</p>
-<p>Each Chapter is designed to take approximately two weeks of class time. In an ideal world, I would cover at least the first eight in a 15 week semester. However, with assessment, activities, student questions, holidays, etc., I usually get through the first six or seven. Sometimes I introduce regression at the end of Chapter 2. Rarely do I get to ANOVA. Despite the time constraints, I am working on including additional topics.</p>
-<p>This text is a work in progress and gets updated every semester that I each Introduction to Statistics (which is very nearly every semester) and sometimes during winter and summer breaks.</p>
-<p>Currently, I am working on</p>
-<ul>
-<li>overhauling the entire thing to remove some of the examples borrowed from OpenIntro (another great resource) and from Weiss’ <em>Introductory Statistics</em> from when this was just the typed version of my course notes.</li>
-<li>adding section exercises and additional topics.</li>
-<li>including subsections with brief introductions to R programming.</li>
-</ul>
-<p>Note that the problems with the pdf or epub downloads are known issues. I will tackle those when the text is in a more finished state. Currently, it is designed to be viewed fully online (or you can right click and “print page” - save to pdf - to download each chapter individually).</p>
-<p>Please feel free to reach out to me with any questions, comments, or concerns by emailing me at <a href="mailto:cappiello@csus.edu" class="email">cappiello@csus.edu</a></p>
+<div id="inference-for-a-population-variance" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Inference for a Population Variance<a href="chi-square-tests.html#inference-for-a-population-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sometimes, it may be of interest to examine directly the variability of a population. Why? Suppose we have some medication that comes in a pill form. We know that each pill has an average of 10mg of active ingredient. For this medication to be consistently effective, we want to make sure that the amount of active ingredient does not <em>vary</em> too much from one pill to the next. We examine this using tests for population variance.</p>
+<div id="the-chi-square-distribution" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> The Chi-Square Distribution<a href="chi-square-tests.html#the-chi-square-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="for-the-student" class="section level2 unnumbered hasAnchor">
-<h2>For the Student<a href="index.html#for-the-student" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are a lot of ways to approach an introductory statistics class. Historically, the topics found in this text have been taught in a way that emphasizes hand calculations and the use of tables full of numbers.</p>
-<p>My philosophy is a little different. This class is designed for students who will need to read statistical results and may need to produce basic statistics using a computer. If you go on to be a scientist and need more statistical know how, this course will give you enough background knowledge to take the inevitable next course in statistics. There is plenty of math in this text, but none of these situations require the ability to do that math by hand.</p>
-<p>In many sections, the math is provided and explained but not emphasized. This is intentional. Instead, we focus on the “why”… Why do we care about this topic? Why is this concept important? Why do I run this test when I have that kind of data? …and we focus on the interpretation. What does this number tell us about an experiment? What can we conclude based on these statistical results?</p>
-<p>We see statistics all the time in the media - in the form of graphs, tables, averages, predictions about elections or sports, you name it! Hopefully, by learning the whys and the interpretation, you will finish this text feeling like you can read and understand statistical results when you run into them in the real world.</p>
-<div id="r-programming" class="section level3 unnumbered hasAnchor">
-<h3>R Programming<a href="index.html#r-programming" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This text is designed to teach you introductory statistics with the option to learn some R (a statistical programming language) along the way. As a result, some sections have some introductory material on R. R is an incredibly powerful tool, but we’re going to keep it relatively simple. Using R will save us the headache of doing a lot of calculations by hand.</p>
-<p>Since we are only going to use R for a few simple commands, we will run it completely online at the website <a href="https://rdrr.io/snippets/" target="blank">rdrr.io/snippets</a> (bookmark this website!)</p>
-<p>For now, you can run R right here in the course notes! This is exactly what you will see on the rdrr.io website. Type in your command and click the green “Run” button. Try running the command <code>print("Welcome to Statistics!")</code>.</p>
-<iframe width="100%" height="500" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
-<p>If it prints out “Sorry, something went wrong. All I know is:”, just press the “Run” button again.</p>
+</div>
+<div id="the-ratio-of-two-variances" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> The Ratio of Two Variances<a href="chi-square-tests.html#the-ratio-of-two-variances" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="goodness-of-fit" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Goodness of Fit<a href="chi-square-tests.html#goodness-of-fit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="contingency-tables" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Contingency Tables<a href="chi-square-tests.html#contingency-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
-</div>
 </div>
 </div>
             </section>
@@ -421,8 +404,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="introduction-to-data.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="inference-comparing-parameters.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="anova.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

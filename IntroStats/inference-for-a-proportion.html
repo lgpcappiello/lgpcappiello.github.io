@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introduction to Statistics</title>
-  <meta name="description" content="Introduction to Statistics." />
+  <title>Chapter 7 Inference for a Proportion | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 7 Inference for a Proportion | Introduction to Statistics." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introduction to Statistics" />
+  <meta property="og:title" content="Chapter 7 Inference for a Proportion | Introduction to Statistics" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Introduction to Statistics." />
+  <meta property="og:description" content="Chapter 7 Inference for a Proportion | Introduction to Statistics." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introduction to Statistics" />
+  <meta name="twitter:title" content="Chapter 7 Inference for a Proportion | Introduction to Statistics" />
   
-  <meta name="twitter:description" content="Introduction to Statistics." />
+  <meta name="twitter:description" content="Chapter 7 Inference for a Proportion | Introduction to Statistics." />
   
 
 <meta name="author" content="Dr. Lauren Cappiello" />
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="introduction-to-data.html"/>
+<link rel="prev" href="introduction-to-hypothesis-testing.html"/>
+<link rel="next" href="inference-comparing-parameters.html"/>
 <script src="libs/header-attrs-2.20.1/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -365,55 +365,158 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Introduction to Statistics</h1>
-<p class="author"><em>Dr. Lauren Cappiello</em></p>
-</div>
-<div id="welcome-to-statistics" class="section level1 unnumbered hasAnchor">
-<h1>Welcome to Statistics!<a href="index.html#welcome-to-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="course-learning-outcomes" class="section level2 unnumbered hasAnchor">
-<h2>Course Learning Outcomes<a href="index.html#course-learning-outcomes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Students will be able to:</p>
+<div id="inference-for-a-proportion" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Inference for a Proportion<a href="inference-for-a-proportion.html#inference-for-a-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chapter-overview-6" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Chapter Overview<a href="inference-for-a-proportion.html#chapter-overview-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this chapter, we will continue our discussion on statistical inference with a discussion on hypothesis testing. In hypothesis testing, we take a more active approach to our data by asking questions about population parameters and developing a framework to answer those questions. We will root this discussion in confidence intervals before learning about several other approaches to hypothesis testing.</p>
+<p><strong>Chapter Learning Outcomes/Objectives</strong></p>
 <ol style="list-style-type: decimal">
-<li>Organize, summarize, and interpret data in tabular, graphical, and pictorial formats.</li>
-<li>Organize and interpret bivariate data and learn simple linear regression and correlation.</li>
-<li>Understand the basic rules of probability.</li>
-<li>Use the binomial distribution as a model for discrete variables.</li>
-<li>Use the normal distribution as a model for continuous variables.</li>
-<li>Apply statistical inference techniques of parameter estimation such as point estimation and confidence interval estimation.</li>
-<li>Apply techniques of testing various statistical hypotheses concerning population parameters.</li>
+<li>Perform and interpret inference for a population proportion.</li>
 </ol>
+<p><strong>R Objectives</strong></p>
+<ol style="list-style-type: decimal">
+<li>Generate hypothesis tests for a proportion.</li>
+<li>Interpret R output for tests of a proportion.</li>
+</ol>
+<p>This chapter’s outcomes correspond to course outcomes (6) apply statistical inference techniques of parameter estimation such as point estimation and confidence interval estimation and (7) apply techniques of testing various statistical hypotheses concerning population parameters.</p>
 </div>
-<div id="for-the-instructor" class="section level2 unnumbered hasAnchor">
-<h2>For the Instructor<a href="index.html#for-the-instructor" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Thanks for checking out my Introduction to Statistics text! Sections are designed to be short, easy-to-read introductions to each concept. Some of the more conceptual sections do not have section exercises, but I am working on adding exercises wherever it seems appropriate. The topics and course ordering reflect the department syllabus for the 3-unit Introduction to Statistics at Sacramento State. I am sure there are topics we’ve left out, but there are only so many things one can cover in 15 weeks.</p>
-<p>Each Chapter is designed to take approximately two weeks of class time. In an ideal world, I would cover at least the first eight in a 15 week semester. However, with assessment, activities, student questions, holidays, etc., I usually get through the first six or seven. Sometimes I introduce regression at the end of Chapter 2. Rarely do I get to ANOVA. Despite the time constraints, I am working on including additional topics.</p>
-<p>This text is a work in progress and gets updated every semester that I each Introduction to Statistics (which is very nearly every semester) and sometimes during winter and summer breaks.</p>
-<p>Currently, I am working on</p>
+<div id="confidence-intervals-for-a-proportion" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Confidence Intervals for a Proportion<a href="inference-for-a-proportion.html#confidence-intervals-for-a-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Inference for a proportion is really similar to inference for a mean! It turns out we can apply the Central Limit Theorem to the sampling distribution for a proportion. But wait - isn’t our Central Limit Theorem only for means?</p>
+<p>Think back to the binomial distribution (Section 4.3). A binomial experiment is made up of a series of Bernoulli trials, which result in 0s and 1s. If we add up these values, we get the number of successes <span class="math inline">\(x\)</span>. If we take the mean of these successes, we get the <em>proportion</em> of successes. In short, <span class="math inline">\(\bar{x} = \hat{p}\)</span> and we can work with the sampling distribution for a sample mean!</p>
+<p>The mean of a Bernoulli random variable is <span class="math inline">\(\mu = p\)</span> and the standard deviation is <span class="math inline">\(\sigma = \sqrt{p(1-p)}\)</span>. So if we apply the Central Limit Theorem, <span class="math inline">\(\hat{p}\)</span> is approximately normally distributed with mean <span class="math display">\[\mu_{\hat{p}} = p\]</span> and standard error <span class="math display">\[\sigma_{\hat{p}} = \frac{\sqrt{p(1-p)}}{\sqrt{n}} = \sqrt{\frac{p(1-p)}{n}}\]</span></p>
+<p>Each of the confidence intervals for a mean uses the same logic: <span class="math display">\[\text{estimate }\pm\text{ critical value }\times\text{ standard error }\]</span> Confidence intervals for a proportion will do the same. We do not know the true value of <span class="math inline">\(p\)</span> for the standard error, so we will plug in <span class="math inline">\(\hat{p}\)</span>.</p>
+<center>
+<font size='4'><b>A <span class="math inline">\(100(1-\alpha)\%\)</span> confidence interval for <span class="math inline">\(p\)</span>.</b></font>
+</center>
+<p><span class="math display">\[\hat{p}\pm z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</span></p>
+<p>To use this formula, we need to check that <span class="math inline">\(n\hat{p} &gt; 10\)</span> and <span class="math inline">\(n(1-\hat{p})&gt;10\)</span>. (Note that <span class="math inline">\(n\hat{p}\)</span> is the number of successes and <span class="math inline">\(n(1-\hat{p})\)</span> is the number of failures, so this is another way to check this condition!)</p>
+<p>Why? This relies on a normal approximation that does not work well if either of those quantities is less than or equal to 10. (This a topic which we have skipped, but the theory behind it is similar to the theory presented here for why we can use the Central Limit Theorem with proportions.)</p>
+<blockquote>
+<p><strong>Example:</strong> Suppose we take a random sample of 27 US households and find that 15 of them have dogs. Find a 95% confidence interval for the proportion of US households with dogs.</p>
+<p><strong>Solution:</strong> From the problem statement, <span class="math inline">\(\alpha = 0.05\)</span>. Also, <span class="math inline">\(\hat{p} = 15/27 = 0.56\)</span>. The number of successes (households with dogs) in the sample is 15 and the number of failures is 12, both greater than 10, so our assumptions are satisfied.</p>
+<p>The critical value is <span class="math inline">\(z_{\alpha/2}\)</span>. Using the normal distribution applet with <span class="math inline">\(\alpha = 0.05\)</span>, this yields a value of 1.96. Plugging everything in, <span class="math display">\[\hat{p}\pm z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = 0.56 \pm 1.96\sqrt{\frac{0.56\times0.44}{27}} = 0.37 \pm 0.19\]</span> or a 95% confidence interval of (0.37, 0.75).</p>
+<p>Based on our sample, we can be 95% confident that the proportion of US households with dogs is between 0.37 and 0.75.</p>
+</blockquote>
+</div>
+<div id="hypothesis-tests-for-a-proportion" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Hypothesis Tests for a Proportion<a href="inference-for-a-proportion.html#hypothesis-tests-for-a-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For a single proportion, the null and alternative hypotheses are</p>
 <ul>
-<li>overhauling the entire thing to remove some of the examples borrowed from OpenIntro (another great resource) and from Weiss’ <em>Introductory Statistics</em> from when this was just the typed version of my course notes.</li>
-<li>adding section exercises and additional topics.</li>
-<li>including subsections with brief introductions to R programming.</li>
+<li><span class="math inline">\(H_0: p = p_0\)</span></li>
+<li><span class="math inline">\(H_A: p \ne p_0\)</span></li>
 </ul>
-<p>Note that the problems with the pdf or epub downloads are known issues. I will tackle those when the text is in a more finished state. Currently, it is designed to be viewed fully online (or you can right click and “print page” - save to pdf - to download each chapter individually).</p>
-<p>Please feel free to reach out to me with any questions, comments, or concerns by emailing me at <a href="mailto:cappiello@csus.edu" class="email">cappiello@csus.edu</a></p>
+<p>We can perform a hypothesis test for <span class="math inline">\(P\)</span> using the confidence interval, critical value, or p-value approach described in Chapter 6.</p>
+<p><strong>Setting and Assumptions</strong>: <span class="math inline">\(p\)</span> is target parameter, <span class="math inline">\(np_0 &gt; 10\)</span>, <span class="math inline">\(n(1-p_0)&gt;10\)</span>.</p>
+<div id="confidence-interval-approach" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> Confidence Interval Approach<a href="inference-for-a-proportion.html#confidence-interval-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <span class="math inline">\(100(1-\alpha)\%\)</span> confidence interval for <span class="math inline">\(p\)</span> is <span class="math display">\[\hat{p}\pm z_{\alpha/2}\sqrt{\frac{p_0(1-p_0)}{n}}\]</span> Notice that we use <span class="math inline">\(p_0\)</span> in the standard error and <em>not</em> the sample proportion. This is because the standard error is calculated based on the distribution based on the null hypothesis, which says that <span class="math inline">\(p=p_0\)</span>.</p>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>State null and alternative hypotheses.</li>
+<li>Decide on significance level <span class="math inline">\(\alpha\)</span>. Check assumptions.</li>
+<li>Find the critical value.</li>
+<li>Compute confidence interval.</li>
+<li>If the null value is <em>not</em> in the confidence interval, reject the null hypothesis. Otherwise, do not reject.</li>
+<li>Interpret results in the context of the problem.</li>
+</ol>
+<blockquote>
+<p><strong>Example:</strong> A quick internet search suggests that 38.4% of US households have dogs. Based on the sample described previously, is it reasonable to assume that the internet search is correct? Test at the 0.05 level of signifance using a confidence interval approach.</p>
+<p><strong>Solution:</strong> We know from the previous example that <span class="math inline">\(\hat{p} = 0.56\)</span> and <span class="math inline">\(n=27\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>We want to see if the internet search is correct, so the null and alternative hypotheses are <span class="math display">\[H_0: p = 0.384\]</span> <span class="math display">\[H_A: p \ne 0.384\]</span></li>
+<li>From the problem statement, <span class="math inline">\(\alpha = 0.05\)</span>. Also, <span class="math inline">\(np_0 = 27(0.384)=10.4\)</span> and <span class="math inline">\(n(1-p_0)=27(0.616)=16.6\)</span>, both greater than 10, so our assumptions are satisfied.</li>
+<li>The critical value is <span class="math inline">\(z_{\alpha/2}\)</span>. Using the normal distribution applet with <span class="math inline">\(\alpha = 0.05\)</span>, this yields a value of 1.96.</li>
+<li>Plugging everything in, <span class="math display">\[\hat{p}\pm z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = 0.56 \pm 1.96\sqrt{\frac{0.37\times0.63}{27}} = 0.56 \pm 0.18\]</span> or a 95% confidence interval of (0.38, 0.74).</li>
+<li>The null value is in the interval, so we fail to reject <span class="math inline">\(H_0\)</span>.</li>
+<li>At the 0.05 level of significance, the data provide <em>insufficient evidence</em> to conclude that the proportion of US Households with dogs differs from 0.384.</li>
+</ol>
+</blockquote>
 </div>
-<div id="for-the-student" class="section level2 unnumbered hasAnchor">
-<h2>For the Student<a href="index.html#for-the-student" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are a lot of ways to approach an introductory statistics class. Historically, the topics found in this text have been taught in a way that emphasizes hand calculations and the use of tables full of numbers.</p>
-<p>My philosophy is a little different. This class is designed for students who will need to read statistical results and may need to produce basic statistics using a computer. If you go on to be a scientist and need more statistical know how, this course will give you enough background knowledge to take the inevitable next course in statistics. There is plenty of math in this text, but none of these situations require the ability to do that math by hand.</p>
-<p>In many sections, the math is provided and explained but not emphasized. This is intentional. Instead, we focus on the “why”… Why do we care about this topic? Why is this concept important? Why do I run this test when I have that kind of data? …and we focus on the interpretation. What does this number tell us about an experiment? What can we conclude based on these statistical results?</p>
-<p>We see statistics all the time in the media - in the form of graphs, tables, averages, predictions about elections or sports, you name it! Hopefully, by learning the whys and the interpretation, you will finish this text feeling like you can read and understand statistical results when you run into them in the real world.</p>
-<div id="r-programming" class="section level3 unnumbered hasAnchor">
-<h3>R Programming<a href="index.html#r-programming" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This text is designed to teach you introductory statistics with the option to learn some R (a statistical programming language) along the way. As a result, some sections have some introductory material on R. R is an incredibly powerful tool, but we’re going to keep it relatively simple. Using R will save us the headache of doing a lot of calculations by hand.</p>
-<p>Since we are only going to use R for a few simple commands, we will run it completely online at the website <a href="https://rdrr.io/snippets/" target="blank">rdrr.io/snippets</a> (bookmark this website!)</p>
-<p>For now, you can run R right here in the course notes! This is exactly what you will see on the rdrr.io website. Type in your command and click the green “Run” button. Try running the command <code>print("Welcome to Statistics!")</code>.</p>
-<iframe width="100%" height="500" src="https://rdrr.io/snippets/embed/?code=" frameborder="0">
-</iframe>
-<p>If it prints out “Sorry, something went wrong. All I know is:”, just press the “Run” button again.</p>
+<div id="critical-value-approach" class="section level3 hasAnchor" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> Critical Value Approach<a href="inference-for-a-proportion.html#critical-value-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The critical value is <span class="math inline">\(z_{\alpha/2}\)</span> and the test statistic is <span class="math display">\[z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}\]</span> Notice that we plug in <span class="math inline">\(p_0\)</span> for the standard error! This is different from how we dealt with the standard error when calculating confidence intervals outside of a hypothesis testing context.</p>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses.</li>
+<li>Determine the significance level <span class="math inline">\(\alpha\)</span>. Check assumptions.</li>
+<li>Compute the value of the test statistic.</li>
+<li>Determine the critical values.</li>
+<li>If the test statistic is in the rejection region, reject the null hypothesis. Otherwise, do not reject.</li>
+<li>Interpret results.</li>
+</ol>
+<blockquote>
+<p><strong>Example:</strong> A quick internet search suggests that 38.4% of US households have dogs. Based on the sample described previously, is it reasonable to assume that the internet search is correct? Test at the 0.05 level of signifance using a critical value approach.</p>
+<p><strong>Solution:</strong> We know from a previous example that <span class="math inline">\(\hat{p} = 0.56\)</span> and <span class="math inline">\(n=27\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>We want to see if the internet search is correct, so the null and alternative hypotheses are <span class="math display">\[H_0: p = 0.384\]</span> <span class="math display">\[H_A: p \ne 0.384\]</span></li>
+<li>From the problem statement, <span class="math inline">\(\alpha = 0.05\)</span>. Also, <span class="math inline">\(np_0 = 27(0.384)=10.4\)</span> and <span class="math inline">\(n(1-p_0)=27(0.616)=16.6\)</span>, both greater than 10, so our assumptions are satisfied.</li>
+<li>The test statisic is <span class="math display">\[z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{0.56 - 0.384}{\sqrt{\frac{0.384(0.616)}{27}}} = 1.41\]</span></li>
+<li>The critical value is <span class="math inline">\(z_{\alpha/2}\)</span>. Using the normal distribution applet with <span class="math inline">\(\alpha = 0.05\)</span>, this yields a value of 1.96.</li>
+<li>The test statistics is <em>not</em> in the rejection region, so we fail to reject <span class="math inline">\(H_0\)</span>.</li>
+<li>At the 0.05 level of significance, the data provide <em>insufficient evidence</em> to conclude that the proportion of US Households with dogs differs from 0.384.</li>
+</ol>
+</blockquote>
+</div>
+<div id="p-value-approach" class="section level3 hasAnchor" number="7.3.3">
+<h3><span class="header-section-number">7.3.3</span> P-Value Approach<a href="inference-for-a-proportion.html#p-value-approach" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The p-value is <span class="math display">\[2P(Z &gt; |z|)\]</span> where <span class="math inline">\(z\)</span> is the test statistic described above.</p>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses.</li>
+<li>Determine the significance level <span class="math inline">\(\alpha\)</span>. Check assumptions.</li>
+<li>Compute the value of the test statistic.</li>
+<li>Determine the p-value.</li>
+<li>If <span class="math inline">\(\text{p-value} &lt; \alpha\)</span>, reject the null hypothesis. Otherwise, do not reject.</li>
+<li>Interpret results.</li>
+</ol>
+<blockquote>
+<p><strong>Example:</strong> A quick internet search suggests that 38.4% of US households have dogs. Based on the sample described previously, is it reasonable to assume that the internet search is correct? Test at the 0.05 level of signifance using a p-value approach.</p>
+<p><strong>Solution:</strong> We know from a previous example that <span class="math inline">\(\hat{p} = 0.56\)</span> and <span class="math inline">\(n=27\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>We want to see if the internet search is correct, so the null and alternative hypotheses are <span class="math display">\[H_0: p = 0.384\]</span> <span class="math display">\[H_A: p \ne 0.384\]</span></li>
+<li>From the problem statement, <span class="math inline">\(\alpha = 0.05\)</span>. Also, <span class="math inline">\(np_0 = 27(0.384)=10.4\)</span> and <span class="math inline">\(n(1-p_0)=27(0.616)=16.6\)</span>, both greater than 10, so our assumptions are satisfied.</li>
+<li>The test statisic is <span class="math display">\[z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{0.56 - 0.384}{\sqrt{\frac{0.384(0.616)}{27}}} = 1.41\]</span></li>
+<li>The p-value is <span class="math display">\[2P(Z &gt; |z|) = 2P(Z &gt; 1.41)\]</span> Using the normal distribution applet, we find this probability to be <span class="math inline">\(2(0.079) = 0.159\)</span>.</li>
+<li>The p-value <span class="math inline">\(= 0.159 &gt; \alpha = 0.05\)</span>, so we fail to reject <span class="math inline">\(H_0\)</span>.</li>
+<li>At the 0.05 level of significance, the data provide <em>insufficient evidence</em> to conclude that the proportion of US Households with dogs differs from 0.384.</li>
+</ol>
+</blockquote>
+</div>
+</div>
+<div id="r-hypothesis-tests-for-a-proportion" class="section level2 unnumbered hasAnchor">
+<h2>R: Hypothesis Tests for a Proportion<a href="inference-for-a-proportion.html#r-hypothesis-tests-for-a-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To generate confidence intervals and hypothesis tests for a proportion, we will use the command <code>binom.test</code>. This will give us slightly different results than the z-test we used throughout this chapter, but it is actually going to be more exact! This approach also does not have any limitations on the values <span class="math inline">\(n\hat{p}\)</span> or <span class="math inline">\(np_0\)</span>. We use the z-test when working by hand because the exact binomial test is difficult to do on paper. The arguments we need are:</p>
+<ul>
+<li><code>x</code>: the number of successes.</li>
+<li><code>n</code>: the number of trials.</li>
+<li><code>p</code>: the null value <span class="math inline">\(p_0\)</span>.</li>
+<li><code>conf.level</code>: the desired confidence level (<span class="math inline">\(1-\alpha\)</span>).</li>
+</ul>
+<p>Let’s continue to use the example seen throughout this chapter. We have a random sample of 27 US households and 15 of them have dogs. We also have the claim that, in fact, 38.4% of US households have dogs. We will use a significance level of <span class="math inline">\(\alpha=0.05\)</span>.</p>
+<p>Based on the prompt, there are <code>x = 15</code> successes; <code>n=27</code> trials; and <span class="math inline">\(p_0=\)</span><code>p=0.384</code>. So the R command will look like</p>
+<pre><code>## 
+##  Exact binomial test
+## 
+## data:  15 and 27
+## number of successes = 15, number of trials = 27, p-value = 0.07591
+## alternative hypothesis: true probability of success is not equal to 0.384
+## 95 percent confidence interval:
+##  0.3532642 0.7452012
+## sample estimates:
+## probability of success 
+##              0.5555556</code></pre>
+<p>The output shows (top to bottom):</p>
+<ul>
+<li>a summary of the data we entered, along with the null value <span class="math inline">\(p_0\)</span>.</li>
+<li>the test statistic and associated degrees of freedom (we will ignore this part) and the p-value.</li>
+<li>the alternative hypothesis.</li>
+<li>a 95% confidence interval for <span class="math inline">\(p\)</span>.</li>
+<li>the sample proportion <span class="math inline">\(\hat{p}\)</span>.</li>
+</ul>
+<p>Since this is slightly different from the test used when we discussed doing these calculations by hand, when we do hypothesis tests for a proportion using R, we will <em>not</em> use the critical value approach. Based on the confidence interval and p-value, at the 0.05 level of significance, the data provide insufficient evidence to conclude that the proportion of US Households with dogs differs from 0.384. (In general, we will come to the same conclusion whether we do these tests by hand or using R.)</p>
 
-</div>
 </div>
 </div>
             </section>
@@ -421,8 +524,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-
-<a href="introduction-to-data.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction-to-hypothesis-testing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inference-comparing-parameters.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

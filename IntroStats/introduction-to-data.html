@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 Introduction to Data | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 1 Introduction to Data | Introduction to Statistics." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 Introduction to Data | Introduction to Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 1 Introduction to Data | Introduction to Statistics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 Introduction to Data | Introduction to Statistics" />
+  
+  <meta name="twitter:description" content="Chapter 1 Introduction to Data | Introduction to Statistics." />
+  
+
+<meta name="author" content="Dr. Lauren Cappiello" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="descriptive-measures.html"/>
+<script src="libs/header-attrs-2.20.1/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Statistics</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#welcome-to-statistics" id="toc-welcome-to-statistics">Welcome to Statistics!</a>
+<ul>
+<li><a href="index.html#course-learning-outcomes" id="toc-course-learning-outcomes">Course Learning Outcomes</a></li>
+<li><a href="index.html#for-the-instructor" id="toc-for-the-instructor">For the Instructor</a></li>
+<li><a href="index.html#for-the-student" id="toc-for-the-student">For the Student</a>
+<ul>
+<li><a href="index.html#r-programming" id="toc-r-programming">R Programming</a></li>
+</ul></li>
+</ul></li>
+<li><a href="introduction-to-data.html#introduction-to-data" id="toc-introduction-to-data"><span class="toc-section-number">1</span> Introduction to Data</a>
+<ul>
+<li><a href="introduction-to-data.html#chapter-overview" id="toc-chapter-overview"><span class="toc-section-number">1.1</span> Chapter Overview</a></li>
+<li><a href="introduction-to-data.html#statistics-terminology" id="toc-statistics-terminology"><span class="toc-section-number">1.2</span> Statistics Terminology</a>
+<ul>
+<li><a href="introduction-to-data.html#r-entering-data" id="toc-r-entering-data">R: Entering Data</a></li>
+<li><a href="introduction-to-data.html#section-exercises" id="toc-section-exercises">Section Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-data.html#sampling-and-design" id="toc-sampling-and-design"><span class="toc-section-number">1.3</span> Sampling and Design</a>
+<ul>
+<li><a href="introduction-to-data.html#statistical-sampling" id="toc-statistical-sampling"><span class="toc-section-number">1.3.1</span> Statistical Sampling</a></li>
+<li><a href="introduction-to-data.html#experimental-design" id="toc-experimental-design"><span class="toc-section-number">1.3.2</span> Experimental Design</a></li>
+<li><a href="introduction-to-data.html#r-random-number-generation" id="toc-r-random-number-generation">R: Random Number Generation</a></li>
+<li><a href="introduction-to-data.html#section-exercises-1" id="toc-section-exercises-1">Section Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-data.html#frequency-distributions" id="toc-frequency-distributions"><span class="toc-section-number">1.4</span> Frequency Distributions</a>
+<ul>
+<li><a href="introduction-to-data.html#qualitative-variables" id="toc-qualitative-variables"><span class="toc-section-number">1.4.1</span> Qualitative Variables</a></li>
+<li><a href="introduction-to-data.html#quantitative-variables" id="toc-quantitative-variables"><span class="toc-section-number">1.4.2</span> Quantitative Variables</a></li>
+<li><a href="introduction-to-data.html#r-histograms" id="toc-r-histograms">R: Histograms</a></li>
+</ul></li>
+</ul></li>
+<li><a href="descriptive-measures.html#descriptive-measures" id="toc-descriptive-measures"><span class="toc-section-number">2</span> Descriptive Measures</a>
+<ul>
+<li><a href="descriptive-measures.html#chapter-overview-1" id="toc-chapter-overview-1"><span class="toc-section-number">2.1</span> Chapter Overview</a></li>
+<li><a href="descriptive-measures.html#measures-of-central-tendency" id="toc-measures-of-central-tendency"><span class="toc-section-number">2.2</span> Measures of Central Tendency</a>
+<ul>
+<li><a href="descriptive-measures.html#r-finding-measures-of-center" id="toc-r-finding-measures-of-center">R: Finding Measures of Center</a></li>
+</ul></li>
+<li><a href="descriptive-measures.html#measures-of-variability" id="toc-measures-of-variability"><span class="toc-section-number">2.3</span> Measures of Variability</a>
+<ul>
+<li><a href="descriptive-measures.html#r-finding-measures-of-variability" id="toc-r-finding-measures-of-variability">R: Finding Measures of Variability</a></li>
+</ul></li>
+<li><a href="descriptive-measures.html#measures-of-position" id="toc-measures-of-position"><span class="toc-section-number">2.4</span> Measures of Position</a>
+<ul>
+<li><a href="descriptive-measures.html#box-plots" id="toc-box-plots"><span class="toc-section-number">2.4.1</span> Box Plots</a></li>
+<li><a href="descriptive-measures.html#r-measures-of-position" id="toc-r-measures-of-position">R: Measures of Position</a></li>
+<li><a href="descriptive-measures.html#r-box-plots" id="toc-r-box-plots">R: Box Plots</a></li>
+</ul></li>
+<li><a href="descriptive-measures.html#descriptive-measures-for-populations" id="toc-descriptive-measures-for-populations"><span class="toc-section-number">2.5</span> Descriptive Measures for Populations</a></li>
+</ul></li>
+<li><a href="probability-concepts.html#probability-concepts" id="toc-probability-concepts"><span class="toc-section-number">3</span> Probability Concepts</a>
+<ul>
+<li><a href="probability-concepts.html#chapter-overview-2" id="toc-chapter-overview-2"><span class="toc-section-number">3.1</span> Chapter Overview</a></li>
+<li><a href="probability-concepts.html#experiments-sample-spaces-and-events" id="toc-experiments-sample-spaces-and-events"><span class="toc-section-number">3.2</span> Experiments, Sample Spaces, and Events</a></li>
+<li><a href="probability-concepts.html#probability-distributions" id="toc-probability-distributions"><span class="toc-section-number">3.3</span> Probability Distributions</a>
+<ul>
+<li><a href="probability-concepts.html#venn-diagrams" id="toc-venn-diagrams"><span class="toc-section-number">3.3.1</span> Venn Diagrams</a></li>
+<li><a href="probability-concepts.html#probability-axioms" id="toc-probability-axioms"><span class="toc-section-number">3.3.2</span> Probability Axioms</a></li>
+<li><a href="probability-concepts.html#exercises" id="toc-exercises">Exercises</a></li>
+</ul></li>
+<li><a href="probability-concepts.html#rules-of-probability" id="toc-rules-of-probability"><span class="toc-section-number">3.4</span> Rules of Probability</a>
+<ul>
+<li><a href="probability-concepts.html#addition-rules" id="toc-addition-rules"><span class="toc-section-number">3.4.1</span> Addition Rules</a></li>
+<li><a href="probability-concepts.html#complements" id="toc-complements"><span class="toc-section-number">3.4.2</span> Complements</a></li>
+</ul></li>
+<li><a href="probability-concepts.html#conditional-probability" id="toc-conditional-probability"><span class="toc-section-number">3.5</span> Conditional Probability</a>
+<ul>
+<li><a href="probability-concepts.html#multiplication-rules" id="toc-multiplication-rules"><span class="toc-section-number">3.5.1</span> Multiplication Rules</a></li>
+</ul></li>
+</ul></li>
+<li><a href="random-variables.html#random-variables" id="toc-random-variables"><span class="toc-section-number">4</span> Random Variables</a>
+<ul>
+<li><a href="random-variables.html#chapter-overview-3" id="toc-chapter-overview-3"><span class="toc-section-number">4.1</span> Chapter Overview</a></li>
+<li><a href="random-variables.html#discrete-random-variables" id="toc-discrete-random-variables"><span class="toc-section-number">4.2</span> Discrete Random Variables</a>
+<ul>
+<li><a href="random-variables.html#the-mean-and-standard-deviation" id="toc-the-mean-and-standard-deviation"><span class="toc-section-number">4.2.1</span> The Mean and Standard Deviation</a></li>
+</ul></li>
+<li><a href="random-variables.html#the-binomial-distribution" id="toc-the-binomial-distribution"><span class="toc-section-number">4.3</span> The Binomial Distribution</a>
+<ul>
+<li><a href="random-variables.html#mean-and-variance" id="toc-mean-and-variance"><span class="toc-section-number">4.3.1</span> Mean and Variance</a></li>
+<li><a href="random-variables.html#binomial-probabilities-in-r" id="toc-binomial-probabilities-in-r">Binomial Probabilities in R</a></li>
+</ul></li>
+<li><a href="random-variables.html#the-normal-distribution" id="toc-the-normal-distribution"><span class="toc-section-number">4.4</span> The Normal Distribution</a>
+<ul>
+<li><a href="random-variables.html#the-standard-normal-distribution" id="toc-the-standard-normal-distribution"><span class="toc-section-number">4.4.1</span> The Standard Normal Distribution</a></li>
+</ul></li>
+<li><a href="random-variables.html#area-under-the-standard-normal-curve" id="toc-area-under-the-standard-normal-curve"><span class="toc-section-number">4.5</span> Area Under the Standard Normal Curve</a>
+<ul>
+<li><a href="random-variables.html#r-normal-distribution-probabilities" id="toc-r-normal-distribution-probabilities">R: Normal Distribution Probabilities</a></li>
+</ul></li>
+<li><a href="random-variables.html#working-with-normally-distributed-variables" id="toc-working-with-normally-distributed-variables"><span class="toc-section-number">4.6</span> Working with Normally Distributed Variables</a>
+<ul>
+<li><a href="random-variables.html#normal-distribution-probabilities" id="toc-normal-distribution-probabilities"><span class="toc-section-number">4.6.1</span> Normal Distribution Probabilities</a></li>
+<li><a href="random-variables.html#empirical-rule-for-variables" id="toc-empirical-rule-for-variables"><span class="toc-section-number">4.6.2</span> Empirical Rule for Variables</a></li>
+<li><a href="random-variables.html#percentiles" id="toc-percentiles"><span class="toc-section-number">4.6.3</span> Percentiles</a></li>
+</ul></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#introduction-to-confidence-intervals" id="toc-introduction-to-confidence-intervals"><span class="toc-section-number">5</span> Introduction to Confidence Intervals</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#chapter-overview-4" id="toc-chapter-overview-4"><span class="toc-section-number">5.1</span> Chapter Overview</a></li>
+<li><a href="introduction-to-confidence-intervals.html#sampling-distributions" id="toc-sampling-distributions"><span class="toc-section-number">5.2</span> Sampling Distributions</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#sampling-error" id="toc-sampling-error"><span class="toc-section-number">5.2.1</span> Sampling Error</a></li>
+<li><a href="introduction-to-confidence-intervals.html#the-central-limit-theorem" id="toc-the-central-limit-theorem"><span class="toc-section-number">5.2.2</span> The Central Limit Theorem</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#developing-confidence-intervals" id="toc-developing-confidence-intervals"><span class="toc-section-number">5.3</span> Developing Confidence Intervals</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#interpreting-a-confidence-interval" id="toc-interpreting-a-confidence-interval"><span class="toc-section-number">5.3.1</span> Interpreting a Confidence Interval</a></li>
+<li><a href="introduction-to-confidence-intervals.html#exercises-1" id="toc-exercises-1"><span class="toc-section-number">5.3.2</span> Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#other-levels-of-confidence" id="toc-other-levels-of-confidence"><span class="toc-section-number">5.4</span> Other Levels of Confidence</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#r-finding-critical-values" id="toc-r-finding-critical-values">R: Finding Critical Values</a></li>
+<li><a href="introduction-to-confidence-intervals.html#breaking-down-a-confidence-interval" id="toc-breaking-down-a-confidence-interval"><span class="toc-section-number">5.4.1</span> Breaking Down a Confidence Interval</a></li>
+<li><a href="introduction-to-confidence-intervals.html#confidence-level-precision-and-sample-size" id="toc-confidence-level-precision-and-sample-size"><span class="toc-section-number">5.4.2</span> Confidence Level, Precision, and Sample Size</a></li>
+<li><a href="introduction-to-confidence-intervals.html#exercises-2" id="toc-exercises-2"><span class="toc-section-number">5.4.3</span> Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#confidence-intervals-for-a-mean" id="toc-confidence-intervals-for-a-mean"><span class="toc-section-number">5.5</span> Confidence Intervals for a Mean</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#the-t-distribution" id="toc-the-t-distribution"><span class="toc-section-number">5.5.1</span> The T-Distribution</a></li>
+<li><a href="introduction-to-confidence-intervals.html#r-t-critical-values" id="toc-r-t-critical-values">R: T Critical Values</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#r-confidence-intevals-for-a-mean" id="toc-r-confidence-intevals-for-a-mean">R: Confidence Intevals for a Mean</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#introduction-to-hypothesis-testing" id="toc-introduction-to-hypothesis-testing"><span class="toc-section-number">6</span> Introduction to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#chapter-overview-5" id="toc-chapter-overview-5"><span class="toc-section-number">6.1</span> Chapter Overview</a></li>
+<li><a href="introduction-to-hypothesis-testing.html#logic-of-hypothesis-testing" id="toc-logic-of-hypothesis-testing"><span class="toc-section-number">6.2</span> Logic of Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#decision-errors" id="toc-decision-errors"><span class="toc-section-number">6.2.1</span> Decision Errors</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#confidence-interval-approach-to-hypothesis-testing" id="toc-confidence-interval-approach-to-hypothesis-testing"><span class="toc-section-number">6.3</span> Confidence Interval Approach to Hypothesis Testing</a></li>
+<li><a href="introduction-to-hypothesis-testing.html#critical-value-approach-to-hypothesis-testing" id="toc-critical-value-approach-to-hypothesis-testing"><span class="toc-section-number">6.4</span> Critical Value Approach to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#test-statistics" id="toc-test-statistics"><span class="toc-section-number">6.4.1</span> Test statistics</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#p-value-approach-to-hypothesis-testing" id="toc-p-value-approach-to-hypothesis-testing"><span class="toc-section-number">6.5</span> P-Value Approach to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#p-values" id="toc-p-values"><span class="toc-section-number">6.5.1</span> P-Values</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#r-hypothesis-tests-for-a-mean" id="toc-r-hypothesis-tests-for-a-mean">R: Hypothesis Tests for a Mean</a></li>
+</ul></li>
+<li><a href="inference-for-a-proportion.html#inference-for-a-proportion" id="toc-inference-for-a-proportion"><span class="toc-section-number">7</span> Inference for a Proportion</a>
+<ul>
+<li><a href="inference-for-a-proportion.html#chapter-overview-6" id="toc-chapter-overview-6"><span class="toc-section-number">7.1</span> Chapter Overview</a></li>
+<li><a href="inference-for-a-proportion.html#confidence-intervals-for-a-proportion" id="toc-confidence-intervals-for-a-proportion"><span class="toc-section-number">7.2</span> Confidence Intervals for a Proportion</a></li>
+<li><a href="inference-for-a-proportion.html#hypothesis-tests-for-a-proportion" id="toc-hypothesis-tests-for-a-proportion"><span class="toc-section-number">7.3</span> Hypothesis Tests for a Proportion</a>
+<ul>
+<li><a href="inference-for-a-proportion.html#confidence-interval-approach" id="toc-confidence-interval-approach"><span class="toc-section-number">7.3.1</span> Confidence Interval Approach</a></li>
+<li><a href="inference-for-a-proportion.html#critical-value-approach" id="toc-critical-value-approach"><span class="toc-section-number">7.3.2</span> Critical Value Approach</a></li>
+<li><a href="inference-for-a-proportion.html#p-value-approach" id="toc-p-value-approach"><span class="toc-section-number">7.3.3</span> P-Value Approach</a></li>
+</ul></li>
+<li><a href="inference-for-a-proportion.html#r-hypothesis-tests-for-a-proportion" id="toc-r-hypothesis-tests-for-a-proportion">R: Hypothesis Tests for a Proportion</a></li>
+</ul></li>
+<li><a href="inference-comparing-parameters.html#inference-comparing-parameters" id="toc-inference-comparing-parameters"><span class="toc-section-number">8</span> Inference: Comparing Parameters</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#chapter-overview-7" id="toc-chapter-overview-7"><span class="toc-section-number">8.1</span> Chapter Overview</a></li>
+<li><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-proportions" id="toc-hypothesis-tests-for-two-proportions"><span class="toc-section-number">8.2</span> Hypothesis Tests for Two Proportions</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#confidence-intervals-for-two-proportions" id="toc-confidence-intervals-for-two-proportions"><span class="toc-section-number">8.2.1</span> Confidence Intervals for Two Proportions</a></li>
+<li><a href="inference-comparing-parameters.html#critical-values-test-statistics-and-p-values" id="toc-critical-values-test-statistics-and-p-values"><span class="toc-section-number">8.2.2</span> Critical Values, Test Statistics, and P-Values</a></li>
+<li><a href="inference-comparing-parameters.html#r-hypothesis-tests-for-two-proportions" id="toc-r-hypothesis-tests-for-two-proportions">R: Hypothesis Tests for Two Proportions</a></li>
+</ul></li>
+<li><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-means" id="toc-hypothesis-tests-for-two-means"><span class="toc-section-number">8.3</span> Hypothesis Tests for Two Means</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#paired-samples" id="toc-paired-samples"><span class="toc-section-number">8.3.1</span> Paired Samples</a></li>
+<li><a href="inference-comparing-parameters.html#independent-samples" id="toc-independent-samples"><span class="toc-section-number">8.3.2</span> Independent Samples</a></li>
+<li><a href="inference-comparing-parameters.html#r-hypothesis-tests-for-two-means" id="toc-r-hypothesis-tests-for-two-means">R: Hypothesis Tests for Two Means</a></li>
+</ul></li>
+</ul></li>
+<li><a href="chi-square-tests.html#chi-square-tests" id="toc-chi-square-tests"><span class="toc-section-number">9</span> Chi-Square Tests</a>
+<ul>
+<li><a href="chi-square-tests.html#chapter-overview-8" id="toc-chapter-overview-8"><span class="toc-section-number">9.1</span> Chapter Overview</a></li>
+<li><a href="chi-square-tests.html#inference-for-a-population-variance" id="toc-inference-for-a-population-variance"><span class="toc-section-number">9.2</span> Inference for a Population Variance</a>
+<ul>
+<li><a href="chi-square-tests.html#the-chi-square-distribution" id="toc-the-chi-square-distribution"><span class="toc-section-number">9.2.1</span> The Chi-Square Distribution</a></li>
+</ul></li>
+<li><a href="chi-square-tests.html#the-ratio-of-two-variances" id="toc-the-ratio-of-two-variances"><span class="toc-section-number">9.3</span> The Ratio of Two Variances</a></li>
+<li><a href="chi-square-tests.html#goodness-of-fit" id="toc-goodness-of-fit"><span class="toc-section-number">9.4</span> Goodness of Fit</a></li>
+<li><a href="chi-square-tests.html#contingency-tables" id="toc-contingency-tables"><span class="toc-section-number">9.5</span> Contingency Tables</a></li>
+</ul></li>
+<li><a href="anova.html#anova" id="toc-anova"><span class="toc-section-number">10</span> ANOVA</a>
+<ul>
+<li><a href="anova.html#chapter-overview-9" id="toc-chapter-overview-9"><span class="toc-section-number">10.1</span> Chapter Overview</a></li>
+<li><a href="anova.html#what-is-the-analysis-of-variance-anova" id="toc-what-is-the-analysis-of-variance-anova"><span class="toc-section-number">10.2</span> What is the Analysis of Variance (ANOVA)</a></li>
+<li><a href="anova.html#the-f-distribution" id="toc-the-f-distribution"><span class="toc-section-number">10.3</span> The F-Distribution</a></li>
+<li><a href="anova.html#multiple-comparisons-and-type-i-error-rate" id="toc-multiple-comparisons-and-type-i-error-rate"><span class="toc-section-number">10.4</span> Multiple Comparisons and Type I Error Rate</a></li>
+</ul></li>
+<li><a href="regression-and-correlation.html#regression-and-correlation" id="toc-regression-and-correlation"><span class="toc-section-number">11</span> Regression and Correlation</a>
+<ul>
+<li><a href="regression-and-correlation.html#chapter-overview-10" id="toc-chapter-overview-10"><span class="toc-section-number">11.1</span> Chapter Overview</a></li>
+<li><a href="regression-and-correlation.html#linear-equations" id="toc-linear-equations"><span class="toc-section-number">11.2</span> Linear Equations</a></li>
+<li><a href="regression-and-correlation.html#correlation" id="toc-correlation"><span class="toc-section-number">11.3</span> Correlation</a></li>
+<li><a href="regression-and-correlation.html#finding-a-regression-line" id="toc-finding-a-regression-line"><span class="toc-section-number">11.4</span> Finding a Regression Line</a>
+<ul>
+<li><a href="regression-and-correlation.html#coefficient-of-determination" id="toc-coefficient-of-determination"><span class="toc-section-number">11.4.1</span> Coefficient of Determination</a></li>
+</ul></li>
+</ul></li>
+<li><a href="appendices.html#appendices" id="toc-appendices">Appendices</a>
+<ul>
+<li><a href="appendices.html#appendix-a-important-links-and-additional-resources" id="toc-appendix-a-important-links-and-additional-resources">Appendix A: Important Links and Additional Resources</a>
+<ul>
+<li><a href="appendices.html#applets" id="toc-applets">Applets</a></li>
+<li><a href="appendices.html#run-r-online" id="toc-run-r-online">Run R Online</a></li>
+</ul></li>
+<li><a href="appendices.html#appendix-b-average-deviance" id="toc-appendix-b-average-deviance">Appendix B: Average Deviance</a></li>
+<li><a href="appendices.html#appendix-c-deriving-a-confidence-interval" id="toc-appendix-c-deriving-a-confidence-interval">Appendix C: Deriving a Confidence Interval</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction-to-data" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Introduction to Data<a href="introduction-to-data.html#introduction-to-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chapter-overview" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Chapter Overview<a href="introduction-to-data.html#chapter-overview" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>What is statistics? There are two ways to think about this:</p>
+<ol style="list-style-type: decimal">
+<li>Facts and data, organized or summarized in such a way that they provide useful information about something.</li>
+<li>The science of analyzing, organizing, and summarizing data.</li>
+</ol>
+<p>As a field, Statistics provides tools for scientists, practitioners, and laypeople to better understand data. You may find yourself using knowledge from this course in a research lab, while reading a research report, or even while watching the news!</p>
+<p><strong>Chapter Learning Objectives/Outcomes</strong></p>
+<p>After completing Chapter 1, you will:</p>
+<ol style="list-style-type: decimal">
+<li>Understand basic statistical terminology.</li>
+<li>Produce data using sampling and experimental design techniques.</li>
+<li>Organize and visualize data using techniques for exploratory data analysis.</li>
+<li>Identify the shape of a data set.</li>
+<li>Understand and interpret graphical displays.</li>
+</ol>
+<p><strong>R objectives</strong></p>
+<ol style="list-style-type: decimal">
+<li>Manually enter data.</li>
+<li>Generate random numbers.</li>
+<li>Create histograms.</li>
+</ol>
+<p>This chapter’s outcomes correspond to course outcomes (1) organize, summarize, and interpret data in tabular, graphical, and pictorial formats and (2) organize and interpret bivariate data and learn simple linear regression and correlation.</p>
+</div>
+<div id="statistics-terminology" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Statistics Terminology<a href="introduction-to-data.html#statistics-terminology" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are two ways to think about statistics:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Descriptive statistics</strong> are methods for <em>describing</em> information.</li>
+</ol>
+<p>For example, 66% of eligible voters voted in the 2020 presidential election (the highest turnout since 1900!).</p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Inferential statistics</strong> are methods for <em>drawing inference</em> (making decisions about something we are uncertain about).</li>
+</ol>
+<p>For example, a poll suggests that 75% of voters will select a Candidate A. People haven’t voted yet, so we don’t know what will happen, but we could reasonably conclude that Candidate A will win the election.</p>
+<p><strong>Data</strong> is factual information. We collect data from a <strong>population</strong>, the collection of all individuals or items a researcher is interested in.</p>
+<ul>
+<li>Collecting data from an entire population is called a <strong>census</strong>.
+<ul>
+<li>This is complicated and expensive! There’s a reason the United States only does a census every 10 years.</li>
+</ul></li>
+<li>We can also take a <strong>sample</strong>, a subset of the population we get data from.
+<ul>
+<li>If you think of the population as a pie, the sample is a small slice. Whether it’s a pumpkin pie, a cherry pie, or a savory pie, the small slice will tell you that. We don’t need to eat the entire pie to learn a lot about it!</li>
+</ul></li>
+</ul>
+Data are often organized in what we call a <strong>data matrix</strong>. If you’ve ever seen data in a spreadsheet, that’s a data matrix!
+<table>
+<tbody>
+<tr style="height: 29px;">
+<td style="width: 24.4596%; height: 29px;">
+</td>
+<td style="width: 10.4473%; height: 29px;">
+<strong>Age</strong>
+</td>
+<td style="width: 17.1773%; height: 29px;">
+<strong>Gender</strong>
+</td>
+<td style="width: 20.2449%; height: 29px;">
+<strong>Smoker</strong>
+</td>
+<td style="width: 27.5772%; height: 29px;">
+<strong>Marital Status</strong>
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 24.4596%; height: 29px;">
+<strong>Person 1</strong>
+</td>
+<td style="width: 10.4473%; height: 29px;">
+45
+</td>
+<td style="width: 17.1773%; height: 29px;">
+Male
+</td>
+<td style="width: 20.2449%; height: 29px;">
+yes
+</td>
+<td style="width: 27.5772%; height: 29px;">
+married
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 24.4596%; height: 29px;">
+<strong>Person 2</strong>
+</td>
+<td style="width: 10.4473%; height: 29px;">
+23
+</td>
+<td style="width: 17.1773%; height: 29px;">
+Female
+</td>
+<td style="width: 20.2449%; height: 29px;">
+no
+</td>
+<td style="width: 27.5772%; height: 29px;">
+single
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 24.4596%; height: 29px;">
+<strong>Person 3</strong>
+</td>
+<td style="width: 10.4473%; height: 29px;">
+36
+</td>
+<td style="width: 17.1773%; height: 29px;">
+Other
+</td>
+<td style="width: 20.2449%; height: 29px;">
+no
+</td>
+<td style="width: 27.5772%; height: 29px;">
+married
+</td>
+</tr>
+<tr style="height: 29px;">
+<td style="width: 24.4596%; height: 29px;">
+<strong>Person 4</strong>
+</td>
+<td style="width: 10.4473%; height: 29px;">
+29
+</td>
+<td style="width: 17.1773%; height: 29px;">
+Female
+</td>
+<td style="width: 20.2449%; height: 29px;">
+no
+</td>
+<td style="width: 27.5772%; height: 29px;">
+single
+</td>
+</tr>
+</tbody>
+</table>
+<p>Each row (horizontal) represents one <strong>observation</strong> (also called <strong>observational units</strong>, <strong>cases</strong>, or <strong>subjects</strong>). These are the individuals or items in the sample.</p>
+<p>Each column (vertical) represents a <strong>variable</strong>, the characteristic or thing being measured. Think of variables as measurements that can <em>vary</em> from one observation to the next.</p>
+<p>There are two types of variable:</p>
+<ol>
+<li>
+<strong>Numeric</strong> or <strong>quantitative</strong> variables take <em>numeric</em> values AND it is sensible to do math with those values.
+</li>
+<ol type="A">
+<li>
+<strong>Discrete numeric</strong> variables take numeric values with jumps. Typically, this means they can only take whole number values. These are often counts of something - for example, counting the number of pets you have.
+</li>
+<li>
+<strong>Continuous numeric</strong> variables take values “between the jumps”. Typically, this means they can take decimal values.
+</li>
+</ol>
+<li>
+<strong>Categorical</strong> or <strong>qualitative</strong> variables take values that are <em>categories</em>.
+</li>
+</ol>
+<center>
+<font size='4'><b>The “Does it make sense”? Test</b></font>
+</center>
+<ul>
+<li>Sometimes, categories can be represented by numbers. Ask yourself if it makes sense to do math with those numbers. If it doesn’t make sense, it’s probably a categorical variable. (Ex: zip codes)</li>
+<li>If you’re unsure whether a variable is discrete or continuous, pick a number with some decimal places - like 1.83 - and ask yourself if that value makes sense. If it doesn’t, it’s probably discrete. (Ex: number of siblings)</li>
+</ul>
+<div id="r-entering-data" class="section level3 unnumbered hasAnchor">
+<h3>R: Entering Data<a href="introduction-to-data.html#r-entering-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can work with data in R by reading it in from a file or by entering it manually. To enter numeric data manually, we use the <code>c</code> command.</p>
+<p>The following line of code saves the <code>age</code> data from the data matrix example above:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="introduction-to-data.html#cb1-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">45</span>, <span class="dv">23</span>, <span class="dv">36</span>, <span class="dv">29</span>)</span></code></pre></div>
+<p>Notice that we set <code>age</code> equal to <code>c()</code> with the numbers in the parentheses, separated by commas. Also notice that the numbers are in the same order as in the data. If I want to use the <code>age</code> variable later, I can refer to it directly in R and it will print out the values in that variable:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introduction-to-data.html#cb2-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">=</span> <span class="fu">c</span>(<span class="dv">45</span>, <span class="dv">23</span>, <span class="dv">36</span>, <span class="dv">29</span>)</span></code></pre></div>
+<p>To enter categorical data in R, we do the same thing, but with the addition of quotation marks:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction-to-data.html#cb3-1" aria-hidden="true" tabindex="-1"></a>gender <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;Male&quot;</span>, <span class="st">&quot;Female&quot;</span>, <span class="st">&quot;Other&quot;</span>, <span class="st">&quot;Female&quot;</span>)</span></code></pre></div>
+</div>
+<div id="section-exercises" class="section level3 unnumbered hasAnchor">
+<h3>Section Exercises<a href="introduction-to-data.html#section-exercises" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The following table shows part of the data matrix from a Stat 1 course survey.</p>
+<table>
+<tr>
+<td>
+</td>
+<td>
+<strong>Age</strong>
+</td>
+<td>
+<strong>Year in college</strong>
+</td>
+<td>
+<strong>What is your major?</strong>
+</td>
+<td>
+<strong>Units this semester</strong>
+</td>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+19
+</td>
+<td>
+Sophomore
+</td>
+<td>
+Health Sciences
+</td>
+<td>
+15
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+19
+</td>
+<td>
+Sophomore
+</td>
+<td>
+Business
+</td>
+<td>
+15
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+19
+</td>
+<td>
+Sophomore
+</td>
+<td>
+Undecided
+</td>
+<td>
+14
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+<td>
+<span class="math inline">\(\vdots\)</span>
+</td>
+</tr>
+<tr>
+<td>
+29
+</td>
+<td>
+21
+</td>
+<td>
+Junior
+</td>
+<td>
+Business
+</td>
+<td>
+15
+</td>
+</tr>
+</table>
+<ol style="list-style-type: decimal">
+<li><p>What does each row of the data matrix represent?</p></li>
+<li><p>What does each column of the data matrix represent?</p></li>
+<li><p>Indicate whether each variable is discrete numeric, continuous numeric, or categorical.</p></li>
+</ol>
+<div id="dig-deeper" class="section level4 unnumbered hasAnchor">
+<h4>Dig Deeper<a href="introduction-to-data.html#dig-deeper" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Read the article, <a href="https://www.nytimes.com/2018/03/27/us/politics/census-citizenship-question.html">Here’s Why an Accurate Census Count Is So Important</a> from the New York Times. (If you can’t access the article, try a Google search for “why an accurate census count is important”.) Take a moment to write down your thoughts on the relationship between how we collect data (for example - the questions asked in the census) and the power data has over people’s lives. As researchers, scientists, and consumers of media, what are some reasons this is important to think about?</p>
+</div>
+</div>
+</div>
+<div id="sampling-and-design" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Sampling and Design<a href="introduction-to-data.html#sampling-and-design" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="statistical-sampling" class="section level3 hasAnchor" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> Statistical Sampling<a href="introduction-to-data.html#statistical-sampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>How do we get samples? We want a sample that represents our population. <strong>Representative samples</strong> reflect the relevant characteristics of our population.</p>
+<p>In general, we get representative samples by selecting our samples <em>at random</em> and with an adequate sample size.</p>
+<p>A non-representative sample is said to be <strong>biased</strong>. For example, if we used a sample of chihuahuas to represent all dogs, we probably wouldn’t get very good information; that sample would be <em>biased</em>.</p>
+<p>These can be a result of <strong>convenience sampling</strong>, choosing a sample based on ease.</p>
+<p>In our daily lives, common sources of biases are <em>anecdotal evidence</em> and <em>availability bias</em>. Anecdotal evidence is data based on personal experience or observation. Typically this consists of only one or two observations and is NOT representative of the population.</p>
+<blockquote>
+<p><em>Example</em>: anecdotal evidence. A friend tells you their grandpa smoked a pack of cigarettes a day and lived to be 100. Does this mean that cigarettes will help you live to 100? no!</p>
+</blockquote>
+<p>Availability bias is your brain’s tendency to think that examples of things that come readily to mind are more representative than is actually the case.</p>
+<blockquote>
+<p><em>Example</em>: availability bias. Shark attacks. Shark attacks are actually extremely uncommon, but the media tends to report on extreme anecdotes, making us more prone to this kind of bias!</p>
+</blockquote>
+<p>We avoid bias by taking random samples. One type of random sample is a <strong>simple random sample</strong>. We can think of this as “raffle sampling”, like drawing names out of a hat. Each case (or each possible sample) has an equal chance of being selected. Knowing that A is selected doesn’t tell us anything about whether B is selected. Instead of literally drawing from a hat, we usually use a <strong>random number generator</strong> from a computer.</p>
+</div>
+<div id="experimental-design" class="section level3 hasAnchor" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Experimental Design<a href="introduction-to-data.html#experimental-design" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When we do research, we have two options:</p>
+<ol>
+<li>
+Conduct an <strong>experiment</strong>, where researchers assign treatments to cases.
+</li>
+<ol type="a">
+<li>
+<strong>Treatments</strong> are experimental conditions.
+</li>
+<li>
+In an experiment, cases may also be called <strong>experimental units</strong> (items or individuals on which the experiment is performed).
+</li>
+</ol>
+<li>
+Conduct an <strong>observational study</strong>, where no conditions are assigned. These are often done for ethical reasons, like examining the impacts of smoking cigarettes.
+</li>
+</ol>
+<p>Experiments allow us to infer causation. Observational studies do not.</p>
+<p>Experimental design principles:</p>
+<ul>
+<li>
+<strong>Control</strong>: two or more treatments are compared.
+</li>
+<li>
+<strong>Randomization</strong>: experimental units are assigned to treatment groups (usually and preferably at random).
+</li>
+<li>
+<strong>Replication</strong>: a large enough sample size is used to test each treatment many times (on many different experimental units).
+</li>
+<li>
+<strong>Blocking</strong>: if variables other than treatment are likely to have an impact on study outcome, we use blocks.
+</li>
+<ul>
+<li>
+For example, I might separate patients in a medical study into “high risk” and “low risk” blocks. I would randomly assign all of the high risk patients to a treatment and then randomly assign all of the low risk patients to a treatment. This helps ensure an even distribution of high/low risk patients in each treatment group.
+</li>
+</ul>
+</ul>
+<p>An experiment without blocking has a completely randomized design; an experiment with blocking has a randomized block design.</p>
+<p>In an experimental setting, we talk about</p>
+<ul>
+<li>
+<strong>Response variable</strong>: the characteristic of the experimental outcome being measured or observed.
+</li>
+<li>
+<strong>Factor:</strong> a variable whose impact on the response variable is of interest in the experiment.
+</li>
+<li>
+<strong>Levels</strong>: the possible values of a factor.
+</li>
+<li>
+<strong>Treatments:</strong> experimental conditions (based on combinations of factor levels).
+</li>
+</ul>
+<p>In human subjects research, we do a little extra work:</p>
+<ul>
+<li>
+If subjects do not know what treatment group they are in, the study is called <strong>blind.</strong>
+</li>
+<ul>
+<li>
+We use a <strong>placebo</strong> (fake treatment) to achieve this.
+</li>
+</ul>
+<li>
+If neither the subjects nor the researchers who interact with them know the treatment group, it is called <strong>double blind.</strong>
+</li>
+</ul>
+<p>This helps avoid bias caused by placebo effect, doctor’s expectations for outcome, etc.!</p>
+</div>
+<div id="r-random-number-generation" class="section level3 unnumbered hasAnchor">
+<h3>R: Random Number Generation<a href="introduction-to-data.html#r-random-number-generation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To generate a random whole number using R, we can use the <code>sample</code> command. We use the <code>sample</code> command like <code>sample(minimum:maximum, size = n)</code>, replacing <code>minimum</code> with the minimum value (often the number 1), <code>maximum</code> with the maximum value, and <code>n</code> with the sample size.</p>
+<p>The following command takes a random sample of size 1 from the values 1 through 10 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10):</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-data.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">size =</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 9</code></pre>
+</div>
+<div id="section-exercises-1" class="section level3 unnumbered hasAnchor">
+<h3>Section Exercises<a href="introduction-to-data.html#section-exercises-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>A study published in 2009 sought to examine whether supplementing with chia seeds contributed to weight loss. Researchers recruited 76 individuals and randomly assigned them into either a treatment group or a control group. The treatment group was given a set quantity of daily chia seeds; the control group was given a placebo. At the end of the 12-week study, they found no difference in average weight lost between the treatment and control group.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Is this an observational study or an experiment? Explain.</p></li>
+<li><p>Identify the (i) cases and (ii) response variable.</p></li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="frequency-distributions" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Frequency Distributions<a href="introduction-to-data.html#frequency-distributions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="qualitative-variables" class="section level3 hasAnchor" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> Qualitative Variables<a href="introduction-to-data.html#qualitative-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Frequency</strong> (<strong>count</strong>): the number of times a particular value occurs.</p>
+<p>A <strong>frequency distribution</strong> lists each distinct value with its frequency.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Class</th>
+<th align="center">Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">freshman</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">sophomore</td>
+<td align="center">10</td>
+</tr>
+<tr class="odd">
+<td align="center">junior</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">senior</td>
+<td align="center">5</td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>bar plot</strong> is a graphical representation of a frequency distribution. Each bar’s height is based on the frequency of the corresponding category.</p>
+<pre><code>## Keep up to date with changes at https://www.tidyverse.org/blog/</code></pre>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>The bar plot above shows the class level breakdown for students in an Introductory Statistics course. Take a moment to notice how the bars match up with the frequency distribution above.</p>
+<p><strong>Relative frequency</strong> is the ratio of the frequency to the total number of observations.</p>
+<p><span class="math display">\[
+  \text{relative frequency} = \frac{\text{frequency}}{\text{number of observations}}
+\]</span></p>
+<p>This is also called the <strong>proportion</strong>. The <strong>percentage</strong> can be obtained by multiplying the proportion by 100.</p>
+<p>A <strong>relative frequency distribution</strong> lists each distinct value with its relative frequency.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Class</th>
+<th align="center">Frequency</th>
+<th align="center">Relative Frequency</th>
+<th align="center">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">freshman</td>
+<td align="center">12</td>
+<td align="center"><span class="math inline">\(12/30 = 0.4\)</span></td>
+<td align="center">40%</td>
+</tr>
+<tr class="even">
+<td align="center">sophomore</td>
+<td align="center">10</td>
+<td align="center"><span class="math inline">\(10/30 \approx 0.3333\)</span></td>
+<td align="center">33.33%</td>
+</tr>
+<tr class="odd">
+<td align="center">junior</td>
+<td align="center">3</td>
+<td align="center"><span class="math inline">\(3/30 = 0.1\)</span></td>
+<td align="center">10%</td>
+</tr>
+<tr class="even">
+<td align="center">senior</td>
+<td align="center">5</td>
+<td align="center"><span class="math inline">\(5/30 \approx 0.1667\)</span></td>
+<td align="center">16.67%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="quantitative-variables" class="section level3 hasAnchor" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> Quantitative Variables<a href="introduction-to-data.html#quantitative-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can also apply this concept to numeric data. A <strong>dot plot</strong> is one graphical representation of this. A dot plot shows a number line with dots drawn above the line. Each dot represents a single point.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>For example, the dot plot above shows a sample where the value 1 appears three times, the value 5 appears six times, etc.</p>
+<p>We would also like to be able to visualize larger, more complex data sets. This is hard to do using a dot plot! Instead, we can do this using <strong>bins</strong>, which group numeric data into equal-width consecutive intervals.</p>
+<blockquote>
+<p><em>Example</em>: A random sample of weights (in lbs) from 12 cats:</p>
+<p><span class="math display">\[\quad 6.2 \quad 11.6 \quad 7.2 \quad 17.1 \quad 15.1 \quad 8.4 \quad    7.7 \quad   13.9 \quad  21.0 \quad  5.5 \quad 9.1 \quad 7.3 \]</span></p>
+<p>The <strong>minimum</strong> (smallest value) is 5.5 and the <strong>maximum</strong> (largest value) is 21. There are lots of ways to break these into “bins”, but what about…</p>
+<ul>
+<li>5 - 10</li>
+<li>10 - 15</li>
+<li>15 - 20</li>
+<li>20 - 25</li>
+</ul>
+<p>Each bin has an equal width of 5, but if we had a cat with a weight of exactly 15 lbs, would we use the second or third bin?? It’s unclear. To make this clear, we need there to be no overlap. Instead, we could use:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Weight</th>
+<th align="center">Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">5 - &lt;10</td>
+<td align="center">7</td>
+</tr>
+<tr class="even">
+<td align="center">10 - &lt;15</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">15 - &lt;20</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">20 - &lt;25</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<p>Now, a cat with a weight of 15.0 lbs would be placed in the third bin (but not the second).</p>
+</blockquote>
+<p>We will visualize this using a <strong>histogram</strong>, which is a lot like a bar plot but for numeric data:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>This is what we call a <strong>frequency histogram</strong> because each bar height reflects the frequency of that bin. We can also create a <strong>relative frequency histogram</strong> which displays the relative frequency instead of the frequency:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p>Notice that these last two histograms look the same <em>except for the numbers on the vertical axis</em>! This gives us insight into the shape of the data <strong>distribution</strong>, literally how the values are distributed across the bins. The part of the distribution that “trails off” to one or both sides is called a <strong>tail</strong> of the distribution.</p>
+<p>When a histogram trails off to one side, we say it is <strong>skewed</strong> (right-skewed if it trails off to the right, left-skewed if it trails off to the left). Data sets with roughly equal tails are <strong>symmetric</strong>.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>We can also use a histogram to identify <strong>modes</strong>. For numeric data, especially continuous variables, we think of modes as <em>prominent peaks</em>.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<ul>
+<li><strong>Unimodal</strong>: one prominent peak.</li>
+<li><strong>Bimodal</strong>: two prominent peaks.</li>
+<li><strong>Multimodal</strong>: three or more prominent peaks.</li>
+</ul>
+<p>Finally, we can also “smooth out” these histograms and use a smooth curve to examine the shape of the distribution. Below are the smooth curve versions of the distributions shown in the four histograms used to demonstrate skew and symmetry.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="r-histograms" class="section level3 unnumbered hasAnchor">
+<h3>R: Histograms<a href="introduction-to-data.html#r-histograms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There is a built-in dataset in R called <code>Loblolly</code>, which contains the variables <code>height</code> and <code>age</code> of some Loblolly pine trees. I can refer to this data by typing in <code>Loblolly</code> directly. To view just the first few observations (out of the 84 total in the data), I can use the <code>head</code> command:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introduction-to-data.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(Loblolly)</span></code></pre></div>
+<pre><code>##   height age
+## 1   4.51   3
+## 2  10.89   5
+## 3  28.72  10
+## 4  41.74  15
+## 5  52.70  20
+## 6  60.92  25</code></pre>
+<p>The information that appears next to each ## is what R prints out for us.</p>
+<p>In order to refer to the variables in <code>Loblolly</code> directly, I will need to use the <code>attach</code> command. This tells R that when I say <code>age</code> I mean the age variable from the <code>Loblolly</code> dataset (and not from some other dataset).</p>
+<p>I want to create a histogram to visualize the ratio of tree height to age. First, I need to find this ratio for each observation. I can do this easily in R by dividing <code>height</code> by <code>age</code>. I will save this as a new variable called <code>htage_ratio</code>.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="introduction-to-data.html#cb9-1" aria-hidden="true" tabindex="-1"></a>htage_ratio <span class="ot">=</span> height<span class="sc">/</span>age</span></code></pre></div>
+<p>Then to create a histogram of the height to age ratio, we will use the command <code>hist</code> on the variable <code>htage_ratio</code>:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="introduction-to-data.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(htage_ratio)</span></code></pre></div>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>I can clean up this graph by taking advantage of additional <em>arguments</em> in the <code>hist</code> command:</p>
+<ul>
+<li><code>main</code> is where I can give the plot a new title. (Make sure to put the title in quotes!)</li>
+<li><code>xlab</code> is the x-axis (horizontal axis) title.</li>
+<li><code>ylab</code> is the y-axis (vertical axis) title.</li>
+<li><code>freq</code> allows us to create either frequency or <em>relative frequency</em> histograms.
+<ul>
+<li>If we set it equal to <code>TRUE</code> it will produce a frequency histogram. (This is the default if we don’t give R any instructions.)</li>
+<li>If we set it equal to <code>FALSE</code> it will produce a relative frequency histogram.</li>
+</ul></li>
+<li><code>col</code> allows us to give R a specific color for the bars.</li>
+</ul>
+<p>Notice that each argument is separated by a comma.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="introduction-to-data.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(htage_ratio, </span>
+<span id="cb11-2"><a href="introduction-to-data.html#cb11-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">&quot;Histogram of Height-to-Age Ratio&quot;</span>, </span>
+<span id="cb11-3"><a href="introduction-to-data.html#cb11-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">&quot;Height-to-Age Ratio (feet/year)&quot;</span>, </span>
+<span id="cb11-4"><a href="introduction-to-data.html#cb11-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">&quot;Relative Frequency&quot;</span>, </span>
+<span id="cb11-5"><a href="introduction-to-data.html#cb11-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">freq =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb11-6"><a href="introduction-to-data.html#cb11-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">&#39;pink&#39;</span>)</span></code></pre></div>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>When I am done, I will use the <code>detatch</code> command to tell R that I am not working with the <code>Loblolly</code> data anymore.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introduction-to-data.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">detach</span>(Loblolly)</span></code></pre></div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="descriptive-measures.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IntroStats.pdf", "IntroStats.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

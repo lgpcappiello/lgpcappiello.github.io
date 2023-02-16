@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Module 5 Random Variables | Course Notes for Introduction to Statistics</title>
+  <meta name="description" content="Course notes for Introduction to Statistics." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Module 5 Random Variables | Course Notes for Introduction to Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Course notes for Introduction to Statistics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Module 5 Random Variables | Course Notes for Introduction to Statistics" />
+  
+  <meta name="twitter:description" content="Course notes for Introduction to Statistics." />
+  
+
+<meta name="author" content="Dr. Lauren Cappiello" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="random-variables.html"/>
+<link rel="next" href="module-5.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction to Data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#module-overview"><i class="fa fa-check"></i><b>1.1</b> Module Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#statistics-terminology"><i class="fa fa-check"></i><b>1.2</b> Statistics Terminology</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#data-basics"><i class="fa fa-check"></i><b>1.3</b> Data Basics</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sampling"><i class="fa fa-check"></i><b>1.4</b> Sampling</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#experimental-design"><i class="fa fa-check"></i><b>1.5</b> Experimental Design</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#graphical-presentations"><i class="fa fa-check"></i><b>1.6</b> Graphical Presentations</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#frequency-distributions"><i class="fa fa-check"></i><b>1.7</b> Frequency Distributions</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#qualitative-variables"><i class="fa fa-check"></i><b>1.7.1</b> Qualitative Variables</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#quantitative-variables"><i class="fa fa-check"></i><b>1.7.2</b> Quantitative Variables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="descriptive-measures.html"><a href="descriptive-measures.html"><i class="fa fa-check"></i><b>2</b> Descriptive Measures</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="descriptive-measures.html"><a href="descriptive-measures.html#module-overview-1"><i class="fa fa-check"></i><b>2.1</b> Module Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>2.2</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="2.3" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-variability"><i class="fa fa-check"></i><b>2.3</b> Measures of Variability</a></li>
+<li class="chapter" data-level="2.4" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-position"><i class="fa fa-check"></i><b>2.4</b> Measures of Position</a></li>
+<li class="chapter" data-level="2.5" data-path="descriptive-measures.html"><a href="descriptive-measures.html#box-plots"><i class="fa fa-check"></i><b>2.5</b> Box Plots</a></li>
+<li class="chapter" data-level="2.6" data-path="descriptive-measures.html"><a href="descriptive-measures.html#descriptive-measures-for-populations"><i class="fa fa-check"></i><b>2.6</b> Descriptive Measures for Populations</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="probability-concepts.html"><a href="probability-concepts.html"><i class="fa fa-check"></i><b>3</b> Probability Concepts</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="probability-concepts.html"><a href="probability-concepts.html#module-overview-2"><i class="fa fa-check"></i><b>3.1</b> Module Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="probability-concepts.html"><a href="probability-concepts.html#experiments-sample-spaces-and-events"><i class="fa fa-check"></i><b>3.2</b> Experiments, Sample Spaces, and Events</a></li>
+<li class="chapter" data-level="3.3" data-path="probability-concepts.html"><a href="probability-concepts.html#probability-distributions"><i class="fa fa-check"></i><b>3.3</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="probability-concepts.html"><a href="probability-concepts.html#venn-diagrams"><i class="fa fa-check"></i><b>3.3.1</b> Venn Diagrams</a></li>
+<li class="chapter" data-level="3.3.2" data-path="probability-concepts.html"><a href="probability-concepts.html#probability-axioms"><i class="fa fa-check"></i><b>3.3.2</b> Probability Axioms</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="probability-concepts.html"><a href="probability-concepts.html#rules-of-probability"><i class="fa fa-check"></i><b>3.4</b> Rules of Probability</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="probability-concepts.html"><a href="probability-concepts.html#addition-rules"><i class="fa fa-check"></i><b>3.4.1</b> Addition Rules</a></li>
+<li class="chapter" data-level="3.4.2" data-path="probability-concepts.html"><a href="probability-concepts.html#complements"><i class="fa fa-check"></i><b>3.4.2</b> Complements</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="probability-concepts.html"><a href="probability-concepts.html#conditional-probability"><i class="fa fa-check"></i><b>3.5</b> Conditional Probability</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="probability-concepts.html"><a href="probability-concepts.html#multiplication-rules"><i class="fa fa-check"></i><b>3.5.1</b> Multiplication Rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="random-variables.html"><a href="random-variables.html"><i class="fa fa-check"></i><b>4</b> Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="random-variables.html"><a href="random-variables.html#module-overview-3"><i class="fa fa-check"></i><b>4.1</b> Module Overview</a></li>
+<li class="chapter" data-level="4.2" data-path="random-variables.html"><a href="random-variables.html#discrete-random-variables"><i class="fa fa-check"></i><b>4.2</b> Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="random-variables.html"><a href="random-variables.html#the-mean-and-standard-deviation"><i class="fa fa-check"></i><b>4.2.1</b> The Mean and Standard Deviation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="random-variables.html"><a href="random-variables.html#the-binomial-distribution"><i class="fa fa-check"></i><b>4.3</b> The Binomial Distribution</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="random-variables.html"><a href="random-variables.html#mean-and-variance"><i class="fa fa-check"></i><b>4.3.1</b> Mean and Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="random-variables.html"><a href="random-variables.html#the-normal-distribution"><i class="fa fa-check"></i><b>4.4</b> The Normal Distribution</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="random-variables.html"><a href="random-variables.html#the-standard-normal-distribution"><i class="fa fa-check"></i><b>4.4.1</b> The Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="random-variables.html"><a href="random-variables.html#area-under-the-standard-normal-curve"><i class="fa fa-check"></i><b>4.5</b> Area Under the Standard Normal Curve</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="random-variables-1.html"><a href="random-variables-1.html"><i class="fa fa-check"></i><b>5</b> Random Variables</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="random-variables-1.html"><a href="random-variables-1.html#module-overview-4"><i class="fa fa-check"></i><b>5.1</b> Module Overview</a></li>
+<li class="chapter" data-level="5.2" data-path="random-variables-1.html"><a href="random-variables-1.html#discrete-random-variables-1"><i class="fa fa-check"></i><b>5.2</b> Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="random-variables-1.html"><a href="random-variables-1.html#the-mean-and-standard-deviation-1"><i class="fa fa-check"></i><b>5.2.1</b> The Mean and Standard Deviation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="random-variables-1.html"><a href="random-variables-1.html#the-binomial-distribution-1"><i class="fa fa-check"></i><b>5.3</b> The Binomial Distribution</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="random-variables-1.html"><a href="random-variables-1.html#mean-and-variance-1"><i class="fa fa-check"></i><b>5.3.1</b> Mean and Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="random-variables-1.html"><a href="random-variables-1.html#the-normal-distribution-1"><i class="fa fa-check"></i><b>5.4</b> The Normal Distribution</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="random-variables-1.html"><a href="random-variables-1.html#the-standard-normal-distribution-1"><i class="fa fa-check"></i><b>5.4.1</b> The Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="random-variables-1.html"><a href="random-variables-1.html#area-under-the-standard-normal-curve-1"><i class="fa fa-check"></i><b>5.5</b> Area Under the Standard Normal Curve</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="module-5.html"><a href="module-5.html"><i class="fa fa-check"></i><b>6</b> Module 5</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="module-5.html"><a href="module-5.html#test"><i class="fa fa-check"></i><b>6.1</b> Test</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>7</b> Regression</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="regression.html"><a href="regression.html#module-overview-5"><i class="fa fa-check"></i><b>7.1</b> Module Overview</a></li>
+<li class="chapter" data-level="7.2" data-path="regression.html"><a href="regression.html#linear-equations-with-one-independent-variable"><i class="fa fa-check"></i><b>7.2</b> Linear Equations with One Independent Variable</a></li>
+<li class="chapter" data-level="7.3" data-path="regression.html"><a href="regression.html#regression-1"><i class="fa fa-check"></i><b>7.3</b> Regression</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Notes for Introduction to Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="random-variables-1" class="section level1" number="5">
+<h1><span class="header-section-number">Module 5</span> Random Variables</h1>
+<div id="module-overview-4" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Module Overview</h2>
+<p>In previous modules, we introduced the idea of variables and examined their distributions. We also began our discussion on probability theory. Now, we extend these concepts into what are called random variables. We will introduce the concept of random variables in general and will discuss a specific type of distribution - the binomial distribution. Then we will discuss a continuous probability distribution, the normal distribution. The normal distribution will provide a foundation for much of the inference we will complete throughout the rest of this course.</p>
+<p><strong>Module Learning Objectives/Outcomes</strong></p>
+<ol style="list-style-type: decimal">
+<li>Discuss discrete random variables using key terminology.</li>
+<li>Express cumulative probabilities using probability notation.</li>
+<li>Calculate the expected value and standard deviation of a discrete random variable.</li>
+<li>Calculate binomial probabilities.</li>
+<li>Convert normal distributions to standard normal distributions.</li>
+<li>Calculate probabilities for a normal distribution using area under the curve.</li>
+<li>Approximate binomial probabilities using the normal curve.</li>
+</ol>
+<p>This module’s outcomes correspond to course outcomes (4) use the binomial distribution as a model for discrete variables and (5) use the normal distribution as a model for continuous variables.</p>
+</div>
+<div id="discrete-random-variables-1" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> Discrete Random Variables</h2>
+<p>A <strong>random variable</strong> is a quantitative variable whose values are based on chance. By “chance,” we mean that you can’t <em>know</em> the outcome before it occurs.</p>
+<p>A <strong>discrete random variable</strong> is a random variable whose possible values can be listed.</p>
+<p>Notation:</p>
+<ul>
+<li><span class="math inline">\(x\)</span>,<span class="math inline">\(y\)</span>,<span class="math inline">\(z\)</span> (lower case letters) denote variables.</li>
+<li><span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, <span class="math inline">\(Z\)</span> (upper case letters) denote <em>random</em> variables.</li>
+</ul>
+<p>In contrast to events, where we usually used letters toward the start of the alphabet, (random) variables are typically denoted by letters from the end of the alphabet.</p>
+<ul>
+<li><span class="math inline">\(\{X=x\}\)</span> denotes the event that the random variable <span class="math inline">\(X\)</span> equals <span class="math inline">\(x\)</span>.</li>
+<li><span class="math inline">\(P(X=x)\)</span> denotes the probability that the random variable <span class="math inline">\(X\)</span> equals <span class="math inline">\(x\)</span>.</li>
+</ul>
+<p>Recall: a probability distribution is a list of all possible values and their corresponding probabilities. (See Section 3.3 for a refresher.) A <strong>probability histogram</strong> is a histogram where the heights of the bars correspond to the probability of each value. For discrete random variables, each “bin” is one of the listed values.</p>
+<blockquote>
+<p><em>Example</em>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Number of Siblings, <span class="math inline">\(x\)</span></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Probability</strong>, <span class="math inline">\(P(X=x)\)</span></td>
+<td align="center">0.200</td>
+<td align="center">0.425</td>
+<td align="center">0.275</td>
+<td align="center">0.075</td>
+<td align="center">0.025</td>
+</tr>
+</tbody>
+</table>
+<p>(Assume for the sake of the example that no one has more than 4 siblings.)</p>
+</blockquote>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>Interpretation: in a large number of independent observations of a random variable <span class="math inline">\(X\)</span>, the proportion of times each possible value occurs will approximate the probability distribution of <span class="math inline">\(X\)</span>.</p>
+<div id="the-mean-and-standard-deviation-1" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> The Mean and Standard Deviation</h3>
+<center>
+<font size='4'><strong>Mean of a Discrete Random Variable</strong>
+</center>
+<p></font></p>
+<p>The mean of a discrete random variable <span class="math inline">\(X\)</span> is denoted <span class="math inline">\(\mu_X\)</span>. If it’s clear which random variable we’re talking about, we can drop the subscript and write <span class="math inline">\(\mu\)</span>. (Note that <span class="math inline">\(\mu\)</span> is the Greek letter “mu.”)
+<span class="math display">\[
+  \mu_X = \Sigma xP(X=x)
+\]</span>
+where <span class="math inline">\(\Sigma\)</span> denotes “the sum over all values of <span class="math inline">\(x\)</span>”: <span class="math display">\[\Sigma xP(X=x) = x_1P(X=x_1) + x_2P(X=x_2) + \dots + x_nP(X=x_n).\]</span></p>
+<p>The mean of a random variable is also called the <strong>expected value</strong> or <strong>expectation</strong>. Recall that measures of center are meant to identify the most common or most likely, thus the value we can <em>expect</em> to see (most often).</p>
+<blockquote>
+<p><em>Example</em>: for the Siblings distribution, <span class="math display">\[\mu = 0(0.200)+1(0.425)+2(0.275)+3(0.075)+4(0.025)=1.3\]</span>
+Make sure you understand how we used the formula for <span class="math inline">\(\mu\)</span> and the probability distribution to come up with this number.</p>
+</blockquote>
+<p>Interpretation: in a large number of independent observations of a random variable <span class="math inline">\(X\)</span>, the mean of those observations will approximately equal <span class="math inline">\(\mu\)</span>.</p>
+<p>The larger the number of observations, the closer their average tends to be to <span class="math inline">\(\mu\)</span>. This is known as the <strong>law of large numbers</strong>.</p>
+<blockquote>
+<p><em>Example</em>: Suppose I took a random sample of 10 people and asked how many siblings they have. <span class="math display">\[2,2,2,2,1,0,3,1,2,0\]</span> In my random sample of 10, <span class="math inline">\(\bar{x}=2\)</span>, which is a reasonable estimate but not that close to the true mean <span class="math inline">\(\mu=1.3\)</span>.</p>
+<ul>
+<li>A random sample of 30 gave me a mean of <span class="math inline">\(\bar{x}=1.53\)</span>.</li>
+<li>A random sample of 100 gave me a mean of <span class="math inline">\(\bar{x}=1.47\)</span>.</li>
+<li>A random sample of 1000 gave me a mean of <span class="math inline">\(\bar{x}=1.307\)</span>.</li>
+</ul>
+</blockquote>
+<p>We use concepts related to the law of large numbers as a foundation for statistical inference, but note that - although very large samples are nice to have - it’s not necessary to take enormous samples all the time. Often, we can come to interesting conclusions with fewer than 30 observations!</p>
+<center>
+<font size='4'><strong>Standard Deviation of a Discrete Random Variable</strong>
+</center>
+<p></font></p>
+<p>The variance of a discrete random variable <span class="math inline">\(X\)</span> is denoted <span class="math inline">\(\sigma_X^2\)</span> (or <span class="math inline">\(\sigma^2\)</span> if it’s clear which variable we’re talking about). (Note that <span class="math inline">\(\sigma\)</span> is the Greek letter “sigma.”)
+<span class="math display">\[ \sigma_X^2 = \Sigma[(x-\mu_X)^2P(X=x)]\]</span>
+OR
+<span class="math display">\[ \sigma_X^2 = \Sigma[x^2P(X=x)]-\mu_X^2\]</span>
+These formulas are <em>exactly</em> equivalent and you may use whichever you wish, but note that the second may be a little easier to work with.</p>
+<p>As before, the standard deviation is the square root of the variance: <span class="math display">\[\sigma = \sqrt{\sigma^2}\]</span></p>
+<blockquote>
+<p><em>Example</em>: Calculate the standard deviation of the Siblings variable.</p>
+<p>In general, a table is the best way to keep track of a variance calculation:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="center"><span class="math inline">\(P(X=x)\)</span></th>
+<th align="center"><span class="math inline">\(xP(X=x)\)</span></th>
+<th align="center"><span class="math inline">\(x^2\)</span></th>
+<th align="center"><span class="math inline">\(x^2P(X=x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">0.200</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">0.425</td>
+<td align="center">0.425</td>
+<td align="center">1</td>
+<td align="center">0.425</td>
+</tr>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center">0.275</td>
+<td align="center">0.550</td>
+<td align="center">4</td>
+<td align="center">1.100</td>
+</tr>
+<tr class="even">
+<td align="center">3</td>
+<td align="center">0.075</td>
+<td align="center">0.225</td>
+<td align="center">9</td>
+<td align="center">0.675</td>
+</tr>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">0.025</td>
+<td align="center">0.100</td>
+<td align="center">16</td>
+<td align="center">0.400</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(\mu\)</span> = 1.3</td>
+<td align="center"></td>
+<td align="center">Total = 2.6</td>
+</tr>
+</tbody>
+</table>
+<p>Then the variance is <span class="math display">\[\sigma^2 = 2.6 - 1.3^2 = 0.9\]</span> and the standard deviation is <span class="math display">\[\sigma = \sqrt{0.9} = 0.9539.\]</span></p>
+</blockquote>
+</div>
+</div>
+<div id="the-binomial-distribution-1" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> The Binomial Distribution</h2>
+<p>Think back to replication in an experiment. Each replication is what we call a <strong>trial</strong>. We will consider a setting where each trial has two possible outcomes.</p>
+<blockquote>
+<p>For example, suppose you want to know if a coin is fair (both sides equally likely). You might flip the coin 100 times (thus running 100 trials). Each trial is a flip of the coin with two possible outcomes: heads or tails.</p>
+</blockquote>
+<p>The product of the first <span class="math inline">\(k\)</span> positive integers <span class="math inline">\((1, 2, 3, \dots)\)</span> is called <strong>k-factorial</strong>, denoted <span class="math inline">\(k!\)</span>: <span class="math display">\[k! = k \times (k-1) \times\dots\times 3 \times 2 \times 1\]</span> We define <span class="math inline">\(0!=1\)</span>.</p>
+<blockquote>
+<p><em>Example</em>: <span class="math inline">\(5! = 5 \times 4 \times 3 \times 2 \times 1 = 120\)</span></p>
+</blockquote>
+<p>If <span class="math inline">\(n\)</span> is a positive integer <span class="math inline">\((1, 2, 3, \dots)\)</span> and <span class="math inline">\(x\)</span> is a nonnegative integer <span class="math inline">\((0, 1, 2, \dots)\)</span> with <span class="math inline">\(x \le n\)</span>, the <strong>binomial coefficient</strong> is <span class="math display">\[\binom{n}{x} = \frac{n!}{x!(n-x)!}\]</span></p>
+<blockquote>
+<p><em>Example</em>: <span class="math display">\[\binom{5}{2} = \frac{5!}{2!(5-2)!} = \frac{5 \times 4 \times 3 \times 2 \times 1}{(2 \times 1)(3 \times 2 \times 1)}\]</span></p>
+</blockquote>
+<p>Sometimes, we may want to simplify a binomial coefficient <em>before</em> taking all of the factorials. Why? Well, <span class="math display">\[20! = 2432902008176640000\]</span> Most calculators will not print this number. Instead, you’ll get an error or a rounded version printed using scientific notation. Neither will help you accurately calculate the binomial coefficient.</p>
+<blockquote>
+<p><em>Example</em>: <span class="math display">\[\binom{20}{17} = \frac{20\times 19\times 18\times 17\times 16\times \dots \times 3\times 2\times 1}{(17\times 16\times \dots \times 3\times 2\times 1)(3\times 2\times 1)}\]</span> but notice that I can rewrite <span class="math inline">\(20!\)</span> as <span class="math inline">\(20\times 19\times 18\times 17!\)</span>, so <span class="math display">\[\binom{20}{17} = \frac{20\times 19\times 18\times 17!}{17!(3\times 2\times 1)} = \frac{20\times 19\times 18}{3\times 2\times 1} = \frac{6840}{6} = 1140\]</span></p>
+</blockquote>
+<p><strong>Bernoulli trials</strong> are repeated trials of an experiment that satisfy
+1. Each trial has two possible outcomes: success and failure.
+2. Trials are independent.
+3. The probability of success (the <strong>success probability</strong>) <span class="math inline">\(p\)</span> remains the same from one trial to the next: <span class="math display">\[P(X=\text{success})=p\]</span></p>
+<p>The <strong>binomial distribution</strong> is the probability distribution for the number of successes in a sequence of Bernoulli trials.</p>
+<p>Fact: in <span class="math inline">\(n\)</span> Bernoulli trials, the number of outcomes that contain exactly <span class="math inline">\(x\)</span> successes equals the binomial coefficient <span class="math inline">\(\binom{n}{x}\)</span>.</p>
+<center>
+<font size='4'><strong>Binomial Probability Formula</strong>
+</center>
+<p></font></p>
+<p>Let <span class="math inline">\(x\)</span> denote the total number of successes in <span class="math inline">\(n\)</span> Bernoulli trials with success probability <span class="math inline">\(p\)</span>. The probability distribution of the random variable <span class="math inline">\(X\)</span> is given by <span class="math display">\[P(X=x) = \binom{n}{x}p^x(1-p)^{n-x} \quad\quad x = 0,1,2,\dots,n\]</span> The random variable <span class="math inline">\(X\)</span> is called a <strong>binomial random variable</strong> and is said to have the <strong>binomial distribution</strong>. Because <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span> fully define this distribution, they are called the distribution’s <strong>parameters</strong>.</p>
+<p>To find a binomial probability formula:</p>
+<ol>
+<li>
+Check assumptions.
+</li>
+<ol type="a">
+<li>
+Exactly <span class="math inline">\(n\)</span> trials to be performed.
+</li>
+<li>
+Two possible outcomes for each trial.
+</li>
+<li>
+Trials are independent (each trial does not impact the result of the next)
+</li>
+<li>
+Success probability <span class="math inline">\(p\)</span> remains the same from trial to trial.
+</li>
+</ol>
+<li>
+Identify a “success.” Generally, this is whichever of the two possible outcomes we are most interested in.
+</li>
+<li>
+Determine the success probability <span class="math inline">\(p\)</span>.
+</li>
+<li>
+Determine <span class="math inline">\(n\)</span>, the number of trials.
+</li>
+<li>
+Plug <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span> into the binomial distribution formula.
+</li>
+</ol>
+<p>We can also use the binomial probability formula to calculate probabilities like <span class="math inline">\(P(X\le x)\)</span>. Notice that we can rewrite this uisng concepts from the previous module <span class="math display">\[P(X \le k) = P(X=k \text{ or } X=k-1 \text{ or } \dots  \text{ or } X=2 \text{ or } X=1  \text{ or } X=0)\]</span> Since <span class="math inline">\(X\)</span> is a discrete random variable, each possible value is <em>disjoint</em>. We can use this! <span class="math display">\[P(X \le k) = P(X=k) + P(X=k-1) + \dots + P(X=2) + P(X=1) + P(X=0)\]</span></p>
+<blockquote>
+<p><em>Example</em>: <span class="math inline">\(P(X \le 3) = p(X=3)+P(X=2)+P(X=1)+P(X=0)\)</span></p>
+</blockquote>
+<p>We can also extend this concept to work with probabilities like <span class="math inline">\(P(a &lt; X \le b)\)</span>.</p>
+<blockquote>
+<p><em>Example</em>: <span class="math inline">\(P(2 &lt; X \le 5)\)</span></p>
+<p>First, notice that if <span class="math inline">\(2 &lt; X \le 5\)</span>, then <span class="math inline">\(X\)</span> can be 3, 4, or 5: <span class="math display">\[P(2 &lt; X \le 5) = P(X=3)+P(X=4)+P(X=5)\]</span></p>
+</blockquote>
+<blockquote>
+<p>Note: if going from <span class="math inline">\(2 &lt; X \le 5\)</span> to “<span class="math inline">\(X\)</span> can be 3, 4, or 5” doesn’t make sense to you, start by writing out the sample space. Suppose <span class="math inline">\(n=10\)</span>. Then the sample space for the binomial distribution is <span class="math display">\[S = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}\]</span> Then I can check any number in this sample space by plugging it in for <span class="math inline">\(X\)</span>. So for 1, I can check <span class="math inline">\(2 &lt; 1 \le 5\)</span>. Obviously this is not true, so we won’t include 1. Checking the number 2, I get <span class="math inline">\(2 &lt; 2 \le 5\)</span>. Since 2 &lt; 2 is NOT true, we don’t include 2. Etc.</p>
+</blockquote>
+<div id="mean-and-variance-1" class="section level3" number="5.3.1">
+<h3><span class="header-section-number">5.3.1</span> Mean and Variance</h3>
+<p>The shape of a binomial distribution is determined by the success probability:</p>
+<ul>
+<li>If <span class="math inline">\(p \approx 0.5\)</span>, the distribution is approximately symmetric.</li>
+<li>If <span class="math inline">\(p &lt; 0.5\)</span>, the distribution is right-skewed.</li>
+<li>If <span class="math inline">\(p &gt; 0.5\)</span>, the distribution is left-skewed.</li>
+</ul>
+<p>The mean of a binomial distribution is <span class="math inline">\(\mu = np\)</span>. The variance is <span class="math inline">\(\sigma^2 = np(1-p)\)</span>.</p>
+</div>
+</div>
+<div id="the-normal-distribution-1" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> The Normal Distribution</h2>
+<p>If we can represent a discrete variable with a probability histogram, what can we do with a continuous variable?</p>
+<p>We represent the shape of a continuous variable using a <strong>density curve</strong>. This is like a histogram, but with a smooth curve:
+<img src="IntroStats_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>Properties:</p>
+<ol style="list-style-type: decimal">
+<li>The curve is always above the horizontal axis (because probabilities are always nonnegative).</li>
+<li>The total area under the curve equals 1.</li>
+</ol>
+<p>For a variable with a density curve, the proportion of all possible observations that lie within a specified range equals the corresponding area under the density curve.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p>A <strong>normal curve</strong> is a special type of density curve that has a “bell-shaped” distribution. In fact, all of the density curves I’ve shown so far have been normal curves! We say that a variable is <strong>normally distributed</strong> or has a <strong>normal distribution</strong> if its distribution has the shape of a normal curve.</p>
+<p>Why “normal?” Because it’s very common! Lots of things are more common around the average and less common as you get farther from the average: height, amount of sleep people get each night, standardized test scores, etc. In practice, these things aren’t <em>exactly</em> normally distributed… instead, they’re <strong>approximately normally distributed</strong> (and that’s ok).</p>
+<p>Normal distributions…</p>
+<ul>
+<li>are fully determined by parameters mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>.</li>
+<li>are symmetric and centered at <span class="math inline">\(\mu\)</span>.</li>
+<li>have spreads that depend on <span class="math inline">\(\sigma\)</span>.</li>
+</ul>
+<p>Pay close attention to the horizontal axis and how spread out the densities are in each of the following plots:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>Notice that the bottom left plot comes to a sharper peak, while the bottom right has a gentler slope. This is what we mean by “spread”: the density on the bottom right is the most spread out.</p>
+<p>To check whether a variable is (approximately) normally distributed,</p>
+<ol style="list-style-type: decimal">
+<li>Check the histogram to see if it is symmetric and bell-shaped.</li>
+<li>Estimate the parameters: <span class="math inline">\(\mu\)</span> using <span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(\sigma\)</span> using <span class="math inline">\(s\)</span>.</li>
+</ol>
+<div id="the-standard-normal-distribution-1" class="section level3" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> The Standard Normal Distribution</h3>
+<p>In order to make normal distributions easier to work with, we will <strong>standardize</strong> them. A <strong>standard normal distribution</strong> is a normal distribution with mean <span class="math inline">\(\mu=0\)</span> and standard deviation <span class="math inline">\(\sigma=1\)</span>. We standardize a variable using <span class="math display">\[z = \frac{x-\mu}{\sigma}.\]</span> This is also called a <strong>z-score</strong>. Standardizing using this formula will <em>always</em> result in a variable with mean 0 and standard deviation 1 (even if it’s not normal!). If <span class="math inline">\(X\)</span> is approximately normal, then the standardized variable <span class="math inline">\(Z\)</span> will have a standard normal distribution.</p>
+<p>Note: when we z-score a variable, we preserve the area under the curve properties! If <span class="math inline">\(X\)</span> is Normal<span class="math inline">\((\mu,\sigma)\)</span>, then <span class="math display">\[P(X &lt; c) = P\left(Z &lt; \frac{c - \mu}{\sigma}\right) = P(Z &lt; z).\]</span></p>
+</div>
+</div>
+<div id="area-under-the-standard-normal-curve-1" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> Area Under the Standard Normal Curve</h2>
+<p>Properties:</p>
+<ol style="list-style-type: decimal">
+<li>Total area under the curve is 1.</li>
+<li>The curve extends infinitely in both directions, never touching the horizontal axis.</li>
+<li>Symmetric about 0.</li>
+<li>Almost all of the area under the curve is between -3 and 3.</li>
+</ol>
+<center>
+<font size='4'><strong>Finding Area Under the Curve</strong>
+</center>
+<p></font></p>
+<iframe width="100%" height="300" src="https://rdrr.io/snippets/embed/" frameborder="0">
+</iframe>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="random-variables.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="module-5.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IntroStats.pdf", "IntroStats.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

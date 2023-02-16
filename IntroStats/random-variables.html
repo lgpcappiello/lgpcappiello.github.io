@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Random Variables | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 4 Random Variables | Introduction to Statistics." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Random Variables | Introduction to Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 4 Random Variables | Introduction to Statistics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Random Variables | Introduction to Statistics" />
+  
+  <meta name="twitter:description" content="Chapter 4 Random Variables | Introduction to Statistics." />
+  
+
+<meta name="author" content="Dr. Lauren Cappiello" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="probability-concepts.html"/>
+<link rel="next" href="introduction-to-confidence-intervals.html"/>
+<script src="libs/header-attrs-2.20.1/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Statistics</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#welcome-to-statistics" id="toc-welcome-to-statistics">Welcome to Statistics!</a>
+<ul>
+<li><a href="index.html#course-learning-outcomes" id="toc-course-learning-outcomes">Course Learning Outcomes</a></li>
+<li><a href="index.html#for-the-instructor" id="toc-for-the-instructor">For the Instructor</a></li>
+<li><a href="index.html#for-the-student" id="toc-for-the-student">For the Student</a>
+<ul>
+<li><a href="index.html#r-programming" id="toc-r-programming">R Programming</a></li>
+</ul></li>
+</ul></li>
+<li><a href="introduction-to-data.html#introduction-to-data" id="toc-introduction-to-data"><span class="toc-section-number">1</span> Introduction to Data</a>
+<ul>
+<li><a href="introduction-to-data.html#chapter-overview" id="toc-chapter-overview"><span class="toc-section-number">1.1</span> Chapter Overview</a></li>
+<li><a href="introduction-to-data.html#statistics-terminology" id="toc-statistics-terminology"><span class="toc-section-number">1.2</span> Statistics Terminology</a>
+<ul>
+<li><a href="introduction-to-data.html#r-entering-data" id="toc-r-entering-data">R: Entering Data</a></li>
+<li><a href="introduction-to-data.html#section-exercises" id="toc-section-exercises">Section Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-data.html#sampling-and-design" id="toc-sampling-and-design"><span class="toc-section-number">1.3</span> Sampling and Design</a>
+<ul>
+<li><a href="introduction-to-data.html#statistical-sampling" id="toc-statistical-sampling"><span class="toc-section-number">1.3.1</span> Statistical Sampling</a></li>
+<li><a href="introduction-to-data.html#experimental-design" id="toc-experimental-design"><span class="toc-section-number">1.3.2</span> Experimental Design</a></li>
+<li><a href="introduction-to-data.html#r-random-number-generation" id="toc-r-random-number-generation">R: Random Number Generation</a></li>
+<li><a href="introduction-to-data.html#section-exercises-1" id="toc-section-exercises-1">Section Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-data.html#frequency-distributions" id="toc-frequency-distributions"><span class="toc-section-number">1.4</span> Frequency Distributions</a>
+<ul>
+<li><a href="introduction-to-data.html#qualitative-variables" id="toc-qualitative-variables"><span class="toc-section-number">1.4.1</span> Qualitative Variables</a></li>
+<li><a href="introduction-to-data.html#quantitative-variables" id="toc-quantitative-variables"><span class="toc-section-number">1.4.2</span> Quantitative Variables</a></li>
+<li><a href="introduction-to-data.html#r-histograms" id="toc-r-histograms">R: Histograms</a></li>
+</ul></li>
+</ul></li>
+<li><a href="descriptive-measures.html#descriptive-measures" id="toc-descriptive-measures"><span class="toc-section-number">2</span> Descriptive Measures</a>
+<ul>
+<li><a href="descriptive-measures.html#chapter-overview-1" id="toc-chapter-overview-1"><span class="toc-section-number">2.1</span> Chapter Overview</a></li>
+<li><a href="descriptive-measures.html#measures-of-central-tendency" id="toc-measures-of-central-tendency"><span class="toc-section-number">2.2</span> Measures of Central Tendency</a>
+<ul>
+<li><a href="descriptive-measures.html#r-finding-measures-of-center" id="toc-r-finding-measures-of-center">R: Finding Measures of Center</a></li>
+</ul></li>
+<li><a href="descriptive-measures.html#measures-of-variability" id="toc-measures-of-variability"><span class="toc-section-number">2.3</span> Measures of Variability</a>
+<ul>
+<li><a href="descriptive-measures.html#r-finding-measures-of-variability" id="toc-r-finding-measures-of-variability">R: Finding Measures of Variability</a></li>
+</ul></li>
+<li><a href="descriptive-measures.html#measures-of-position" id="toc-measures-of-position"><span class="toc-section-number">2.4</span> Measures of Position</a>
+<ul>
+<li><a href="descriptive-measures.html#box-plots" id="toc-box-plots"><span class="toc-section-number">2.4.1</span> Box Plots</a></li>
+<li><a href="descriptive-measures.html#r-measures-of-position" id="toc-r-measures-of-position">R: Measures of Position</a></li>
+<li><a href="descriptive-measures.html#r-box-plots" id="toc-r-box-plots">R: Box Plots</a></li>
+</ul></li>
+<li><a href="descriptive-measures.html#descriptive-measures-for-populations" id="toc-descriptive-measures-for-populations"><span class="toc-section-number">2.5</span> Descriptive Measures for Populations</a></li>
+</ul></li>
+<li><a href="probability-concepts.html#probability-concepts" id="toc-probability-concepts"><span class="toc-section-number">3</span> Probability Concepts</a>
+<ul>
+<li><a href="probability-concepts.html#chapter-overview-2" id="toc-chapter-overview-2"><span class="toc-section-number">3.1</span> Chapter Overview</a></li>
+<li><a href="probability-concepts.html#experiments-sample-spaces-and-events" id="toc-experiments-sample-spaces-and-events"><span class="toc-section-number">3.2</span> Experiments, Sample Spaces, and Events</a></li>
+<li><a href="probability-concepts.html#probability-distributions" id="toc-probability-distributions"><span class="toc-section-number">3.3</span> Probability Distributions</a>
+<ul>
+<li><a href="probability-concepts.html#venn-diagrams" id="toc-venn-diagrams"><span class="toc-section-number">3.3.1</span> Venn Diagrams</a></li>
+<li><a href="probability-concepts.html#probability-axioms" id="toc-probability-axioms"><span class="toc-section-number">3.3.2</span> Probability Axioms</a></li>
+<li><a href="probability-concepts.html#exercises" id="toc-exercises">Exercises</a></li>
+</ul></li>
+<li><a href="probability-concepts.html#rules-of-probability" id="toc-rules-of-probability"><span class="toc-section-number">3.4</span> Rules of Probability</a>
+<ul>
+<li><a href="probability-concepts.html#addition-rules" id="toc-addition-rules"><span class="toc-section-number">3.4.1</span> Addition Rules</a></li>
+<li><a href="probability-concepts.html#complements" id="toc-complements"><span class="toc-section-number">3.4.2</span> Complements</a></li>
+</ul></li>
+<li><a href="probability-concepts.html#conditional-probability" id="toc-conditional-probability"><span class="toc-section-number">3.5</span> Conditional Probability</a>
+<ul>
+<li><a href="probability-concepts.html#multiplication-rules" id="toc-multiplication-rules"><span class="toc-section-number">3.5.1</span> Multiplication Rules</a></li>
+</ul></li>
+</ul></li>
+<li><a href="random-variables.html#random-variables" id="toc-random-variables"><span class="toc-section-number">4</span> Random Variables</a>
+<ul>
+<li><a href="random-variables.html#chapter-overview-3" id="toc-chapter-overview-3"><span class="toc-section-number">4.1</span> Chapter Overview</a></li>
+<li><a href="random-variables.html#discrete-random-variables" id="toc-discrete-random-variables"><span class="toc-section-number">4.2</span> Discrete Random Variables</a>
+<ul>
+<li><a href="random-variables.html#the-mean-and-standard-deviation" id="toc-the-mean-and-standard-deviation"><span class="toc-section-number">4.2.1</span> The Mean and Standard Deviation</a></li>
+</ul></li>
+<li><a href="random-variables.html#the-binomial-distribution" id="toc-the-binomial-distribution"><span class="toc-section-number">4.3</span> The Binomial Distribution</a>
+<ul>
+<li><a href="random-variables.html#mean-and-variance" id="toc-mean-and-variance"><span class="toc-section-number">4.3.1</span> Mean and Variance</a></li>
+<li><a href="random-variables.html#binomial-probabilities-in-r" id="toc-binomial-probabilities-in-r">Binomial Probabilities in R</a></li>
+</ul></li>
+<li><a href="random-variables.html#the-normal-distribution" id="toc-the-normal-distribution"><span class="toc-section-number">4.4</span> The Normal Distribution</a>
+<ul>
+<li><a href="random-variables.html#the-standard-normal-distribution" id="toc-the-standard-normal-distribution"><span class="toc-section-number">4.4.1</span> The Standard Normal Distribution</a></li>
+</ul></li>
+<li><a href="random-variables.html#area-under-the-standard-normal-curve" id="toc-area-under-the-standard-normal-curve"><span class="toc-section-number">4.5</span> Area Under the Standard Normal Curve</a>
+<ul>
+<li><a href="random-variables.html#r-normal-distribution-probabilities" id="toc-r-normal-distribution-probabilities">R: Normal Distribution Probabilities</a></li>
+</ul></li>
+<li><a href="random-variables.html#working-with-normally-distributed-variables" id="toc-working-with-normally-distributed-variables"><span class="toc-section-number">4.6</span> Working with Normally Distributed Variables</a>
+<ul>
+<li><a href="random-variables.html#normal-distribution-probabilities" id="toc-normal-distribution-probabilities"><span class="toc-section-number">4.6.1</span> Normal Distribution Probabilities</a></li>
+<li><a href="random-variables.html#empirical-rule-for-variables" id="toc-empirical-rule-for-variables"><span class="toc-section-number">4.6.2</span> Empirical Rule for Variables</a></li>
+<li><a href="random-variables.html#percentiles" id="toc-percentiles"><span class="toc-section-number">4.6.3</span> Percentiles</a></li>
+</ul></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#introduction-to-confidence-intervals" id="toc-introduction-to-confidence-intervals"><span class="toc-section-number">5</span> Introduction to Confidence Intervals</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#chapter-overview-4" id="toc-chapter-overview-4"><span class="toc-section-number">5.1</span> Chapter Overview</a></li>
+<li><a href="introduction-to-confidence-intervals.html#sampling-distributions" id="toc-sampling-distributions"><span class="toc-section-number">5.2</span> Sampling Distributions</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#sampling-error" id="toc-sampling-error"><span class="toc-section-number">5.2.1</span> Sampling Error</a></li>
+<li><a href="introduction-to-confidence-intervals.html#the-central-limit-theorem" id="toc-the-central-limit-theorem"><span class="toc-section-number">5.2.2</span> The Central Limit Theorem</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#developing-confidence-intervals" id="toc-developing-confidence-intervals"><span class="toc-section-number">5.3</span> Developing Confidence Intervals</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#interpreting-a-confidence-interval" id="toc-interpreting-a-confidence-interval"><span class="toc-section-number">5.3.1</span> Interpreting a Confidence Interval</a></li>
+<li><a href="introduction-to-confidence-intervals.html#exercises-1" id="toc-exercises-1"><span class="toc-section-number">5.3.2</span> Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#other-levels-of-confidence" id="toc-other-levels-of-confidence"><span class="toc-section-number">5.4</span> Other Levels of Confidence</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#r-finding-critical-values" id="toc-r-finding-critical-values">R: Finding Critical Values</a></li>
+<li><a href="introduction-to-confidence-intervals.html#breaking-down-a-confidence-interval" id="toc-breaking-down-a-confidence-interval"><span class="toc-section-number">5.4.1</span> Breaking Down a Confidence Interval</a></li>
+<li><a href="introduction-to-confidence-intervals.html#confidence-level-precision-and-sample-size" id="toc-confidence-level-precision-and-sample-size"><span class="toc-section-number">5.4.2</span> Confidence Level, Precision, and Sample Size</a></li>
+<li><a href="introduction-to-confidence-intervals.html#exercises-2" id="toc-exercises-2"><span class="toc-section-number">5.4.3</span> Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#confidence-intervals-for-a-mean" id="toc-confidence-intervals-for-a-mean"><span class="toc-section-number">5.5</span> Confidence Intervals for a Mean</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#the-t-distribution" id="toc-the-t-distribution"><span class="toc-section-number">5.5.1</span> The T-Distribution</a></li>
+<li><a href="introduction-to-confidence-intervals.html#r-t-critical-values" id="toc-r-t-critical-values">R: T Critical Values</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#r-confidence-intevals-for-a-mean" id="toc-r-confidence-intevals-for-a-mean">R: Confidence Intevals for a Mean</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#introduction-to-hypothesis-testing" id="toc-introduction-to-hypothesis-testing"><span class="toc-section-number">6</span> Introduction to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#chapter-overview-5" id="toc-chapter-overview-5"><span class="toc-section-number">6.1</span> Chapter Overview</a></li>
+<li><a href="introduction-to-hypothesis-testing.html#logic-of-hypothesis-testing" id="toc-logic-of-hypothesis-testing"><span class="toc-section-number">6.2</span> Logic of Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#decision-errors" id="toc-decision-errors"><span class="toc-section-number">6.2.1</span> Decision Errors</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#confidence-interval-approach-to-hypothesis-testing" id="toc-confidence-interval-approach-to-hypothesis-testing"><span class="toc-section-number">6.3</span> Confidence Interval Approach to Hypothesis Testing</a></li>
+<li><a href="introduction-to-hypothesis-testing.html#critical-value-approach-to-hypothesis-testing" id="toc-critical-value-approach-to-hypothesis-testing"><span class="toc-section-number">6.4</span> Critical Value Approach to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#test-statistics" id="toc-test-statistics"><span class="toc-section-number">6.4.1</span> Test statistics</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#p-value-approach-to-hypothesis-testing" id="toc-p-value-approach-to-hypothesis-testing"><span class="toc-section-number">6.5</span> P-Value Approach to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#p-values" id="toc-p-values"><span class="toc-section-number">6.5.1</span> P-Values</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#r-hypothesis-tests-for-a-mean" id="toc-r-hypothesis-tests-for-a-mean">R: Hypothesis Tests for a Mean</a></li>
+</ul></li>
+<li><a href="inference-for-a-proportion.html#inference-for-a-proportion" id="toc-inference-for-a-proportion"><span class="toc-section-number">7</span> Inference for a Proportion</a>
+<ul>
+<li><a href="inference-for-a-proportion.html#chapter-overview-6" id="toc-chapter-overview-6"><span class="toc-section-number">7.1</span> Chapter Overview</a></li>
+<li><a href="inference-for-a-proportion.html#confidence-intervals-for-a-proportion" id="toc-confidence-intervals-for-a-proportion"><span class="toc-section-number">7.2</span> Confidence Intervals for a Proportion</a></li>
+<li><a href="inference-for-a-proportion.html#hypothesis-tests-for-a-proportion" id="toc-hypothesis-tests-for-a-proportion"><span class="toc-section-number">7.3</span> Hypothesis Tests for a Proportion</a>
+<ul>
+<li><a href="inference-for-a-proportion.html#confidence-interval-approach" id="toc-confidence-interval-approach"><span class="toc-section-number">7.3.1</span> Confidence Interval Approach</a></li>
+<li><a href="inference-for-a-proportion.html#critical-value-approach" id="toc-critical-value-approach"><span class="toc-section-number">7.3.2</span> Critical Value Approach</a></li>
+<li><a href="inference-for-a-proportion.html#p-value-approach" id="toc-p-value-approach"><span class="toc-section-number">7.3.3</span> P-Value Approach</a></li>
+</ul></li>
+<li><a href="inference-for-a-proportion.html#r-hypothesis-tests-for-a-proportion" id="toc-r-hypothesis-tests-for-a-proportion">R: Hypothesis Tests for a Proportion</a></li>
+</ul></li>
+<li><a href="inference-comparing-parameters.html#inference-comparing-parameters" id="toc-inference-comparing-parameters"><span class="toc-section-number">8</span> Inference: Comparing Parameters</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#chapter-overview-7" id="toc-chapter-overview-7"><span class="toc-section-number">8.1</span> Chapter Overview</a></li>
+<li><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-proportions" id="toc-hypothesis-tests-for-two-proportions"><span class="toc-section-number">8.2</span> Hypothesis Tests for Two Proportions</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#confidence-intervals-for-two-proportions" id="toc-confidence-intervals-for-two-proportions"><span class="toc-section-number">8.2.1</span> Confidence Intervals for Two Proportions</a></li>
+<li><a href="inference-comparing-parameters.html#critical-values-test-statistics-and-p-values" id="toc-critical-values-test-statistics-and-p-values"><span class="toc-section-number">8.2.2</span> Critical Values, Test Statistics, and P-Values</a></li>
+<li><a href="inference-comparing-parameters.html#r-hypothesis-tests-for-two-proportions" id="toc-r-hypothesis-tests-for-two-proportions">R: Hypothesis Tests for Two Proportions</a></li>
+</ul></li>
+<li><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-means" id="toc-hypothesis-tests-for-two-means"><span class="toc-section-number">8.3</span> Hypothesis Tests for Two Means</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#paired-samples" id="toc-paired-samples"><span class="toc-section-number">8.3.1</span> Paired Samples</a></li>
+<li><a href="inference-comparing-parameters.html#independent-samples" id="toc-independent-samples"><span class="toc-section-number">8.3.2</span> Independent Samples</a></li>
+<li><a href="inference-comparing-parameters.html#r-hypothesis-tests-for-two-means" id="toc-r-hypothesis-tests-for-two-means">R: Hypothesis Tests for Two Means</a></li>
+</ul></li>
+</ul></li>
+<li><a href="chi-square-tests.html#chi-square-tests" id="toc-chi-square-tests"><span class="toc-section-number">9</span> Chi-Square Tests</a>
+<ul>
+<li><a href="chi-square-tests.html#chapter-overview-8" id="toc-chapter-overview-8"><span class="toc-section-number">9.1</span> Chapter Overview</a></li>
+<li><a href="chi-square-tests.html#inference-for-a-population-variance" id="toc-inference-for-a-population-variance"><span class="toc-section-number">9.2</span> Inference for a Population Variance</a>
+<ul>
+<li><a href="chi-square-tests.html#the-chi-square-distribution" id="toc-the-chi-square-distribution"><span class="toc-section-number">9.2.1</span> The Chi-Square Distribution</a></li>
+</ul></li>
+<li><a href="chi-square-tests.html#the-ratio-of-two-variances" id="toc-the-ratio-of-two-variances"><span class="toc-section-number">9.3</span> The Ratio of Two Variances</a></li>
+<li><a href="chi-square-tests.html#goodness-of-fit" id="toc-goodness-of-fit"><span class="toc-section-number">9.4</span> Goodness of Fit</a></li>
+<li><a href="chi-square-tests.html#contingency-tables" id="toc-contingency-tables"><span class="toc-section-number">9.5</span> Contingency Tables</a></li>
+</ul></li>
+<li><a href="anova.html#anova" id="toc-anova"><span class="toc-section-number">10</span> ANOVA</a>
+<ul>
+<li><a href="anova.html#chapter-overview-9" id="toc-chapter-overview-9"><span class="toc-section-number">10.1</span> Chapter Overview</a></li>
+<li><a href="anova.html#what-is-the-analysis-of-variance-anova" id="toc-what-is-the-analysis-of-variance-anova"><span class="toc-section-number">10.2</span> What is the Analysis of Variance (ANOVA)</a></li>
+<li><a href="anova.html#the-f-distribution" id="toc-the-f-distribution"><span class="toc-section-number">10.3</span> The F-Distribution</a></li>
+<li><a href="anova.html#multiple-comparisons-and-type-i-error-rate" id="toc-multiple-comparisons-and-type-i-error-rate"><span class="toc-section-number">10.4</span> Multiple Comparisons and Type I Error Rate</a></li>
+</ul></li>
+<li><a href="regression-and-correlation.html#regression-and-correlation" id="toc-regression-and-correlation"><span class="toc-section-number">11</span> Regression and Correlation</a>
+<ul>
+<li><a href="regression-and-correlation.html#chapter-overview-10" id="toc-chapter-overview-10"><span class="toc-section-number">11.1</span> Chapter Overview</a></li>
+<li><a href="regression-and-correlation.html#linear-equations" id="toc-linear-equations"><span class="toc-section-number">11.2</span> Linear Equations</a></li>
+<li><a href="regression-and-correlation.html#correlation" id="toc-correlation"><span class="toc-section-number">11.3</span> Correlation</a></li>
+<li><a href="regression-and-correlation.html#finding-a-regression-line" id="toc-finding-a-regression-line"><span class="toc-section-number">11.4</span> Finding a Regression Line</a>
+<ul>
+<li><a href="regression-and-correlation.html#coefficient-of-determination" id="toc-coefficient-of-determination"><span class="toc-section-number">11.4.1</span> Coefficient of Determination</a></li>
+</ul></li>
+</ul></li>
+<li><a href="appendices.html#appendices" id="toc-appendices">Appendices</a>
+<ul>
+<li><a href="appendices.html#appendix-a-important-links-and-additional-resources" id="toc-appendix-a-important-links-and-additional-resources">Appendix A: Important Links and Additional Resources</a>
+<ul>
+<li><a href="appendices.html#applets" id="toc-applets">Applets</a></li>
+<li><a href="appendices.html#run-r-online" id="toc-run-r-online">Run R Online</a></li>
+</ul></li>
+<li><a href="appendices.html#appendix-b-average-deviance" id="toc-appendix-b-average-deviance">Appendix B: Average Deviance</a></li>
+<li><a href="appendices.html#appendix-c-deriving-a-confidence-interval" id="toc-appendix-c-deriving-a-confidence-interval">Appendix C: Deriving a Confidence Interval</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="random-variables" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Random Variables<a href="random-variables.html#random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chapter-overview-3" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Chapter Overview<a href="random-variables.html#chapter-overview-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In previous chapters, we introduced the idea of variables and examined their distributions. We also began our discussion on probability theory. Now, we extend these concepts into what are called random variables. We will introduce the concept of random variables in general and will discuss a specific type of distribution - the binomial distribution. Then we will discuss a continuous probability distribution, the normal distribution. The normal distribution will provide a foundation for much of the inference we will complete throughout the rest of this course.</p>
+<p><strong>Chapter Learning Objectives/Outcomes</strong></p>
+<ol style="list-style-type: decimal">
+<li>Discuss discrete random variables using key terminology.</li>
+<li>Express cumulative probabilities using probability notation.</li>
+<li>Calculate the expected value and standard deviation of a discrete random variable.</li>
+<li>Calculate binomial probabilities.</li>
+<li>Convert normal distributions to standard normal distributions.</li>
+<li>Calculate probabilities for a normal distribution using area under the curve.</li>
+<li>Approximate binomial probabilities using the normal curve.</li>
+</ol>
+<p><strong>R Objectives</strong></p>
+<ol style="list-style-type: decimal">
+<li>Calculate binomial probabilities.</li>
+<li>Find cumulative probabilities for the standard normal distribution.</li>
+<li>Find percentiles.</li>
+<li>Use R as a simple calculator.</li>
+</ol>
+<p>This chapter’s outcomes correspond to course outcomes (4) use the binomial distribution as a model for discrete variables and (5) use the normal distribution as a model for continuous variables.</p>
+</div>
+<div id="discrete-random-variables" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Discrete Random Variables<a href="random-variables.html#discrete-random-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A <strong>random variable</strong> is a quantitative variable whose values are based on chance. By “chance”, we mean that you can’t <em>know</em> the outcome before it occurs.</p>
+<p>A <strong>discrete random variable</strong> is a random variable whose possible values can be listed.</p>
+<p>Notation:</p>
+<ul>
+<li><span class="math inline">\(x\)</span>,<span class="math inline">\(y\)</span>,<span class="math inline">\(z\)</span> (lower case letters) denote variables.</li>
+<li><span class="math inline">\(X\)</span>, <span class="math inline">\(Y\)</span>, <span class="math inline">\(Z\)</span> (upper case letters) denote <em>random</em> variables.</li>
+</ul>
+<p>In contrast to events, where we usually used letters toward the start of the alphabet, (random) variables are typically denoted by letters from the end of the alphabet.</p>
+<ul>
+<li><span class="math inline">\(\{X=x\}\)</span> denotes the event that the random variable <span class="math inline">\(X\)</span> equals <span class="math inline">\(x\)</span>.</li>
+<li><span class="math inline">\(P(X=x)\)</span> denotes the probability that the random variable <span class="math inline">\(X\)</span> equals <span class="math inline">\(x\)</span>.</li>
+</ul>
+<p>Recall: a probability distribution is a list of all possible values and their corresponding probabilities. (See Section 3.3 for a refresher.) A <strong>probability histogram</strong> is a histogram where the heights of the bars correspond to the probability of each value. (This is very similar to a relative frequency histogram!) For discrete random variables, each “bin” is one of the listed values.</p>
+<blockquote>
+<p><em>Example</em>:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Number of Siblings, <span class="math inline">\(x\)</span></th>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Probability</strong>, <span class="math inline">\(P(X=x)\)</span></td>
+<td align="center">0.200</td>
+<td align="center">0.425</td>
+<td align="center">0.275</td>
+<td align="center">0.075</td>
+<td align="center">0.025</td>
+</tr>
+</tbody>
+</table>
+<p>(Assume for the sake of the example that no one has more than 4 siblings.)</p>
+</blockquote>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+<p>Interpretation: in a large number of independent observations of a random variable <span class="math inline">\(X\)</span>, the proportion of times each possible value occurs will approximate the probability distribution of <span class="math inline">\(X\)</span>.</p>
+<div id="the-mean-and-standard-deviation" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> The Mean and Standard Deviation<a href="random-variables.html#the-mean-and-standard-deviation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<center>
+<font size='4'><b>Mean of a Discrete Random Variable</b></font>
+</center>
+<p>The mean of a discrete random variable <span class="math inline">\(X\)</span> is denoted <span class="math inline">\(\mu_X\)</span>. If it’s clear which random variable we’re talking about, we can drop the subscript and write <span class="math inline">\(\mu\)</span>.
+<span class="math display">\[
+  \mu_X = \Sigma xP(X=x)
+\]</span>
+where <span class="math inline">\(\Sigma\)</span> denotes “the sum over all values of <span class="math inline">\(x\)</span>”: <span class="math display">\[\Sigma xP(X=x) = x_1P(X=x_1) + x_2P(X=x_2) + \dots + x_nP(X=x_n).\]</span></p>
+<p>The mean of a random variable is also called the <strong>expected value</strong> or <strong>expectation</strong>. Recall that measures of center are meant to identify the most common or most likely, thus the value we can <em>expect</em> to see (most often).</p>
+<blockquote>
+<p><em>Example</em>: for the Siblings distribution, <span class="math display">\[\mu = 0(0.200)+1(0.425)+2(0.275)+3(0.075)+4(0.025)=1.3\]</span>
+Make sure you understand how we used the formula for <span class="math inline">\(\mu\)</span> and the probability distribution to come up with this number.</p>
+</blockquote>
+<p>Interpretation: in a large number of independent observations of a random variable <span class="math inline">\(X\)</span>, the mean of those observations will approximately equal <span class="math inline">\(\mu\)</span>.</p>
+<p>The larger the number of observations, the closer their average tends to be to <span class="math inline">\(\mu\)</span>. This is known as the <strong>law of large numbers</strong>.</p>
+<blockquote>
+<p><em>Example</em>: Suppose I took a random sample of 10 people and asked how many siblings they have. <span class="math display">\[2,2,2,2,1,0,3,1,2,0\]</span> In my random sample of 10, <span class="math inline">\(\bar{x}=2\)</span>, which is a reasonable estimate but not that close to the true mean <span class="math inline">\(\mu=1.3\)</span>.</p>
+<ul>
+<li>A random sample of 30 gave me a mean of <span class="math inline">\(\bar{x}=1.53\)</span>.</li>
+<li>A random sample of 100 gave me a mean of <span class="math inline">\(\bar{x}=1.47\)</span>.</li>
+<li>A random sample of 1000 gave me a mean of <span class="math inline">\(\bar{x}=1.307\)</span>.</li>
+</ul>
+</blockquote>
+<p>We use concepts related to the law of large numbers as a foundation for statistical inference, but note that - although very large samples are nice to have - it’s not necessary to take enormous samples all the time. Often, we can come to interesting conclusions with fewer than 30 observations!</p>
+<center>
+<font size='4'><b>Standard Deviation of a Discrete Random Variable</b></font>
+</center>
+<p>The variance of a discrete random variable <span class="math inline">\(X\)</span> is denoted <span class="math inline">\(\sigma_X^2\)</span> (or <span class="math inline">\(\sigma^2\)</span> if it’s clear which variable we’re talking about).
+<span class="math display">\[ \sigma_X^2 = \Sigma[(x-\mu_X)^2P(X=x)]\]</span>
+OR
+<span class="math display">\[ \sigma_X^2 = \Sigma[x^2P(X=x)]-\mu_X^2\]</span>
+These formulas are <em>exactly</em> equivalent and you may use whichever you wish, but note that the second may be a little easier to work with.</p>
+<p>As before, the standard deviation is the square root of the variance: <span class="math display">\[\sigma = \sqrt{\sigma^2}\]</span></p>
+<blockquote>
+<p><em>Example</em>: Calculate the standard deviation of the Siblings variable.</p>
+<p>In general, a table is the best way to keep track of a variance calculation:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="center"><span class="math inline">\(P(X=x)\)</span></th>
+<th align="center"><span class="math inline">\(xP(X=x)\)</span></th>
+<th align="center"><span class="math inline">\(x^2\)</span></th>
+<th align="center"><span class="math inline">\(x^2P(X=x)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">0.200</td>
+<td align="center">0</td>
+<td align="center">0</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">0.425</td>
+<td align="center">0.425</td>
+<td align="center">1</td>
+<td align="center">0.425</td>
+</tr>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center">0.275</td>
+<td align="center">0.550</td>
+<td align="center">4</td>
+<td align="center">1.100</td>
+</tr>
+<tr class="even">
+<td align="center">3</td>
+<td align="center">0.075</td>
+<td align="center">0.225</td>
+<td align="center">9</td>
+<td align="center">0.675</td>
+</tr>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">0.025</td>
+<td align="center">0.100</td>
+<td align="center">16</td>
+<td align="center">0.400</td>
+</tr>
+<tr class="even">
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">\(\mu\)</span> = 1.3</td>
+<td align="center"></td>
+<td align="center">Total = 2.6</td>
+</tr>
+</tbody>
+</table>
+<p>Then the variance is <span class="math display">\[\sigma^2 = 2.6 - 1.3^2 = 0.9\]</span> and the standard deviation is <span class="math display">\[\sigma = \sqrt{0.9} = 0.9539.\]</span></p>
+</blockquote>
+</div>
+</div>
+<div id="the-binomial-distribution" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> The Binomial Distribution<a href="random-variables.html#the-binomial-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Think back to replication in an experiment. Each replication is what we call a <strong>trial</strong>. We will consider a setting where each trial has two possible outcomes.</p>
+<blockquote>
+<p>For example, suppose you want to know if a coin is fair (both sides equally likely). You might flip the coin 100 times (thus running 100 trials). Each trial is a flip of the coin with two possible outcomes: heads or tails.</p>
+</blockquote>
+<p>The product of the first <span class="math inline">\(k\)</span> positive integers <span class="math inline">\((1, 2, 3, \dots)\)</span> is called <strong>k-factorial</strong>, denoted <span class="math inline">\(k!\)</span>: <span class="math display">\[k! = k \times (k-1) \times\dots\times 3 \times 2 \times 1\]</span> We define <span class="math inline">\(0!=1\)</span>.</p>
+<blockquote>
+<p><em>Example</em>: <span class="math inline">\(5! = 5 \times 4 \times 3 \times 2 \times 1 = 120\)</span></p>
+</blockquote>
+<p>If <span class="math inline">\(n\)</span> is a positive integer <span class="math inline">\((1, 2, 3, \dots)\)</span> and <span class="math inline">\(x\)</span> is a nonnegative integer <span class="math inline">\((0, 1, 2, \dots)\)</span> with <span class="math inline">\(x \le n\)</span>, the <strong>binomial coefficient</strong> is <span class="math display">\[\binom{n}{x} = \frac{n!}{x!(n-x)!}\]</span></p>
+<blockquote>
+<p><em>Example</em>: <span class="math display">\[\binom{5}{2} = \frac{5!}{2!(5-2)!} = \frac{5 \times 4 \times 3 \times 2 \times 1}{(2 \times 1)(3 \times 2 \times 1)}\]</span></p>
+</blockquote>
+<p>Sometimes, we may want to simplify a binomial coefficient <em>before</em> taking all of the factorials. Why? Well, <span class="math display">\[20! = 2432902008176640000\]</span> Most calculators will not print this number. Instead, you’ll get an error or a rounded version printed using scientific notation. Neither will help you accurately calculate the binomial coefficient.</p>
+<blockquote>
+<p><em>Example</em>: <span class="math display">\[\binom{20}{17} = \frac{20\times 19\times 18\times 17\times 16\times \dots \times 3\times 2\times 1}{(17\times 16\times \dots \times 3\times 2\times 1)(3\times 2\times 1)}\]</span> but notice that I can rewrite <span class="math inline">\(20!\)</span> as <span class="math inline">\(20\times 19\times 18\times 17!\)</span>, so <span class="math display">\[\binom{20}{17} = \frac{20\times 19\times 18\times 17!}{17!(3\times 2\times 1)} = \frac{20\times 19\times 18}{3\times 2\times 1} = \frac{6840}{6} = 1140\]</span></p>
+</blockquote>
+<p><strong>Bernoulli trials</strong> are repeated trials of an experiment where:</p>
+<ol style="list-style-type: decimal">
+<li>Each trial has two possible outcomes: success and failure.</li>
+<li>Trials are independent.</li>
+<li>The probability of success (the <strong>success probability</strong>) <span class="math inline">\(p\)</span> remains the same from one trial to the next: <span class="math display">\[P(X=\text{success})=p\]</span></li>
+</ol>
+<p>The <strong>binomial distribution</strong> is the probability distribution for the number of successes in a sequence of Bernoulli trials.</p>
+<p>Fact: in <span class="math inline">\(n\)</span> Bernoulli trials, the number of outcomes that contain exactly <span class="math inline">\(x\)</span> successes equals the binomial coefficient <span class="math inline">\(\binom{n}{x}\)</span>.</p>
+<center>
+<font size='4'><b>Binomial Probability Formula</b></font>
+</center>
+<p>Let <span class="math inline">\(x\)</span> denote the total number of successes in <span class="math inline">\(n\)</span> Bernoulli trials with success probability <span class="math inline">\(p\)</span>. The probability distribution of the random variable <span class="math inline">\(X\)</span> is given by <span class="math display">\[P(X=x) = \binom{n}{x}p^x(1-p)^{n-x} \quad\quad x = 0,1,2,\dots,n\]</span> The random variable <span class="math inline">\(X\)</span> is called a <strong>binomial random variable</strong> and is said to have the <strong>binomial distribution</strong>. Because <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span> fully define this distribution, they are called the distribution’s <strong>parameters</strong>.</p>
+<p>To find a binomial probability formula:</p>
+<ol>
+<li>
+Check assumptions.
+</li>
+<ol type="a">
+<li>
+Exactly <span class="math inline">\(n\)</span> trials to be performed.
+</li>
+<li>
+Two possible outcomes for each trial.
+</li>
+<li>
+Trials are independent (each trial does not impact the result of the next)
+</li>
+<li>
+Success probability <span class="math inline">\(p\)</span> remains the same from trial to trial.
+</li>
+</ol>
+<li>
+Identify a “success”. Generally, this is whichever of the two possible outcomes we are most interested in.
+</li>
+<li>
+Determine the success probability <span class="math inline">\(p\)</span>.
+</li>
+<li>
+Determine <span class="math inline">\(n\)</span>, the number of trials.
+</li>
+<li>
+Plug <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span> into the binomial distribution formula.
+</li>
+</ol>
+<p>We can also use the binomial probability formula to calculate probabilities like <span class="math inline">\(P(X\le x)\)</span>. Notice that we can rewrite this using concepts from the previous chapter <span class="math display">\[P(X \le k) = P(X=k \text{ or } X=k-1 \text{ or } \dots  \text{ or } X=2 \text{ or } X=1  \text{ or } X=0)\]</span> Since <span class="math inline">\(X\)</span> is a discrete random variable, each possible value is <em>disjoint</em>. We can use this! <span class="math display">\[P(X \le k) = P(X=k) + P(X=k-1) + \dots + P(X=2) + P(X=1) + P(X=0)\]</span></p>
+<blockquote>
+<p><em>Example</em>: <span class="math inline">\(P(X \le 3) = P(X=3)+P(X=2)+P(X=1)+P(X=0)\)</span></p>
+</blockquote>
+<p>We can also extend this concept to work with probabilities like <span class="math inline">\(P(a &lt; X \le b)\)</span>.</p>
+<blockquote>
+<p><em>Example</em>: <span class="math inline">\(P(2 &lt; X \le 5)\)</span></p>
+<p>First, notice that if <span class="math inline">\(2 &lt; X \le 5\)</span>, then <span class="math inline">\(X\)</span> can be 3, 4, or 5: <span class="math display">\[P(2 &lt; X \le 5) = P(X=3)+P(X=4)+P(X=5)\]</span></p>
+</blockquote>
+<blockquote>
+<p>Note: if going from <span class="math inline">\(2 &lt; X \le 5\)</span> to “<span class="math inline">\(X\)</span> can be 3, 4, or 5” doesn’t make sense to you, start by writing out the sample space. Suppose <span class="math inline">\(n=10\)</span>. Then the sample space for the binomial distribution is <span class="math display">\[S = \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}\]</span> Then I can check any number in this sample space by plugging it in for <span class="math inline">\(X\)</span>. So for 1, I can check <span class="math inline">\(2 &lt; 1 \le 5\)</span>. Obviously this is not true, so we won’t include 1. Checking the number 2, I get <span class="math inline">\(2 &lt; 2 \le 5\)</span>. Since 2 &lt; 2 is NOT true, we don’t include 2. Etc.</p>
+</blockquote>
+<div id="mean-and-variance" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Mean and Variance<a href="random-variables.html#mean-and-variance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The shape of a binomial distribution is determined by the success probability:</p>
+<ul>
+<li>If <span class="math inline">\(p \approx 0.5\)</span>, the distribution is approximately symmetric.</li>
+<li>If <span class="math inline">\(p &lt; 0.5\)</span>, the distribution is right-skewed.</li>
+<li>If <span class="math inline">\(p &gt; 0.5\)</span>, the distribution is left-skewed.</li>
+</ul>
+<p>The mean of a binomial distribution is <span class="math inline">\(\mu = np\)</span>. The variance is <span class="math inline">\(\sigma^2 = np(1-p)\)</span>.</p>
+</div>
+<div id="binomial-probabilities-in-r" class="section level3 unnumbered hasAnchor">
+<h3>Binomial Probabilities in R<a href="random-variables.html#binomial-probabilities-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When it comes to calculating binomial probabilities, hand calculations can be cumbersome. Fortunately, this is another thing we can do in R!</p>
+<p>Approximately 66% of US adults take prescription medications. Find the probability that, in a sample of 100 adults, exactly 65 take prescription drugs.</p>
+<p>We want to find <span class="math inline">\(P(X = 65)\)</span> where <span class="math inline">\(X\)</span> has a binomial distribution with <span class="math inline">\(n=100\)</span> and <span class="math inline">\(p=0.66\)</span>. (Take a moment on your own to make sure you can convince yourself that this satisfies the conditions for a binomial setting and that you understand how we got here from the prompt above.)</p>
+<p>Instead of doing this by hand (the larger <span class="math inline">\(n\)</span> is, the more difficult this tends to get!), we will use the <code>dbinom</code> command in R. The <code>dbinom</code> command takes in the following information:</p>
+<ul>
+<li><code>x</code> the value <span class="math inline">\(x\)</span> takes on in the expression <span class="math inline">\(P(X=x)\)</span></li>
+<li><code>size</code> the value of <span class="math inline">\(n\)</span></li>
+<li><code>prob</code> the probability <span class="math inline">\(p\)</span></li>
+</ul>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="random-variables.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">65</span>, <span class="at">size =</span> <span class="dv">100</span>, <span class="at">prob =</span> <span class="fl">0.66</span>)</span></code></pre></div>
+<pre><code>## [1] 0.0815753</code></pre>
+<p>So without doing any hand calculations, I find that <span class="math inline">\(P(X=65) = 0.082\)</span>; the probability that exactly 65 of 100 randomly selected US adults take prescription medication is 0.082.</p>
+<p>Suppose now we want to find <span class="math inline">\(P(63 &lt; X &lt; 68)\)</span>. How can we manage that? We can figure out that this probability includes numbers between 63 and 68, but does not include 63 or 68. In fact, it is the numbers 64 through 67. SO we can break this up as <span class="math display">\[ P(63 &lt; X &lt; 68) = P(X=64) + P(X=65)+ P(X=66) + P(X=67) \]</span></p>
+<p>In R, we can get a sequence of whole numbers using the format <code>a:b</code>. For example</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="random-variables.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="dv">64</span><span class="sc">:</span><span class="dv">67</span></span></code></pre></div>
+<pre><code>## [1] 64 65 66 67</code></pre>
+<p>gives all whole numbers from 64 through 67.</p>
+<p>I can then put this directly into the <code>dbinom</code> command!</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="random-variables.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">64</span><span class="sc">:</span><span class="dv">67</span>, <span class="at">size =</span> <span class="dv">100</span>, <span class="at">prob =</span> <span class="fl">0.66</span>)</span></code></pre></div>
+<pre><code>## [1] 0.07587601 0.08157530 0.08397457 0.08272122</code></pre>
+<p>This produces each individual probability <span class="math inline">\(P(X=64)\)</span>, <span class="math inline">\(P(X=65)\)</span>, <span class="math inline">\(P(X=66)\)</span>, and <span class="math inline">\(P(X=67)\)</span>. To quickly add these up, I am going to use the <code>sum</code> command. Notice that I put the entire <code>dibnom</code> command <em>in the parentheses</em> of the <code>sum()</code>.</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="random-variables.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(</span>
+<span id="cb42-2"><a href="random-variables.html#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">64</span><span class="sc">:</span><span class="dv">67</span>, <span class="at">size =</span> <span class="dv">100</span>, <span class="at">prob =</span> <span class="fl">0.66</span>)</span>
+<span id="cb42-3"><a href="random-variables.html#cb42-3" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div>
+<pre><code>## [1] 0.3241471</code></pre>
+<p>And so <span class="math inline">\(P(63 &lt; X &lt; 68) = 0.324\)</span>; the probability that between 64 and 67 (inclusive) US adults in a sample of 100 take prescription medication is 0.324.</p>
+</div>
+</div>
+<div id="the-normal-distribution" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> The Normal Distribution<a href="random-variables.html#the-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If we can represent a discrete variable with a probability histogram, what can we do with a continuous variable?</p>
+<p>We represent the shape of a continuous variable using a <strong>density curve</strong>. This is like a histogram, but with a smooth curve:
+<img src="IntroStats_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
+<p>Properties:</p>
+<ol style="list-style-type: decimal">
+<li>The curve is always above the horizontal axis (because probabilities are always nonnegative).</li>
+<li>The total area under the curve equals 1.</li>
+</ol>
+<p>For a variable with a density curve, the proportion of all possible observations that lie within a specified range equals the corresponding area under the density curve.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<p>A <strong>normal curve</strong> is a special type of density curve that has a “bell-shaped” distribution. In fact, all of the density curves I’ve shown in this section have been normal curves! We say that a variable is <strong>normally distributed</strong> or has a <strong>normal distribution</strong> if its distribution has the shape of a normal curve.</p>
+<p>Why “normal”? Because it appears so often in practice! Lots of things are more common around the average and less common as you get farther from the average: height, amount of sleep people get each night, standardized test scores, etc. (In practice, these things aren’t <em>exactly</em> normally distributed… instead, they’re <strong>approximately normally distributed</strong> - and that’s ok.)</p>
+<p>Normal distributions…</p>
+<ul>
+<li>are fully determined by parameters mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span>.</li>
+<li>are symmetric and centered at <span class="math inline">\(\mu\)</span>.</li>
+<li>have spreads that depend on <span class="math inline">\(\sigma\)</span>.</li>
+</ul>
+<p>Pay close attention to the horizontal axis and how spread out the densities are in each of the following plots:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-48-1.png" width="672" /></p>
+<p>Notice that the bottom left plot comes to a sharper peak, while the bottom right has a gentler slope. This is what we mean by “spread”: the density on the bottom right is the most spread out.</p>
+<p>To check whether a variable is (approximately) normally distributed,</p>
+<ol style="list-style-type: decimal">
+<li>Check the histogram to see if it is symmetric and bell-shaped.</li>
+<li>Estimate the parameters: <span class="math inline">\(\mu\)</span> using <span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(\sigma\)</span> using <span class="math inline">\(s\)</span>.</li>
+</ol>
+<div id="the-standard-normal-distribution" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> The Standard Normal Distribution<a href="random-variables.html#the-standard-normal-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In order to make normal distributions easier to work with, we will <strong>standardize</strong> them. A <strong>standard normal distribution</strong> is a normal distribution with mean <span class="math inline">\(\mu=0\)</span> and standard deviation <span class="math inline">\(\sigma=1\)</span>. We standardize a variable using <span class="math display">\[z = \frac{x-\mu}{\sigma}.\]</span> This is also called a <strong>z-score</strong>. Standardizing using this formula will <em>always</em> result in a variable with mean 0 and standard deviation 1 (even if it’s not normal!). If <span class="math inline">\(X\)</span> is approximately normal, then the standardized variable <span class="math inline">\(Z\)</span> will have a standard normal distribution.</p>
+<p>Note: when we z-score a variable, we preserve the area under the curve properties! If <span class="math inline">\(X\)</span> is Normal<span class="math inline">\((\mu,\sigma)\)</span>, then <span class="math display">\[P(X &lt; c) = P\left(Z &lt; \frac{c - \mu}{\sigma}\right) = P(Z &lt; z).\]</span></p>
+<p>Because z-scores always result in variables with mean 0 and standard deviation 1, they are also very useful for comparing values which are originally on very different scales.</p>
+</div>
+</div>
+<div id="area-under-the-standard-normal-curve" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Area Under the Standard Normal Curve<a href="random-variables.html#area-under-the-standard-normal-curve" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Properties:</p>
+<ol style="list-style-type: decimal">
+<li>Total area under the curve is 1.</li>
+<li>The curve extends infinitely in both directions, never touching the horizontal axis.</li>
+<li>Symmetric about 0.</li>
+<li>Almost all of the area under the curve is between -3 and 3.</li>
+</ol>
+<p>We will think about area under the standard normal curve in terms of <strong>cumulative probabilities</strong> or probabilities of the form <span class="math inline">\(P(Z &lt; z)\)</span>.</p>
+<p>We will use the fact that the total area under the curve is 1 to find probabilities like <span class="math inline">\(P(Z &gt; c)\)</span>:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+<p>Using the graphic to help visualize, we can see that <span class="math display">\[1 = P(Z &lt; c) + P(Z &gt; c)\]</span> which we can then rewrite as
+<span class="math display">\[P(Z &gt; c) = 1-P(Z&lt;c).\]</span></p>
+<p>We can also use this concept to find <span class="math inline">\(P(a &lt; Z &lt; b)\)</span>.</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-50-1.png" width="672" /></p>
+<p>Notice that <span class="math display">\[1 = P(Z &lt; a) + P(a &lt; Z &lt; b) + P(Z &gt; b),\]</span> which we can rewrite as <span class="math display">\[P(a &lt; Z &lt; b) = 1 - P(Z &gt; b) - P(Z &lt; a)\]</span> and since we just found that <span class="math inline">\(P(Z &gt; b) = 1 - P(Z &lt; b)\)</span>, we can replace <span class="math inline">\(1 - P(Z &gt; b)\)</span> with <span class="math inline">\(P(Z &lt; b)\)</span>, and get <span class="math display">\[P(a &lt; Z &lt; b) = P(Z &lt; b) - P(Z &lt; a).\]</span></p>
+<center>
+<font size='4'><b>Key Cumulative Probability Concepts</b></font>
+</center>
+<ul>
+<li><span class="math inline">\(P(Z &gt; c) = 1 - P(Z &lt; c)\)</span></li>
+<li><span class="math inline">\(P(a &lt; Z &lt; b) = P(Z &lt; b) - P(Z &lt; a)\)</span></li>
+</ul>
+<p>A final note, because the normal distribution is symmetric, <span class="math inline">\(P(X &lt; \mu) = P(X &gt; \mu) = 0.5\)</span>. Notice this also implies that, when a distribution is symmetric (and unimodal), the mean and median are the same!</p>
+<p>Now that we can get all of our probabilities written as <em>cumulative</em> probabilities, we’re ready to use software to find the area under the curve!</p>
+<center>
+<font size='4'><b>Finding Area Under the Curve: Applets</b></font>
+</center>
+<p>One option for finding probabilities and z-scores associated with the normal curve is to use an online applet. The <a href="http://www.rossmanchance.com/applets/2021/normcalc/NormCalc.html" target="blank">Rossman and Chance Normal Probability Calculator</a> is my preferred applet. It’s relatively straightforward to use and would be difficult to demonstrate in these course notes! We will demonstrate this applet in class. I recommend you bookmark any websites you use to find probabilities!</p>
+<p>You can also find the area under a normal distribution using a Normal Distribution Table. These are outdated and not used anywhere but the statistics classroom. As a result, I do not teach them.</p>
+<div id="r-normal-distribution-probabilities" class="section level3 unnumbered hasAnchor">
+<h3>R: Normal Distribution Probabilities<a href="random-variables.html#r-normal-distribution-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Standard normal probabilities of the form <span class="math inline">\(P(Z &lt; z)\)</span> are found using the command ‘pnorm(z)’. To find <span class="math inline">\(P(Z&lt;1)\)</span>, I would type <code>pnorm(1)</code>:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="random-variables.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 0.8413447</code></pre>
+<p>so <span class="math inline">\(P(Z &lt; 1) = 0.841\)</span>.</p>
+<p>A quick note about R: R will print very large numbers and numbers close to 0 using <em>scientific notation</em>. However, R’s scientific notation may not look the way you’re used to! Check out the R output for <span class="math inline">\(P(Z &lt; -5)\)</span>:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="random-variables.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="sc">-</span><span class="dv">5</span>)</span></code></pre></div>
+<pre><code>## [1] 2.866516e-07</code></pre>
+<p>When you see <code>e-07</code>, that means <span class="math inline">\(\times10^{-7}\)</span>… so <span class="math inline">\(P(Z &lt; -5) = 2.8665 \times 10^{-7} \approx 0.00000029\)</span>.</p>
+</div>
+</div>
+<div id="working-with-normally-distributed-variables" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Working with Normally Distributed Variables<a href="random-variables.html#working-with-normally-distributed-variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="normal-distribution-probabilities" class="section level3 hasAnchor" number="4.6.1">
+<h3><span class="header-section-number">4.6.1</span> Normal Distribution Probabilities<a href="random-variables.html#normal-distribution-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Using z-scores and area under the standard normal curve, we can find probabilities for any normal distribution problem!</p>
+<center>
+<font size='4'><b>Determining Normal Distribution Probabilities</b></font>
+</center>
+<ol style="list-style-type: decimal">
+<li>Sketch the normal curve for the variable.</li>
+<li>Shade the region of interest and mark its delimiting x-value(s).</li>
+<li>Find the z-score(s) for the value(s).</li>
+<li>Use an applet (or the <code>pnorm</code> command in R) to find the associated area.</li>
+</ol>
+<blockquote>
+<p><em>Example</em>: Find the proportion of SAT-takers who score between 1150 and 1300. Assume that SAT scores are approximately normally distributed with mean <span class="math inline">\(\mu=1100\)</span> and standard deviation <span class="math inline">\(\sigma = 200\)</span>.</p>
+<p>First, let’s figure out what we want to calculate. Using area under the curve concepts, the proportion of test-takers who score <em>between</em> 1150 and 1300 will be <span class="math inline">\(P(1150 &lt; X &lt; 1300)\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Sketch:</li>
+</ol>
+</blockquote>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+<blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>Shade and label:</li>
+</ol>
+</blockquote>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
+<blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>Calculate z-scores: <span class="math display">\[x = 1150 \rightarrow z = \frac{1150-1100}{200} = 0.25\]</span> and <span class="math display">\[x=1300 \rightarrow z = \frac{1300-1100}{200} = 1.\]</span></li>
+<li>Use an applet to find <span class="math inline">\(P(Z &lt; 0.25) = 0.599\)</span> and <span class="math inline">\(P(Z &lt; 1) = 0.841\)</span> <em>or</em> use the <code>pnorm</code> command in R:</li>
+</ol>
+</blockquote>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="random-variables.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="fl">0.25</span>)</span></code></pre></div>
+<pre><code>## [1] 0.5987063</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="random-variables.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pnorm</span>(<span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] 0.8413447</code></pre>
+<blockquote>
+<p>Note that <span class="math display">\[P(1150 &lt; X &lt; 1300) = P\left(\frac{1150-1100}{200} &lt; Z &lt; \frac{1300-1100}{200}\right) = P(0.25 &lt; Z &lt; 1)\]</span> and, using cumulative probability concepts, <span class="math display">\[P(0.25 &lt; Z &lt; 1) = P(Z &lt; 1) - P(Z &lt; 0.25).\]</span> We found <span class="math inline">\(P(Z &lt; 0.25) \approx 0.5987\)</span> and <span class="math inline">\(P(Z &lt; 1) \approx 0.8413\)</span>, so <span class="math display">\[P(Z &lt; 1) - P(Z &lt; 0.25) \approx 0.8413 - 0.5987 = 0.2426.\]</span> That is, approximately 26.26% of test-takers score between 1150 and 1300 on the SAT.</p>
+</blockquote>
+</div>
+<div id="empirical-rule-for-variables" class="section level3 hasAnchor" number="4.6.2">
+<h3><span class="header-section-number">4.6.2</span> Empirical Rule for Variables<a href="random-variables.html#empirical-rule-for-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For any (approximately) normally distributed variable,</p>
+<ol style="list-style-type: decimal">
+<li>Approximately 68% of all possible observations lie within one standard deviation of the mean: <span class="math inline">\(\mu \pm \sigma.\)</span></li>
+<li>Approximately 95% of all possible observations lie within two standard deviations of the mean: <span class="math inline">\(\mu \pm 2\sigma.\)</span></li>
+<li>Approximately 99.7% of all possible observations lie within three standard deviations of the mean: <span class="math inline">\(\mu \pm 3\sigma.\)</span></li>
+</ol>
+<p>Given some data, you can check if approximately 68% of the data falls within <span class="math inline">\(\bar{x}\pm s\)</span>, 95% within <span class="math inline">\(\bar{x}\pm 2s\)</span>, and 99.7% within <span class="math inline">\(\bar{x}\pm 3s\)</span> to examine whether the data follow the empirical rule.</p>
+<p>Note that a z-score tells us how many standard deviations an observation is from the mean. A positive z-score <span class="math inline">\(z&gt;0\)</span> is <em>above</em> the mean; a negative z-score <span class="math inline">\(z&lt;0\)</span> is <em>below</em> the mean.</p>
+<blockquote>
+<p><em>Example</em>: <span class="math inline">\(z=-0.23\)</span> is 0.23 standard deviations below the mean.</p>
+</blockquote>
+</div>
+<div id="percentiles" class="section level3 hasAnchor" number="4.6.3">
+<h3><span class="header-section-number">4.6.3</span> Percentiles<a href="random-variables.html#percentiles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We can also find the <em>observation</em> associated with a percentage/proportion.</p>
+<p>The <span class="math inline">\(w\)</span>th <strong>percentile</strong> <span class="math inline">\(p_w\)</span> is the observation that is higher than w% of all observations <span class="math display">\[P(X &lt; p_w) = w\]</span></p>
+<center>
+<font size='4'><b>Finding a Percentile</b></font>
+</center>
+<ol style="list-style-type: decimal">
+<li>Sketch the normal curve for the variable.</li>
+<li>Shade the region of interest and label the area.</li>
+<li>Use the applet (or R - see below) to determine the z-score for the area.</li>
+<li>Find the x-value using <span class="math inline">\(z\)</span>, <span class="math inline">\(\mu\)</span>, and <span class="math inline">\(\sigma\)</span>.</li>
+</ol>
+<p>Note that if <span class="math inline">\(z = \frac{x-\mu}{\sigma}\)</span>, then <span class="math inline">\(x = \mu + z\sigma\)</span>.</p>
+<blockquote>
+<p><em>Example</em>: Find the 90th percentile for SAT scores.</p>
+<p>From the previous example, we know that SAT scores are approximately Normal(<span class="math inline">\(\mu=1100\)</span>, <span class="math inline">\(\sigma=200\)</span>).</p>
+<ol style="list-style-type: decimal">
+<li>Sketch the normal curve.</li>
+</ol>
+</blockquote>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
+<blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>Shade the region of interest and label the area.</li>
+</ol>
+</blockquote>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
+<blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>Use the applet to determine the z-score for the area. This results in <span class="math inline">\(z = 1.28\)</span>.</li>
+<li>Find the x-value using <span class="math inline">\(z\approx 1.28\)</span>, <span class="math inline">\(\mu=1100\)</span>, and <span class="math inline">\(\sigma=200\)</span>: <span class="math display">\[x = 1100 + 1.28(200) = 1356\]</span> so 90% of SAT test-takers score below 1356.</li>
+</ol>
+</blockquote>
+<div id="r-normal-distribution-percentiles" class="section level4 unnumbered hasAnchor">
+<h4>R: Normal Distribution Percentiles<a href="random-variables.html#r-normal-distribution-percentiles" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Instead of using an applet, we can use the <code>qnorm</code> command in R to find the z-score corresponding to a percentile. In this case, we simply enter the percentile of interest <em>expressed as a proportion</em> in the <code>qnorm</code> command. That is, to find the z score for the 90th percentile, we would enter</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="random-variables.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qnorm</span>(<span class="fl">0.9</span>)</span></code></pre></div>
+<pre><code>## [1] 1.281552</code></pre>
+<p>which gives the same result as the applet in the example above. Then, we can use R as a calculator to find the value of <span class="math inline">\(x\)</span> (recall <span class="math inline">\(\mu=1100\)</span> and <span class="math inline">\(\sigma=200\)</span>)</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="random-variables.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1100</span> <span class="sc">+</span> <span class="fl">1.281552</span><span class="sc">*</span><span class="dv">200</span></span></code></pre></div>
+<pre><code>## [1] 1356.31</code></pre>
+<p>This gives us the same result as before, that 90% of SAT test-takers score below 1356.</p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="probability-concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introduction-to-confidence-intervals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IntroStats.pdf", "IntroStats.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

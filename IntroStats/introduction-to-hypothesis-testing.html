@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Introduction to Hypothesis Testing | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 6 Introduction to Hypothesis Testing | Introduction to Statistics." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Introduction to Hypothesis Testing | Introduction to Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 6 Introduction to Hypothesis Testing | Introduction to Statistics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Introduction to Hypothesis Testing | Introduction to Statistics" />
+  
+  <meta name="twitter:description" content="Chapter 6 Introduction to Hypothesis Testing | Introduction to Statistics." />
+  
+
+<meta name="author" content="Dr. Lauren Cappiello" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-confidence-intervals.html"/>
+<link rel="next" href="inference-for-a-proportion.html"/>
+<script src="libs/header-attrs-2.20.1/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Statistics</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#welcome-to-statistics" id="toc-welcome-to-statistics">Welcome to Statistics!</a>
+<ul>
+<li><a href="index.html#course-learning-outcomes" id="toc-course-learning-outcomes">Course Learning Outcomes</a></li>
+<li><a href="index.html#for-the-instructor" id="toc-for-the-instructor">For the Instructor</a></li>
+<li><a href="index.html#for-the-student" id="toc-for-the-student">For the Student</a>
+<ul>
+<li><a href="index.html#r-programming" id="toc-r-programming">R Programming</a></li>
+</ul></li>
+</ul></li>
+<li><a href="introduction-to-data.html#introduction-to-data" id="toc-introduction-to-data"><span class="toc-section-number">1</span> Introduction to Data</a>
+<ul>
+<li><a href="introduction-to-data.html#chapter-overview" id="toc-chapter-overview"><span class="toc-section-number">1.1</span> Chapter Overview</a></li>
+<li><a href="introduction-to-data.html#statistics-terminology" id="toc-statistics-terminology"><span class="toc-section-number">1.2</span> Statistics Terminology</a>
+<ul>
+<li><a href="introduction-to-data.html#r-entering-data" id="toc-r-entering-data">R: Entering Data</a></li>
+<li><a href="introduction-to-data.html#section-exercises" id="toc-section-exercises">Section Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-data.html#sampling-and-design" id="toc-sampling-and-design"><span class="toc-section-number">1.3</span> Sampling and Design</a>
+<ul>
+<li><a href="introduction-to-data.html#statistical-sampling" id="toc-statistical-sampling"><span class="toc-section-number">1.3.1</span> Statistical Sampling</a></li>
+<li><a href="introduction-to-data.html#experimental-design" id="toc-experimental-design"><span class="toc-section-number">1.3.2</span> Experimental Design</a></li>
+<li><a href="introduction-to-data.html#r-random-number-generation" id="toc-r-random-number-generation">R: Random Number Generation</a></li>
+<li><a href="introduction-to-data.html#section-exercises-1" id="toc-section-exercises-1">Section Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-data.html#frequency-distributions" id="toc-frequency-distributions"><span class="toc-section-number">1.4</span> Frequency Distributions</a>
+<ul>
+<li><a href="introduction-to-data.html#qualitative-variables" id="toc-qualitative-variables"><span class="toc-section-number">1.4.1</span> Qualitative Variables</a></li>
+<li><a href="introduction-to-data.html#quantitative-variables" id="toc-quantitative-variables"><span class="toc-section-number">1.4.2</span> Quantitative Variables</a></li>
+<li><a href="introduction-to-data.html#r-histograms" id="toc-r-histograms">R: Histograms</a></li>
+</ul></li>
+</ul></li>
+<li><a href="descriptive-measures.html#descriptive-measures" id="toc-descriptive-measures"><span class="toc-section-number">2</span> Descriptive Measures</a>
+<ul>
+<li><a href="descriptive-measures.html#chapter-overview-1" id="toc-chapter-overview-1"><span class="toc-section-number">2.1</span> Chapter Overview</a></li>
+<li><a href="descriptive-measures.html#measures-of-central-tendency" id="toc-measures-of-central-tendency"><span class="toc-section-number">2.2</span> Measures of Central Tendency</a>
+<ul>
+<li><a href="descriptive-measures.html#r-finding-measures-of-center" id="toc-r-finding-measures-of-center">R: Finding Measures of Center</a></li>
+</ul></li>
+<li><a href="descriptive-measures.html#measures-of-variability" id="toc-measures-of-variability"><span class="toc-section-number">2.3</span> Measures of Variability</a>
+<ul>
+<li><a href="descriptive-measures.html#r-finding-measures-of-variability" id="toc-r-finding-measures-of-variability">R: Finding Measures of Variability</a></li>
+</ul></li>
+<li><a href="descriptive-measures.html#measures-of-position" id="toc-measures-of-position"><span class="toc-section-number">2.4</span> Measures of Position</a>
+<ul>
+<li><a href="descriptive-measures.html#box-plots" id="toc-box-plots"><span class="toc-section-number">2.4.1</span> Box Plots</a></li>
+<li><a href="descriptive-measures.html#r-measures-of-position" id="toc-r-measures-of-position">R: Measures of Position</a></li>
+<li><a href="descriptive-measures.html#r-box-plots" id="toc-r-box-plots">R: Box Plots</a></li>
+</ul></li>
+<li><a href="descriptive-measures.html#descriptive-measures-for-populations" id="toc-descriptive-measures-for-populations"><span class="toc-section-number">2.5</span> Descriptive Measures for Populations</a></li>
+</ul></li>
+<li><a href="probability-concepts.html#probability-concepts" id="toc-probability-concepts"><span class="toc-section-number">3</span> Probability Concepts</a>
+<ul>
+<li><a href="probability-concepts.html#chapter-overview-2" id="toc-chapter-overview-2"><span class="toc-section-number">3.1</span> Chapter Overview</a></li>
+<li><a href="probability-concepts.html#experiments-sample-spaces-and-events" id="toc-experiments-sample-spaces-and-events"><span class="toc-section-number">3.2</span> Experiments, Sample Spaces, and Events</a></li>
+<li><a href="probability-concepts.html#probability-distributions" id="toc-probability-distributions"><span class="toc-section-number">3.3</span> Probability Distributions</a>
+<ul>
+<li><a href="probability-concepts.html#venn-diagrams" id="toc-venn-diagrams"><span class="toc-section-number">3.3.1</span> Venn Diagrams</a></li>
+<li><a href="probability-concepts.html#probability-axioms" id="toc-probability-axioms"><span class="toc-section-number">3.3.2</span> Probability Axioms</a></li>
+<li><a href="probability-concepts.html#exercises" id="toc-exercises">Exercises</a></li>
+</ul></li>
+<li><a href="probability-concepts.html#rules-of-probability" id="toc-rules-of-probability"><span class="toc-section-number">3.4</span> Rules of Probability</a>
+<ul>
+<li><a href="probability-concepts.html#addition-rules" id="toc-addition-rules"><span class="toc-section-number">3.4.1</span> Addition Rules</a></li>
+<li><a href="probability-concepts.html#complements" id="toc-complements"><span class="toc-section-number">3.4.2</span> Complements</a></li>
+</ul></li>
+<li><a href="probability-concepts.html#conditional-probability" id="toc-conditional-probability"><span class="toc-section-number">3.5</span> Conditional Probability</a>
+<ul>
+<li><a href="probability-concepts.html#multiplication-rules" id="toc-multiplication-rules"><span class="toc-section-number">3.5.1</span> Multiplication Rules</a></li>
+</ul></li>
+</ul></li>
+<li><a href="random-variables.html#random-variables" id="toc-random-variables"><span class="toc-section-number">4</span> Random Variables</a>
+<ul>
+<li><a href="random-variables.html#chapter-overview-3" id="toc-chapter-overview-3"><span class="toc-section-number">4.1</span> Chapter Overview</a></li>
+<li><a href="random-variables.html#discrete-random-variables" id="toc-discrete-random-variables"><span class="toc-section-number">4.2</span> Discrete Random Variables</a>
+<ul>
+<li><a href="random-variables.html#the-mean-and-standard-deviation" id="toc-the-mean-and-standard-deviation"><span class="toc-section-number">4.2.1</span> The Mean and Standard Deviation</a></li>
+</ul></li>
+<li><a href="random-variables.html#the-binomial-distribution" id="toc-the-binomial-distribution"><span class="toc-section-number">4.3</span> The Binomial Distribution</a>
+<ul>
+<li><a href="random-variables.html#mean-and-variance" id="toc-mean-and-variance"><span class="toc-section-number">4.3.1</span> Mean and Variance</a></li>
+<li><a href="random-variables.html#binomial-probabilities-in-r" id="toc-binomial-probabilities-in-r">Binomial Probabilities in R</a></li>
+</ul></li>
+<li><a href="random-variables.html#the-normal-distribution" id="toc-the-normal-distribution"><span class="toc-section-number">4.4</span> The Normal Distribution</a>
+<ul>
+<li><a href="random-variables.html#the-standard-normal-distribution" id="toc-the-standard-normal-distribution"><span class="toc-section-number">4.4.1</span> The Standard Normal Distribution</a></li>
+</ul></li>
+<li><a href="random-variables.html#area-under-the-standard-normal-curve" id="toc-area-under-the-standard-normal-curve"><span class="toc-section-number">4.5</span> Area Under the Standard Normal Curve</a>
+<ul>
+<li><a href="random-variables.html#r-normal-distribution-probabilities" id="toc-r-normal-distribution-probabilities">R: Normal Distribution Probabilities</a></li>
+</ul></li>
+<li><a href="random-variables.html#working-with-normally-distributed-variables" id="toc-working-with-normally-distributed-variables"><span class="toc-section-number">4.6</span> Working with Normally Distributed Variables</a>
+<ul>
+<li><a href="random-variables.html#normal-distribution-probabilities" id="toc-normal-distribution-probabilities"><span class="toc-section-number">4.6.1</span> Normal Distribution Probabilities</a></li>
+<li><a href="random-variables.html#empirical-rule-for-variables" id="toc-empirical-rule-for-variables"><span class="toc-section-number">4.6.2</span> Empirical Rule for Variables</a></li>
+<li><a href="random-variables.html#percentiles" id="toc-percentiles"><span class="toc-section-number">4.6.3</span> Percentiles</a></li>
+</ul></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#introduction-to-confidence-intervals" id="toc-introduction-to-confidence-intervals"><span class="toc-section-number">5</span> Introduction to Confidence Intervals</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#chapter-overview-4" id="toc-chapter-overview-4"><span class="toc-section-number">5.1</span> Chapter Overview</a></li>
+<li><a href="introduction-to-confidence-intervals.html#sampling-distributions" id="toc-sampling-distributions"><span class="toc-section-number">5.2</span> Sampling Distributions</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#sampling-error" id="toc-sampling-error"><span class="toc-section-number">5.2.1</span> Sampling Error</a></li>
+<li><a href="introduction-to-confidence-intervals.html#the-central-limit-theorem" id="toc-the-central-limit-theorem"><span class="toc-section-number">5.2.2</span> The Central Limit Theorem</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#developing-confidence-intervals" id="toc-developing-confidence-intervals"><span class="toc-section-number">5.3</span> Developing Confidence Intervals</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#interpreting-a-confidence-interval" id="toc-interpreting-a-confidence-interval"><span class="toc-section-number">5.3.1</span> Interpreting a Confidence Interval</a></li>
+<li><a href="introduction-to-confidence-intervals.html#exercises-1" id="toc-exercises-1"><span class="toc-section-number">5.3.2</span> Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#other-levels-of-confidence" id="toc-other-levels-of-confidence"><span class="toc-section-number">5.4</span> Other Levels of Confidence</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#r-finding-critical-values" id="toc-r-finding-critical-values">R: Finding Critical Values</a></li>
+<li><a href="introduction-to-confidence-intervals.html#breaking-down-a-confidence-interval" id="toc-breaking-down-a-confidence-interval"><span class="toc-section-number">5.4.1</span> Breaking Down a Confidence Interval</a></li>
+<li><a href="introduction-to-confidence-intervals.html#confidence-level-precision-and-sample-size" id="toc-confidence-level-precision-and-sample-size"><span class="toc-section-number">5.4.2</span> Confidence Level, Precision, and Sample Size</a></li>
+<li><a href="introduction-to-confidence-intervals.html#exercises-2" id="toc-exercises-2"><span class="toc-section-number">5.4.3</span> Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#confidence-intervals-for-a-mean" id="toc-confidence-intervals-for-a-mean"><span class="toc-section-number">5.5</span> Confidence Intervals for a Mean</a>
+<ul>
+<li><a href="introduction-to-confidence-intervals.html#the-t-distribution" id="toc-the-t-distribution"><span class="toc-section-number">5.5.1</span> The T-Distribution</a></li>
+<li><a href="introduction-to-confidence-intervals.html#r-t-critical-values" id="toc-r-t-critical-values">R: T Critical Values</a></li>
+</ul></li>
+<li><a href="introduction-to-confidence-intervals.html#r-confidence-intevals-for-a-mean" id="toc-r-confidence-intevals-for-a-mean">R: Confidence Intevals for a Mean</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#introduction-to-hypothesis-testing" id="toc-introduction-to-hypothesis-testing"><span class="toc-section-number">6</span> Introduction to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#chapter-overview-5" id="toc-chapter-overview-5"><span class="toc-section-number">6.1</span> Chapter Overview</a></li>
+<li><a href="introduction-to-hypothesis-testing.html#logic-of-hypothesis-testing" id="toc-logic-of-hypothesis-testing"><span class="toc-section-number">6.2</span> Logic of Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#decision-errors" id="toc-decision-errors"><span class="toc-section-number">6.2.1</span> Decision Errors</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#confidence-interval-approach-to-hypothesis-testing" id="toc-confidence-interval-approach-to-hypothesis-testing"><span class="toc-section-number">6.3</span> Confidence Interval Approach to Hypothesis Testing</a></li>
+<li><a href="introduction-to-hypothesis-testing.html#critical-value-approach-to-hypothesis-testing" id="toc-critical-value-approach-to-hypothesis-testing"><span class="toc-section-number">6.4</span> Critical Value Approach to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#test-statistics" id="toc-test-statistics"><span class="toc-section-number">6.4.1</span> Test statistics</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#p-value-approach-to-hypothesis-testing" id="toc-p-value-approach-to-hypothesis-testing"><span class="toc-section-number">6.5</span> P-Value Approach to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#p-values" id="toc-p-values"><span class="toc-section-number">6.5.1</span> P-Values</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#r-hypothesis-tests-for-a-mean" id="toc-r-hypothesis-tests-for-a-mean">R: Hypothesis Tests for a Mean</a></li>
+</ul></li>
+<li><a href="inference-for-a-proportion.html#inference-for-a-proportion" id="toc-inference-for-a-proportion"><span class="toc-section-number">7</span> Inference for a Proportion</a>
+<ul>
+<li><a href="inference-for-a-proportion.html#chapter-overview-6" id="toc-chapter-overview-6"><span class="toc-section-number">7.1</span> Chapter Overview</a></li>
+<li><a href="inference-for-a-proportion.html#confidence-intervals-for-a-proportion" id="toc-confidence-intervals-for-a-proportion"><span class="toc-section-number">7.2</span> Confidence Intervals for a Proportion</a></li>
+<li><a href="inference-for-a-proportion.html#hypothesis-tests-for-a-proportion" id="toc-hypothesis-tests-for-a-proportion"><span class="toc-section-number">7.3</span> Hypothesis Tests for a Proportion</a>
+<ul>
+<li><a href="inference-for-a-proportion.html#confidence-interval-approach" id="toc-confidence-interval-approach"><span class="toc-section-number">7.3.1</span> Confidence Interval Approach</a></li>
+<li><a href="inference-for-a-proportion.html#critical-value-approach" id="toc-critical-value-approach"><span class="toc-section-number">7.3.2</span> Critical Value Approach</a></li>
+<li><a href="inference-for-a-proportion.html#p-value-approach" id="toc-p-value-approach"><span class="toc-section-number">7.3.3</span> P-Value Approach</a></li>
+</ul></li>
+<li><a href="inference-for-a-proportion.html#r-hypothesis-tests-for-a-proportion" id="toc-r-hypothesis-tests-for-a-proportion">R: Hypothesis Tests for a Proportion</a></li>
+</ul></li>
+<li><a href="inference-comparing-parameters.html#inference-comparing-parameters" id="toc-inference-comparing-parameters"><span class="toc-section-number">8</span> Inference: Comparing Parameters</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#chapter-overview-7" id="toc-chapter-overview-7"><span class="toc-section-number">8.1</span> Chapter Overview</a></li>
+<li><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-proportions" id="toc-hypothesis-tests-for-two-proportions"><span class="toc-section-number">8.2</span> Hypothesis Tests for Two Proportions</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#confidence-intervals-for-two-proportions" id="toc-confidence-intervals-for-two-proportions"><span class="toc-section-number">8.2.1</span> Confidence Intervals for Two Proportions</a></li>
+<li><a href="inference-comparing-parameters.html#critical-values-test-statistics-and-p-values" id="toc-critical-values-test-statistics-and-p-values"><span class="toc-section-number">8.2.2</span> Critical Values, Test Statistics, and P-Values</a></li>
+<li><a href="inference-comparing-parameters.html#r-hypothesis-tests-for-two-proportions" id="toc-r-hypothesis-tests-for-two-proportions">R: Hypothesis Tests for Two Proportions</a></li>
+</ul></li>
+<li><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-means" id="toc-hypothesis-tests-for-two-means"><span class="toc-section-number">8.3</span> Hypothesis Tests for Two Means</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#paired-samples" id="toc-paired-samples"><span class="toc-section-number">8.3.1</span> Paired Samples</a></li>
+<li><a href="inference-comparing-parameters.html#independent-samples" id="toc-independent-samples"><span class="toc-section-number">8.3.2</span> Independent Samples</a></li>
+<li><a href="inference-comparing-parameters.html#r-hypothesis-tests-for-two-means" id="toc-r-hypothesis-tests-for-two-means">R: Hypothesis Tests for Two Means</a></li>
+</ul></li>
+</ul></li>
+<li><a href="chi-square-tests.html#chi-square-tests" id="toc-chi-square-tests"><span class="toc-section-number">9</span> Chi-Square Tests</a>
+<ul>
+<li><a href="chi-square-tests.html#chapter-overview-8" id="toc-chapter-overview-8"><span class="toc-section-number">9.1</span> Chapter Overview</a></li>
+<li><a href="chi-square-tests.html#inference-for-a-population-variance" id="toc-inference-for-a-population-variance"><span class="toc-section-number">9.2</span> Inference for a Population Variance</a>
+<ul>
+<li><a href="chi-square-tests.html#the-chi-square-distribution" id="toc-the-chi-square-distribution"><span class="toc-section-number">9.2.1</span> The Chi-Square Distribution</a></li>
+</ul></li>
+<li><a href="chi-square-tests.html#the-ratio-of-two-variances" id="toc-the-ratio-of-two-variances"><span class="toc-section-number">9.3</span> The Ratio of Two Variances</a></li>
+<li><a href="chi-square-tests.html#goodness-of-fit" id="toc-goodness-of-fit"><span class="toc-section-number">9.4</span> Goodness of Fit</a></li>
+<li><a href="chi-square-tests.html#contingency-tables" id="toc-contingency-tables"><span class="toc-section-number">9.5</span> Contingency Tables</a></li>
+</ul></li>
+<li><a href="anova.html#anova" id="toc-anova"><span class="toc-section-number">10</span> ANOVA</a>
+<ul>
+<li><a href="anova.html#chapter-overview-9" id="toc-chapter-overview-9"><span class="toc-section-number">10.1</span> Chapter Overview</a></li>
+<li><a href="anova.html#what-is-the-analysis-of-variance-anova" id="toc-what-is-the-analysis-of-variance-anova"><span class="toc-section-number">10.2</span> What is the Analysis of Variance (ANOVA)</a></li>
+<li><a href="anova.html#the-f-distribution" id="toc-the-f-distribution"><span class="toc-section-number">10.3</span> The F-Distribution</a></li>
+<li><a href="anova.html#multiple-comparisons-and-type-i-error-rate" id="toc-multiple-comparisons-and-type-i-error-rate"><span class="toc-section-number">10.4</span> Multiple Comparisons and Type I Error Rate</a></li>
+</ul></li>
+<li><a href="regression-and-correlation.html#regression-and-correlation" id="toc-regression-and-correlation"><span class="toc-section-number">11</span> Regression and Correlation</a>
+<ul>
+<li><a href="regression-and-correlation.html#chapter-overview-10" id="toc-chapter-overview-10"><span class="toc-section-number">11.1</span> Chapter Overview</a></li>
+<li><a href="regression-and-correlation.html#linear-equations" id="toc-linear-equations"><span class="toc-section-number">11.2</span> Linear Equations</a></li>
+<li><a href="regression-and-correlation.html#correlation" id="toc-correlation"><span class="toc-section-number">11.3</span> Correlation</a></li>
+<li><a href="regression-and-correlation.html#finding-a-regression-line" id="toc-finding-a-regression-line"><span class="toc-section-number">11.4</span> Finding a Regression Line</a>
+<ul>
+<li><a href="regression-and-correlation.html#coefficient-of-determination" id="toc-coefficient-of-determination"><span class="toc-section-number">11.4.1</span> Coefficient of Determination</a></li>
+</ul></li>
+</ul></li>
+<li><a href="appendices.html#appendices" id="toc-appendices">Appendices</a>
+<ul>
+<li><a href="appendices.html#appendix-a-important-links-and-additional-resources" id="toc-appendix-a-important-links-and-additional-resources">Appendix A: Important Links and Additional Resources</a>
+<ul>
+<li><a href="appendices.html#applets" id="toc-applets">Applets</a></li>
+<li><a href="appendices.html#run-r-online" id="toc-run-r-online">Run R Online</a></li>
+</ul></li>
+<li><a href="appendices.html#appendix-b-average-deviance" id="toc-appendix-b-average-deviance">Appendix B: Average Deviance</a></li>
+<li><a href="appendices.html#appendix-c-deriving-a-confidence-interval" id="toc-appendix-c-deriving-a-confidence-interval">Appendix C: Deriving a Confidence Interval</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction-to-hypothesis-testing" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Introduction to Hypothesis Testing<a href="introduction-to-hypothesis-testing.html#introduction-to-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chapter-overview-5" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Chapter Overview<a href="introduction-to-hypothesis-testing.html#chapter-overview-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this chapter, we will continue our discussion on statistical inference with a discussion on hypothesis testing. In hypothesis testing, we take a more active approach to our data by asking questions about population parameters and developing a framework to answer those questions. We will root this discussion in confidence intervals before learning about several other approaches to hypothesis testing.</p>
+<p><strong>Chapter Learning Outcomes/Objectives</strong></p>
+<ol style="list-style-type: decimal">
+<li>Test one sample means using
+<ol style="list-style-type: lower-alpha">
+<li>confidence intervals.</li>
+<li>the critical value approach.</li>
+<li>the p-value approach.</li>
+</ol></li>
+</ol>
+<p><strong>R Objectives</strong></p>
+<ol style="list-style-type: decimal">
+<li>Generate hypothesis tests for a mean.</li>
+<li>Interpret R output for tests of a mean.</li>
+</ol>
+<p>This chapter’s outcomes correspond to course outcomes (6) apply statistical inference techniques of parameter estimation such as point estimation and confidence interval estimation and (7) apply techniques of testing various statistical hypotheses concerning population parameters.</p>
+</div>
+<div id="logic-of-hypothesis-testing" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Logic of Hypothesis Testing<a href="introduction-to-hypothesis-testing.html#logic-of-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section is framed in terms of questions about a population mean <span class="math inline">\(\mu\)</span>, but the same logic applies to <span class="math inline">\(p\)</span> (and other population parameters).</p>
+<p>One of our goals with statistical inference is to make decisions or judgements about the value of a parameter. A confidence interval is a good starting point, but we might also want to ask questions like</p>
+<ul>
+<li>Do cans of soda actually contain 12 oz?</li>
+<li>Is Medicine A better than Medicine B?</li>
+</ul>
+<p>A <strong>hypothesis</strong> is a statement that something is true. A hypothesis test involves two (competing) hypotheses:</p>
+<ol style="list-style-type: decimal">
+<li>The <strong>null hypothesis</strong>, denoted <span class="math inline">\(H_0\)</span>, is the hypothesis to be tested. This is the “default” assumption.</li>
+<li>The <strong>alternative hypothesis</strong>, denoted <span class="math inline">\(H_A\)</span> is the alternative to the null.</li>
+</ol>
+<p>Note that the subscript 0 is “nought” (pronounced “not”). A <strong>hypothesis test</strong> helps us decide whether the null hypothesis should be rejected in favor of the alternative.</p>
+<blockquote>
+<p><em>Example</em>: Cans of soda are labeled with “12 FL OZ”. Is this accurate?</p>
+<p>The default, or uninteresting, assumption is that cans of soda contain 12 oz.</p>
+<ul>
+<li><span class="math inline">\(H_0\)</span>: the mean volume of soda in a can is 12 oz.</li>
+<li><span class="math inline">\(H_A\)</span>: the mean volume of soda in a can is NOT 12 oz.</li>
+</ul>
+</blockquote>
+<p>We can write these hypotheses in words (as above) or in statistical notation. The null specifies a single value of <span class="math inline">\(\mu\)</span></p>
+<ul>
+<li><span class="math inline">\(H_0\)</span>: <span class="math inline">\(\mu=\mu_0\)</span></li>
+</ul>
+<p>We call <span class="math inline">\(\mu_0\)</span> the <strong>null value</strong>. When we run a hypothesis test, <span class="math inline">\(\mu_0\)</span> will be replaced by some number. For the soda can example, the null value is 12. We would write <span class="math inline">\(H_0: \mu = 12\)</span>.</p>
+<p>The alternative specifies a <em>range</em> of possible values for <span class="math inline">\(\mu\)</span>:</p>
+<ul>
+<li><span class="math inline">\(H_A\)</span>: <span class="math inline">\(\mu\ne\mu_0\)</span>. “The true mean is different from the null value.”</li>
+</ul>
+<center>
+<font size='4'><strong>The Logic of Hypothesis Testing</strong>
+</center>
+<p></font></p>
+<p>Take a random sample from the population. If the data area consistent with the null hypothesis, do not reject the null hypothesis. If the data are inconsistent with the null hypothesis <em>and</em> supportive of the alternative hypothesis, reject the null in favor of the alternative.</p>
+<blockquote>
+<p><em>Example</em>: One way to think about the logic of hypothesis testing is by comparing it to the U.S. court system. In a jury trial, jurors are told to assume the defendant is “innocent until proven guilty”. Innocence is the default assumption, so</p>
+<ul>
+<li><span class="math inline">\(H_0\)</span>: the defendant is innocent.</li>
+<li><span class="math inline">\(H_A\)</span>: the defendant is guilty.</li>
+</ul>
+<p>Like in hypothesis testing, it is not the jury’s job to decide if the defendant is innocent. That should be their default assumption. They are only there to decide if the defendant is guilty or if there is not enough evidence to override that default assumption. The <em>burden of proof</em> lies on the alternative hypothesis.</p>
+</blockquote>
+<p>Notice the careful language in the logic of hypothesis testing: we either reject, or fail to reject, the null hypothesis. We never “accept” a null hypothesis.</p>
+<div id="decision-errors" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Decision Errors<a href="introduction-to-hypothesis-testing.html#decision-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>A <strong>Type I Error</strong> is rejecting the null when it is true. (Null is true, but we conclude null is false.)</li>
+<li>A <strong>Type II Error</strong> is not rejecting the null when it is false. (Null is false, but we do not conclude it is false.)</li>
+</ul>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-s7xz{border-color:#ffffff;text-align:left;vertical-align:middle}
+.tg .tg-vhtn{background-color:#ffffff;border-color:#000000;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+<tr>
+<th class="tg-s7xz">
+</th>
+<th class="tg-s7xz">
+</th>
+<th class="tg-vhtn" colspan="2">
+<span class="math inline">\(H_0\)</span> is
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tg-s7xz">
+</td>
+<td class="tg-s7xz">
+</td>
+<td class="tg-vhtn">
+True
+</td>
+<td class="tg-vhtn">
+False
+</td>
+</tr>
+<tr>
+<td class="tg-vhtn" rowspan="2">
+Decision
+</td>
+<td class="tg-vhtn">
+Do not reject <span class="math inline">\(H_0\)</span>
+</td>
+<td class="tg-vhtn">
+Correct decision
+</td>
+<td class="tg-vhtn">
+Type II Error
+</td>
+</tr>
+<tr>
+<td class="tg-vhtn">
+Reject <span class="math inline">\(H_0\)</span>
+</td>
+<td class="tg-vhtn">
+Type I Error
+</td>
+<td class="tg-vhtn">
+Correct decision
+</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><em>Example</em>: In our jury trial,</p>
+<ul>
+<li><span class="math inline">\(H_0\)</span>: the defendant is innocent.</li>
+<li><span class="math inline">\(H_A\)</span>: the defendant is guilty.</li>
+</ul>
+<p>A Type I error is concluding guilt when the defendant is innocent. A Type II error is failing to convict when the person is guilty.</p>
+</blockquote>
+<p>How likely are we to make errors? Well, <span class="math inline">\(P(\)</span>Type I Error<span class="math inline">\()=\alpha\)</span>, the <strong>significance level</strong>. (Yes, this is the same <span class="math inline">\(\alpha\)</span> we saw in confidence intervals!) For Type II error, <span class="math inline">\(P(\)</span>Type II Error<span class="math inline">\()=\beta\)</span>. This is related to the sample size calculation from the previous chapter, but is otherwise something we don’t have time to cover.</p>
+<p>We would like both <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> to be small but, like many other things in statistics, there’s a trade off! For a fixed sample size,</p>
+<ul>
+<li>If we decrease <span class="math inline">\(\alpha\)</span>, then <span class="math inline">\(\beta\)</span> will increase.</li>
+<li>If we increase <span class="math inline">\(\alpha\)</span>, then <span class="math inline">\(\beta\)</span> will decrease.</li>
+</ul>
+<p>In practice, we set <span class="math inline">\(\alpha\)</span> (as we did in confidence intervals). We can improve <span class="math inline">\(\beta\)</span> by increasing sample size. Since resources are finite (we can’t get enormous sample sizes all the time), we will need to consider the consequences of each type of error.</p>
+<blockquote>
+<p><em>Example</em> We could think about assessing consequences through the jury trial example. Consider two possible charges:</p>
+<ol style="list-style-type: decimal">
+<li>Defendant is accused of stealing a loaf of bread. If found guilty, they may face some jail time and will have a criminal record.</li>
+<li>Defendant is accused of murder. If found guilty, they will have a felony and may spend decades in prison.</li>
+</ol>
+<p>Since these are moral questions, I will let you consider the consequences of each type of error. However, keep in mind that we do make scientific decisions that have lasting impacts on people’s lives.</p>
+</blockquote>
+<center>
+<font size='4'><strong>Hypothesis Test Conclusions</strong>
+</center>
+<p></font></p>
+<ul>
+<li>If the null hypothesis is rejected, we say the result is <strong>statistically significant</strong>. We can interpret this result with:
+<ul>
+<li>At the <span class="math inline">\(\alpha\)</span> level of significance, the data provide sufficient evidence to support the alternative hypothesis.</li>
+</ul></li>
+<li>If the null hypothesis is <em>not</em> rejected, we say the result is <strong>not statistically significant</strong>. We can interpret this result with:
+<ul>
+<li>At the <span class="math inline">\(\alpha\)</span> level of significance, the data do <em>not</em> provide sufficient evidence to support the alternative hypothesis.</li>
+</ul></li>
+</ul>
+<p>Notice that these conclusions are framed in terms of the alternative hypothesis, which is either supported or not supported. We will <em>never</em> conclude the null hypothesis. Finally, when we write these types of conclusions, we will write them in the context of the problem.</p>
+</div>
+</div>
+<div id="confidence-interval-approach-to-hypothesis-testing" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Confidence Interval Approach to Hypothesis Testing<a href="introduction-to-hypothesis-testing.html#confidence-interval-approach-to-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We can use a confidence interval to help us weigh the evidence against the null hypothesis. A confidence interval gives us a range of <em>plausible</em> values for <span class="math inline">\(\mu\)</span>. If the null value is in the interval, then <span class="math inline">\(\mu_0\)</span> is a plausible value for <span class="math inline">\(\mu\)</span>. If the null value is <em>not</em> in the interval, then <span class="math inline">\(\mu_0\)</span> is <em>not</em> a plausible value for <span class="math inline">\(\mu\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>State null and alternative hypotheses.</li>
+<li>Decide on significance level <span class="math inline">\(\alpha\)</span>. Check assumptions (decide which confidence interval setting to use).</li>
+<li>Find the critical value.</li>
+<li>Compute confidence interval.</li>
+<li>If the null value is <em>not</em> in the confidence interval, reject the null hypothesis. Otherwise, do not reject.</li>
+<li>Interpret results in the context of the problem.</li>
+</ol>
+<blockquote>
+<p><em>Example</em>: Is the average mercury level in dolphin muslces different from <span class="math inline">\(2.5\mu g/g\)</span>? Test at the 0.05 level of significance. A random sample of <span class="math inline">\(19\)</span> dolphins resulted in a mean of <span class="math inline">\(4.4 \mu g/g\)</span> and a standard deviation of <span class="math inline">\(2.3 \mu g/g\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(H_0: \mu = 2.5\)</span> and <span class="math inline">\(H_A: \mu \ne 2.5\)</span>.</li>
+<li>Significance level is <span class="math inline">\(\alpha=0.05\)</span>. The value of <span class="math inline">\(\sigma\)</span> is unknown and <span class="math inline">\(n = 19 &lt; 30\)</span>, so we are in setting 3.</li>
+<li>For setting 3, the critical value is <span class="math inline">\(t_{df, \alpha/2}\)</span>. Here, <span class="math inline">\(df=n-1=18\)</span> and <span class="math inline">\(\alpha/2 = 0.025\)</span>:</li>
+</ol>
+</blockquote>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="introduction-to-hypothesis-testing.html#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.025</span>, <span class="dv">18</span>)</span></code></pre></div>
+<pre><code>## [1] -2.100922</code></pre>
+<blockquote>
+<ol start="4" style="list-style-type: decimal">
+<li>The confidence interval is <span class="math display">\[\begin{align} \bar{x} &amp;\pm t_{df, \alpha/2}\frac{s}{\sqrt{n}} \\ 4.4 &amp;\pm 2.101 \frac{2.3}{\sqrt{19}} \\ 4.4 &amp;\pm 1.109 \end{align}\]</span> or <span class="math inline">\((3.29, 5.51)\)</span>.</li>
+<li>Since the null value, <span class="math inline">\(2.5\)</span>, is not in the interval, it is <em>not</em> a plausible value for <span class="math inline">\(\mu\)</span> (at the 95% level of confidence). Therefore we reject the null hypothesis.</li>
+<li>At the 0.05 level of significance, the data provide sufficient evidence to conclude that the true mean mercury level in dolphin muscles is <em>greater than</em> <span class="math inline">\(2.5\mu g/g\)</span>.</li>
+</ol>
+<p>Note: The alternative hypothesis is “not equal to”, but we conclude “greater than” because all of the plausible values in the confidence interval are greater than the null value.</p>
+</blockquote>
+</div>
+<div id="critical-value-approach-to-hypothesis-testing" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> Critical Value Approach to Hypothesis Testing<a href="introduction-to-hypothesis-testing.html#critical-value-approach-to-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We learned about critical values when we discussed confidence intervals. Now, we want to use these values directly in a hypothesis test. We will compare these values to a value based on the data, called a <strong>test statistic</strong>.</p>
+<p>Idea: the null is our “default assumption”. If the null is true, how likely are we to observe a sample that looks like the one we have? If our sample is very inconsistent with the null hypothesis, we want to reject the null hypothesis.</p>
+<div id="test-statistics" class="section level3 hasAnchor" number="6.4.1">
+<h3><span class="header-section-number">6.4.1</span> Test statistics<a href="introduction-to-hypothesis-testing.html#test-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Test statistics are similar to z- and t-scores: <span class="math display">\[\text{test statistic} = \frac{\text{point estimate}-\text{null value}}{\text{standard error}}.\]</span> In fact, they serve a similar function in converting a variable <span class="math inline">\(\bar{X}\)</span> into a distribution we can work with easily.</p>
+<ul>
+<li><strong>Large Sample Setting</strong>: <span class="math inline">\(\mu\)</span> is target parameter, <span class="math inline">\(n \ge 30\)</span></li>
+</ul>
+<p><span class="math display">\[z = \frac{\bar{x}-\mu_0}{s/\sqrt{n}}\]</span></p>
+<ul>
+<li><strong>Small Sample Setting</strong>: <span class="math inline">\(\mu\)</span> is target parameter, <span class="math inline">\(n &lt; 30\)</span></li>
+</ul>
+<p><span class="math display">\[t = \frac{\bar{x}-\mu_0}{s/\sqrt{n}}\]</span></p>
+<p>The set of values for the test statistic that cause us to reject <span class="math inline">\(H_0\)</span> is the <strong>rejection region</strong>. The remaining values are the <strong>nonrejection region</strong>. The value that separates these is the critical value!</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-71-1.png" width="672" /></p>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses.</li>
+<li>Determine the significance level <span class="math inline">\(\alpha\)</span>. Check assumptions (decide which setting to use).</li>
+<li>Compute the value of the test statistic.</li>
+<li>Determine the critical values.</li>
+<li>If the test statistic is in the rejection region, reject the null hypothesis. Otherwise, do not reject.</li>
+<li>Interpret results.</li>
+</ol>
+<blockquote>
+<p><em>Example</em>: Is the average mercury level in dolphin muslces different from <span class="math inline">\(2.5\mu g/g\)</span>? Test at the 0.05 level of significance. A random sample of <span class="math inline">\(19\)</span> dolphins resulted in a mean of <span class="math inline">\(4.4 \mu g/g\)</span> and a standard deviation of <span class="math inline">\(2.3 \mu g/g\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(H_0: \mu = 2.5\)</span> and <span class="math inline">\(H_A: \mu \ne 2.5\)</span>.</li>
+<li>Significance level is <span class="math inline">\(\alpha=0.05\)</span>. The value of <span class="math inline">\(\sigma\)</span> is unknown and <span class="math inline">\(n = 19 &lt; 30\)</span>, so we are in setting 3.</li>
+<li>The test statistic is <span class="math display">\[\begin{align} t &amp;= \frac{\bar{x}-\mu_0}{s/\sqrt{n}} \\ &amp;= \frac{4.4-2.5}{2.3/\sqrt{19}} \\ &amp;= 3.601 \end{align}\]</span></li>
+<li>The critical value is <span class="math inline">\(t_{df, \alpha/2}\)</span>. Here, <span class="math inline">\(df=n-1=18\)</span> and <span class="math inline">\(\alpha/2 = 0.025\)</span>:</li>
+</ol>
+</blockquote>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="introduction-to-hypothesis-testing.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">qt</span>(<span class="fl">0.025</span>, <span class="dv">18</span>)</span></code></pre></div>
+<pre><code>## [1] -2.100922</code></pre>
+<blockquote>
+<ol start="5" style="list-style-type: decimal">
+<li>The test statistic is in the rejection region, so we will reject the null hypothesis:</li>
+</ol>
+</blockquote>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+<blockquote>
+<ol start="6" style="list-style-type: decimal">
+<li>At the 0.05 level of significance, the data provide sufficient evidence to conclude that the true mean mercury level in dolphin muscles is greater than <span class="math inline">\(2.5\mu g/g\)</span>.</li>
+</ol>
+</blockquote>
+<p>Notice that this is the same conclusion we came to when we used the confidence interval approach. These approaches are exactly equivalent!</p>
+</div>
+</div>
+<div id="p-value-approach-to-hypothesis-testing" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> P-Value Approach to Hypothesis Testing<a href="introduction-to-hypothesis-testing.html#p-value-approach-to-hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If the null hypothesis is true, what is the probability of getting a random sample that is as inconsistent with the null hypothesis as the random sample we got? This probability is called the <strong>p-value</strong>.</p>
+<blockquote>
+<p><em>Example</em>: Is the average mercury level in dolphin muslces different from <span class="math inline">\(2.5\mu g/g\)</span>? Test at the 0.05 level of significance. A random sample of <span class="math inline">\(19\)</span> dolphins resulted in a mean of <span class="math inline">\(4.4 \mu g/g\)</span> and a standard deviation of <span class="math inline">\(2.3 \mu g/g\)</span>.</p>
+<p>Probability of a sample <em>as inconsistent</em> as our sample is <span class="math inline">\(P(t_{df} \text{ is as extreme as the test statistic})\)</span>. Consider <span class="math display">\[P(t_{18} &gt; 3.6) = 0.001\]</span> but we want to think about the probability of being “as extreme” in <em>either direction</em> (either tail), so <span class="math display">\[\text{p-value} = 2P(t_{18}&gt;3.6) = 0.002\]</span></p>
+</blockquote>
+<p>If <span class="math inline">\(\text{p-value} &lt; \alpha\)</span>, reject the null hypothesis. Otherwise, do not reject.</p>
+<div id="p-values" class="section level3 hasAnchor" number="6.5.1">
+<h3><span class="header-section-number">6.5.1</span> P-Values<a href="introduction-to-hypothesis-testing.html#p-values" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p><strong>Large Sample Setting</strong>: <span class="math inline">\(\mu\)</span> is target parameter, <span class="math inline">\(n \ge 30\)</span>, <span class="math display">\[2P(Z &gt; |z|)\]</span> where <span class="math inline">\(z\)</span> is the test statistic.</p></li>
+<li><p><strong>Small Sample Setting</strong>: <span class="math inline">\(\mu\)</span> is target parameter, <span class="math inline">\(n &lt; 30\)</span>, <span class="math display">\[2P(t_{df} &gt; |t|)\]</span> where <span class="math inline">\(t\)</span> is the test statistic.</p></li>
+</ul>
+<p>Note: <span class="math inline">\(|a|\)</span> is the “absolute value” of <span class="math inline">\(a\)</span>. The absolute value takes a number and throws away the sign, so <span class="math inline">\(|2|=2\)</span> and <span class="math inline">\(|-3|=3\)</span>.</p>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses.</li>
+<li>Determine the significance level <span class="math inline">\(\alpha\)</span>. Check assumptions (decide which setting to use).</li>
+<li>Compute the value of the test statistic.</li>
+<li>Determine the p-value.</li>
+<li>If <span class="math inline">\(\text{p-value} &lt; \alpha\)</span>, reject the null hypothesis. Otherwise, do not reject.</li>
+<li>Interpret results.</li>
+</ol>
+<p>We often use p-values instead of the critical value approach because they are meaningful on their own (they have a direct interpretation).</p>
+<blockquote>
+<p><em>Example</em>: For the dolphins,</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(H_0: \mu = 2.5\)</span> and <span class="math inline">\(H_A: \mu \ne 2.5\)</span>.</li>
+<li>Significance level is <span class="math inline">\(\alpha=0.05\)</span>. The value of <span class="math inline">\(\sigma\)</span> is unknown and <span class="math inline">\(n = 19 &lt; 30\)</span>, so we are in setting 3.</li>
+<li>The test statistic is <span class="math display">\[\begin{align} t &amp;= \frac{\bar{x}-\mu_0}{s/\sqrt{n}} \\ &amp;= \frac{4.4-2.5}{2.3/\sqrt{19}} \\ &amp;= 3.601 \end{align}\]</span></li>
+<li>The p-value is <span class="math display">\[2P(t_{df} &gt; |t|) - 2P(t_{18} &gt; 3.601) = 0.002\]</span></li>
+<li>Since <span class="math inline">\(\text{p-value}=0.002 &lt; \alpha=0.05\)</span>, reject the null hypothesis.</li>
+<li>At the 0.05 level of significance, the data provide sufficient evidence to conclude that the true mean mercury level in dolphin muscles is greater than <span class="math inline">\(2.5\mu g/g\)</span>.</li>
+</ol>
+</blockquote>
+<p>As before, this is the same conclusion we came to when we used the confidence interval and critical value approaches. All of these approaches are exactly equivalent.</p>
+</div>
+</div>
+<div id="r-hypothesis-tests-for-a-mean" class="section level2 unnumbered hasAnchor">
+<h2>R: Hypothesis Tests for a Mean<a href="introduction-to-hypothesis-testing.html#r-hypothesis-tests-for-a-mean" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To conduct hypothesis tests for a mean in R, we will again use the <code>t.test</code> command. The arguments we will use for hypothesis testing are</p>
+<ul>
+<li><code>x</code>: the variable that contains the data we want to use to construct a confidence interval.</li>
+<li><code>mu</code>: the null value, <span class="math inline">\(\mu_0\)</span>.</li>
+<li><code>conf.level</code>: the desired confidence level (<span class="math inline">\(1-\alpha\)</span>).</li>
+</ul>
+<p>We will again to use the <code>Loblolly</code> pine tree data.</p>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb68-1"><a href="introduction-to-hypothesis-testing.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attach</span>(Loblolly)</span></code></pre></div>
+<p>Let’s test if the average height of Loblolly pines differs from <span class="math inline">\(40\)</span> feet. We will test at a 0.01 level of significance (<span class="math inline">\(\alpha = 0.01\)</span>). So <span class="math inline">\(H_0: \mu = 40\)</span> and <span class="math inline">\(H_A: \mu \ne 40\)</span> and the R command will look like</p>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="introduction-to-hypothesis-testing.html#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> height, <span class="at">mu =</span> <span class="dv">40</span>, <span class="at">conf.level =</span> <span class="fl">0.99</span>)</span></code></pre></div>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  height
+## t = -3.3851, df = 83, p-value = 0.001089
+## alternative hypothesis: true mean is not equal to 40
+## 99 percent confidence interval:
+##  26.41761 38.31120
+## sample estimates:
+## mean of x 
+##   32.3644</code></pre>
+<p>Last time we used this command, we noted that R printed more information than we knew how to handle. That information was about hypothesis tests! The output from this test shows the following (top to bottom):</p>
+<ul>
+<li>the data used in the hypothesis test.</li>
+<li>the value of the test statistic (<span class="math inline">\(t = -3.3851\)</span>), the degrees of freedom (<span class="math inline">\(83\)</span>), and the p-value (<span class="math inline">\(0.001\)</span>).</li>
+<li>the alternative hypothesis.</li>
+<li>the confidence interval.</li>
+<li>the sample mean.</li>
+</ul>
+<p>Based on this output, we have everything we need to conduct a hypothesis test using (A) the confidence interval approach, (B) the critical value approach, or (C) the p-value approach! In practice, we might include results from multiple approaches: At the 0.01 level of significance, there is sufficient evidence to reject the null hypothesis and conclude that the true mean height of Loblolly pines is less than 40 feet (<span class="math inline">\(t = -3.385\)</span>, p-value<span class="math inline">\(=0.001\)</span>).</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="introduction-to-hypothesis-testing.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="fu">detach</span>(Loblolly)</span></code></pre></div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-confidence-intervals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inference-for-a-proportion.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IntroStats.pdf", "IntroStats.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

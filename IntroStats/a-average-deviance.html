@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 A: Average Deviance | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 8 A: Average Deviance | Introduction to Statistics (Stat 1). These notes are based loosely on OpenInto Statistics (Diez, Cetinkaya-Rundel, and Barr) and Introductory Statisics (Weiss)." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 A: Average Deviance | Introduction to Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 8 A: Average Deviance | Introduction to Statistics (Stat 1). These notes are based loosely on OpenInto Statistics (Diez, Cetinkaya-Rundel, and Barr) and Introductory Statisics (Weiss)." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 A: Average Deviance | Introduction to Statistics" />
+  
+  <meta name="twitter:description" content="Chapter 8 A: Average Deviance | Introduction to Statistics (Stat 1). These notes are based loosely on OpenInto Statistics (Diez, Cetinkaya-Rundel, and Barr) and Introductory Statisics (Weiss)." />
+  
+
+<meta name="author" content="Dr. Lauren Cappiello" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="inference-comparing-parameters.html"/>
+
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Statistics</a></li>
+
+<li class="divider"></li>
+<li><a href="index.html#introduction-to-data" id="toc-introduction-to-data"><span class="toc-section-number">1</span> Introduction to Data</a>
+<ul>
+<li><a href="index.html#module-overview" id="toc-module-overview"><span class="toc-section-number">1.1</span> Module Overview</a></li>
+<li><a href="index.html#statistics-terminology" id="toc-statistics-terminology"><span class="toc-section-number">1.2</span> Statistics Terminology</a>
+<ul>
+<li><a href="index.html#dig-deeper" id="toc-dig-deeper">Dig Deeper</a></li>
+</ul></li>
+<li><a href="index.html#data-basics" id="toc-data-basics"><span class="toc-section-number">1.3</span> Data Basics</a></li>
+<li><a href="index.html#sampling" id="toc-sampling"><span class="toc-section-number">1.4</span> Sampling</a></li>
+<li><a href="index.html#experimental-design" id="toc-experimental-design"><span class="toc-section-number">1.5</span> Experimental Design</a></li>
+<li><a href="index.html#frequency-distributions" id="toc-frequency-distributions"><span class="toc-section-number">1.6</span> Frequency Distributions</a>
+<ul>
+<li><a href="index.html#qualitative-variables" id="toc-qualitative-variables"><span class="toc-section-number">1.6.1</span> Qualitative Variables</a></li>
+<li><a href="index.html#quantitative-variables" id="toc-quantitative-variables"><span class="toc-section-number">1.6.2</span> Quantitative Variables</a></li>
+</ul></li>
+</ul></li>
+<li><a href="descriptive-measures.html#descriptive-measures" id="toc-descriptive-measures"><span class="toc-section-number">2</span> Descriptive Measures</a>
+<ul>
+<li><a href="descriptive-measures.html#module-overview-1" id="toc-module-overview-1"><span class="toc-section-number">2.1</span> Module Overview</a></li>
+<li><a href="descriptive-measures.html#measures-of-central-tendency" id="toc-measures-of-central-tendency"><span class="toc-section-number">2.2</span> Measures of Central Tendency</a></li>
+<li><a href="descriptive-measures.html#measures-of-variability" id="toc-measures-of-variability"><span class="toc-section-number">2.3</span> Measures of Variability</a></li>
+<li><a href="descriptive-measures.html#measures-of-position" id="toc-measures-of-position"><span class="toc-section-number">2.4</span> Measures of Position</a>
+<ul>
+<li><a href="descriptive-measures.html#box-plots" id="toc-box-plots"><span class="toc-section-number">2.4.1</span> Box Plots</a></li>
+<li><a href="descriptive-measures.html#descriptive-measures-for-populations" id="toc-descriptive-measures-for-populations"><span class="toc-section-number">2.4.2</span> Descriptive Measures for Populations</a></li>
+</ul></li>
+<li><a href="descriptive-measures.html#regression-and-correlation" id="toc-regression-and-correlation"><span class="toc-section-number">2.5</span> Regression and Correlation</a>
+<ul>
+<li><a href="descriptive-measures.html#correlation" id="toc-correlation"><span class="toc-section-number">2.5.1</span> Correlation</a></li>
+<li><a href="descriptive-measures.html#finding-a-regression-line" id="toc-finding-a-regression-line"><span class="toc-section-number">2.5.2</span> Finding a Regression Line</a></li>
+</ul></li>
+</ul></li>
+<li><a href="probability-concepts.html#probability-concepts" id="toc-probability-concepts"><span class="toc-section-number">3</span> Probability Concepts</a>
+<ul>
+<li><a href="probability-concepts.html#module-overview-2" id="toc-module-overview-2"><span class="toc-section-number">3.1</span> Module Overview</a></li>
+<li><a href="probability-concepts.html#experiments-sample-spaces-and-events" id="toc-experiments-sample-spaces-and-events"><span class="toc-section-number">3.2</span> Experiments, Sample Spaces, and Events</a></li>
+<li><a href="probability-concepts.html#probability-distributions" id="toc-probability-distributions"><span class="toc-section-number">3.3</span> Probability Distributions</a>
+<ul>
+<li><a href="probability-concepts.html#venn-diagrams" id="toc-venn-diagrams"><span class="toc-section-number">3.3.1</span> Venn Diagrams</a></li>
+<li><a href="probability-concepts.html#probability-axioms" id="toc-probability-axioms"><span class="toc-section-number">3.3.2</span> Probability Axioms</a></li>
+<li><a href="probability-concepts.html#exercises" id="toc-exercises"><span class="toc-section-number">3.3.3</span> Exercises</a></li>
+</ul></li>
+<li><a href="probability-concepts.html#rules-of-probability" id="toc-rules-of-probability"><span class="toc-section-number">3.4</span> Rules of Probability</a>
+<ul>
+<li><a href="probability-concepts.html#addition-rules" id="toc-addition-rules"><span class="toc-section-number">3.4.1</span> Addition Rules</a></li>
+<li><a href="probability-concepts.html#complements" id="toc-complements"><span class="toc-section-number">3.4.2</span> Complements</a></li>
+</ul></li>
+<li><a href="probability-concepts.html#conditional-probability" id="toc-conditional-probability"><span class="toc-section-number">3.5</span> Conditional Probability</a>
+<ul>
+<li><a href="probability-concepts.html#multiplication-rules" id="toc-multiplication-rules"><span class="toc-section-number">3.5.1</span> Multiplication Rules</a></li>
+</ul></li>
+</ul></li>
+<li><a href="random-variables.html#random-variables" id="toc-random-variables"><span class="toc-section-number">4</span> Random Variables</a>
+<ul>
+<li><a href="random-variables.html#module-overview-3" id="toc-module-overview-3"><span class="toc-section-number">4.1</span> Module Overview</a></li>
+<li><a href="random-variables.html#discrete-random-variables" id="toc-discrete-random-variables"><span class="toc-section-number">4.2</span> Discrete Random Variables</a>
+<ul>
+<li><a href="random-variables.html#the-mean-and-standard-deviation" id="toc-the-mean-and-standard-deviation"><span class="toc-section-number">4.2.1</span> The Mean and Standard Deviation</a></li>
+</ul></li>
+<li><a href="random-variables.html#the-binomial-distribution" id="toc-the-binomial-distribution"><span class="toc-section-number">4.3</span> The Binomial Distribution</a>
+<ul>
+<li><a href="random-variables.html#mean-and-variance" id="toc-mean-and-variance"><span class="toc-section-number">4.3.1</span> Mean and Variance</a></li>
+</ul></li>
+<li><a href="random-variables.html#the-normal-distribution" id="toc-the-normal-distribution"><span class="toc-section-number">4.4</span> The Normal Distribution</a>
+<ul>
+<li><a href="random-variables.html#the-standard-normal-distribution" id="toc-the-standard-normal-distribution"><span class="toc-section-number">4.4.1</span> The Standard Normal Distribution</a></li>
+</ul></li>
+<li><a href="random-variables.html#area-under-the-standard-normal-curve" id="toc-area-under-the-standard-normal-curve"><span class="toc-section-number">4.5</span> Area Under the Standard Normal Curve</a></li>
+<li><a href="random-variables.html#working-with-normally-distributed-variables" id="toc-working-with-normally-distributed-variables"><span class="toc-section-number">4.6</span> Working with Normally Distributed Variables</a>
+<ul>
+<li><a href="random-variables.html#normal-distribution-probabilities" id="toc-normal-distribution-probabilities"><span class="toc-section-number">4.6.1</span> Normal Distribution Probabilities</a></li>
+<li><a href="random-variables.html#empirical-rule-for-variables" id="toc-empirical-rule-for-variables"><span class="toc-section-number">4.6.2</span> Empirical Rule for Variables</a></li>
+<li><a href="random-variables.html#percentiles" id="toc-percentiles"><span class="toc-section-number">4.6.3</span> Percentiles</a></li>
+</ul></li>
+</ul></li>
+<li><a href="introduction-to-inference.html#introduction-to-inference" id="toc-introduction-to-inference"><span class="toc-section-number">5</span> Introduction to Inference</a>
+<ul>
+<li><a href="introduction-to-inference.html#module-overview-4" id="toc-module-overview-4"><span class="toc-section-number">5.1</span> Module Overview</a></li>
+<li><a href="introduction-to-inference.html#sampling-distributions" id="toc-sampling-distributions"><span class="toc-section-number">5.2</span> Sampling Distributions</a>
+<ul>
+<li><a href="introduction-to-inference.html#sampling-error" id="toc-sampling-error"><span class="toc-section-number">5.2.1</span> Sampling Error</a></li>
+<li><a href="introduction-to-inference.html#the-sampling-distribution-of-barx" id="toc-the-sampling-distribution-of-barx"><span class="toc-section-number">5.2.2</span> The Sampling Distribution of <span class="math inline">\(\bar{X}\)</span></a></li>
+</ul></li>
+<li><a href="introduction-to-inference.html#developing-confidence-intervals" id="toc-developing-confidence-intervals"><span class="toc-section-number">5.3</span> Developing Confidence Intervals</a>
+<ul>
+<li><a href="introduction-to-inference.html#interpreting-a-confidence-interval" id="toc-interpreting-a-confidence-interval"><span class="toc-section-number">5.3.1</span> Interpreting a Confidence Interval</a></li>
+<li><a href="introduction-to-inference.html#exercises-1" id="toc-exercises-1"><span class="toc-section-number">5.3.2</span> Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-inference.html#other-levels-of-confidence" id="toc-other-levels-of-confidence"><span class="toc-section-number">5.4</span> Other Levels of Confidence</a>
+<ul>
+<li><a href="introduction-to-inference.html#breaking-down-a-confidence-interval" id="toc-breaking-down-a-confidence-interval"><span class="toc-section-number">5.4.1</span> Breaking Down a Confidence Interval</a></li>
+<li><a href="introduction-to-inference.html#confidence-level-precision-and-sample-size" id="toc-confidence-level-precision-and-sample-size"><span class="toc-section-number">5.4.2</span> Confidence Level, Precision, and Sample Size</a></li>
+<li><a href="introduction-to-inference.html#exercises-2" id="toc-exercises-2"><span class="toc-section-number">5.4.3</span> Exercises</a></li>
+</ul></li>
+<li><a href="introduction-to-inference.html#confidence-intervals-sigma-unknown" id="toc-confidence-intervals-sigma-unknown"><span class="toc-section-number">5.5</span> Confidence Intervals, <span class="math inline">\(\sigma\)</span> Unknown</a>
+<ul>
+<li><a href="introduction-to-inference.html#the-t-distribution" id="toc-the-t-distribution"><span class="toc-section-number">5.5.1</span> The T-Distribution</a></li>
+</ul></li>
+<li><a href="introduction-to-inference.html#confidence-intervals-for-a-proportion" id="toc-confidence-intervals-for-a-proportion"><span class="toc-section-number">5.6</span> Confidence Intervals for a Proportion</a></li>
+<li><a href="introduction-to-inference.html#summary-of-confidence-interval-settings" id="toc-summary-of-confidence-interval-settings"><span class="toc-section-number">5.7</span> Summary of Confidence Interval Settings</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#introduction-to-hypothesis-testing" id="toc-introduction-to-hypothesis-testing"><span class="toc-section-number">6</span> Introduction to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#module-overview-5" id="toc-module-overview-5"><span class="toc-section-number">6.1</span> Module Overview</a></li>
+<li><a href="introduction-to-hypothesis-testing.html#logic-of-hypothesis-testing" id="toc-logic-of-hypothesis-testing"><span class="toc-section-number">6.2</span> Logic of Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#decision-errors" id="toc-decision-errors"><span class="toc-section-number">6.2.1</span> Decision Errors</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#confidence-interval-approach-to-hypothesis-testing" id="toc-confidence-interval-approach-to-hypothesis-testing"><span class="toc-section-number">6.3</span> Confidence Interval Approach to Hypothesis Testing</a></li>
+<li><a href="introduction-to-hypothesis-testing.html#critical-value-approach-to-hypothesis-testing" id="toc-critical-value-approach-to-hypothesis-testing"><span class="toc-section-number">6.4</span> Critical Value Approach to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#test-statistics" id="toc-test-statistics"><span class="toc-section-number">6.4.1</span> Test statistics</a></li>
+</ul></li>
+<li><a href="introduction-to-hypothesis-testing.html#p-value-approach-to-hypothesis-testing" id="toc-p-value-approach-to-hypothesis-testing"><span class="toc-section-number">6.5</span> P-Value Approach to Hypothesis Testing</a>
+<ul>
+<li><a href="introduction-to-hypothesis-testing.html#p-values" id="toc-p-values"><span class="toc-section-number">6.5.1</span> P-Values</a></li>
+</ul></li>
+</ul></li>
+<li><a href="inference-comparing-parameters.html#inference-comparing-parameters" id="toc-inference-comparing-parameters"><span class="toc-section-number">7</span> Inference: Comparing Parameters</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#module-overview-6" id="toc-module-overview-6"><span class="toc-section-number">7.1</span> Module Overview</a></li>
+<li><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-proportions" id="toc-hypothesis-tests-for-two-proportions"><span class="toc-section-number">7.2</span> Hypothesis Tests for Two Proportions</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#confidence-intervals-for-two-proportions" id="toc-confidence-intervals-for-two-proportions"><span class="toc-section-number">7.2.1</span> Confidence Intervals for Two Proportions</a></li>
+<li><a href="inference-comparing-parameters.html#critical-values-test-statistics-and-p-values" id="toc-critical-values-test-statistics-and-p-values"><span class="toc-section-number">7.2.2</span> Critical Values, Test Statistics, and P-Values</a></li>
+</ul></li>
+<li><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-means" id="toc-hypothesis-tests-for-two-means"><span class="toc-section-number">7.3</span> Hypothesis Tests for Two Means</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#paired-samples" id="toc-paired-samples"><span class="toc-section-number">7.3.1</span> Paired Samples</a></li>
+<li><a href="inference-comparing-parameters.html#independent-samples" id="toc-independent-samples"><span class="toc-section-number">7.3.2</span> Independent Samples</a></li>
+</ul></li>
+<li><a href="inference-comparing-parameters.html#analysis-of-variance-anova" id="toc-analysis-of-variance-anova"><span class="toc-section-number">7.4</span> Analysis of Variance (ANOVA)</a>
+<ul>
+<li><a href="inference-comparing-parameters.html#the-f-distribution" id="toc-the-f-distribution"><span class="toc-section-number">7.4.1</span> The F-Distribution</a></li>
+<li><a href="inference-comparing-parameters.html#multiple-comparisons-and-type-i-error-rate" id="toc-multiple-comparisons-and-type-i-error-rate"><span class="toc-section-number">7.4.2</span> Multiple Comparisons and Type I Error Rate</a></li>
+</ul></li>
+</ul></li>
+<li><a href="a-average-deviance.html#a-average-deviance" id="toc-a-average-deviance"><span class="toc-section-number">8</span> A: Average Deviance</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="a-average-deviance" class="section level1" number="8">
+<h1><span class="header-section-number">Chapter 8</span> A: Average Deviance</h1>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="inference-comparing-parameters.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IntroStats.pdf", "IntroStats.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

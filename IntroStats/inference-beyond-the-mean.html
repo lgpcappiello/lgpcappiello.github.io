@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Inference: Beyond the Mean | Introduction to Statistics</title>
+  <meta name="description" content="Chapter 7 Inference: Beyond the Mean | Introduction to Statistics." />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Inference: Beyond the Mean | Introduction to Statistics" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Chapter 7 Inference: Beyond the Mean | Introduction to Statistics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Inference: Beyond the Mean | Introduction to Statistics" />
+  
+  <meta name="twitter:description" content="Chapter 7 Inference: Beyond the Mean | Introduction to Statistics." />
+  
+
+<meta name="author" content="Dr. Lauren Cappiello" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-hypothesis-testing.html"/>
+<link rel="next" href="inference-comparing-parameters.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Introduction to Statistics</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>For the Instructor</a></li>
+<li class="chapter" data-level="1" data-path="introduction-to-data.html"><a href="introduction-to-data.html"><i class="fa fa-check"></i><b>1</b> Introduction to Data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#module-overview"><i class="fa fa-check"></i><b>1.1</b> Module Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#statistics-terminology"><i class="fa fa-check"></i><b>1.2</b> Statistics Terminology</a>
+<ul>
+<li class="chapter" data-level="" data-path="introduction-to-data.html"><a href="introduction-to-data.html#section-exercises"><i class="fa fa-check"></i>Section Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction-to-data.html"><a href="introduction-to-data.html#sampling-and-design"><i class="fa fa-check"></i><b>1.3</b> Sampling and Design</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#statistical-sampling"><i class="fa fa-check"></i><b>1.3.1</b> Statistical Sampling</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-data.html"><a href="introduction-to-data.html#r-random-number-generation"><i class="fa fa-check"></i>R: Random Number Generation</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#experimental-design"><i class="fa fa-check"></i><b>1.3.2</b> Experimental Design</a></li>
+<li class="chapter" data-level="" data-path="introduction-to-data.html"><a href="introduction-to-data.html#section-exercises-1"><i class="fa fa-check"></i>Section Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction-to-data.html"><a href="introduction-to-data.html#frequency-distributions"><i class="fa fa-check"></i><b>1.4</b> Frequency Distributions</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#qualitative-variables"><i class="fa fa-check"></i><b>1.4.1</b> Qualitative Variables</a></li>
+<li class="chapter" data-level="1.4.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#quantitative-variables"><i class="fa fa-check"></i><b>1.4.2</b> Quantitative Variables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="descriptive-measures.html"><a href="descriptive-measures.html"><i class="fa fa-check"></i><b>2</b> Descriptive Measures</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="descriptive-measures.html"><a href="descriptive-measures.html#chapter-overview"><i class="fa fa-check"></i><b>2.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>2.2</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="2.3" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-variability"><i class="fa fa-check"></i><b>2.3</b> Measures of Variability</a></li>
+<li class="chapter" data-level="2.4" data-path="descriptive-measures.html"><a href="descriptive-measures.html#measures-of-position"><i class="fa fa-check"></i><b>2.4</b> Measures of Position</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="descriptive-measures.html"><a href="descriptive-measures.html#box-plots"><i class="fa fa-check"></i><b>2.4.1</b> Box Plots</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="descriptive-measures.html"><a href="descriptive-measures.html#descriptive-measures-for-populations"><i class="fa fa-check"></i><b>2.5</b> Descriptive Measures for Populations</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="probability-concepts.html"><a href="probability-concepts.html"><i class="fa fa-check"></i><b>3</b> Probability Concepts</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="probability-concepts.html"><a href="probability-concepts.html#chapter-overview-1"><i class="fa fa-check"></i><b>3.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="probability-concepts.html"><a href="probability-concepts.html#experiments-sample-spaces-and-events"><i class="fa fa-check"></i><b>3.2</b> Experiments, Sample Spaces, and Events</a></li>
+<li class="chapter" data-level="3.3" data-path="probability-concepts.html"><a href="probability-concepts.html#probability-distributions"><i class="fa fa-check"></i><b>3.3</b> Probability Distributions</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="probability-concepts.html"><a href="probability-concepts.html#venn-diagrams"><i class="fa fa-check"></i><b>3.3.1</b> Venn Diagrams</a></li>
+<li class="chapter" data-level="3.3.2" data-path="probability-concepts.html"><a href="probability-concepts.html#probability-axioms"><i class="fa fa-check"></i><b>3.3.2</b> Probability Axioms</a></li>
+<li class="chapter" data-level="" data-path="probability-concepts.html"><a href="probability-concepts.html#exercises"><i class="fa fa-check"></i>Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="probability-concepts.html"><a href="probability-concepts.html#rules-of-probability"><i class="fa fa-check"></i><b>3.4</b> Rules of Probability</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="probability-concepts.html"><a href="probability-concepts.html#addition-rules"><i class="fa fa-check"></i><b>3.4.1</b> Addition Rules</a></li>
+<li class="chapter" data-level="3.4.2" data-path="probability-concepts.html"><a href="probability-concepts.html#complements"><i class="fa fa-check"></i><b>3.4.2</b> Complements</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="probability-concepts.html"><a href="probability-concepts.html#conditional-probability"><i class="fa fa-check"></i><b>3.5</b> Conditional Probability</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="probability-concepts.html"><a href="probability-concepts.html#multiplication-rules"><i class="fa fa-check"></i><b>3.5.1</b> Multiplication Rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="random-variables.html"><a href="random-variables.html"><i class="fa fa-check"></i><b>4</b> Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="random-variables.html"><a href="random-variables.html#chapter-overview-2"><i class="fa fa-check"></i><b>4.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="4.2" data-path="random-variables.html"><a href="random-variables.html#discrete-random-variables"><i class="fa fa-check"></i><b>4.2</b> Discrete Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="random-variables.html"><a href="random-variables.html#the-mean-and-standard-deviation"><i class="fa fa-check"></i><b>4.2.1</b> The Mean and Standard Deviation</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="random-variables.html"><a href="random-variables.html#the-binomial-distribution"><i class="fa fa-check"></i><b>4.3</b> The Binomial Distribution</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="random-variables.html"><a href="random-variables.html#mean-and-variance"><i class="fa fa-check"></i><b>4.3.1</b> Mean and Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="random-variables.html"><a href="random-variables.html#the-normal-distribution"><i class="fa fa-check"></i><b>4.4</b> The Normal Distribution</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="random-variables.html"><a href="random-variables.html#the-standard-normal-distribution"><i class="fa fa-check"></i><b>4.4.1</b> The Standard Normal Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="random-variables.html"><a href="random-variables.html#area-under-the-standard-normal-curve"><i class="fa fa-check"></i><b>4.5</b> Area Under the Standard Normal Curve</a></li>
+<li class="chapter" data-level="4.6" data-path="random-variables.html"><a href="random-variables.html#working-with-normally-distributed-variables"><i class="fa fa-check"></i><b>4.6</b> Working with Normally Distributed Variables</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="random-variables.html"><a href="random-variables.html#normal-distribution-probabilities"><i class="fa fa-check"></i><b>4.6.1</b> Normal Distribution Probabilities</a></li>
+<li class="chapter" data-level="4.6.2" data-path="random-variables.html"><a href="random-variables.html#empirical-rule-for-variables"><i class="fa fa-check"></i><b>4.6.2</b> Empirical Rule for Variables</a></li>
+<li class="chapter" data-level="4.6.3" data-path="random-variables.html"><a href="random-variables.html#percentiles"><i class="fa fa-check"></i><b>4.6.3</b> Percentiles</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="random-variables.html"><a href="random-variables.html#the-normal-approximation-to-the-binomial-distribution"><i class="fa fa-check"></i><b>4.7</b> The Normal Approximation to the Binomial Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html"><i class="fa fa-check"></i><b>5</b> Introduction to Inference</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#chapter-overview-3"><i class="fa fa-check"></i><b>5.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="5.2" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#sampling-distributions"><i class="fa fa-check"></i><b>5.2</b> Sampling Distributions</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#sampling-error"><i class="fa fa-check"></i><b>5.2.1</b> Sampling Error</a></li>
+<li class="chapter" data-level="5.2.2" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#the-sampling-distribution-of-barx"><i class="fa fa-check"></i><b>5.2.2</b> The Sampling Distribution of <span class="math inline">\(\bar{X}\)</span></a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#developing-confidence-intervals"><i class="fa fa-check"></i><b>5.3</b> Developing Confidence Intervals</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#interpreting-a-confidence-interval"><i class="fa fa-check"></i><b>5.3.1</b> Interpreting a Confidence Interval</a></li>
+<li class="chapter" data-level="5.3.2" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#exercises-1"><i class="fa fa-check"></i><b>5.3.2</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#other-levels-of-confidence"><i class="fa fa-check"></i><b>5.4</b> Other Levels of Confidence</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#breaking-down-a-confidence-interval"><i class="fa fa-check"></i><b>5.4.1</b> Breaking Down a Confidence Interval</a></li>
+<li class="chapter" data-level="5.4.2" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#confidence-level-precision-and-sample-size"><i class="fa fa-check"></i><b>5.4.2</b> Confidence Level, Precision, and Sample Size</a></li>
+<li class="chapter" data-level="5.4.3" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#exercises-2"><i class="fa fa-check"></i><b>5.4.3</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#confidence-intervals-sigma-unknown"><i class="fa fa-check"></i><b>5.5</b> Confidence Intervals, <span class="math inline">\(\sigma\)</span> Unknown</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#the-t-distribution"><i class="fa fa-check"></i><b>5.5.1</b> The T-Distribution</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="introduction-to-inference.html"><a href="introduction-to-inference.html#summary-of-confidence-interval-settings"><i class="fa fa-check"></i><b>5.6</b> Summary of Confidence Interval Settings</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html"><i class="fa fa-check"></i><b>6</b> Introduction to Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#chapter-overview-4"><i class="fa fa-check"></i><b>6.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="6.2" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#logic-of-hypothesis-testing"><i class="fa fa-check"></i><b>6.2</b> Logic of Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#decision-errors"><i class="fa fa-check"></i><b>6.2.1</b> Decision Errors</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#confidence-interval-approach-to-hypothesis-testing"><i class="fa fa-check"></i><b>6.3</b> Confidence Interval Approach to Hypothesis Testing</a></li>
+<li class="chapter" data-level="6.4" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#critical-value-approach-to-hypothesis-testing"><i class="fa fa-check"></i><b>6.4</b> Critical Value Approach to Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.4.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#test-statistics"><i class="fa fa-check"></i><b>6.4.1</b> Test statistics</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#p-value-approach-to-hypothesis-testing"><i class="fa fa-check"></i><b>6.5</b> P-Value Approach to Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="introduction-to-hypothesis-testing.html"><a href="introduction-to-hypothesis-testing.html#p-values"><i class="fa fa-check"></i><b>6.5.1</b> P-Values</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="inference-beyond-the-mean.html"><a href="inference-beyond-the-mean.html"><i class="fa fa-check"></i><b>7</b> Inference: Beyond the Mean</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="inference-beyond-the-mean.html"><a href="inference-beyond-the-mean.html#chapter-overview-5"><i class="fa fa-check"></i><b>7.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="7.2" data-path="inference-beyond-the-mean.html"><a href="inference-beyond-the-mean.html#inference-for-a-proportion"><i class="fa fa-check"></i><b>7.2</b> Inference for a Proportion</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="inference-beyond-the-mean.html"><a href="inference-beyond-the-mean.html#confidence-intervals-for-a-proportion"><i class="fa fa-check"></i><b>7.2.1</b> Confidence Intervals for a Proportion</a></li>
+<li class="chapter" data-level="7.2.2" data-path="inference-beyond-the-mean.html"><a href="inference-beyond-the-mean.html#hypothesis-tests-for-a-proportion"><i class="fa fa-check"></i><b>7.2.2</b> Hypothesis Tests for a Proportion</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="inference-beyond-the-mean.html"><a href="inference-beyond-the-mean.html#inference-for-a-population-variance"><i class="fa fa-check"></i><b>7.3</b> Inference for a Population Variance</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html"><i class="fa fa-check"></i><b>8</b> Inference: Comparing Parameters</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#chapter-overview-6"><i class="fa fa-check"></i><b>8.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="8.2" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-proportions"><i class="fa fa-check"></i><b>8.2</b> Hypothesis Tests for Two Proportions</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#confidence-intervals-for-two-proportions"><i class="fa fa-check"></i><b>8.2.1</b> Confidence Intervals for Two Proportions</a></li>
+<li class="chapter" data-level="8.2.2" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#critical-values-test-statistics-and-p-values"><i class="fa fa-check"></i><b>8.2.2</b> Critical Values, Test Statistics, and P-Values</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#hypothesis-tests-for-two-means"><i class="fa fa-check"></i><b>8.3</b> Hypothesis Tests for Two Means</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#paired-samples"><i class="fa fa-check"></i><b>8.3.1</b> Paired Samples</a></li>
+<li class="chapter" data-level="8.3.2" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#independent-samples"><i class="fa fa-check"></i><b>8.3.2</b> Independent Samples</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="inference-comparing-parameters.html"><a href="inference-comparing-parameters.html#the-ratio-of-two-variances"><i class="fa fa-check"></i><b>8.4</b> The Ratio of Two Variances</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>9</b> ANOVA</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="anova.html"><a href="anova.html#chapter-overview-7"><i class="fa fa-check"></i><b>9.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="9.2" data-path="anova.html"><a href="anova.html#analysis-of-variance-anova"><i class="fa fa-check"></i><b>9.2</b> Analysis of Variance (ANOVA)</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="anova.html"><a href="anova.html#the-f-distribution"><i class="fa fa-check"></i><b>9.2.1</b> The F-Distribution</a></li>
+<li class="chapter" data-level="9.2.2" data-path="anova.html"><a href="anova.html#multiple-comparisons-and-type-i-error-rate"><i class="fa fa-check"></i><b>9.2.2</b> Multiple Comparisons and Type I Error Rate</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html"><i class="fa fa-check"></i><b>10</b> Regression and Correlation</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#chapter-overview-8"><i class="fa fa-check"></i><b>10.1</b> Chapter Overview</a></li>
+<li class="chapter" data-level="10.2" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#linear-equations"><i class="fa fa-check"></i><b>10.2</b> Linear Equations</a></li>
+<li class="chapter" data-level="10.3" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#correlation"><i class="fa fa-check"></i><b>10.3</b> Correlation</a></li>
+<li class="chapter" data-level="10.4" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#finding-a-regression-line"><i class="fa fa-check"></i><b>10.4</b> Finding a Regression Line</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="regression-and-correlation.html"><a href="regression-and-correlation.html#coefficient-of-determination"><i class="fa fa-check"></i><b>10.4.1</b> Coefficient of Determination</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix</a>
+<ul>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#appendix-a-important-links-and-additional-resources"><i class="fa fa-check"></i>Appendix A: Important Links and Additional Resources</a>
+<ul>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#applets"><i class="fa fa-check"></i>Applets</a></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#run-r-online"><i class="fa fa-check"></i>Run R Online</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#appendix-b-average-deviance"><i class="fa fa-check"></i>Appendix B: Average Deviance</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="inference-beyond-the-mean" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Inference: Beyond the Mean<a href="inference-beyond-the-mean.html#inference-beyond-the-mean" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="chapter-overview-5" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Chapter Overview<a href="inference-beyond-the-mean.html#chapter-overview-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In this chapter, we will continue our discussion on statistical inference with a discussion on hypothesis testing. In hypothesis testing, we take a more active approach to our data by asking questions about population parameters and developing a framework to answer those questions. We will root this discussion in confidence intervals before learning about several other approaches to hypothesis testing.</p>
+<p><strong>Chapter Learning Outcomes/Objectives</strong></p>
+<ol style="list-style-type: decimal">
+<li>Perform and interpret inference for a population proportion.</li>
+<li>Perform and interpret inference for a population variance.</li>
+</ol>
+<p>This chapter’s outcomes correspond to course outcomes (6) apply statistical inference techniques of parameter estimation such as point estimation and confidence interval estimation and (7) apply techniques of testing various statistical hypotheses concerning population parameters.</p>
+</div>
+<div id="inference-for-a-proportion" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Inference for a Proportion<a href="inference-beyond-the-mean.html#inference-for-a-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Inference for a proportion is really similar to inference for a mean! It turns out we can apply the Central Limit Theorem to the sampling distribution for a proportion. But wait - isn’t our Central Limit Theorem only for means?</p>
+<p>Think back to the binomial distribution (Section 4.3). A binomial experiment is made up of a series of Bernoulli trials, which result in 0s and 1s. If we add up these values, we get the number of successes <span class="math inline">\(x\)</span>. If we take the mean of these successes, we get the <em>proportion</em> of successes. In short, <span class="math inline">\(\bar{x} = \hat{p}\)</span> and we can work with the sampling distribution for a sample mean!</p>
+<p>The mean of a Bernoulli random variable is <span class="math inline">\(\mu = p\)</span> and the standard deviation is <span class="math inline">\(\sigma = \sqrt{p(1-p)}\)</span>. So if we apply the Central Limit Theorem, <span class="math inline">\(\hat{p}\)</span> is approximately normally distributed with mean <span class="math display">\[\mu_{\hat{p}} = p\]</span> and standard error <span class="math display">\[\sigma_{\hat{p}} = \frac{\sqrt{p(1-p)}}{\sqrt{n}} = \sqrt{\frac{p(1-p)}{n}}\]</span></p>
+<div id="confidence-intervals-for-a-proportion" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Confidence Intervals for a Proportion<a href="inference-beyond-the-mean.html#confidence-intervals-for-a-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Each of the confidence intervals for a mean uses the same logic: <span class="math display">\[\text{estimate }\pm\text{ critical value }\times\text{ standard error }\]</span> Confidence intervals for a proportion will do the same. We do not know the true value of <span class="math inline">\(p\)</span> for the standard error, so we will plug in <span class="math inline">\(\hat{p}\)</span>.</p>
+<center>
+<font size='4'><b>A <span class="math inline">\(100(1-\alpha)\%\)</span> confidence interval for <span class="math inline">\(p\)</span>.</b></font>
+</center>
+<p><span class="math display">\[\hat{p}\pm z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\]</span></p>
+<p>To use this formula, we need to check that <span class="math inline">\(n\hat{p} &gt; 10\)</span> and <span class="math inline">\(n(1-\hat{p})&gt;10\)</span>. (Note that <span class="math inline">\(n\hat{p}\)</span> is the number of successes and <span class="math inline">\(n(1-\hat{p})\)</span> is the number of failures, so this is another way to check this condition!)</p>
+<p>Why? This relies on a normal approximation that does not work well if either of those quantities is less than or equal to 10. (This a topic which we have skipped, but the theory behind it is similar to the theory presented here for why we can use the Central Limit Theorem with proportions.)</p>
+<blockquote>
+<p><strong>Example:</strong> Suppose we take a random sample of 27 US households and find that 15 of them have dogs. Find a 95% confidence interval for the proportion of US households with dogs.</p>
+<p><strong>Solution:</strong> From the problem statement, <span class="math inline">\(\alpha = 0.05\)</span>. Also, <span class="math inline">\(\hat{p} = 15/27 = 0.56\)</span>. The number of successes (households with dogs) in the sample is 15 and the number of failures is 12, both greater than 10, so our assumptions are satisfied.</p>
+<p>The critical value is <span class="math inline">\(z_{\alpha/2}\)</span>. Using the normal distribution applet with <span class="math inline">\(\alpha = 0.05\)</span>, this yields a value of 1.96. Plugging everything in, <span class="math display">\[\hat{p}\pm z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = 0.56 \pm 1.96\sqrt{\frac{0.56\times0.44}{27}} = 0.37 \pm 0.19\]</span> or a 95% confidence interval of (0.37, 0.75).</p>
+<p>Based on our sample, we can be 95% confident that the proportion of US households with dogs is between 0.37 and 0.75.</p>
+</blockquote>
+</div>
+<div id="hypothesis-tests-for-a-proportion" class="section level3 hasAnchor" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Hypothesis Tests for a Proportion<a href="inference-beyond-the-mean.html#hypothesis-tests-for-a-proportion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For a single proportion, the null and alternative hypotheses are</p>
+<ul>
+<li><span class="math inline">\(H_0: p = p_0\)</span></li>
+<li><span class="math inline">\(H_A: p \ne p_0\)</span></li>
+</ul>
+<p>We can perform a hypothesis test for <span class="math inline">\(P\)</span> using the confidence interval, critical value, or p-value approach described in Chapter 6.</p>
+<p><strong>Setting and Assumptions</strong>: <span class="math inline">\(p\)</span> is target parameter, <span class="math inline">\(np_0 &gt; 10\)</span>, <span class="math inline">\(n(1-p_0)&gt;10\)</span>.</p>
+<center>
+<font size='4'><b>Confidence Interval Approach</b></font>
+</center>
+<p>The <span class="math inline">\(100(1-\alpha)\%\)</span> confidence interval for <span class="math inline">\(p\)</span> is <span class="math display">\[\hat{p}\pm z_{\alpha/2}\sqrt{\frac{p_0(1-p_0)}{n}}\]</span> Notice that we use <span class="math inline">\(p_0\)</span> in the standard error and <em>not</em> the sample proportion. This is because the standard error is calculated based on the distribution based on the null hypothesis, which says that <span class="math inline">\(p=p_0\)</span>.</p>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>State null and alternative hypotheses.</li>
+<li>Decide on significance level <span class="math inline">\(\alpha\)</span>. Check assumptions.</li>
+<li>Find the critical value.</li>
+<li>Compute confidence interval.</li>
+<li>If the null value is <em>not</em> in the confidence interval, reject the null hypothesis. Otherwise, do not reject.</li>
+<li>Interpret results in the context of the problem.</li>
+</ol>
+<blockquote>
+<p><strong>Example:</strong> A quick internet search suggests that 38.4% of US households have dogs. Based on the sample described previously, is it reasonable to assume that the internet search is correct? Test at the 0.05 level of signifance using a confidence interval approach.</p>
+<p><strong>Solution:</strong> We know from the previous example that <span class="math inline">\(\hat{p} = 0.56\)</span> and <span class="math inline">\(n=27\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>We want to see if the internet search is correct, so the null and alternative hypotheses are <span class="math display">\[H_0: p = 0.384\]</span> <span class="math display">\[H_A: p \ne 0.384\]</span></li>
+<li>From the problem statement, <span class="math inline">\(\alpha = 0.05\)</span>. Also, <span class="math inline">\(np_0 = 27(0.384)=10.4\)</span> and <span class="math inline">\(n(1-p_0)=27(0.616)=16.6\)</span>, both greater than 10, so our assumptions are satisfied.</li>
+<li>The critical value is <span class="math inline">\(z_{\alpha/2}\)</span>. Using the normal distribution applet with <span class="math inline">\(\alpha = 0.05\)</span>, this yields a value of 1.96.</li>
+<li>Plugging everything in, <span class="math display">\[\hat{p}\pm z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = 0.56 \pm 1.96\sqrt{\frac{0.37\times0.63}{27}} = 0.56 \pm 0.18\]</span> or a 95% confidence interval of (0.38, 0.74).</li>
+<li>The null value is in the interval, so we fail to reject <span class="math inline">\(H_0\)</span>.</li>
+<li>At the 0.05 level of significance, the data provide <em>insufficient evidence</em> to conclude that the proportion of US Households with dogs differs from 0.384.</li>
+</ol>
+</blockquote>
+<center>
+<font size='4'><b>Critical Value Approach</b></font>
+</center>
+<p>The critical value is <span class="math inline">\(z_{\alpha/2}\)</span> and the test statistic is <span class="math display">\[z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}\]</span> Notice that we plug in <span class="math inline">\(p_0\)</span> for the standard error! This is different from how we dealt with the standard error when calculating confidence intervals outside of a hypothesis testing context.</p>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses.</li>
+<li>Determine the significance level <span class="math inline">\(\alpha\)</span>. Check assumptions.</li>
+<li>Compute the value of the test statistic.</li>
+<li>Determine the critical values.</li>
+<li>If the test statistic is in the rejection region, reject the null hypothesis. Otherwise, do not reject.</li>
+<li>Interpret results.</li>
+</ol>
+<blockquote>
+<p><strong>Example:</strong> A quick internet search suggests that 38.4% of US households have dogs. Based on the sample described previously, is it reasonable to assume that the internet search is correct? Test at the 0.05 level of signifance using a critical value approach.</p>
+<p><strong>Solution:</strong> We know from a previous example that <span class="math inline">\(\hat{p} = 0.56\)</span> and <span class="math inline">\(n=27\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>We want to see if the internet search is correct, so the null and alternative hypotheses are <span class="math display">\[H_0: p = 0.384\]</span> <span class="math display">\[H_A: p \ne 0.384\]</span></li>
+<li>From the problem statement, <span class="math inline">\(\alpha = 0.05\)</span>. Also, <span class="math inline">\(np_0 = 27(0.384)=10.4\)</span> and <span class="math inline">\(n(1-p_0)=27(0.616)=16.6\)</span>, both greater than 10, so our assumptions are satisfied.</li>
+<li>The test statisic is <span class="math display">\[z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{0.56 - 0.384}{\sqrt{\frac{0.384(0.616)}{27}}} = 1.41\]</span></li>
+<li>The critical value is <span class="math inline">\(z_{\alpha/2}\)</span>. Using the normal distribution applet with <span class="math inline">\(\alpha = 0.05\)</span>, this yields a value of 1.96.</li>
+<li>The test statistics is <em>not</em> in the rejection region, so we fail to reject <span class="math inline">\(H_0\)</span>.</li>
+<li>At the 0.05 level of significance, the data provide <em>insufficient evidence</em> to conclude that the proportion of US Households with dogs differs from 0.384.</li>
+</ol>
+</blockquote>
+<center>
+<font size='4'><b>P-Value Approach</b></font>
+</center>
+<p>The p-value is <span class="math display">\[2P(Z &gt; |z|)\]</span> where <span class="math inline">\(z\)</span> is the test statistic described above.</p>
+<p>Steps:</p>
+<ol style="list-style-type: decimal">
+<li>State the null and alternative hypotheses.</li>
+<li>Determine the significance level <span class="math inline">\(\alpha\)</span>. Check assumptions.</li>
+<li>Compute the value of the test statistic.</li>
+<li>Determine the p-value.</li>
+<li>If <span class="math inline">\(\text{p-value} &lt; \alpha\)</span>, reject the null hypothesis. Otherwise, do not reject.</li>
+<li>Interpret results.</li>
+</ol>
+<blockquote>
+<p><strong>Example:</strong> A quick internet search suggests that 38.4% of US households have dogs. Based on the sample described previously, is it reasonable to assume that the internet search is correct? Test at the 0.05 level of signifance using a p-value approach.</p>
+<p><strong>Solution:</strong> We know from a previous example that <span class="math inline">\(\hat{p} = 0.56\)</span> and <span class="math inline">\(n=27\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>We want to see if the internet search is correct, so the null and alternative hypotheses are <span class="math display">\[H_0: p = 0.384\]</span> <span class="math display">\[H_A: p \ne 0.384\]</span></li>
+<li>From the problem statement, <span class="math inline">\(\alpha = 0.05\)</span>. Also, <span class="math inline">\(np_0 = 27(0.384)=10.4\)</span> and <span class="math inline">\(n(1-p_0)=27(0.616)=16.6\)</span>, both greater than 10, so our assumptions are satisfied.</li>
+<li>The test statisic is <span class="math display">\[z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}} = \frac{0.56 - 0.384}{\sqrt{\frac{0.384(0.616)}{27}}} = 1.41\]</span></li>
+<li>The p-value is <span class="math display">\[2P(Z &gt; |z|) = 2P(Z &gt; 1.41)\]</span> Using the normal distribution applet, we find this probability to be <span class="math inline">\(2(0.079) = 0.159\)</span>.</li>
+<li>The p-value <span class="math inline">\(= 0.159 &gt; \alpha = 0.05\)</span>, so we fail to reject <span class="math inline">\(H_0\)</span>.</li>
+<li>At the 0.05 level of significance, the data provide <em>insufficient evidence</em> to conclude that the proportion of US Households with dogs differs from 0.384.</li>
+</ol>
+</blockquote>
+</div>
+</div>
+<div id="inference-for-a-population-variance" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Inference for a Population Variance<a href="inference-beyond-the-mean.html#inference-for-a-population-variance" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Sometimes, it may be of interest to examine directly the variability of a population. Why? Suppose we have some medication that comes in a pill form. We know that each pill has an average of 10mg of active ingredient. For this medication to be consistently effective, we want to make sure that the amount of active ingredient does not <em>vary</em> too much from one pill to the next. We examine this using tests for population variance.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-hypothesis-testing.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inference-comparing-parameters.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IntroStats.pdf", "IntroStats.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

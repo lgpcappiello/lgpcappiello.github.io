@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Module 2 Descriptive Measures and Regression | Course Notes for Introduction to Statistics</title>
+  <meta name="description" content="Course notes for Introduction to Statistics." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Module 2 Descriptive Measures and Regression | Course Notes for Introduction to Statistics" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Course notes for Introduction to Statistics." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Module 2 Descriptive Measures and Regression | Course Notes for Introduction to Statistics" />
+  
+  <meta name="twitter:description" content="Course notes for Introduction to Statistics." />
+  
+
+<meta name="author" content="Dr. Lauren Cappiello" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="introduction-to-data.html"/>
+<link rel="next" href="methods.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="introduction-to-data.html"><a href="introduction-to-data.html"><i class="fa fa-check"></i><b>1</b> Introduction to Data</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#module-overview"><i class="fa fa-check"></i><b>1.1</b> Module Overview</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#statistics-terminology"><i class="fa fa-check"></i><b>1.2</b> Statistics Terminology</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction-to-data.html"><a href="introduction-to-data.html#data-basics"><i class="fa fa-check"></i><b>1.3</b> Data Basics</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction-to-data.html"><a href="introduction-to-data.html#sampling"><i class="fa fa-check"></i><b>1.4</b> Sampling</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction-to-data.html"><a href="introduction-to-data.html#experimental-design"><i class="fa fa-check"></i><b>1.5</b> Experimental Design</a></li>
+<li class="chapter" data-level="1.6" data-path="introduction-to-data.html"><a href="introduction-to-data.html#graphical-presentations"><i class="fa fa-check"></i><b>1.6</b> Graphical Presentations</a></li>
+<li class="chapter" data-level="1.7" data-path="introduction-to-data.html"><a href="introduction-to-data.html#frequency-distributions"><i class="fa fa-check"></i><b>1.7</b> Frequency Distributions</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#qualitative-variables"><i class="fa fa-check"></i><b>1.7.1</b> Qualitative Variables</a></li>
+<li class="chapter" data-level="1.7.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#quantitative-variables"><i class="fa fa-check"></i><b>1.7.2</b> Quantitative Variables</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="descriptive-measures-and-regression.html"><a href="descriptive-measures-and-regression.html"><i class="fa fa-check"></i><b>2</b> Descriptive Measures and Regression</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="descriptive-measures-and-regression.html"><a href="descriptive-measures-and-regression.html#module-overview-1"><i class="fa fa-check"></i><b>2.1</b> Module Overview</a></li>
+<li class="chapter" data-level="2.2" data-path="descriptive-measures-and-regression.html"><a href="descriptive-measures-and-regression.html#measures-of-central-tendency"><i class="fa fa-check"></i><b>2.2</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="2.3" data-path="descriptive-measures-and-regression.html"><a href="descriptive-measures-and-regression.html#measures-of-variability"><i class="fa fa-check"></i><b>2.3</b> Measures of Variability</a></li>
+<li class="chapter" data-level="2.4" data-path="descriptive-measures-and-regression.html"><a href="descriptive-measures-and-regression.html#measures-of-position"><i class="fa fa-check"></i><b>2.4</b> Measures of Position</a></li>
+<li class="chapter" data-level="2.5" data-path="descriptive-measures-and-regression.html"><a href="descriptive-measures-and-regression.html#box-plots"><i class="fa fa-check"></i><b>2.5</b> Box Plots</a></li>
+<li class="chapter" data-level="2.6" data-path="descriptive-measures-and-regression.html"><a href="descriptive-measures-and-regression.html#linear-equations-with-one-independent-variable"><i class="fa fa-check"></i><b>2.6</b> Linear Equations with One Independent Variable</a></li>
+<li class="chapter" data-level="2.7" data-path="descriptive-measures-and-regression.html"><a href="descriptive-measures-and-regression.html#regression"><i class="fa fa-check"></i><b>2.7</b> Regression</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a></li>
+<li class="chapter" data-level="4" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>4</b> Applications</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>4.1</b> Example one</a></li>
+<li class="chapter" data-level="4.2" data-path="applications.html"><a href="applications.html#example-two"><i class="fa fa-check"></i><b>4.2</b> Example two</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="final-words.html"><a href="final-words.html"><i class="fa fa-check"></i><b>5</b> Final Words</a></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Notes for Introduction to Statistics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="descriptive-measures-and-regression" class="section level1" number="2">
+<h1><span class="header-section-number">Module 2</span> Descriptive Measures and Regression</h1>
+<div id="module-overview-1" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Module Overview</h2>
+<p>In the previous module, we thought about descriptive statistics using tables and graphs. Next, we summarize data by computing numbers. Some of these numbers you may already be familiar with, such as averages and percentiles. Numbers used to describe data are called descriptive measures. We also extend our conversation on descriptive measures for quantitative variables to include the relationship between two variables.</p>
+<p><strong>Module Learning Objectives/Outcomes</strong></p>
+<p>After completing Module 2, you will be able to:</p>
+<ol style="list-style-type: decimal">
+<li>Calculate and interpret measures of center.</li>
+<li>Calculate and interpret measures of variation.</li>
+<li>Summarize data using boxplots.</li>
+<li>Use sample data to estimate descriptive measures for populations.</li>
+<li>Calculate and interpret a regression equation.</li>
+<li>Use a regression equation to make predictions.</li>
+<li>Find and interpret the coefficient of determination.</li>
+<li>Find and interpret the linear correlation coefficient.</li>
+</ol>
+<p>This module’s outcomes correspond to course outcomes (1) organize, summarize, and interpret data in tabular, graphical, and pictorial formats (6) apply statistical inference techniques of parameter estimation such as point estimation and confidence interval estimation and (2) organize and interpret bivariate data and learn simple linear regression and correlation.</p>
+</div>
+<div id="measures-of-central-tendency" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Measures of Central Tendency</h2>
+<p>What values are most common or most likely?</p>
+<p><strong>Mode</strong>: the most commonly occurring value.</p>
+<p><strong>Mean</strong>: this is what we usually think of as the “average.” Denoted <span class="math inline">\(\bar{x}\)</span>. Add up all of the values and divide by the number of observations (<span class="math inline">\(n\)</span>):
+<span class="math display">\[
+  \bar{x} = \frac{x_1 + x_2 + \dots + x_n}{n}
+\]</span></p>
+<p><strong>Median</strong>: the middle number when the data are ordered from smallest to largest.</p>
+<ul>
+<li>If there are an odd number of observations, this will be the number in the middle:
+<center>
+{1, 3, <strong>7</strong>, 9, 9} has median 7
+</center></li>
+<li>If there are an even number of observations, there will be two numbers in the middle. The median will be their average.
+<center>
+{1, 2, <strong>4, 7</strong>, 9, 9} has median <span class="math inline">\(\frac{4+7}{2}=5.5\)</span>
+</center></li>
+</ul>
+<p>The mean is sensitive to extreme values and skew. The median is not!</p>
+<table border="1">
+<tbody>
+<tr>
+<td style="width: 49.9524%; text-align: center;">
+<span class="math inline">\(x\)</span>: 1, 3, 7, 9, 9
+</td>
+<td style="width: 49.9524%; text-align: center;">
+<span class="math inline">\(y\)</span>: 1, 3, 7, 9, 45
+</td>
+</tr>
+<tr>
+<td style="width: 49.9524%; text-align: center;">
+<span class="math inline">\(\bar{x} = \frac{29}{5} = 5.8\)</span>
+</td>
+<td style="width: 49.9524%; text-align: center;">
+<span class="math inline">\(\bar{y} = \frac{65}{5} = 13\)</span>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Notice how changing that 9 out for a 45 changes the <em>mean</em> a lot! But the <em>median</em> is 7 for both <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
+<p>Because the median is not affected by extreme observations or skew, we say it is a <strong>resistant measure</strong> or that it is <strong>robust</strong>.</p>
+<p>Which measure should we use?</p>
+<ul>
+<li>Mean: symmetric, numeric data</li>
+<li>Median: skewed, numeric data</li>
+<li>Median: categorical data</li>
+</ul>
+</div>
+<div id="measures-of-variability" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Measures of Variability</h2>
+<p>How much do the data vary?</p>
+<p>Should we care? Yes! The more variable the data, the harder it is to be confident in our measures of center!</p>
+<p>If you live in a place with extremely variable weather, it is going to be much harder to be confident in how to dress for tomorrow’s weather… but if you live in a place where the weather is always the same, it’s much easier to be confident in what you plan to wear.</p>
+<p>We want to think about how far observations are from the measure of center.</p>
+<p><strong>Deviation</strong> is the distance of an observation from the mean: <span class="math inline">\(x - \bar{X}\)</span>. If we want to think about how far - on average - a typical observation is from the center, our intuition might be to take the average deviance… but it turns out that summing up the deviances will <em>always</em> result in 0! Conceptually, this is because the stuff below the mean (negative numbers) and the stuff above the mean (positive numbers) end up canceling each other out until we end up at 0.</p>
+<p>One way to deal with this is to make all of the numbers positive, which we accomplish by squaring the deviance.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Deviance</th>
+<th>Squared Deviance</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(x\)</span></td>
+<td><span class="math inline">\(x - \bar{x}\)</span></td>
+<td><span class="math inline">\((x - \bar{x})^2\)</span></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>-1.2</td>
+<td>1.44</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>1.8</td>
+<td>3.24</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>-0.2</td>
+<td>0.04</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>0.8</td>
+<td>0.64</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>-1.2</td>
+<td>1.44</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\bar{x}=3.2\)</span></td>
+<td>Total = 0</td>
+<td>Total = 6.8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variance</strong> (denoted <span class="math inline">\(s^2\)</span>) is the average squared distance from the mean:
+<span class="math display">\[
+  s^2 = \frac{(x_1-\bar{x})^2 + (x_2-\bar{x})^2 + \dots + (x_n-\bar{x})^2}{n-1}
+\]</span>
+where <span class="math inline">\(n\)</span> is the sample size. Notice that we divide by <span class="math inline">\(n-1\)</span> and NOT by <span class="math inline">\(n\)</span>. There are some mathematical reasons why we do this, but the short version is that it’ll be a better estimate when we move into Inference.</p>
+</div>
+<div id="measures-of-position" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Measures of Position</h2>
+<p>The <strong>interquartile range</strong> (<strong>IQR</strong>) represents the middle 50% of the data.</p>
+<p>Recall that the <em>median</em> cut the data in half: 50% of the data is below and 50% is above the median. This is also called the <strong>50th percentile</strong>. The <strong><span class="math inline">\(p\)</span>th percentile</strong> is the value for which <span class="math inline">\(p\)</span>% of the data is below it.</p>
+<p>To get the middle 50%, we will split the data into four parts:</p>
+<table>
+<thead>
+<tr class="header">
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>25%</td>
+<td>25%</td>
+<td>25%</td>
+<td>25%</td>
+</tr>
+</tbody>
+</table>
+<p>The 25th and 75th percentiles, along with the median, divide the data into four parts. We call these three measurements the <strong>quartiles</strong>:</p>
+<ul>
+<li><strong>Q1</strong>, the first quartile, is the median of the lower 50% of the data (the values below the median).</li>
+<li><strong>Q2</strong>, the second quartile, is the median.</li>
+<li><strong>Q3</strong>, the third quartile, is the median of the upper 50% of the data (the values above the median).</li>
+</ul>
+<p><em>Example</em> Consider {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}</p>
+<ul>
+<li>Cutting the data in half: {1, 2, 3, 4, 5 | 6, 7, 8, 9, 10}, the median (Q2) is <span class="math inline">\(\frac{5+6}{2}=5.5\)</span>.</li>
+<li>Q1 is the median of {1, 2, 3, 4, 5}, or 3</li>
+<li>Q3 is the median of {6, 7, 8, 9, 10}, or 8</li>
+</ul>
+<p>Then the interquartile range is
+<span class="math display">\[
+  \text{IQR} = \text{Q3}-\text{Q1}
+\]</span></p>
+<p>This is another measure of variability and is resistant to extreme values. In general, we prefer the mean and standard deviation when the data are symmetric and we prefer the median and IQR when the data are skewed.</p>
+</div>
+<div id="box-plots" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Box Plots</h2>
+<p>Our measures of position are the foundation for constructing what we call a box plot, which summarizes the data with 5 statistics plus extreme observations:</p>
+<p><img src="IntroStats_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>Drawing a box plot:</p>
+<ol style="list-style-type: decimal">
+<li>Draw the vertical axis to include all possible values in the data.</li>
+<li>Draw a horizontal line at the median, at Q1, and at Q3. Use these to form a box.</li>
+<li>Draw the <strong>whiskers</strong>. The whiskers’ upper limit is Q3+1.5xIQR and the lower limit is Q1-1.5xIQR.</li>
+<li>The actual whiskers are then drawn <em>at the next closet point within the limit</em>.</li>
+<li>Any points outside the whisker limits are included as individual points. These are <strong>potential outliers</strong>.</li>
+</ol>
+<p>(Potential) outliers can help us…
+- examine skew (outliers in the negative direction suggest left skew; outliers in the positive direction suggest right skew).
+- identify issues with data collection or entry, especially if the value of the outliers doesn’t make sense.</p>
+</div>
+<div id="linear-equations-with-one-independent-variable" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Linear Equations with One Independent Variable</h2>
+<p>From your previous math classes, you should have a passing familiarity with linear equations like <span class="math inline">\(y=mx+b\)</span>. In statistics, we write these as <span class="math display">\[y=b_0 + b_1x\]</span> where <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> are constants, <span class="math inline">\(x\)</span> is the independent variable, and <span class="math inline">\(y\)</span> is the dependent variable. The graph of a linear function is always a (straight) line.</p>
+<p>The <strong>y-intercept</strong> is <span class="math inline">\(b_0\)</span>, the value the dependent variable takes when the independent variable <span class="math inline">\(x=0\)</span>. The <strong>slope</strong> is <span class="math inline">\(b_1\)</span>, the change in <span class="math inline">\(y\)</span> for a 1-unit change in <span class="math inline">\(x\)</span>.</p>
+</div>
+<div id="regression" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> Regression</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-data.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["IntroStats.pdf", "IntroStats.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
