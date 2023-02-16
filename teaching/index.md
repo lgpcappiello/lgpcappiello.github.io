@@ -9,7 +9,7 @@ author_profile: true
 ### Spring 2023 drop-in hours
 
 - Tuesday/Thursday 12:15-1:15 PM in Shasta 153
-- Wednesday (time TBD) via Zoom
+- Wednesday 1:00-2:00 PM via Zoom
 
 I am also available by appointment. (<a href="https://calendly.com/lcappiello/30min">Click here to view my calendar and set up an appointment.</a>)
 
