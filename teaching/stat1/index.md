@@ -31,3 +31,9 @@ Slides are based on my [Introduction to Statistics](https://bookdown.org/lgpcapp
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/4_4-Normal-Distribution.html" target="blank">4.4 The Normal Distribution</a>
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/4_5-Area-Under-Standard-Normal.html" target="blank">4.5 Area Under the Standard Normal Curve</a>
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/4_6-Working-with-Normal.html" target="blank">4.6 Working with Normally Distributed Variables</a>
+
+### Chapter 5
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/5_2-Sampling-Error.html" target="blank">5.2 Sampling Error</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/5_3-Developing-CIs.html" target="blank">5.3 Developing Confidence Intervals</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/5_4-Other-Levels-of-Confidences.html" target="blank">5.4 Other Levels of Confidence</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/5_5-CIs-for-a-Mean.html" target="blank">5.5 Confidence Intervals for a Mean</a>
