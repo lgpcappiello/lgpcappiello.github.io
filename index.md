@@ -10,7 +10,7 @@ Selected course materials may be found under "Teaching", with original LaTeX and
 
 ## About
 
-As a college student, I went to six different colleges and universities, switched majors countless times, and finally graduated after five years. I started college wanting to be an opera singer and starred in a <a href="https://vimeo.com/32599888" target="_blank">condensed version of Leonard Bernstein's Trouble in Tahiti</a>. Later I spent a summer doing wildlife care at the <a href="https://highdesertmuseum.org/wildlife/" target="_blank">High Desert Museum in Central Oregon</a>. Eventually I landed in Statistics and went on to do my PhD in Applied Statistics at UC Riverside. Not every path from A to Z is a straight line. :)
+As a college student, I went to six different colleges and universities, switched majors countless times, and finally graduated after five years. I started college wanting to be an opera singer and starred in a <a href="https://vimeo.com/32599888" target="_blank">condensed version of Leonard Bernstein's Trouble in Tahiti</a>. Later I spent a summer doing wildlife care at the <a href="https://highdesertmuseum.org/wildlife/" target="_blank">High Desert Museum in Central Oregon</a>. Eventually I landed in Statistics and went on to do my PhD in Applied Statistics at UC Riverside. Not every path from A to Z is a straight line and I encourage students to take their time and explore. :)
 
 > "The best thing about being a statistician is that you get to play in everyone's backyard." - John Tukey
 
