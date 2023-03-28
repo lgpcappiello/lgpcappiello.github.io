@@ -23,7 +23,7 @@ Selected course materials for Stat 128 (Fall 2022).
 12. Regression
 13. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/13-rpart.html" target="blank">Recursive Partitioning</a> (adapted from <a href="http://webpages.csus.edu/fitzgerald/" target="blank">Clark Fitzgerald's</a> Stat 128 rpart code).
 14. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/14-simulation.html" target="blank">Simulation</a>
-15. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/15-Bootstrap.html" target="blank">Bootstrap</a>
+15. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/15-Bootstrap.html" target="blank">Bootstrap</a> (adapted from Dr. James Flegal)
 16. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/16-ggplot2.html" target="blank">ggplot2</a>
 17. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/17-tidyverse.html" target="blank">TidyVerse</a>
 18. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/18-textData.hml" target="blank">Text Data</a>
