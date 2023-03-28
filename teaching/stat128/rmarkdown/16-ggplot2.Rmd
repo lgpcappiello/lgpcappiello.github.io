@@ -1,0 +1,177 @@
+---
+title: "ggplot2"
+author: "Lauren Cappiello"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Graphics with ggplot2
+
+The package `ggplot2` is used to produce graphics using a different system than base R plotting. 
+
+```{r}
+# install.packages(ggplot2)
+library(ggplot2)
+```
+
+All such plots are composed of data and a mapping.
+
+- Data: information you want to visualize
+- Mapping: description of how the variables are mapped to aesthetic attributes.
+
+There are five mapping components:
+
+- **Layer**: a collect of geometric elements and statistical transformations.
+    - Geometric elements are called **geoms**, they are what you see (points, lines, etc.)
+    - Statistical transformations are called **stats**, they summarize the data (counting observations, making models)
+- **Scales**: a map of the values in the data space to the aesthetic space.
+    - Modifications of the color, shape, size
+    - How to draw legends and axes
+- Coordinate System: called **coord**, describe how data coordinates are mapped to the plane of the graphic.
+    - Usually use Cartesian coordinate system.
+- **Facet**: How to break up and display subsets of data as small multiples.
+- **Theme**: control other points of display, like font size, and background color.
+
+## Getting started
+
+Every ggplot has three key components:
+
+1. Data.
+2. A set of **aes**thetic mappings between variables and visual properties.
+3. At least one layer which describes how to render each observation, usually created with a **geom** function.
+
+Example:
+
+```{r}
+ggplot(mpg,                         # Data
+       aes(x = displ, y = hwy)) +   # aesthetic mapping
+  geom_point()                      # geom layer 
+```
+
+## Adjusting Aesthetic Attributes
+
+### Adjusting by variable
+
+We can adjust aesthetic attributes by variable using the aes() function and the mapping argument.
+
+Adjust the color for each point by `class`: 
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = class)) + 
+  geom_point()
+```
+
+Adjust the shape for each point by `drv`:
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, shape = drv)) + 
+  geom_point()
+```
+
+Adjust the size of each point by `cyl`:
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, size = cyl)) + 
+  geom_point()
+```
+
+### Adjusting for the entire plot
+
+The plot changes based on if the color is assigned *outside* or *inside* the `aes()` function. 
+
+This is because `aes()` is used to map the data to an aesthetic property of the map. Inside of `aes()` we let the aesthetic argument (`color`, `shape`, etc) equal a variable in the data set. The different values for that variable control what happens to that aesthetic. 
+
+If we assign aesthetic value outside of the `aes()` function, we assign a value for the *entire data set*.
+
+Change aesthetic attributes according to some variable:
+```{r}
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point(aes(color = class))
+```
+
+Attempt to change all points to blue:
+```{r}
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point(aes(color = "blue"))
+```
+
+Notice that this did not work because `color = "blue"` is *inside* `aes()`.
+
+Change all points to blue:
+```{r}
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point(color = "blue")
+```
+
+## Faceting
+
+*Faceting* creates tables of graphics by splitting the data into subsets and displaying the same graph for each subset. 
+
+You can facet using `facet_wrap()` which is more flexible and automatically determines how to organize the data. Or, you can manually determine the facet structure using `facet_grid()`.
+
+Facet wrap: let ggplot decide how many rows and columns to make.
+```{r}
+# break data up by class
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() + 
+  facet_wrap(~class)
+```
+
+Facet grid: number of rows and columsn by number of unique values for each variable.
+```{r}
+# Row variable ~ Column variable. 
+ggplot(mpg, aes(displ, hwy)) + 
+  geom_point() + 
+  facet_grid(drv~class)
+```
+
+## More Examples
+
+```{r}
+# Example 1
+ggplot(diamonds)+
+  geom_boxplot(mapping=aes(y = price, x = cut, color = cut))
+```
+
+```{r}
+# Example 2
+ggplot(diamonds)+
+  geom_point(mapping=aes(y = price, x = depth, size = carat, 
+                         color = cut), pch = 1)+
+  labs(title = "A Title is On This Plot")
+```
+
+```{r}
+# Example 3
+ggplot(data = diamonds) +
+  geom_bar(mapping = aes(x = cut, fill=color), 
+           position = "fill")
+```
+
+```{r}
+# Example 4
+ggplot(diamonds, aes(x = clarity, group = cut, fill = cut)) +
+  geom_bar(position = "dodge")
+```
+
+## Resources
+
+- https://ggplot2-book.org/index.html
+- https://www.stat.auckland.ac.nz/~ihaka/downloads/Interface98.pdf
+- https://hbctraining.github.io/Intro-to-R-flipped/cheatsheets/data-visualization-2.1.pdf
+
+## On Your Own
+
+The code below generates an initial infection and plot for the SIR model. Use `ggplot2` to recreate the plot. (You may need to dig through those resources and do some googling.)
+
+```{r}
+set.seed(0)
+nr <- 50
+nc <- 50
+p0 <- 0.1
+sir.init <- matrix(rbinom(nr*nc, 1, p0), nr, nc)
+image(sir.init, col = c("white","red"))
+```

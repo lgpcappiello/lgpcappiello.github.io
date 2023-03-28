@@ -1,0 +1,222 @@
+---
+title: "Text Data"
+author: "Lauren Cappiello"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+You may come across messy text data in web scaping applications, analysis of writing samples, open-ended survey responses, etc. Even if we are only interested in numbers, it is useful to be able to extract them from text.
+
+*Strings* are sequences of characters.
+
+```{r}
+"Suki"
+```
+
+R treats all character data (including strings) as the `character` type. 
+
+```{r}
+class("Suki")
+```
+
+## Making Strings
+
+We use quotes to construct strings. By using double quotes, we allow for the possibility that a single quote exists within the string.
+
+```{r}
+"Suki's favorite ball"
+```
+
+```{r}
+"The dog said 'woof'!"
+```
+
+Each space is also a character, as is the empty string "".
+
+Some characters are special, so we have "escape characters" to specify them in strings:
+
+- quotes within strings: `\"` 
+- tab: `\t` 
+- new line `\n` and carriage return `\r` (use the former when possible)
+
+Since strings (or character objects) are one of the atomic data types, like `numeric` or `logical`, they can go into scalars, vectors, arrays, lists, or be the type of a column in a data frame. We can use `nchar()` to get the length of a single string:
+
+```{r}
+nchar("probably not the most efficient way to get a character count for an essay")
+```
+
+```{r}
+nchar(c("Suki","Sokka","Fiddler","Daisy"))
+```
+
+We can print a string using `print()`.
+
+```{r}
+print("cats")
+```
+
+### On Your Own
+
+Construct a vector of three strings. Store this vector as `mystring`.
+
+## Substring Operations
+
+A *substring* is one part of a larger string. To extract substrings, we use `substr()`. A string is not a vector or a list, so we **cannot** use operations like `[[ ]]` or `[ ]` to extract substrings.
+
+```{r}
+mystr <- "Did you know that female praying mantises don't actually eat their mates in the wild?"
+substr(mystr, start = 26, stop = 39)
+```
+
+We can also use `substr` to replace elements.
+
+```{r}
+substr(mystr, 13, 13) = "X"
+mystr
+```
+
+The function `substr()` can also be used for vectors.
+
+`substr()` vectorizes over all its arguments:
+
+```{r}
+pets <- c("Suki","Sokka","Fiddler","Daisy")
+substr(pets, 1, 2)
+substr(pets, 12, 13)
+substr(pets, 5, 6)
+```
+
+### On Your Own
+
+Extract the first 4 characters of all the entries in `mystring`.
+
+## Dividing Strings into Vectors
+
+`strsplit()` divides a string according to key characters, by splitting each element of the character vector `x` at appearances of the pattern `split`:
+
+```{r}
+pets2 <- "Suki, Sokka, Fiddler, Daisy"
+pets2
+
+strsplit(pets2, ", ")
+```
+
+## Converting Objects into Strings
+
+Explicitly converting one variable type to another is called casting. Notice that the number “7.2e12” is printed as supplied, but “7.2e5” is not. This is because if a number is exceeding large, small, or close to zero, then R will by default use scientific notation for that number.
+
+```{r}
+as.character(7.2)
+as.character(7.2e12)
+as.character(7.2, 7.2e12)
+as.character(7.2e5)
+```
+
+## The `paste()` Function
+
+The `paste()` function is very flexible. With one vector argument, works like `as.character()`:
+
+```{r}
+paste(1:10)
+```
+
+With 2 or more vector arguments, it combines them with recycling.
+
+```{r}
+paste(pets, 1:10)
+```
+
+We can change the separator between pasted items:
+
+```{r}
+paste(pets, 1:10, sep="_")
+paste(pets, 1:10, sep="")
+```
+
+We can also condense multiple strings together using the `collapse` argument:
+
+```{r}
+paste(pets2, " (", pets, ")", sep="", collapse="; ")
+```
+
+The `paste` function is super useful for automatically generating names!
+
+```{r}
+filename <- paste("savedFromR_setting", 2, ".csv")
+write.csv(mtcars, filename)
+```
+
+## Example
+
+Often we want to study of analyze a block of text.
+
+```{r}
+theurl <- "https://lgpcappiello.github.io/teaching/stat128/theplot.txt"
+theplot <- readLines(theurl, warn=FALSE)
+
+# how many lines
+length(theplot)
+```
+
+## Pattern Matching and Replacement
+
+```{r}
+# ?grep
+```
+
+These functions are super useful for picking apart messy data! 
+
+## Word Count Tables
+
+Now lets break up the data set by spaces. We do this in hopes that it will separate each word as an element.
+
+```{r}
+all.words <- strsplit(theplot, split=" ")[[1]]
+head(all.words)
+```
+
+We can now tabulate how often each word appears using the `table()` function. Then we can sort the frequencies in order using `sort()`.
+
+```{r}
+wc <- table(all.words)
+wc <- sort(wc, decreasing=TRUE)
+wc[wc > 1]
+```
+
+## Word Clouds
+
+Note that punctuation and case can both cause words to appear that are not of interest to us. We may also want to remove super common words like "and" and "the". The `tm` library can help with this.
+
+```{r}
+# install.packages("tm")
+library(tm)
+# Create a corpus  
+docs <- Corpus(VectorSource(theplot))
+```
+
+```{r}
+library(tidyverse)
+docs <- docs %>%
+  tm_map(removeNumbers) %>%
+  tm_map(removePunctuation) %>%
+  tm_map(stripWhitespace)
+docs <- tm_map(docs, content_transformer(tolower))
+docs <- tm_map(docs, removeWords, stopwords("english"))
+```
+Now we create a dataframe with each word in one column and their frequency in a second column. 
+
+```{r}
+dtm <- TermDocumentMatrix(docs) 
+matrix <- as.matrix(dtm) 
+words <- sort(rowSums(matrix),decreasing=TRUE) 
+df <- data.frame(word = names(words),freq=words)
+```
+
+```{r}
+# install.packages("wordcloud2")
+library(wordcloud2)
+wordcloud2(df)
+```

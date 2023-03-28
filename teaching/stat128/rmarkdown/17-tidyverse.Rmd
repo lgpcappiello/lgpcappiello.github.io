@@ -1,0 +1,214 @@
+---
+title: "Tidyverse"
+author: "Lauren Cappiello"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# install.packages('tidyverse')
+library(tidyverse)
+```
+
+The tidyverse is a collection of R packages including `ggplot2`, `dplyr`, `tidyr`, `readr`, `purr`, `tibble`, and `stringr`. There are approximately 20 of these in total.
+
+The tidyverse philosophy is structured around "action" instead of "objects".
+
+Tidyverse is designed for and often used for data science applications. It tends to be more beginner-friendly than base R, *but* (1) it can be a major deviation from base R and (2) it's not always flexible enough to do everything we want it to do. 
+
+## Piping Operator
+
+Tidyverse syntax is designed to be used with a "piping" operator (loaded in when we call the `tidyverse` library). 
+
+The piping operator, `%>%` "feeds" things from left to right. 
+
+```{r}
+vec <- 1:10
+vec %>% mean() # "feed" vec into the mean function
+```
+
+This is useful when we have a sequence of multiple operations and want to pipe the output of one into the next. 
+
+### On Your Own
+
+Convert the following base R code into a tidyverse approach using the piping operator:
+
+```{r}
+colMeans(subset(mtcars, vs = 1))
+```
+
+## Tibbles
+
+A **tibble** is tidyverse's answer to the data frame. You may have seen things stored in the R environment as tibbles before - they're fairly widely used and function similarly to data frames. 
+
+Unlike data frames, tibbles are designed to print in a way that doesn't fill your markdown document with 47 pages of output when you forget to comment out that `print` statement before compiling. (Similar to the `head` function in base R.)
+
+```{r}
+class(diamonds)
+dim(diamonds)
+diamonds
+```
+
+## Key Functions
+
+Tidyverse is a gigantic collections of functions and objects, but these are a few of the main ones to help you get started.
+
+Note, in general, for tidyverse help files arguments typically start with a ".", this in contrast to many of the base R help files where arguments are in all caps.
+
+- `select()`: Select variables in a data frame.
+- `filter()`: Subset a data frame, retaining all rows that satisfy your conditions.
+- `arrange()`: Orders the rows of a data frame by the values of selected columns.
+- `rename()`: Changes the names of individual variables using new_name = old_name syntax
+- `mutate()`: Adds new variables and preserves existing ones.
+- `group_by()`: Takes an existing tibble and converts it into a grouped tibble where operations can then be performed “by group”.
+- `summarize()`/`summarise()`: Summarizes results for each group (rows), and summary statistics (columns).
+
+Generally, the functions above have the following properties:
+
+- The first argument is a data frame or a tibble.
+- The subsequent arguments are used to determine what to do with the data-frame/tibble in the first argument.
+- The returned value is a data frame or a tibble.
+- The inputted data-frames/tibbles should be well formatted to start off with. Each row should be an observation, and each column should be a variable.
+- When we refer to column names for the data frame or tibble in the first argument we do not need to use quotes around the column names.
+
+### `select()`
+
+Isolate particular columns:
+
+```{r}
+diamonds %>% select(price, cut)
+```
+
+We store this output as before:
+
+```{r}
+priceCut <- diamonds %>% select(price, cut)
+priceCut
+```
+
+You can also use the operator “:”, and negative signs with the select() function. With the “name1:name2” operator we can select all columns between the column named “name1” and “name2”. With negative signs we can omit all variables that are preceded with a negative sign. These methods are typically not allowed in standard base R indexing when using names:
+
+```{r}
+# Select all columns between (and including) cut and price:
+diamonds %>% select(price:cut)
+```
+
+```{r}
+# Select all but price and cut
+diamonds %>% select(-price, -cut)
+```
+
+### `filter()`
+
+Isolate particular rows:
+
+```{r}
+mean(diamonds$depth) # mean of depth variable
+
+diamonds %>% filter(depth > mean(depth)) # all rows where depth > mean(depth)
+```
+
+We can also filter on multiple conditions:
+
+```{r}
+diamonds %>% filter(depth > mean(depth), cut == "Good", price > 350)
+```
+### `arrange()`
+
+The `arrange()` function works like `sort()` or `order()` in base R.
+
+```{r}
+diamonds %>% arrange(price)
+```
+
+### `rename()`
+
+Allows us to rename variables (replaces `colnames()`).
+
+Structure: `NewName = OldName`. If we want to rename the `cut` column to `Cut` (capitalized), this would look like:
+
+```{r}
+diamonds %>% rename(Cut = cut) #new = old
+```
+
+We can do this with as many columns at one time as we want.
+
+### `mutate()`
+
+The `mutate` function can be used to add or change a variable. 
+
+```{r}
+diamonds %>% mutate(price = price/100) # change price units from dollars to hundreds of dollars
+```
+
+We can change multiple columns at once and add new columns:
+
+```{r}
+diamonds %>% mutate(price = price/100, newVar = 10*depth + price)
+```
+
+The function `transmute()` is similar, but drops all other variables:
+
+```{r}
+diamonds %>% transmute(price = price/100, newVar = 10*depth + price)
+```
+
+### `group_by()`
+
+This is often used with the `summarize` function to group sets of observations together.
+
+### `summarize()` / `summarise()`
+
+Group by `cut`, then calculate the mean `price` for each `cut`:
+
+```{r}
+diamonds %>% group_by(cut) %>% summarize(PriceMean = mean(price))
+```
+
+We can also do this with multiple groups and summary statistics.
+
+```{r}
+diamonds %>%
+  group_by(cut, color) %>%
+  summarize(PriceMean = mean(price), 
+            PriceMedian = median(price))
+```
+
+### On Your Own
+
+Convert the following line of code to code that uses piping operators and tidyverse functions.
+
+```{r}
+by(diamonds$price, diamonds$color, summary)
+```
+
+### On Your Own
+
+Explain in plain English what each of the following code chunks does. You may need to examine the help files for some of the functions.
+
+```{r}
+diamonds %>%
+  mutate(DxC = depth*carat) %>%
+  group_by(cut) %>%
+  summarise(AvgDxC = mean(DxC), 
+            AvgCut = mean(price))
+```
+
+```{r}
+diamonds %>%
+  filter(cut == "Ideal") %>%
+  select(cut, carat, depth, price)
+```
+
+```{r}
+diamonds %>%
+  filter(price >median(price)) %>%
+  group_by(color) %>%
+  summarize(mean_depth = mean(depth),
+            min_depth = min(depth)) %>%
+  arrange(mean_depth)%>%
+  head(n = 10)
+```

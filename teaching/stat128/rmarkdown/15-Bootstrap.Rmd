@@ -1,0 +1,184 @@
+---
+title: "Bootstrap"
+output: html_document
+---
+
+## Plug-In and the Bootstrap
+
+The worst mistake one can make in statistics is to confuse the sample and the population or to confuse estimators and parameters. That is, $\hat{\theta}$ is not $\theta$. The plug-in principle seems to say the opposite, that sometimes it's okay to just plug in an estimate for an unknown parameter. In particular, it's ok to plug in estimates of variance to form confidence intervals for a parameter.
+
+The *bootstrap* is a vast generalization of the plug-in principle. It may seem problematic, but it (usually) works.
+
+## Nonparametric Bootstrap
+
+The bootstrap comes in two flavors, parametric and nonparametric. The theory of the nonparametric bootstrap is outside the scope of this course, so a non-theoretical explanation:
+
+   World | Real | Bootstrap
+------|------|------
+true distribution | $F$ | $\hat{F}_n$
+data | $X_1, \dots, X_n$ IID $F$ | $X_1^*, \dots, X_n^*$ IID $\hat{F}_n$
+empirical distribution | $\hat{F}_n$ | $F_n^*$
+parameter | $\theta = t(F)$ | $\hat{\theta}_n = t(\hat{F}_n)$
+estimator | $\hat{\theta}_n = t(\hat{F}_n)$ | $\theta_n^* = t(F_n^*)$
+error | $\hat{\theta}_n - \theta$ | $\theta_n^* - \hat{\theta}_n$
+standardized error | $\frac{\hat{\theta}_n - \theta}{s(\hat{F}_n)}$ | $\frac{\theta_n^* - \hat{\theta}_n}{s(F_n^*)}$
+
+Notation $\theta = t(F)$ means $\theta$ is some function of the true unknown distribution
+
+The notation $X_1^*, \dots, X_n^*$ IID $\hat{F}_n$ means $X_1^*, \dots, X_n^*$ are independent and identically distributed from distribution of the data. 
+
+Sampling from the data is just like sampling from a finite population, where the *population* is the real data $X_1, \dots, X_n$. To be IID sampling must be with replacement ($X_1^*, \dots, X_n^*$ are a sample with replacement from $X_1, \dots, X_n$). This is called *resampling*. 
+    
+Goal: learn about the sampling distribution of $\hat{\theta}_n$ or $\hat{\theta}_n - \theta$ or $\frac{\hat{\theta}_n - \theta}{s(\hat{F}_n)}$. This depends on the true unknown distribution $F$ of the real data. May be very difficult or impossible to calculate this theoretically.
+
+## Bootstrap Percentile Intervals
+
+Simplest method of making confidence intervals for the unknown parameter is to take $\alpha/2$ and $1 - \alpha/2$ quantiles of the bootstrap distribution of the estimator $\theta_n^*$  as endpoints of the $100(1 - \alpha)$% confidence interval.
+
+## Abnormal speed of light data
+
+In 1882 Simon Newcomb performed an experiment to measure the speed of light. He measured time it took for light to travel from Fort Myer on the west bank of the Potomac River to a fixed mirror at the foot of the Washington monument 3721 meters away. In the units of the data, the currently accepted "true" speed of light is 33.02.
+
+We want to know: does the data support the current accepted speed of 33.02?
+
+```{r}
+speed <- c(28, -44, 29, 30, 26, 27, 22, 23, 33, 16, 24, 29, 24, 40 , 21, 31, 34, -2, 25, 19)
+```
+
+(To convert these units to time in the millionths of a second, multiply by $10^{-3}$ and add $24.8$.)
+
+```{r, echo=FALSE}
+par(mfrow = c(1, 2))
+hist(speed)
+qqnorm(speed)
+qqline(speed)
+par(mfrow = c(1, 1))
+```
+
+A $t$-test assumes the population of measurements is normally distributed. With this small sample size and a severe departure from normality, we can't be guaranteed the t-test will work. Instead, we can use the bootstrap:
+
+1. State null and alternative hypotheses
+\[
+H_0: \mu = 33.02 \text{ versus } H_a: \mu \ne 33.02
+\]
+2. Choose a significance level, in our case 0.05
+3. Choose a test statistic, since we wish to estimate the mean speed we can use the sample average
+4. Find the observed value of the test statistic
+5. Calculate a p-value?
+
+```{r}
+mean(speed)
+```
+
+We need a p-value, but we don't have the sampling distribution of our test statistic when the null hypothesis is true. We can perform a simulation under conditions in which we know the null hypothesis is true. Use our data to represent the population, but first we shift it over so that the mean really is 33.02.
+
+```{r}
+newspeed <- speed - mean(speed) + 33.02
+hist(newspeed)
+```
+
+Histogram of `newspeed` will have exactly the same shape as speed, but will be shifted
+
+Now we reach into our fake population and take out 20 observations at random, with replacement. (We take out 20 because that's the size of our initial sample.) We calculate the average and save it, then repeat this process many, many times. Now we have a sampling distribution with mean 33.02. Can compare this to our observed sample average and obtain a p-value.
+
+```{r}
+n <- 1000
+bstrap <- double(n)
+for (i in 1:n){ 
+  newsample <- sample(newspeed, 20, replace=T)
+  bstrap[i] <- mean(newsample)
+  }
+```
+
+```{r, echo=FALSE}
+hist(bstrap, main="Bootstrap Sampling Distribution", xlab="Bootstrap Samples")
+abline(v=21.75, col="red", lwd=2)
+```
+
+Based on our bootstrap sampling, it's not impossible for the sample average to be 21.75 (when the true mean is 33.02), but it's not all that likely, either.
+
+The p-value is the probability of getting something more extreme than what we observed. Notice $21.75$ is $33.02 - 21.75 = 11.27$ units away from the null hypothesis. So the p-value is the probability of being more than 11.27 units away from 33.02.
+
+```{r}
+# Calculate the proportion of times we get a value as extreme at 21.75 in the bootstrap sampling distribution.
+(sum(bstrap < 21.75) + sum(bstrap > 44.29))/1000
+```
+
+Since our significance level is 5%, we reject $H_0$ and conclude that Newcomb's measurements are not consistent with the currently accepted figure.
+
+### On Your Own
+
+For the `mtcars` dataset, use a bootstrap approach to test whether the average `mpg` is different from 18. 
+
+## Example: Sleep study
+
+The two sample $t$-test checks for differences in means according to a known null distribution. Let's resample and generate the sampling distribution under the bootstrap assumption. 
+
+```{r}
+# ?sleep
+# head(sleep)
+bootstrap.resample <- function (object) sample (object, length(object), replace=TRUE)
+diff.in.means <- function(df) {
+  mean(df[df$group==1,"extra"]) - mean(df[df$group==2,"extra"])
+}
+resample.diffs <- replicate(2000, diff.in.means(sleep[bootstrap.resample(1:nrow(sleep)),]))
+```
+
+```{r}
+hist(resample.diffs, main="Bootstrap Sampling Distribution")
+abline(v=diff.in.means(sleep), col=2, lwd=3)
+```
+
+A 95% interval for the difference is then available via the percentiles:
+
+```{r}
+round(quantile(resample.diffs, c(0.025, 0.957)),3)
+```
+
+## Bootstrapping functions
+
+R has numerous built in bootstrapping functions, but mostly we see the `boot` package used. 
+
+Example: bootstrap of the **ratio of means** using the `city` data included in the `boot` package:
+
+```{r}
+library(boot)
+data(city)
+ratio <- function(d, w) sum(d$x * w)/sum(d$u * w)
+results <- boot(city, ratio, R=1000, stype="w")
+results 
+
+boot.ci(results, type="bca")
+```
+
+## Bootstrapping a single statistic
+
+- Can use the bootstrap to generate a 95% confidence interval for R-squared
+- Linear regression of miles per gallon (`mpg`) on car weight (`wt`) and displacement (`disp`)
+- Data source is `mtcars`
+- The bootstrapped confidence interval is based on 1000 replications
+
+```{r}
+rsq <- function(formula, data, indices) {
+  d <- data[indices,]  
+  fit <- lm(formula, data=d)
+  return(summary(fit)$r.square)
+} 
+results <- boot(data=mtcars, statistic=rsq, 
+  	R=1000, formula=mpg~wt+disp)
+
+results 
+
+boot.ci(results, type="bca")
+
+plot(results)
+```
+
+## Summary
+
+- Bootstrapping provides a nonparametric approach to statistical inference when distributional assumptions may not be met
+- Enables calculation of standard errors and confidence intervals in a variety of situations, e.g. medians, correlation coefficients, regression parameters, ...
+- Hypothesis tests are a little more challenging
+- The bootstrap is large sample, approximate, and asymptotic!
+- Works when the empirical distribution $\hat{F}_n$ is close to the true unknown distribution $F$
+- Usually the case when the sample size $n$ is large and not otherwise, no method can save bad data!
