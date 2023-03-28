@@ -25,5 +25,9 @@ Class is presented as a hands-on workthrough of each lab. Labs borrow heavily fr
 12. Regression
 13. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/13-rpart.html" target="blank">Recursive Partitioning</a> (adapted from <a href="http://webpages.csus.edu/fitzgerald/" target="blank">Clark Fitzgerald's</a> Stat 128 rpart code).
 14. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/14-simulation.html" target="blank">Simulation</a>
+15. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/15-Bootstrap.html" target="blank">Bootstrap</a>
+16. ggplot2
+17. TidyVerse
+18. Text Data
 
 Original RMarkdown files can be found <a href="https://github.com/lgpcappiello/lgpcappiello.github.io/tree/master/teaching/stat128/rmarkdown" target="blank">here</a>. 
