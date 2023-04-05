@@ -7,7 +7,7 @@ author_profile: true
 
 ## Slides
 
-Slides are based on my [Introduction to Statistics](https://bookdown.org/lgpcappiello/introstats/). These slides have some short checkpoint problems, but do not include most of our in-class activities. 
+Slides are based on my [Introduction to Statistics](https://bookdown.org/lgpcappiello/introstats/). These slides have some short checkpoint problems, but do not include most of our in-class activities. Original RMarkdown files are available upon request. 
 
 ### Chapter 1
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/1_2-Statistics-Terminology.html" target="blank">1.2 Statistics Terminology</a>
