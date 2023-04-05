@@ -5,7 +5,7 @@ layout: single
 author_profile: true
 ---
 
-Selected course materials for Stat 128 (Fall 2022).
+Selected course materials for Stat 128 (Fall 2022). Class is presented as a hands-on workthrough of each lab. If you want to go through the lab, I recommend downloading the original RMarkdown file and working through it in RStudio. Original RMarkdown files can be found <a href="https://github.com/lgpcappiello/lgpcappiello.github.io/tree/master/teaching/stat128/rmarkdown" target="blank">here</a>. Labs borrow heavily from work by <a href="https://rpkgarcia.github.io/rpkgarcia/" target="blank">Rebecca Kurtz-Garcia</a>. 
 
 ## Labs
 
@@ -27,5 +27,3 @@ Selected course materials for Stat 128 (Fall 2022).
 16. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/16-ggplot2.html" target="blank">ggplot2</a>
 17. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/17-tidyverse.html" target="blank">TidyVerse</a>
 18. <a href="https://lgpcappiello.github.io/teaching/stat128/rmarkdown/18-textData.hml" target="blank">Text Data</a>
-
-Class is presented as a hands-on workthrough of each lab. If you want to go through the lab, I recommend downloading the original RMarkdown file and working through it in RStudio. Original RMarkdown files can be found <a href="https://github.com/lgpcappiello/lgpcappiello.github.io/tree/master/teaching/stat128/rmarkdown" target="blank">here</a>. Labs borrow heavily from work by <a href="https://rpkgarcia.github.io/rpkgarcia/" target="blank">Rebecca Kurtz-Garcia</a>. 
