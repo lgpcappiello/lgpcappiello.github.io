@@ -37,3 +37,10 @@ Slides are based on my [Introduction to Statistics](https://bookdown.org/lgpcapp
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/5_3-Developing-CIs.html" target="blank">5.3 Developing Confidence Intervals</a>
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/5_4-Other-Levels-of-Confidences.html" target="blank">5.4 Other Levels of Confidence</a>
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/5_5-CIs-for-a-Mean.html" target="blank">5.5 Confidence Intervals for a Mean</a>
+
+### Chapter 6
+
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/6_2-Logic-of-Hypothesis-Testing.html" target="blank">6.2 Logic of Hypothesis Testing</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/6_3-Confidence-Interval-Approach.html" target="blank">6.3 Confidence Interval Approach</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/6_4-Critical-Value-Approch.html" target="blank">6.4 Critical Value Approach</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/6_5-P-Value-Approach.html" target="blank">6.5 P-Value Approach</a>
