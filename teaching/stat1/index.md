@@ -42,5 +42,5 @@ Slides are based on my [Introduction to Statistics](https://bookdown.org/lgpcapp
 
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/6_2-Logic-of-Hypothesis-Testing.html" target="blank">6.2 Logic of Hypothesis Testing</a>
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/6_3-Confidence-Interval-Approach.html" target="blank">6.3 Confidence Interval Approach</a>
-- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/6_4-Critical-Value-Approch.html" target="blank">6.4 Critical Value Approach</a>
+- <a href="https://lgpcappiello.github.io/teaching/stat1/slides/6_4-Critical-Value-Approach.html" target="blank">6.4 Critical Value Approach</a>
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/6_5-P-Value-Approach.html" target="blank">6.5 P-Value Approach</a>
