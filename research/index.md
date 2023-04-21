@@ -19,6 +19,7 @@ If you are a student interested in statistics research, [send me an email](mailt
 
 ## Student Projects
 
+- Feini Pek, Sac State Math Major, [*A Comparative Simulation Study on Various Equality of Variance Tests*](https://lgpcappiello.github.io/research/Spring_symp23.pdf)
 - Shriya Iyer, Camp Talaria Participant, [*Examining Attitudes Towards Face Masks Using Sentiment Analysis of Tweets*](https://lgpcappiello.github.io/research/ATHENA_Research_Paper.pdf)
 
 ### Publications and Conferences
