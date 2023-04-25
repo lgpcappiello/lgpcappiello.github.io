@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Dr. Lauren Parker Cappiello"
+title: "Dr. Lauren Cappiello"
 author_profile: true
 ---
 
