@@ -45,7 +45,7 @@ Slides are based on my [Introduction to Statistics](https://bookdown.org/lgpcapp
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/6_4-Critical-Value-Approach.html" target="blank">6.4 Critical Value Approach</a>
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/6_5-P-Value-Approach.html" target="blank">6.5 P-Value Approach</a>
 
-## Chapter 7
+### Chapter 7
 
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/7_2-Confidence-Intervals-for-P.html" target="blank">7.2 Confidence Intervals for a Proportion</a>
 - <a href="https://lgpcappiello.github.io/teaching/stat1/slides/7_3-Hypothesis-Tests-for-P.html" target="blank">7.3 Hypothesis Tests for a Proportion</a>
