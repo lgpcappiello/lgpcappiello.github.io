@@ -59,7 +59,7 @@ author:
   avatar : "https://avatars2.githubusercontent.com/u/46605262?s=460&v=4"
   bio    : "Assistant Professor of Mathematics & Statistics at Sacramento State<br>Pronouns: she/her"
   links:
-    - label: Introduction to Statistics (textbook)
+    - label: Intro Stats (textbook)
       url: https://bookdown.org/lgpcappiello/introstats/
     - label: NorCal DataFest
       url: "https://norcaldatafest.netlify.app/"
@@ -68,10 +68,10 @@ author:
       url: "https://github.com/lgpcappiello"
 
 footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/lgpcappiello"
+  # links:
+  #   - label: "GitHub"
+  #     icon: "fab fa-fw fa-github"
+  #     url: "https://github.com/lgpcappiello"
 
 defaults:
   # _posts
