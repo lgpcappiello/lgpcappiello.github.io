@@ -63,6 +63,8 @@ author:
       url: https://bookdown.org/lgpcappiello/introstats/
     - label: NorCal DataFest
       url: "https://norcaldatafest.netlify.app/"
+    - label: Sac State Math
+      url: "https://www.csus.edu/college/natural-sciences-mathematics/mathematics-statistics/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/lgpcappiello"
