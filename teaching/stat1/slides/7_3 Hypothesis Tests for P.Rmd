@@ -1,0 +1,84 @@
+---
+title: "7.3 Hypothesis Tests for a Proportion"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Hypothesis Tests for a Proportion
+
+For a single proportion, the null and alternative hypotheses are
+
+- $H_0: p = p_0$
+- $H_A: p \ne p_0$
+
+We can perform a hypothesis test for $p$ using the confidence interval, critical value, or p-value approach.
+
+**Setting and Assumptions**: $p$ is target parameter, $np_0 > 10$, $n(1-p_0)>10$.
+
+## Confidence Interval Approach
+
+The $100(1-\alpha)\%$ confidence interval for $p$ is $$\hat{p}\pm z_{\alpha/2}\sqrt{\frac{p_0(1-p_0)}{n}}$$ 
+
+- Notice that we use $p_0$ in the standard error and *not* the sample proportion. 
+    - The standard error is calculated based on the null hypothesis, which says that $p=p_0$. 
+
+## Confidence Interval Approach
+
+Steps:
+
+1. State null and alternative hypotheses.
+2. Decide on significance level $\alpha$. Check assumptions.
+3. Find the critical value. 
+4. Compute confidence interval. 
+5. If the null value is *not* in the confidence interval, reject the null hypothesis. Otherwise, do not reject.
+6. Interpret results in the context of the problem. 
+
+## Checkpoint
+
+A quick internet search suggests that 38.4% of US households have dogs. A random sample of 27 US households resulted in 15 of them having dogs. Is it reasonable to assume that the internet search is correct? Test at the 0.05 level of significance using a confidence interval approach.
+
+## Critical Value Approach
+
+The critical value is $z_{\alpha/2}$ and the test statistic is $$z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}$$ 
+
+- Notice that we again plug in $p_0$ for the standard error and *not* the sample proportion. 
+
+## Critical Value Approach
+
+Steps:
+
+1. State the null and alternative hypotheses.
+2. Determine the significance level $\alpha$. Check assumptions.
+3. Compute the value of the test statistic.
+4. Determine the critical values.
+5. If the test statistic is in the rejection region, reject the null hypothesis. Otherwise, do not reject.
+6. Interpret results.
+
+## Checkpoint
+
+A quick internet search suggests that 38.4% of US households have dogs. A random sample of 27 US households resulted in 15 of them having dogs. Is it reasonable to assume that the internet search is correct? Test at the 0.05 level of significance using a critical value approach.
+
+## P-Value Approach
+
+The p-value is $$2P(Z > |z|)$$ where $z$ is the test statistic described previously.
+
+## P-Value Approach
+
+Steps:
+
+1. State the null and alternative hypotheses.
+2. Determine the significance level $\alpha$. Check assumptions.
+3. Compute the value of the test statistic.
+4. Determine the p-value.
+5. If $\text{p-value} < \alpha$, reject the null hypothesis. Otherwise, do not reject.
+6. Interpret results.
+
+## Checkpoint 
+
+A quick internet search suggests that 38.4% of US households have dogs. A random sample of 27 US households resulted in 15 of them having dogs. Is it reasonable to assume that the internet search is correct? Test at the 0.05 level of signifance using a p-value approach.

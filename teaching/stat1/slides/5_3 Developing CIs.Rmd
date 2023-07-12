@@ -1,0 +1,141 @@
+---
+title: "5.3 Developing Confidence Intervals"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+***
+
+- A **point estimate** is a single-value estimate of a population parameter. 
+
+- We say that a statistic is an **unbiased estimator** if the mean of its distribution is equal to the population parameter. 
+    - Otherwise, it is a **biased estimator**. 
+
+- Ideally, we want estimates that are unbiased with small standard error. 
+    - For example, a sample mean (unbiased) with a large sample size (results in smaller standard error). 
+
+*** 
+
+Point estimates are useful, but they only give us so much information. The variability of an estimate is also important!
+
+Take a look at these two boxplots:
+
+```{r}
+set.seed(0)
+dat <- c(rnorm(100,0,0.5), runif(100,-5,5))
+grp <- c(rep(1,100),rep(2,100))
+boxplot(dat~grp, ylab="", xlab="")
+```
+
+***
+
+```{r}
+set.seed(0)
+dat <- c(rnorm(100,0,0.5), runif(100,-5,5))
+grp <- c(rep(1,100),rep(2,100))
+boxplot(dat~grp, ylab="", xlab="")
+```
+
+- Both samples are size $n=100$ and have $\bar{x}=0$
+- Variable 1 has a standard deviation of $\sigma=0.5$
+- Variable 2 has standard deviation $\sigma=5$
+
+## Confidence Intervals
+
+A **confidence interval** is an interval of numbers based on the point estimate of the parameter (along with some other stuff). 
+
+- Say we want to be 95\% confident about a statement. 
+- In Statistics, this means that we have arrived at our statement using a method that will give us a correct statement 95\% of the time.
+
+***
+
+- Our best point estimate for $\mu$ (based on a random sample) is $\bar{x}$, so that value will make up the center of the interval. 
+- To create an interval around $\bar{x}$, we will construct what is called the **margin of error**. 
+    - We will use the variability of the data along with some normal distribution properties. 
+    - This will look like $$z\times\frac{\sigma}{\sqrt{n}}$$ 
+    - The value $z$ will come from the normal distribution and will be based on how confident we want to be, e.g., 95% confident.
+    
+***
+
+Putting everything together, the 95% confidence interval is $$\left(\bar{x} - z_*\frac{\sigma}{\sqrt{n}}, \bar{x} + z_*\frac{\sigma}{\sqrt{n}}\right)$$ where $z_* = 1.96$. 
+
+<br>
+
+The value $1.96$ is chosen because $(-1.96 < Z < 1.96) = 0.95$ (this is what makes it a 95% confidence interval!).
+
+## Interpreting a Confidence Interval
+
+If an experiment is run infinitely many times, the true value of $\mu$ will be contained in 95\% of the intervals. 
+
+```{r}
+contains <- function(l,u,m){
+  if(l < m & m < u) return(TRUE)
+  else return(FALSE)
+}
+plot_ci <- function(lo, hi, m){
+  par(mar=c(2, 1, 1, 1), mgp=c(2.7, 0.7, 0))
+  k <- 100
+  ci.max <- max(rowSums(matrix(c(-1*lo,hi),ncol=2)))
+
+  xR <- m + ci.max*c(-1, 1)
+  yR <- c(0, 41*k/40)
+
+  plot(xR, yR, type='n', xlab='', ylab='', axes=FALSE)
+  abline(v=m, lty=2, col='#00000088')
+  axis(1, at=m, paste("mu = ",round(m,4)), cex.axis=1.15)
+  #axis(2)
+  for(i in 1:k){
+    x <- mean(c(hi[i],lo[i]))
+	  ci <- c(lo[i],hi[i])
+	  if(contains(lo[i],hi[i],m)==FALSE){
+		  col <- "#F05133"
+		  points(x, i, cex=1.4, col=col)
+#		  points(x, i, pch=20, cex=1.2, col=col)
+		  lines(ci, rep(i, 2), col=col, lwd=5)
+	  }
+	  col <- 1
+  	points(x, i, pch=20, cex=1, col=col)
+	  lines(ci, rep(i, 2), col=col)
+  }
+}
+
+set.seed(0)
+population <- rnorm(1000000,80,25)
+samp_mean <- rep(NA, 100)
+samp_sd <- rep(NA, 100)
+n <- 60
+for(i in 1:100){
+  samp <- sample(population, n) # obtain a sample of size n = 60 from the population
+  samp_mean[i] <- mean(samp)    # save sample mean in ith element of samp_mean
+  samp_sd[i] <- sd(samp)        # save sample sd in ith element of samp_sd
+}
+cv <- -qnorm(0.05/2)
+lower_vector <- samp_mean - cv * samp_sd / sqrt(n) 
+upper_vector <- samp_mean + cv * samp_sd / sqrt(n)
+plot_ci(lower_vector, upper_vector, 80)
+```
+
+## Example 
+
+The preferred keyboard height for typists is approximately normally distributed with $\sigma=2.0$. A sample of size $n=31$, resulted in a mean preferred keyboard height of $80 cm$. Find and interpret a 95\% confidence interval for keyboard height.
+
+## Common mistakes
+
+- It is NOT accurate to say that "the probability that $\mu$ is in the confidence interval is 0.95". 
+    - The parameter $\mu$ is some fixed quantity and it's either in the interval or it isn't. 
+- We are NOT "95\% confident that $\bar{x}$ is in the interval". 
+    - The value $\bar{x}$ is some known quantity and it's always in the interval. 
+
+## Checkpoint
+
+Suppose I took a random sample of 50 Sac State students and asked about their SAT scores and found a mean score of 1112. Prior experience with SAT scores in the CSU system suggests that SAT scores are well-approximated by a normal distribution with standard deviation known to be 50. 
+    
+1. Find a 95\% confidence interval for Sac State SAT scores. 
+2. Interpret your interval in the context of the problem. 
+3. What is the width of your interval? If you want a narrower interval, what could you do? 

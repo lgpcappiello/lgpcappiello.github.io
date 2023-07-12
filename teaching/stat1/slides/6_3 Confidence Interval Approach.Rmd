@@ -1,0 +1,30 @@
+---
+title: "6.3 The Confidence Interval Approach to Hypothesis Testing"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+***
+
+- A confidence interval gives us a range of *plausible* values for $\mu$. 
+    - If the null value is in the interval, then $\mu_0$ is a plausible value for $\mu$. 
+    - If the null value is *not* in the interval, then $\mu_0$ is *not* a plausible value for $\mu$. 
+    
+## Steps
+
+1. State null and alternative hypotheses.
+2. Decide on significance level $\alpha$. Check assumptions (decide which confidence interval setting to use).
+3. Find the critical value. 
+4. Compute confidence interval. 
+5. If the null value is *not* in the confidence interval, reject the null hypothesis. Otherwise, do not reject.
+6. Interpret results in the context of the problem. 
+
+## Example
+
+Is the average mercury level in dolphin muslces different from $2.5\mu g/g$? Test at the 0.05 level of significance. A random sample of $19$ dolphins resulted in a mean of $4.4 \mu g/g$ and a standard deviation of $2.3 \mu g/g$.

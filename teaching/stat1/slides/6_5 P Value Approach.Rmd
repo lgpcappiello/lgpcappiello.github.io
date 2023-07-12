@@ -1,0 +1,46 @@
+---
+title: "6.5 The P-Value Approach to Hypothesis Testing"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+***
+
+If the null hypothesis is true, what is the probability of getting a random sample that is as inconsistent with the null hypothesis as the random sample we got? 
+
+- This probability is called the **p-value**.
+
+## Idea
+
+- Probability of a sample *as inconsistent* as our sample is $$P(t_{df} \text{ is as extreme as the test statistic})$$
+- Something like $P(t_{18} > 3.6) = 0.001$
+    - ...but we want to think about the probability of being "as extreme" in *either direction*, so $$\text{p-value} = 2P(t_{18}>3.6) = 0.002$$
+
+If $\text{p-value} < \alpha$, reject the null hypothesis. Otherwise, do not reject. 
+
+## P-Values 
+
+- **Large Sample Setting**: $\mu$ is target parameter, $n \ge 30$, $$2P(Z > |z|)$$ where $z$ is the test statistic.
+
+- **Small Sample Setting**: $\mu$ is target parameter, $n < 30$, $$2P(t_{df} > |t|)$$ where $t$ is the test statistic.
+
+## Steps
+
+1. State the null and alternative hypotheses.
+2. Determine the significance level $\alpha$. Check assumptions (decide which setting to use).
+3. Compute the value of the test statistic.
+4. Determine the p-value.
+5. If $\text{p-value} < \alpha$, reject the null hypothesis. Otherwise, do not reject.
+6. Interpret results. 
+
+We often use p-values instead of the critical value approach because they are meaningful on their own (they have a direct interpretation).
+
+## Example
+
+Is the average mercury level in dolphin muscles different from $2.5\mu g/g$? Test at the 0.05 level of significance. A random sample of $19$ dolphins resulted in a mean of $4.4 \mu g/g$ and a standard deviation of $2.3 \mu g/g$.

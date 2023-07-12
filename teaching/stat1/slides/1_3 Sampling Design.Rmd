@@ -1,0 +1,102 @@
+---
+title: "1.3 Sampling and Design"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Statistical Sampling
+
+How do we get samples? 
+
+- We want a sample that represents our population. 
+- **Representative samples** reflect the relevant characteristics of our population. 
+- In general, we get representative samples by selecting our samples *at random* and with an adequate sample size. 
+
+***
+
+A non-representative sample is said to be **biased**. 
+
+Ex: A sample of chihuahuas to represent all dogs. 
+
+These can be a result of **convenience sampling**, choosing a sample based on ease. 
+
+***
+
+Common sources of bias in our daily lives: 
+
+- *Anecdotal evidence* is data based on personal experience or observation. 
+    - Typically this consists of only one or two observations and is NOT representative of the population. 
+- Availability bias is your brain's tendency to think that examples of things that come readily to mind are more representative than is actually the case.
+
+## Simple Random Samples
+
+- We avoid bias by taking random samples. 
+- One type of random sample is a **simple random sample**. 
+    - We can think of this as "raffle sampling", like drawing names out of a hat. 
+    - Each case (or each possible sample) has an equal chance of being selected. 
+    - Knowing that A is selected doesn't tell us anything about whether B is selected. 
+- Instead of literally drawing from a hat, we usually use a **random number generator** from a computer.
+
+## Experimental Design
+
+When we do research, we have two options:
+
+<ol><li>Conduct an **experiment**, where researchers assign treatments to cases.</li>
+  <ol type ="a">
+  <li>**Treatments** are experimental conditions.</li>
+  <li>In an experiment, cases may also be called **experimental units** (items or individuals on which the experiment is performed).</li>
+  </ol>
+<li>Conduct an **observational study**, where no conditions are assigned. These are often done for ethical reasons, like examining the impacts of smoking cigarettes.</li>
+</ol>
+
+Experiments allow us to infer causation. Observational studies do not.
+
+## Experimental design principles
+
+<ul>
+<li>**Control**: two or more treatments are compared.</li>
+<li>**Randomization**: experimental units are assigned to treatment groups (usually and preferably at random).</li>
+<li>**Replication**: a large enough sample size is used to test each treatment many times (on many different experimental units).</li>
+<li>**Blocking**: if variables other than treatment are likely to have an impact on study outcome, we use blocks.</li>
+</ul>
+
+An experiment without blocking has a completely randomized design; an experiment with blocking has a randomized block design. 
+
+***
+
+In an experimental setting, we talk about
+
+<ul>
+    <li><strong>Response variable</strong>: the characteristic of the experimental outcome being measured or observed.</li>
+    <li><strong>Factor:</strong> a variable whose impact on the response variable is of interest in the experiment.</li>
+    <li><strong>Levels</strong>: the possible values of a factor.</li>
+    <li><strong>Treatments:</strong> experimental conditions (based on combinations of factor levels).</li>
+</ul>
+
+***
+
+In human subjects research, we do a little extra work:
+
+<ul>
+<li>If subjects do not know what treatment group they are in, the study is called <strong>blind.</strong></li>
+  <ul>
+  <li>We use a <strong>placebo</strong> (fake treatment) to achieve this.</li>
+  </ul>
+<li>If neither the subjects nor the researchers who interact with them know the treatment group, it is called <strong>double blind.</strong></li>
+</ul>
+
+This helps avoid bias caused by placebo effect, doctor's expectations for outcome, etc.!
+
+## Checkpoint
+
+A study published in 2009 sought to examine whether supplementing with chia seeds contributed to weight loss. Researchers recruited 76 individuals and randomly assigned them into either a treatment group or a control group. The treatment group was given a set quantity of daily chia seeds; the control group was given a placebo. At the end of the 12-week study, they found no difference in average weight lost between the treatment and control group.
+
+1. Is this an observational study or an experiment? Explain.
+    
+2. Identify the (a) cases and (b) response variable. 

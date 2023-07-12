@@ -1,0 +1,94 @@
+---
+title: "1.2 Statistics Terminology"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+***
+
+There are two ways to think about statistics:
+
+1. **Descriptive statistics** are methods for *describing* information.
+
+Ex: 66% of eligible voters voted in the 2020 presidential election (the highest turnout since 1900!).
+
+2. **Inferential statistics** are methods for *drawing inference* (making decisions about something we are uncertain about).
+
+Ex: A poll suggests that 75% of voters will select a Candidate A. We reasonably conclude that Candidate A will win the election.
+
+***
+
+**Data** is factual information. We collect data from a **population**, the collection of all individuals or items a researcher is interested in.
+
+- Collecting data from an entire population is called a **census**.
+  - This is complicated and expensive! 
+- We can also take a **sample**, a subset of the population we get data from.
+  
+***
+
+Data are often organized in what we call a **data matrix**. If you've ever seen data in a spreadsheet, that's a data matrix!
+
+|          | Age    | Gender | Smoker         | Marital Status |
+|----------|--------|--------|----------------|----------------|
+| Person 1 | 45     | Male   | yes            | married |
+| Person 2 | 23     | Female | no             | single  |
+| Person 3 | 36     | Other  | no             | married |
+| Person 4 | 29     | Female | no             | single  |
+
+- Each row represents one **observation** (also called **cases** or **subjects**). These are the individuals or items in the sample.
+
+- Each column represents a **variable**, the characteristic or thing being measured.
+
+***
+
+There are two types of variable:
+
+<ol>
+<li>**Numeric** or **quantitative** variables take *numeric* values AND it is sensible to do math with those values.</li>
+  <ol type="A">
+  <li>**Discrete numeric** variables take numeric values with jumps. Typically, this means they can only take whole number values. These are often counts of something.</li>
+  <li>**Continuous numeric** variables take values "between the jumps". Typically, this means they can take decimal values.</li>
+  </ol>
+<li>**Categorical** or **qualitative** variables take values that are *categories*.</li>
+</ol>
+
+## The "Does it make sense"? Test
+
+- If you're unsure whether a variable is discrete or continuous, pick a number with some decimal place and ask yourself if that value makes sense. If it doesn't, it's probably discrete.
+- Sometimes, categories can be represented by numbers. Ask yourself if it makes sense to do math with those numbers. If it doesn't make sense, it's probably a categorical variable.
+
+***
+
+*Checkpoint:* The following table shows part of the data matrix from a Stat 1 course survey. 
+
+|          | Age  | Year | Major | Current Units |
+|----------|----------|----------|-----------|-------------------|
+| 1        | 19       | Sophomore | Health Sciences   | 15       |
+| 2        | 19       | Sophomore | Business          | 15       |
+| 3        | 19       | Sophomore | Undecided         | 14       |
+| $\vdots$ | $\vdots$ | $\vdots$  | $\vdots$          | $\vdots$ |
+| 29       | 21       | Junior    | Business          | 15       |
+
+1. What does each row of the data matrix represent?
+
+2. What does each column of the data matrix represent?
+
+***
+
+*Checkpoint:* The following table shows part of the data matrix from a Stat 1 course survey. 
+
+|          | Age  | Year | Major | Current Units |
+|----------|----------|----------|-----------|-------------------|
+| 1        | 19       | Sophomore | Health Sciences   | 15       |
+| 2        | 19       | Sophomore | Business          | 15       |
+| 3        | 19       | Sophomore | Undecided         | 14       |
+| $\vdots$ | $\vdots$ | $\vdots$  | $\vdots$          | $\vdots$ |
+| 29       | 21       | Junior    | Business          | 15       |
+
+3. Indicate whether each variable is discrete numeric, continuous numeric, or categorical.

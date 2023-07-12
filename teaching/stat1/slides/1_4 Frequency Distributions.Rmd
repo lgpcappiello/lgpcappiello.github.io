@@ -1,0 +1,241 @@
+---
+title: "1.4 Frequency Distributions"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Categorical Variables
+
+**Frequency** (**count**): the number of times a particular value occurs.
+
+A **frequency distribution** lists each distinct value with its frequency. 
+
+| Class | Frequency | 
+| :-: | :-: |
+| freshman | 12 |
+| sophomore | 10 |
+| junior | 3 |
+| senior | 5 |
+
+***
+
+A **bar plot** is a graphical representation of a frequency distribution. Each bar's height is based on the frequency of the corresponding category. 
+
+```{r}
+df <- data.frame(Level=c("freshman","sophomore","junior","senior"),
+                Count=c(12, 10, 3, 5))
+df$Level <- ordered(df$Level, levels = c("freshman","sophomore","junior","senior"))
+library(ggplot2)
+library(scales)
+
+ggplot(data=df, aes(x=Level, y=Count)) +
+  geom_bar(stat="identity", fill="steelblue") +
+  theme_minimal() + 
+  ggtitle("Barplot of Class") + 
+  scale_y_continuous(name="Frequency", breaks= pretty_breaks()) +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+## Relative Frequencies
+
+**Relative frequency** is the ratio of the frequency to the total number of observations.
+
+\[
+  \text{relative frequency} = \frac{\text{frequency}}{\text{number of observations}}
+\]
+
+This is also called the **proportion**. 
+
+The **percentage** can be obtained by multiplying the proportion by 100.
+
+## Relative Frequency Distribution
+
+A **relative frequency distribution** lists each distinct value with its relative frequency.
+
+| Class | Frequency | Relative Frequency |
+| :-: | :-: | :-: |
+| freshman | 12 | $12/30 = 0.4$ |
+| sophomore | 10 | $0.3333$ |
+| junior | 3 | $0.1$ |
+| senior | 5 | $0.1667$ |
+
+## Numeric Variables
+
+A **dot plot** shows a number line with dots drawn above the line. Each dot represents a single observation. 
+
+```{r message=FALSE}
+library(ggplot2)
+set.seed(0)
+dat <- data.frame(x=sample(1:10,50,TRUE))
+ggplot(dat, aes(x = x)) +
+  geom_dotplot(dotsize = 2, stackratio = 1, fill = "steelblue") + 
+  scale_x_continuous(breaks = c(1:10)) +
+  scale_y_continuous(NULL, breaks=NULL) + 
+  labs(title = "Example Dot Plot", x = "Values", y = "") +
+  theme_bw()+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+## Binning Complex Data
+
+- We would also like to be able to visualize larger, more complex data sets. 
+- This is hard to do using a dot plot! 
+- Instead, we can do this using **bins**, which group numeric data into equal-width consecutive intervals.
+
+## Example 
+
+A random sample of weights (in lbs) from 12 cats:
+ 
+\[\quad 6.2 \quad 11.6 \quad 7.2 \quad 17.1 \quad 15.1 \quad 8.4 \]
+\[\quad	7.7 \quad	13.9 \quad	21.0 \quad	5.5 \quad 9.1 \quad	7.3 \]
+ 
+- **Minimum** is 5.5 
+- **Maximum** is 21
+
+Lots of ways to break these into "bins", but what about...
+
+- 5 - 10
+- 10 - 15 
+- 15 - 20
+- 20 - 25
+
+## Example
+
+We've suggested bins
+
+- 5 - 10
+- 10 - 15 
+- 15 - 20
+- 20 - 25
+
+Each has an equal width of 5 (that's good), but if we had a cat with a weight of exactly 15 lbs, would we use the second or third bin?? 
+
+## Example
+
+To make this clear, we need there to be no overlap. Instead, we could use:
+ 
+| Weight |	Count |
+| :-: | :-: |
+| 5 - <10	| 7 |
+| 10 - <15	| 2 |
+| 15 - <20	| 2 |
+| 20 - <25	| 1 |
+
+Now, a cat with a weight of 15.0 lbs would be placed in the third bin (but not the second). 
+
+## Example
+
+We will visualize this using a **histogram**, which is a lot like a bar plot but for numeric data:
+
+```{r}
+wts <- c( 6.2, 11.6, 7.2, 17.1, 15.1, 8.4, 7.7, 13.9, 21.0, 5.5, 9.1, 7.3)
+df <- data.frame(wts)
+ggplot(data=df, aes(x=wts)) +
+  geom_histogram(breaks=c(5,10,15,20,25), color="black", fill = "steelblue") +
+  theme_minimal() + 
+  ggtitle("Histogram of Cat Weights")+
+  scale_y_continuous(name="Frequency") +
+  scale_x_continuous(name="Weight (lbs)") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+***
+
+```{r}
+wts <- c( 6.2, 11.6, 7.2, 17.1, 15.1, 8.4, 7.7, 13.9, 21.0, 5.5, 9.1, 7.3)
+df <- data.frame(wts)
+ggplot(data=df, aes(x=wts)) +
+  geom_histogram(breaks=c(5,10,15,20,25), color="black", fill = "steelblue") +
+  theme_minimal() + 
+  ggtitle("Histogram of Cat Weights")+
+  scale_y_continuous(name="Frequency") +
+  scale_x_continuous(name="Weight (lbs)") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+This is a **frequency histogram** because each bar height reflects the frequency of that bin. 
+
+***
+
+We can also create a **relative frequency histogram** which displays the relative frequency instead of the frequency:
+
+```{r}
+wts <- c( 6.2, 11.6, 7.2, 17.1, 15.1, 8.4, 7.7, 13.9, 21.0, 5.5, 9.1, 7.3)
+df <- data.frame(wts)
+ggplot(data=df, aes(x=wts)) +
+  geom_histogram(aes(y = after_stat(count / sum(count))), 
+                 breaks=c(5,10,15,20,25), color="black", fill = "steelblue") +
+  theme_minimal() + 
+  ggtitle("Histogram of Cat Weights")+
+  scale_y_continuous(name="Relative Frequency") +
+  scale_x_continuous(name="Weight (lbs)") +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+***
+
+Notice that those last two histograms look the same *except for the numbers on the vertical axis*! 
+
+- This gives us insight into the shape of the data **distribution**, literally how the values are distributed across the bins. 
+- The part of the distribution that "trails off" to one or both sides is called a **tail** of the distribution. - When a histogram trails off to one side, we say it is **skewed**.
+
+    - right-skewed if it trails off to the right
+    - left-skewed if it trails off to the left
+- Data sets with roughly equal tails are **symmetric**.
+
+***
+
+```{r}
+par(mfrow=c(2,2))
+set.seed(0)
+x1 <- rpois(1000,2)
+hist(x1, main="Right-Skewed Distribution", xlab="", ylab="", xaxt='n', yaxt='n')
+x2 <- 8-x1
+hist(x2, main="Left-Skewed Distribution", xlab="", ylab="", xaxt='n', yaxt='n')
+x3 <- rnorm(1000)
+hist(x3, main="Symmetric Distribution", xlab="", ylab="", xaxt='n', yaxt='n')
+x4 <- c(rnorm(500), rnorm(500,5))
+hist(x4, main="Symmetric Distribution", xlab="", ylab="", xaxt='n', yaxt='n')
+```
+
+***
+
+We can also use a histogram to identify **modes**. 
+
+```{r}
+par(mfrow=c(2,2))
+set.seed(0)
+x3 <- rnorm(1000)
+hist(x3, main="Unimodal", xlab="", ylab="", xaxt='n', yaxt='n')
+x4 <- c(rnorm(500), rnorm(500,5))
+hist(x4, main="Bimodal", xlab="", ylab="", xaxt='n', yaxt='n')
+x1 <- c(rnorm(330), rnorm(330,5), rnorm(340,9))
+hist(x1, main="Multimodal", xlab="", ylab="", xaxt='n', yaxt='n')
+x2 <- c(rnorm(330), rnorm(330,5,0.5), rnorm(340,11,1.5))
+hist(x2, main="Multimodal", xlab="", ylab="", xaxt='n', yaxt='n')
+```
+
+For numeric data, especially continuous variables, we think of modes as *prominent peaks*.
+
+***
+
+Finally, we can also "smooth out" these histograms and use a smooth curve to examine the shape of the distribution.
+
+```{r}
+par(mfrow=c(2,2))
+set.seed(0)
+x1 <- rpois(10000,2)
+plot(density(x1, bw=0.6), main="Right-Skewed Distribution", xlab="", ylab="", xaxt='n', yaxt='n')
+x2 <- 8-x1
+plot(density(x2, bw=0.6), main="Left-Skewed Distribution", xlab="", ylab="", xaxt='n', yaxt='n')
+x3 <- rnorm(10000)
+plot(density(x3, bw=0.5), main="Symmetric Distribution", xlab="", ylab="", xaxt='n', yaxt='n')
+x4 <- c(rnorm(5000), rnorm(5000,5))
+plot(density(x4, bw=0.5), main="Symmetric Distribution", xlab="", ylab="", xaxt='n', yaxt='n')
+```

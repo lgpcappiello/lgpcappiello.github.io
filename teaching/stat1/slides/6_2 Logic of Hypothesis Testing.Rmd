@@ -1,0 +1,183 @@
+---
+title: "6.2 The Logic of Hypothesis Testing"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+***
+
+Goal: make decisions about the value of a parameter. 
+
+We have confidence intervals, but we might also want to ask questions like
+
+- Do cans of soda actually contain 12 oz?
+- Is Medicine A better than Medicine B?
+
+## Hypotheses
+
+A **hypothesis** is a statement that something is true. 
+
+A hypothesis test involves two (competing) hypotheses:
+
+1. The **null hypothesis**, denoted $H_0$, is the hypothesis to be tested. This is the "default" assumption.
+2. The **alternative hypothesis**, denoted $H_A$ is the alternative to the null. 
+
+A **hypothesis test** helps us decide whether the null hypothesis should be rejected in favor of the alternative. 
+
+## Example
+
+Cans of soda are labeled with "12 FL OZ". Is this accurate? 
+
+The default, or uninteresting, assumption is that cans of soda contain 12 oz. 
+
+- $H_0$: the mean volume of soda in a can is 12 oz.
+- $H_A$: the mean volume of soda in a can is NOT 12 oz.
+
+We can write these hypotheses in words or in statistical notation. 
+
+## Statistical Notation
+
+The null specifies a single value of $\mu$
+
+- $H_0$: $\mu=\mu_0$
+
+We call $\mu_0$ the **null value**. When we run a hypothesis test, $\mu_0$ will be replaced by some number. 
+
+The alternative specifies a *range* of possible values for $\mu$:
+
+- $H_A$: $\mu\ne\mu_0$. "The true mean is different from the null value."
+
+## Example
+
+- $H_0$: the mean volume of soda in a can is 12 oz.
+    - The null value is 12. In statistical notation, $H_0: \mu = 12$.
+- $H_A$: the mean volume of soda in a can is NOT 12 oz.
+    - In statistical notation, $H_A: \mu \ne 12$.
+
+## The Logic of Hypothesis Testing
+
+- Take a random sample from the population. 
+- If the data area consistent with the null hypothesis, do not reject the null hypothesis. 
+- If the data are inconsistent with the null hypothesis *and* supportive of the alternative hypothesis, reject the null in favor of the alternative.  
+
+## Example: Jury Trials
+
+In the US court system, jurors are told to assume the defendant is "innocent until proven guilty". 
+
+Innocence is the default assumption, so
+ 
+- $H_0$: the defendant is innocent.
+- $H_A$: the defendant is guilty.
+
+## Example: Jury Trials
+
+- It is not the jury's job to decide if the defendant is innocent! 
+    - That should be their default assumption. 
+- They are *only* there to decide if the defendant is guilty or if there is not enough evidence to override that default assumption. 
+
+The *burden of proof* lies on the alternative hypothesis. 
+
+Notice the careful language in the logic of hypothesis testing: we either reject, or fail to reject, the null hypothesis. 
+
+We never "accept" a null hypothesis. 
+
+## Decision Errors
+
+- A **Type I Error** is rejecting the null when it is true. (Null is true, but we conclude null is false.)
+- A **Type II Error** is not rejecting the null when it is false. (Null is false, but we do not conclude it is false.)
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-s7xz{border-color:#ffffff;text-align:left;vertical-align:middle}
+.tg .tg-vhtn{background-color:#ffffff;border-color:#000000;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-s7xz"></th>
+    <th class="tg-s7xz"></th>
+    <th class="tg-vhtn" colspan="2">$H_0$ is</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-s7xz"></td>
+    <td class="tg-s7xz"></td>
+    <td class="tg-vhtn">True</td>
+    <td class="tg-vhtn">False</td>
+  </tr>
+  <tr>
+    <td class="tg-vhtn" rowspan="2">Decision</td>
+    <td class="tg-vhtn">Do not reject $H_0$</td>
+    <td class="tg-vhtn">Correct decision</td>
+    <td class="tg-vhtn">Type II Error</td>
+  </tr>
+  <tr>
+    <td class="tg-vhtn">Reject $H_0$</td>
+    <td class="tg-vhtn">Type I Error</td>
+    <td class="tg-vhtn">Correct decision</td>
+  </tr>
+</tbody>
+</table>
+
+## Example
+
+In our jury trial,
+ 
+- $H_0$: the defendant is innocent.
+- $H_A$: the defendant is guilty.
+ 
+A Type I error is concluding guilt when the defendant is innocent. 
+
+A Type II error is failing to convict when the person is guilty. 
+
+## How likely are we to make errors? 
+
+$P($Type I Error$)=\alpha$, the **significance level**. 
+
+- This is the same $\alpha$ we saw in confidence intervals! 
+
+$P($Type II Error$)=\beta$. 
+
+- This is something we don't have time to cover in detail.
+
+*** 
+
+We would like both $\alpha$ and $\beta$ to be small but,
+
+- If we decrease $\alpha$, then $\beta$ will increase.
+- If we increase $\alpha$, then $\beta$ will decrease.
+
+In practice, we set $\alpha$ (as we did in confidence intervals). 
+
+We can improve $\beta$ by increasing sample size. 
+
+## Example 
+
+Consider two possible criminal charges:
+
+1. Defendant is accused of stealing a loaf of bread. If found guilty, they may face some jail time and will have a criminal record.
+2. Defendant is accused of murder. If found guilty, they will have a felony and may spend decades in prison. 
+
+Since these are moral questions, I will let you consider the consequences of each type of error. 
+
+However, keep in mind that we do make scientific decisions that have lasting impacts on people's lives. 
+
+## Hypothesis Test Conclusions
+
+- If the null hypothesis is rejected, we say the result is **statistically significant**. We can interpret this result with:
+  - At the $\alpha$ level of significance, the data provide sufficient evidence to support the alternative hypothesis.
+- If the null hypothesis is *not* rejected, we say the result is **not statistically significant**. We can interpret this result with:
+  - At the $\alpha$ level of significance, the data do *not* provide sufficient evidence to support the alternative hypothesis.
+  
+When we write these types of conclusions, we will write them in the context of the problem.

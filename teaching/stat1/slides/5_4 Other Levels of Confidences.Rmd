@@ -1,0 +1,120 @@
+---
+title: "5.4 Other Levels of Confidence"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+***
+
+The 95\% confidence interval is common in research, but there's nothing inherently special about it. 
+
+- You could calculate a 90\%, a 99\%, or even something like a 43.8\% confidence interval. 
+- These numbers are called the **confidence level**.
+    - They represent the proportion of times that the parameter will fall in the interval (if we took many samples).
+
+## Confidence Intervals
+
+The 100(1-$\alpha$)\% confidence interval for $\mu$ is given by $$\bar{x}\pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$$ where $z_{\alpha/2}$ is the z-score associated with the $[1-(\alpha/2)]$th percentile of the standard normal distribution. 
+
+## Critical Values
+
+The value $z_{\alpha/2}$ is called the **critical value** ("c.v." on the plot, below). 
+
+```{r}
+x <- seq(-3,3,length.out=1000)
+y <- dnorm(x)
+x1 <- -3; x2 <- -qnorm(0.85); x3 <- qnorm(0.85); x4 <- 3
+x.coord <- c(x[x > x1 & x < x2])
+y.coord <- y[x > x1 & x < x2]
+x.coord2 <- c(x[x > x3 & x < x4])
+y.coord2 <- y[x > x3 & x < x4]
+plot(x,y,type='l', xaxt='n', yaxt='n', ylab="",xlab="", ylim=c(-0.02,max(y)+0.01)) #
+abline(h=0); abline(v=1100)
+polygon(x=x.coord, y= c(0, y.coord[2:(length(y.coord)-1)], 0), col="mistyrose")
+polygon(x=x.coord2, y= c(0, y.coord2[2:(length(y.coord)-1)], 0), col="mistyrose")
+text(-1.6,0.03,"Area = a/2"); text(1.6,0.03,"Area = a/2"); text(0,0.1,"Area = 1-a")
+text(x2, 0.-0.015, "-c.v."); text(x3, -0.015, "+c.v.")
+```
+
+## Common Critical Values
+
+| Confidence Level | $\alpha$ | Critical Value, $z_{\alpha/2}$ |
+| :-: | :-: | :-: |
+| 90\% | 0.10 | 1.645 |
+| 95\% | 0.05 | 1.96 | 
+| 98\% | 0.02 | 2.326 |
+| 99\% | 0.01 | 2.575 | 
+
+## Checkpoint
+
+Prior experience with SAT scores in the CSU system suggests that SAT scores are well-approximated by a normal distribution with standard deviation known to be 50. Suppose we have a random sample of 50 Sac State students with (sample) mean SAT score 1112. 
+
+1. Calculate a 98\% confidence interval.
+2. Calculate a 90\% confidence interval.
+3. Interpret each interval in the context of the problem. Comment on how the intervals change as you change the confidence level.
+
+## Breaking Down a Confidence Interval
+
+$$\left(\bar{x}- z_{\alpha/2}\frac{\sigma}{\sqrt{n}}, \quad \bar{x} + z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\right)$$ The key values are
+
+- $\bar{x}$, the sample mean
+- $\sigma$, the population standard deviation
+- $n$, the sample size
+- $z_{\alpha/2}$, the critical value $$P(Z > z_{\alpha/2}) = \frac{\alpha}{2}$$
+
+## Breaking Down a Confidence Interval
+
+$$\left(\bar{x}- z_{\alpha/2}\frac{\sigma}{\sqrt{n}}, \quad \bar{x} + z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\right)$$
+
+- The value of interest is $\mu$, the (unknown) population mean.
+- The confidence interval gives us a reasonable range of values for $\mu$.
+
+In addition, the formula includes 
+
+- The standard error, $\frac{\sigma}{\sqrt{n}}$
+- The margin of error, $z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$
+
+## Confidence Level
+
+$$\left(\bar{x}- z_{\alpha/2}\frac{\sigma}{\sqrt{n}}, \quad \bar{x} + z_{\alpha/2}\frac{\sigma}{\sqrt{n}}\right)$$
+
+If we can be 99\% confident (or even higher), why do we tend to "settle" for 95\%??
+
+- What will higher levels of confidence do to this interval? 
+
+## Sample Size
+
+There is one other thing we can control in the confidence interval: the sample size $n$. 
+
+- We can specify the confidence level and the maximum acceptable interval width and use these to determine sample size. 
+- We know that $$\text{interval width} \ge 2z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$$
+- Letting interval width equal $w$, we can solve for $n$: $$ n \ge \left(2z_{\alpha/2}\frac{\sigma}{w}\right)^2$$ 
+
+## Sample Size
+
+Alternately, we may specify a maximum margin of error $m$ instead: $$ n \ge \left(z_{\alpha/2}\frac{\sigma}{m}\right)^2$$ 
+
+- Once we've done a sample size calculation, we need a whole number for $n$. 
+- Since $n \ge$ something, we will *always round up*.
+
+## Checkpoint 
+
+Suppose we want a 95\% confidence interval for the mean of a normally distributed population with standard deviation $\sigma=10$. It is important for our margin of error to be no more than 2. What sample size do we need?
+
+## Some comments
+
+- As desired width/margin of error decreases, $n$ will increase. 
+- As $\sigma$ increases, $n$ will also increase. (More population variability will necessitate a larger sample size.)
+- As confidence level increases, $n$ will also increase.
+
+## Checkpoint
+
+Prior experience with SAT scores in the CSU system suggests that SAT scores are well-approximated by a normal distribution with standard deviation known to be 50. 
+
+Find the sample size required for a 98% confidence interval with maximum margin of error 10.

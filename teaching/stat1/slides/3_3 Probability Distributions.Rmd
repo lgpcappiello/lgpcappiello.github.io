@@ -1,0 +1,126 @@
+---
+title: "3.3 Probability Distributions"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Disjoint Events
+
+Two outcomes are **disjoint** or **mutually exclusive** if they cannot both happen (at the same time). 
+
+- This is like nonoverlapping bins for histograms.
+
+> *Example*: If I roll a six-sided die one time, rolling a 5 and rolling a 6 are disjoint. I can get a 5 *or* a 6, but not both on the same roll.
+
+> *Example*: If I select a student, they can be a freshman *or* a sophomore, but that student cannot be both a freshman and a sophomore at the same time. 
+
+## Checkpoint
+
+Determine whether the following events are mutually exclusive (disjoint).
+
+1. Your friend studies in the library. You study at home.
+2. You and your study group all earn As on an exam. 
+3. You stay out until 3 am. You go to bed at 9 pm.
+
+
+## Venn Diagrams
+
+**Venn Diagrams** show events as circles. The circles overlap where events share common outcomes. 
+
+```{r include=FALSE}
+library(VennDiagram)
+library(RColorBrewer)
+```
+
+```{r comment=NA}
+venn.plot <- draw.pairwise.venn(
+	area1 = 13,
+	area2 = 12,
+	cross.area = 3,
+	category = c("Diamonds", "Face Cards"),
+	fill = c("lightblue", "lightyellow"),
+	lty = 1,
+	cex = 2,
+	cat.cex = 2,
+	cat.pos = c(315, 20),
+	cat.dist = c(0.09,0.09),
+	cat.just = list(c(-1, -1), c(1, 1)),
+	ext.pos = 30,
+	ext.dist = -0.05,
+	ext.length = 0.85,
+	ext.line.lwd = 2,
+	ext.line.lty = "dashed"
+	)
+grid.draw(venn.plot)
+```
+
+***
+
+- When a Venn Diagram has *no overlap* the events are mutually exclusive. 
+
+- Consider the event "Draw a Diamond" and the event "Draw a Face Card". 
+- There are 13 diamonds and 12 face cards in a deck. 
+- The events are *not* mutually exclusive: 
+    - it's possible to draw both a diamond and a face card at the same time: the Jack of Diamonds, Queen of Diamonds, and King of Diamonds. 
+
+## Checkpoint
+
+Consider events 
+
+- $A$: "Draw a spade"
+- $B$: "Draw a queen"
+- $C$: "Draw a red"
+
+Which of these events are mutually exclusive?
+
+## Checkpoint
+
+In a group of 24 people, 13 have cats and 15 have dogs. Four of them have both cats and dogs. Sketch a Venn Diagram for these events.
+
+## Probability Distributions
+
+A **probability distribution** lists all possible disjoint outcomes and their associated probabilities.
+
+| Roll of a six-sided die | 1 | 2 | 3 | 4 | 5 | 6 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Probability             | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 | 1/6 |
+
+##  Probability Axioms
+
+The **probability axioms** are requirements for a valid probability distribution. They are: 
+
+1. All listed outcomes must be disjoint.
+2. Each probability must be between 0 and 1. 
+3. The probabilities must sum to 1. 
+
+- #2 is true for ALL probabilities. 
+- If you ever calculate a probability and get a negative number or a number greater than 1, something went wrong!
+
+## Checkpoint
+
+Use the probability axioms to check whether the following tables are probability distributions.
+
+A
+
+| X | {1 or 2} | {3 or 4} | {5 or 6} | 
+| :-: | :-: | :-: | :-: | 
+| P(X) | 1/3 | 1/3 | 1/3 |
+
+<br>
+B
+
+| Y | {1 or 2} | {2 or 3} | {3 or 4} | {5 or 6} |
+| :-: | :-: | :-: | :-: | :-: |
+| P(Y) | 1/3 | 1/3 | 1/3 | -1/3 |
+
+## Probability Distributions and Relative Frequency
+
+- Probability distributions look a lot like relative frequency distributions. 
+- This isn't a coincidence! 
+- A relative frequency distribution is a good way to use data to approximate a probability distribution. 

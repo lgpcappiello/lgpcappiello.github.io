@@ -1,0 +1,46 @@
+---
+title: "7.2 Confidence Intervals for a Proportion"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Confidence Intervals for a Proportion
+
+Inference for a proportion is really similar to inference for a mean! 
+
+- We can apply the Central Limit Theorem to the sampling distribution for a proportion.
+    - But... isn't our Central Limit Theorem only for means? 
+    
+## CLT for Binomial?
+
+- A binomial experiment is made up of a series of Bernoulli trials, which result in 0s and 1s. 
+- If we add up these values, we get the number of successes $x$. 
+- If we take the mean of these successes, we get the *proportion* of successes. 
+- That is, $\bar{x} = \hat{p}$ and we can work with the sampling distribution for a sample mean!
+
+## CLT for Binomial
+
+By the Central Limit Theorem, $\hat{p}$ is approximately normally distributed with mean $$\mu_{\hat{p}} = p$$ and standard error $$\sigma_{\hat{p}} = \frac{\sqrt{p(1-p)}}{\sqrt{n}} = \sqrt{\frac{p(1-p)}{n}}$$
+
+## General Confidence Intervals
+
+- Confidence intervals all use the same basic formula: $$\text{estimate }\pm\text{ critical value }\times\text{ standard error }$$ 
+- We do not know the true value of $p$ for the standard error $$\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}}$$ so we will plug in $\hat{p}$.
+
+***
+
+A $100(1-\alpha)\%$ confidence interval for $p$:
+
+$$\hat{p}\pm z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$$
+
+To use this formula, we need to check that $n\hat{p} > 10$ and $n(1-\hat{p})>10$. 
+
+## Checkpoint
+
+Suppose we take a random sample of 27 US households and find that 15 of them have dogs. Find a 95% confidence interval for the proportion of US households with dogs.

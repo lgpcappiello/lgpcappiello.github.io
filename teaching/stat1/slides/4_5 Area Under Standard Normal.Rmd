@@ -1,0 +1,97 @@
+---
+title: "4.5 Area Under the Standard Normal Curve"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Area Under the Standard Normal Curve
+
+Properties:
+
+1. Total area under the curve is 1.
+2. The curve extends infinitely in both directions, never touching the horizontal axis.
+3. Symmetric about 0.
+4. Almost all of the area under the curve is between -3 and 3.
+
+***
+
+We work with **cumulative probabilities** or probabilities of the form $P(Z < z)$. 
+
+We will use the fact that the total area under the curve is 1 to find probabilities like $P(Z > c)$:
+
+```{r}
+x <- seq(1:100)
+y <- dnorm(x,50,15)
+x1 <- 60; x2 <- 60
+plot(x,y,type='l', xaxt='n', yaxt='n', ylab="",xlab="Total area = 1", ylim=c(-0.002, max(y)+0.001)) 
+polygon(x=c(x[c(min(x),min(x):x2,x2)]), y= c(0, y[min(x):x2], 0), col="lightblue")
+polygon(x=c(x[c(x1,x1:max(x),max(x))]), y= c(0, y[x1:max(x)], 0), col="gold")
+text(x=43,y=0.005,"P(Z < c)")
+text(x=68,y=0.005,"P(Z > c)")
+text(x=60,y=-0.0015,"c")
+```
+
+***
+
+We can also use this concept to find $P(a < Z < b)$.
+
+```{r}
+x <- seq(1:100)
+y <- dnorm(x,50,15)
+x1 <- 40; x2 <- 60
+plot(x,y,type='l', xaxt='n', yaxt='n', ylab="",xlab="Total area = 1", ylim=c(-0.002, max(y)+0.001)) 
+polygon(x=c(x[c(min(x),min(x):x2,x2)]), y= c(0, y[min(x):x2], 0), col="lightblue")
+polygon(x=c(x[c(x1,x1:max(x),max(x))]), y= c(0, y[x1:max(x)], 0), col="gold")
+polygon(x=c(x[c(x1,x1:x2,x2)]), y= c(0, y[x1:x2], 0), col="mistyrose")
+text(x=32,y=0.005,"P(Z < a)")
+text(x=50,y=0.005,"P(a < Z < b)")
+text(x=68,y=0.005,"P(Z > b)")
+text(x=40,y=-0.0015,"a");text(x=60,y=-0.0015,"b")
+```
+
+***
+
+```{r}
+x <- seq(1:100)
+y <- dnorm(x,50,15)
+x1 <- 40; x2 <- 60
+plot(x,y,type='l', xaxt='n', yaxt='n', ylab="",xlab="Total area = 1", ylim=c(-0.002, max(y)+0.001)) 
+polygon(x=c(x[c(min(x),min(x):x2,x2)]), y= c(0, y[min(x):x2], 0), col="lightblue")
+polygon(x=c(x[c(x1,x1:max(x),max(x))]), y= c(0, y[x1:max(x)], 0), col="gold")
+polygon(x=c(x[c(x1,x1:x2,x2)]), y= c(0, y[x1:x2], 0), col="mistyrose")
+text(x=32,y=0.005,"P(Z < a)")
+text(x=50,y=0.005,"P(a < Z < b)")
+text(x=68,y=0.005,"P(Z > b)")
+text(x=40,y=-0.0015,"a");text(x=60,y=-0.0015,"b")
+```
+
+Notice that $$1 = P(Z < a) + P(a < Z < b) + P(Z > b)$$ 
+
+***
+
+From $$1 = P(Z < a) + P(a < Z < b) + P(Z > b)$$ we can write $$P(a < Z < b) = 1 - P(Z > b) - P(Z < a)$$ Since we just found that $$P(Z > b) = 1 - P(Z < b)$$ we can replace $1 - P(Z > b)$ with $P(Z < b)$, and get $$P(a < Z < b) = P(Z < b) - P(Z < a).$$
+
+## Key Cumulative Probability Concepts
+
+- $P(Z > c) = 1 - P(Z < c)$
+- $P(a < Z < b) = P(Z < b) - P(Z < a)$
+- The normal distribution is symmetric, so $P(X < \mu) = P(X > \mu) = 0.5$.
+
+Now that we can get all of our probabilities written as *cumulative* probabilities, we're ready to use software to find the area under the curve!
+
+## Finding Area Under the Curve: Applets
+
+<a href="http://www.rossmanchance.com/applets/2021/normcalc/NormCalc.html" target="blank">Rossman and Chance Normal Probability Calculator</a>
+
+## Example
+
+ACT scores are well-approximated by a normal distribution with mean 20.8 and standard deviation 5.8. 
+
+1. Find the probability that a randomly selected test taker scores above a 23.
+2. Find the probability that a randomly selected test taker scores between an 18 and a 22.

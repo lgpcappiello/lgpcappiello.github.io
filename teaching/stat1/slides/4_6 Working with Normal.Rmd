@@ -1,0 +1,45 @@
+---
+title: "4.6 Working with Normally Distributed Variables"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Determining Normal Distribution Probabilities
+
+1. Sketch the normal curve for the variable.
+2. Shade the region of interest and mark its delimiting x-value(s).
+3. Find the z-score(s) for the value(s).
+4. Use an applet (or the `pnorm` command in R) to find the associated area.
+
+## Example
+
+Find the proportion of SAT-takers who score between 1150 and 1300. Assume that SAT scores are approximately normally distributed with mean $\mu=1100$ and standard deviation $\sigma = 200$. 
+
+<a href="http://www.rossmanchance.com/applets/2021/normcalc/NormCalc.html" target="blank">Rossman and Chance Normal Probability Calculator</a>
+
+## Percentiles
+
+We can also find the *observation* associated with a percentage/proportion.
+
+Recall: The $w$th **percentile** $p_w$ is the observation that is higher than w\% of all observations $$P(X < p_w) = w$$
+
+## Finding a Percentile
+
+1. Sketch the normal curve for the variable.
+2. Shade the region of interest and label the area.
+3. Use the applet (or R - see below) to determine the z-score for the area.
+4. Find the x-value using $z$, $\mu$, and $\sigma$.
+
+Note that if $z = \frac{x-\mu}{\sigma}$, then $x = \mu + z\sigma$.
+
+## Example
+
+SAT scores are approximately Normal($\mu=1100$, $\sigma=200$). Find the 90th percentile for SAT scores. 
+
+<a href="http://www.rossmanchance.com/applets/2021/normcalc/NormCalc.html" target="blank">Rossman and Chance Normal Probability Calculator</a>

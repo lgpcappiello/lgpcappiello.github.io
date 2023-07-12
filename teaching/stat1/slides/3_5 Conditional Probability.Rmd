@@ -1,0 +1,359 @@
+---
+title: "3.5 Conditional Probability"
+author: "Dr. Lauren Parker"
+output: 
+  ioslides_presentation:
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Contingency Tables
+
+A **contingency table** is a way to summarize **bivariate data**, or data from two variables. 
+
+***
+
+*Smallpox in Boston (1726)*
+<center>
+<table>
+    <tbody>
+        <tr>
+            <td style="text-align: center;" colspan="2" width="130">
+                <p>&nbsp;</p>
+            </td>
+            <td style="text-align: center;" colspan="3" width="254">
+                <p style="text-align: center;"><strong>Inoculated</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" colspan="2" width="130">
+                <p>&nbsp;</p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p><strong>yes</strong></p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p><strong>no</strong></p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p><strong>total</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" rowspan="3" width="72">
+                <p><strong>Result</strong></p>
+            </td>
+            <td style="text-align: center;" width="58">
+                <p><strong>lived</strong></p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p>238</p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p>
+                    <span style="color: #000000; background-color: #fbeeb8;">5136</span>
+                </p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p>
+                    <span style="background-color: #bfedd2;">5374</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" width="58">
+                <p><strong>died</strong></p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p>6</p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p>844</p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p>850</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" width="58">
+                <p><strong>total</strong></p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p>
+                    <span style="background-color: #eccafa;">244</span>
+                </p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p>5980</p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p>
+                    <span style="background-color: #c2e0f4;">6224</span>
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</center>
+
+<ul>
+    <li>
+        <span style="background-color: #fbeeb8;">5136</span> is the count of people who lived AND were not inoculated.&nbsp;
+    </li>
+    <li>
+        <span style="background-color: #c2e0f4;">6224</span> is the total number of observations.
+    </li>
+    <li>
+        <span style="background-color: #eccafa;">244</span> is the total number of people who were inoculated.
+    </li>
+    <li>
+        <span style="background-color: #bfedd2;">5374</span> is the total number of people who lived.
+    </li>
+</ul>
+
+## Contingency Tables
+
+- These are basically two-variable frequency distributions. 
+- We can convert to proportions by dividing each count by the total number of observations.
+
+***
+
+<center>
+<table>
+    <tbody>
+        <tr>
+            <td style="text-align: center;" colspan="2" width="130">
+                <p>&nbsp;</p>
+            </td>
+            <td style="text-align: center;" colspan="3" width="254">
+                <p><strong>Inoculated</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" colspan="2" width="130">
+                <p>&nbsp;</p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p><strong>yes</strong></p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p><strong>no</strong></p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p><strong>total</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" rowspan="3" width="72">
+                <p><strong>Result</strong></p>
+            </td>
+            <td style="text-align: center;" width="58">
+                <p><strong>lived</strong></p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p>0.0382</p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p>
+                    <span style="background-color: #fbeeb8;">0.8252</span>
+                </p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p>
+                    <span style="background-color: #bfedd2;">0.8634</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" width="58">
+                <p><strong>died</strong></p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p>0.0010</p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p>0.1356</p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p>0.1366</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" width="58">
+                <p><strong>total</strong></p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p>
+                    <span style="background-color: #eccafa;">0.0392</span>
+                </p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p>0.9608</p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p>
+                    <span style="background-color: #c2e0f4;">1.0000</span>
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</center>
+
+<ul>
+    <li>
+        <span style="background-color: #fbeeb8;">0.8252</span> is the proportion of people who lived AND were not inoculated.&nbsp;
+    </li>
+    <li>
+        <span style="background-color: #c2e0f4;">1.000</span> is the proportion of total number of observations. Think of this as 100% of the observations.
+    </li>
+    <li>
+        <span style="background-color: #eccafa;">0.0392</span> is the proportion of people who were inoculated.
+    </li>
+    <li>
+        <span style="background-color: #bfedd2;">0.8634</span> is the proportion of people who lived.
+    </li>
+</ul>
+
+***
+
+<center>
+<table>
+    <tbody>
+        <tr>
+            <td style="text-align: center;" colspan="2" width="130">
+                <p>&nbsp;</p>
+            </td>
+            <td style="text-align: center;" colspan="3" width="254">
+                <p><strong>Inoculated</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" colspan="2" width="130">
+                <p>&nbsp;</p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p><strong>yes</strong></p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p><strong>no</strong></p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p><strong>total</strong></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" rowspan="3" width="72">
+                <p><strong>Result</strong></p>
+            </td>
+            <td style="text-align: center;" width="58">
+                <p><strong>lived</strong></p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p>0.0382</p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p>
+                    <span style="background-color: #fbeeb8;">0.8252</span>
+                </p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p>
+                    <span style="background-color: #bfedd2;">0.8634</span>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" width="58">
+                <p><strong>died</strong></p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p>0.0010</p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p>0.1356</p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p>0.1366</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" width="58">
+                <p><strong>total</strong></p>
+            </td>
+            <td style="text-align: center;" width="74">
+                <p>
+                    <span style="background-color: #eccafa;">0.0392</span>
+                </p>
+            </td>
+            <td style="text-align: center;" width="84">
+                <p>0.9608</p>
+            </td>
+            <td style="text-align: center;" width="96">
+                <p>
+                    <span style="background-color: #c2e0f4;">1.0000</span>
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</center>
+
+- The row and column totals are **marginal probabilities**. 
+- The probability of two events together ($A$ and $B$) is a **joint probability**.
+
+***
+
+What can we learn about the result of smallpox if we already know something about inoculation status? 
+
+- For example, given that a person is inoculated, what is the probability of death? 
+- To figure this out, we restrict our attention to the 244 inoculated cases. Of these, 6 died. So the probability is 6/244.
+
+## Conditional Probability
+
+**Conditional probability**: the probability of some event $A$ if we know that event $B$ occurred (or is true): $$P(A|B) = \frac{P(A\text{ and }B)}{P(B)}$$ where the symbol | is read as "given".
+
+***
+
+- For death given inoculation, 
+$$\begin{align}
+P(\text{death}|\text{inoculation}) &= \frac{P(\text{death and inoculation})}{P(\text{inoculation})} \\ &= \frac{0.0010}{0.0392} = 0.0255
+\end{align}$$
+- We could also write this as 
+$$\begin{align}
+P(\text{death}|\text{inoculation}) &= \frac{P(\text{death and inoculation})}{P(\text{inoculation})} \\ &= \frac{6/6224}{244/6224} = \frac{6}{244}
+\end{align}$$ 
+
+## Independent Events
+
+If knowing whether event $B$ occurs tells us nothing about event $A$, the events are **independent**. For example, if we know that the first flip of a (fair) coin came up heads, that doesn't tell us anything about what will happen next time we flip that coin.
+
+We can test for independence by checking if $P(A|B)=P(A)$. 
+
+## Multiplication Rule for Independent Processes
+
+If $A$ and $B$ are independent events, then $$P(A \text{ and }B) = P(A)P(B).$$ 
+
+- We can extend this to more than two events: $$P(A \text{ and }B \text{ and } C \text{ and } \dots) = P(A)P(B)P(C)\dots.$$
+- Note that if $P(A \text{ and }B) \ne P(A)P(B)$, then $A$ and $B$ are *not* independent.
+
+## Example
+
+Find the probability of rolling a $6$ on your first roll of a die and a $6$ on your second roll.
+
+Let $A=$ (rolling a $6$ on first roll) and $B=$ (rolling a $6$ on second roll). For each roll, the probabiltiy of getting a $6$ is $1/6$, so $P(A) = \frac{1}{6}$ and $P(B)  = \frac{1}{6}$.
+
+Then, because each roll is independent of any other rolls, $$P(A \text{ and }B) = P(A)P(B) = \frac{1}{6}\times\frac{1}{6} = \frac{1}{36}$$
+
+## General Multiplication Rule
+
+If $A$ and $B$ are any two events, then $$P(A \text{ and }B) = P(A|B)P(B).$$ 
+
+- This is just the conditional probability formula, rewritten in terms of $P(A \text{ and }B)$!
+
+## Checkpoint
+
+Suppose we know that 38.4\% of US households have dogs and that *among those with dogs*, 23.1\% have cats. Find the probability that a US household has both dogs and cats.

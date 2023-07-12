@@ -1,0 +1,70 @@
+---
+title: "6.4 The Critical Value Approach to Hypothesis Testing"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Idea
+
+- We learned about critical values when we discussed confidence intervals. 
+- We can use these values in a hypothesis test. 
+- We will compare these values to a value based on the data, called a **test statistic**.
+
+## Idea
+
+- The null is our "default assumption". 
+- If the null is true, how likely are we to observe a sample that looks like the one we have? 
+- If our sample is very inconsistent with the null hypothesis, we should reject the null hypothesis. 
+
+## Test statistics
+
+Test statistics are similar to z- and t-scores: $$\text{test statistic} = \frac{\text{point estimate}-\text{null value}}{\text{standard error}}.$$ 
+
+- **Large Sample Setting**: $\mu$ is target parameter, $n \ge 30$
+
+$$z = \frac{\bar{x}-\mu_0}{s/\sqrt{n}}$$
+
+- **Small Sample Setting**: $\mu$ is target parameter, $n < 30$
+
+$$t = \frac{\bar{x}-\mu_0}{s/\sqrt{n}}$$
+
+## Test statistics
+
+```{r}
+x <- seq(-3,3,length.out=1000)
+y <- dnorm(x)
+x1 <- -3; x2 <- -qnorm(0.85); x3 <- qnorm(0.85); x4 <- 3
+x.coord <- c(x[x > x1 & x < x2])
+y.coord <- y[x > x1 & x < x2]
+x.coord2 <- c(x[x > x3 & x < x4])
+y.coord2 <- y[x > x3 & x < x4]
+plot(x,y,type='l', xaxt='n', yaxt='n', ylab="",xlab="", ylim=c(-0.02,max(y)+0.01)) #
+abline(h=0); abline(v=1100)
+polygon(x=x.coord, y= c(0, y.coord[2:(length(y.coord)-1)], 0), col="mistyrose")
+polygon(x=x.coord2, y= c(0, y.coord2[2:(length(y.coord)-1)], 0), col="mistyrose")
+text(-1.6,0.03,"Reject"); text(1.6,0.03,"Reject"); text(0,0.1,"Do Not Reject")
+text(x2, 0.-0.015, "-c.v."); text(x3, -0.015, "+c.v.")
+```
+
+- Values for the test statistic that cause us to reject $H_0$ are the **rejection region**. 
+- The remaining values are the **nonrejection region**. 
+- The value that separates these is the critical value!
+
+## Steps
+
+1. State the null and alternative hypotheses.
+2. Determine the significance level $\alpha$. Check assumptions (decide which setting to use).
+3. Compute the value of the test statistic.
+4. Determine the critical values.
+5. If the test statistic is in the rejection region, reject the null hypothesis. Otherwise, do not reject.
+6. Interpret results. 
+
+## Example
+
+Is the average mercury level in dolphin muslces different from $2.5\mu g/g$? Test at the 0.05 level of significance. A random sample of $19$ dolphins resulted in a mean of $4.4 \mu g/g$ and a standard deviation of $2.3 \mu g/g$.

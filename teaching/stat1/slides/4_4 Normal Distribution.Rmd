@@ -1,0 +1,135 @@
+---
+title: "4.4 The Normal Distribution"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Density Curves 
+
+We represent the shape of a continuous variable using a **density curve**. This is like a histogram, but with a smooth curve:
+```{r}
+set.seed(0)
+X <- rnorm(100)
+hist(X, prob=TRUE, col="grey")# prob=TRUE for probabilities not counts
+lines(density(X, adjust=2), col="darkgreen", lwd=2) 
+```
+
+## Density Curves
+
+Properties:
+
+1. The curve is always above the horizontal axis (because probabilities are always nonnegative).
+2. The total area under the curve equals 1.
+
+## Density Curves
+
+The proportion of all possible observations that lie within a specified range equals the corresponding area under the density curve. 
+
+```{r}
+par(mfrow=c(2,2))
+x <- seq(1:100)
+y <- dnorm(x,50,15)
+
+x2 <- 60
+plot(x,y,type='l', xaxt='n', yaxt='n', ylab="",xlab="P(X < c)", ylim=c(-0.003,max(y)+0.001))
+polygon(x=c(x[c(min(x),min(x):x2,x2)]), y= c(0, y[min(x):x2], 0), col="lightblue"); abline(h=0)
+text(x2, 0.-0.002, "c")
+
+x1 <- 30
+plot(x,y,type='l', xaxt='n', yaxt='n', ylab="",xlab="P(X > d)", ylim=c(-0.003,max(y)+0.001))
+polygon(x=c(x[c(x1,x1:max(x),max(x))]), y= c(0, y[x1:max(x)], 0), col="lightblue"); abline(h=0)
+text(x1, 0.-0.002, "d")
+
+x1 <- 25; x2 <- 70
+plot(x,y,type='l', xaxt='n', yaxt='n', ylab="",xlab="P(a < X < b)", ylim=c(-0.003,max(y)+0.001))
+polygon(x=c(x[c(x1,x1:x2,x2)]), y= c(0, y[x1:x2], 0), col="lightblue"); abline(h=0)
+text(x1, 0.-0.002, "a"); text(x2, 0.-0.002, "b")
+```
+
+## Normal Curves
+
+- A **normal curve** is a special type of density curve that has a "bell-shaped" distribution. 
+- A variable is **normally distributed** or has a **normal distribution** if its distribution has the shape of a normal curve. 
+
+Why "normal"? Because it appears so often in practice! 
+
+## Normal Distributions
+
+Normal distributions...
+
+- are fully determined by parameters mean $\mu$ and standard deviation $\sigma$.
+- are symmetric and centered at $\mu$.
+- have spreads that depend on $\sigma$.
+
+## Normal Distributions
+
+```{r}
+par(mfrow=c(2,2))
+x <- seq(-5,5,length.out=100)
+
+y <- dnorm(x,2,1)
+plot(x,y,type='l', xlim=c(-1,5), yaxt='n', ylab="", xlab="Normal(mu = 2, sigma = 1)")
+
+y <- dnorm(x,0,1)
+plot(x,y,type='l', xlim=c(-3,3), yaxt='n', ylab="", xlab="Normal(mu = 0, sigma = 1)")
+
+y <- dnorm(x,0,0.5)
+plot(x,y,type='l', xlim=c(-5,5), yaxt='n', ylab="", xlab="Normal(mu = 0, sigma = 0.5)")
+
+y <- dnorm(x,0,2)
+plot(x,y,type='l', xlim=c(-5,5), yaxt='n', ylab="", xlab="Normal(mu = 0, sigma = 2)")
+```
+
+## Normal Distributions
+
+To check whether a variable is (approximately) normally distributed,
+
+1. Check the histogram to see if it is symmetric and bell-shaped. 
+2. Estimate the parameters: $\mu$ using $\bar{x}$ and $\sigma$ using $s$.
+
+## Z-Scores
+
+- We standardize a variable using $$z = \frac{x-\mu}{\sigma}.$$ 
+- This is also called a **z-score**. 
+- Standardizing using this formula will *always* result in a variable with mean 0 and standard deviation 1. 
+- These are useful for comparing values which are originally on very different scales.
+
+## Note about Z-Scores
+
+A z-score tells us how many standard deviations an observation is from the mean. 
+
+- A positive z-score $z>0$ is *above* the mean.
+- A negative z-score $z<0$ is *below* the mean. 
+
+*Example*: $z=-0.23$ is 0.23 standard deviations below the mean.
+
+## Checkpoint
+
+- ACT scores have mean 20.8 and standard deviation 5.8. 
+- SAT scores have mean 1500 and standard deviation 300.
+- If Jose scored a 27 on his ACT and Alice scored a 1850 on her SAT, who would you say got the better score?
+
+## Empirical Rule for Variables
+
+For any (approximately) normally distributed variable,
+
+1. Approximately 68\% of all possible observations lie within one standard deviation of the mean: $\mu \pm \sigma.$
+2. Approximately 95\% of all possible observations lie within two standard deviations of the mean: $\mu \pm 2\sigma.$
+3. Approximately 99.7\% of all possible observations lie within three standard deviations of the mean: $\mu \pm 3\sigma.$
+
+## The Standard Normal Distribution
+
+- A **standard normal distribution** is a normal distribution with mean $\mu=0$ and standard deviation $\sigma=1$. 
+- If $X$ is approximately normal, then the standardized variable $Z$ will have a standard normal distribution.
+
+*** 
+
+Note: when we z-score a variable, we preserve the area under the curve properties! 
+
+- If $X$ is Normal$(\mu,\sigma)$, then $$P(X < c) = P\left(Z < \frac{c - \mu}{\sigma}\right) = P(Z < z).$$

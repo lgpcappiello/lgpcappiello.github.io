@@ -1,0 +1,77 @@
+---
+title: "5.5 Confidence Intervals for a Mean"
+author: "Dr. Lauren Parker"
+output:
+  ioslides_presentation: 
+    widescreen: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Confidence Intervals for a Mean
+
+Realistically, the value of $\sigma$ is almost never known.
+
+- We know that we can estimate $\sigma$ using $s$. 
+- Can we plug in $s$ for $\sigma$? Sometimes!
+
+## Central Limit Theorem
+
+- For samples of size $n \ge 30$, $\bar{X}$ will be approximately normal even if $X$ isn't. 
+
+- In this case, we can plug in $s$ for $\sigma$: $$\bar{x} \pm z_{\alpha/2}\frac{s}{\sqrt{n}}.$$
+
+...but what about when $n < 30$?
+
+## The T-Distribution
+
+If $$Z = \frac{\bar{X}-\mu}{\sigma/\sqrt{n}}$$ has a standard normal distribution (for $X$ normal or $n\ge30$), the slightly modified $$T = \frac{\bar{X}-\mu}{s/\sqrt{n}}$$ has what we call the **t-distribution** with $n-1$ **degrees of freedom**.
+
+## The T-Distribution
+
+The only thing we need to know about degrees of freedom is that $\text{df}=n-1$ is the t-distribution's only parameter.
+
+```{r}
+x <- seq(-4,4,length.out=1000)
+y <- dnorm(x)
+t1 <- dt(x, 30)
+t2 <- dt(x, 10)
+t3 <- dt(x, 5)
+t4 <- dt(x, 2)
+t5 <- dt(x, 1)
+plot(x,y,type='l', lwd=2, lty=2, yaxt='n', ylab="",xlab="") 
+points(x,t1,type='l',lwd=2, col='red') 
+points(x,t2,type='l',lwd=2, col='blue') 
+points(x,t3,type='l',lwd=2, col='darkgreen')
+points(x,t4,type='l',lwd=2, col='purple')
+points(x,t5,type='l',lwd=2, col='darkorange')
+legend(1.4,0.4,legend=c("Standard Normal","T, df=30","T, df=10","T, df=5","T, df=2","T, df=1"),
+       col=c('black','red','blue','darkgreen','purple','darkorange'), lwd=2, lty=c(2,1,1,1,1,1), box.lty=0)
+```
+
+## The T-Distribution
+
+- The t-distribution is symmetric and always centered at 0. 
+- When $n\ge30$, the t-distribution is approximately equivalent to the standard normal distribution. 
+- For smaller sample sizes, the t-distribution has more area in the tails. 
+
+## A General Confidence Interval for the Mean
+
+- Plug in $s$ for $\sigma$ and use a t critical value $t_{\text{df}, \, \alpha/2}$. 
+  - The t critical value is the $[1- \alpha/2]$th percentile of the t-distribution with $n-1$ degrees of freedom. 
+- The resulting 95\% confidence interval is $$\bar{x} \pm t_{\text{df}, \, \alpha/2}\frac{s}{\sqrt{n}}.$$ 
+
+## T-Distribution Applet
+
+<a href="http://www.rossmanchance.com/applets/2021/tcalc/tCalc.htm" target="blank">Rossman and Chance t Probability Calculator</a>
+
+- For this applet, enter the degrees of freedom $n-1$ next to "df". 
+- Then check the top box under "t-value probability" and make sure the inequality is clicked to ">" . 
+- Enter the value of $\alpha/2$ for the probability. 
+- Click anywhere else on the page and the applet will automatically fill in the box under "t-value". 
+- This is your t critical value. 
+
+## Checkpoint
+
