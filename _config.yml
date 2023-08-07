@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Lauren Parker-Cappiello
+title: Lauren Perry
 email: cappiello@csus.edu
 description: test description
 # twitter_username: lgpcappiello
@@ -55,7 +55,7 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Dr. Lauren Parker"
+  name   : "Dr. Lauren Perry"
   avatar : "https://avatars2.githubusercontent.com/u/46605262?s=460&v=4"
   bio    : "Assistant Professor of Mathematics & Statistics at Sacramento State<br>Pronouns: she/her"
   links:
