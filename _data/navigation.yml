@@ -1,23 +1,15 @@
 # main links
 main:
   - title: "Home"
-    url: https://lgpcappiello.github.io/
-  # - title: "About"
-  #   url: https://lgpcappiello.github.io/about/
-  # - title: "Education"
-  #  url: /education/
+    url: https://lgpperry.github.io/
   - title: "Teaching"
     url: /teaching/
   - title: "Student Resources"
     url: /resources/
   - title: "Research & Consulting"
     url: /research/
-  # - title: "Consulting"
-  #  url: /consulting/
   - title: "Blog"
     url: /blog/year-archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
   
 #teaching:
 #  - title: "Course Links"
